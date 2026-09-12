@@ -1,0 +1,169 @@
+name: Publish Garden v0.6
+
+on:
+  push:
+    paths:
+      - '.trigger-v06'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.event.head_commit.message != 'Garden MASTER HOME v0.6'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch verified assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/brand assets/media screenshots
+
+          curl -fL --retry 3 --retry-delay 2 \
+            'https://raw.githubusercontent.com/ladima75-source/bb610-hub/d7f5f22903c33f26514f18207e7590e6bc711b74/assets/bb610-garden.webp' \
+            -o assets/brand/bb610-garden.webp
+          test "$(stat -c%s assets/brand/bb610-garden.webp)" -gt 100000
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('assets/brand/bb610-garden.webp').read_bytes()
+          assert p[:4] == b'RIFF' and p[8:12] == b'WEBP'
+          PY
+
+          fetch_verify() {
+            out="$1"; expected="$2"; shift 2
+            tmp="${out}.tmp"
+            rm -f "$tmp" "$out"
+            for url in "$@"; do
+              if curl -fL --retry 3 --retry-delay 2 "$url" -o "$tmp"; then
+                got="$(sha256sum "$tmp" | awk '{print $1}')"
+                if [ "$got" = "$expected" ]; then
+                  mv "$tmp" "$out"
+                  echo "verified: $out"
+                  return 0
+                fi
+                echo "sha mismatch for $url: $got" >&2
+              fi
+            done
+            echo "No verified source for $out" >&2
+            exit 1
+          }
+
+          fetch_verify assets/media/PLF84C8700_PL_BLUEBERRY_25_LITER_POT_FOR_BLUEBERRIES_PRODUCT_0255.jpg \
+            f84c8700735a12a9af821aad97fcfec87a6bb0fe3f7173f6284a9a147c1fcc26 \
+            'https://getplantlogic.com/wp-content/uploads/2021/12/25-liter-pot-for-blueberries.jpg'
+
+          fetch_verify assets/media/PLD37D1167_PL_BLUEBERRY_BEST_POTS_FOR_BLUEBERRIES_PRODUCT_0262.png \
+            d37d116747990918ab442d7fa8a65dca9b64d02f7de2616d4a4286a1c3e0e1c5 \
+            'https://getplantlogic.com/wp-content/uploads/2024/03/best-pots-for-blueberries.png'
+
+          fetch_verify assets/media/PLA4407A57_PL_BLUEBERRY_BLUEBERRY_POTS_GREENHOUSE_1_APPLICATION_0247.jpg \
+            a4407a57c883c47d5954da0ccb8d8dace9ad307b8e1441c5730f387112ffc512 \
+            'https://getplantlogic.com/wp-content/uploads/2021/04/blueberry-pots-greenhouse-1.jpg' \
+            'https://getplantlogic.com/wp-content/uploads/2021/04/blueberry-pots-greenhouse-2.jpg' \
+            'https://getplantlogic.com/wp-content/uploads/2021/04/blueberry-pots-greenhouse.jpg' \
+            'https://getplantlogic.com/wp-content/uploads/2021/05/blueberry-pots-greenhouse.jpg'
+
+          fetch_verify assets/media/PL4194A57E_PL_BLUEBERRY_20_LITER_ROUND_POT_PRODUCT_0275.jpg \
+            4194a57e4138550130f777acc73716a8fd0e87d92dc3cab37eba3942fe4cc282 \
+            'https://getplantlogic.com/wp-content/uploads/2024/03/20L-Round-pot_Item_1308020_front.jpg'
+
+          fetch_verify assets/media/PL09575BAD_PL_BLUEBERRY_20_LITER_SQUARE_POT_PRODUCT_0297.jpg \
+            09575badcd30312646ff5946d6a2de65b17c7ec638facfafbb1914a94e19bbc8 \
+            'https://getplantlogic.com/wp-content/uploads/2024/03/20L-Square-pot_Item_1309020_bottom-view.jpg'
+
+          fetch_verify assets/media/PL52499DCB_PL_BLUEBERRY_40_LITER_ROUND_POT_WITH_U_GROOVES_PRODUCT_0409.jpg \
+            52499dcbc520776d4d30785201e0ddc1624b3ca53d9fc41a57c7ce0c63fd0fd9 \
+            'https://getplantlogic.com/wp-content/uploads/2024/03/40-liter-round-pot-with-U-grooves_Item_1308041-top-view.jpg'
+
+          fetch_verify assets/media/PL1744E3B3_PL_BLUEBERRY_NEW_ZEPHYR_V2_PRODUCT_0423.jpg \
+            1744e3b39c47386b4c9bedec81d35e7f807e5420c8a393344e50e01415eafcd0 \
+            'https://getplantlogic.com/wp-content/uploads/2020/11/ZEPHYR-V2-1301144-FRONTAL-2-1.jpg' \
+            'https://getplantlogic.com/wp-content/uploads/2020/11/ZEPHYR-V2-1301144-FRONTAL-2.jpg' \
+            'https://getplantlogic.com/wp-content/uploads/2024/04/ZEPHYR-V2-1301144-FRONTAL-2.jpg'
+
+          fetch_verify assets/media/PLD783AF60_PL_APPLICATION_LONG_CANE_PRODUCTION_SYSTEM_APPLICATION_0134.jpg \
+            d783af608e24d9685e662125d87542a61a61cdd07b48f6769543a2c0ec135da1 \
+            'https://getplantlogic.com/wp-content/uploads/2022/02/long-cane-production-system.jpg'
+
+          fetch_verify assets/media/PL32DEBDB8_PL_DRAINAGE_FOTO_COLECCION_DE_DRENAJE_PRODUCT_0450.jpg \
+            32debdb8bb32eb2db8af3eede4d04cd4b2b269de908426a89661d075890534db \
+            'https://getplantlogic.com/wp-content/uploads/2019/06/Foto-Coleccion-de-Drenaje-scaled.jpg' \
+            'https://getplantlogic.com/wp-content/uploads/2019/06/Foto-Coleccion-de-Drenaje.jpg'
+
+          fetch_verify assets/media/PLEFF1F111_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_PRODUCT_0535.jpg \
+            eff1f111e3b9cb7a33d0a6a2030be027908aaa1df421642c659fe40c4805037a \
+            'https://getplantlogic.com/wp-content/uploads/2024/03/25-Liter-Drainage-Collection-pot_Item_1304125.jpg'
+
+          base64 -d tools/tech-diagram.b64 > assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png
+          echo '2f33730b2cddb780cf9f97c2b066ee096775061f69b3b5b9e84a466bf692da2c  assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png' | sha256sum -c -
+
+      - name: Render review screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME" ]; then
+            echo 'Chrome/Chromium not found on runner' >&2
+            exit 1
+          fi
+          npm --silent install --no-save playwright-core@1.55.0
+          CHROME_PATH="$CHROME" node <<'NODE'
+          const { chromium } = require('playwright-core');
+          const path = require('path');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH,args:['--no-sandbox']});
+            const url='file://' + path.resolve('index.html');
+            const desktop=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+            await desktop.goto(url,{waitUntil:'load'});
+            await desktop.screenshot({path:'screenshots/desktop.png',fullPage:true});
+            await desktop.close();
+            const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true});
+            await mobile.goto(url,{waitUntil:'load'});
+            await mobile.screenshot({path:'screenshots/mobile.png',fullPage:true});
+            await mobile.close();
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+
+      - name: Static structure check
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f index.html
+          test -f css/site.css
+          test -f js/site.js
+          test -f assets/brand/bb610-garden.webp
+          test -f screenshots/desktop.png
+          test -f screenshots/mobile.png
+          test -f docs/MEDIA_MAP.md
+          test "$(cat CNAME)" = 'garden.bb610.com.ua'
+          ! find . -type f \( -iname '*.zip' -o -iname '*PlantLogic_GARDEN_READY_HANDOFF*' -o -iname '*Media_Master*' \) -print -quit | grep -q .
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          root=Path('.')
+          html=(root/'index.html').read_text(encoding='utf-8')
+          refs=re.findall(r'(?:src|href)=["\']([^"\']+)',html)
+          bad=[]
+          for r in refs:
+            if r.startswith(('#','http:','https:','mailto:','tel:','data:')): continue
+            if not (root/r).exists(): bad.append(r)
+          if bad:
+            raise SystemExit('Missing relative refs: '+', '.join(bad))
+          print('relative refs: PASS')
+          PY
+
+      - name: Commit master home
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .github tools .trigger-v06 .gitkeep node_modules package-lock.json package.json
+          git config user.name 'ladima75-source'
+          git config user.email 'ladima75@gmail.com'
+          git add -A
+          git commit -m 'Garden MASTER HOME v0.6'
+          git push origin HEAD:main
