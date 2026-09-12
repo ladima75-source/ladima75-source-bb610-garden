@@ -99,7 +99,7 @@ jobs:
             'https://getplantlogic.com/wp-content/uploads/2024/03/25-Liter-Drainage-Collection-pot_Item_1304125.jpg'
 
           base64 -d tools/tech-diagram.b64 > assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png
-          echo '2f33730b2cddb780cf9f97c2b066ee096775061f69b3b5b9e84a466bf692da2c  assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png' | sha256sum -c -
+          echo '6e403799bed21af3bca01bbd492d8f1ac8a971134b7da37c8578f1ee9f5e698b  assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png' | sha256sum -c -
 
       - name: Render review screenshots
         shell: bash
