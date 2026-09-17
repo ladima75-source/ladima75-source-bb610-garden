@@ -1,1 +1,0 @@
-Temporary deployment marker for Garden header logo visibility fix. Safe to remove in a later cleanup.

@@ -1,4 +1,4 @@
-(()=>{const link=document.createElement('link');link.rel='stylesheet';link.href='css/garden-logo-approved.css';document.head.appendChild(link);})();
+(()=>{const link=document.createElement('link');link.rel='stylesheet';link.href='css/garden-logo-approved.css?v=20260917-3';document.head.appendChild(link);})();
 document.addEventListener('DOMContentLoaded',()=>{
   const btn=document.querySelector('[data-menu-button]');
   const panel=document.querySelector('[data-mobile-nav]');
@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   const headerLogo=document.querySelector('.site-header [data-brand-logo]');
   if(headerLogo){
-    headerLogo.style.visibility='visible';
-    headerLogo.closest('.brand')?.classList.remove('is-missing');
-    headerLogo.src='assets/brand/bb610-garden-approved.webp';
+    headerLogo.onload=()=>{
+      headerLogo.style.visibility='visible';
+      headerLogo.closest('.brand')?.classList.remove('is-missing');
+    };
+    headerLogo.src='assets/brand/bb610-garden-approved.webp?v=20260917-3';
   }
 });
