@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://garden.bb610.com.ua/sitemap.xml
