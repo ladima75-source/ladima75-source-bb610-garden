@@ -29,10 +29,7 @@ jobs:
             f=$(find .src -name "$i.*" | head -1)
             ffmpeg -y -loglevel error -ss "$s" -i "$f" -t "$d" -an               -vf "scale='min(720,iw)':-2:flags=lanczos,fps=24"               -c:v libx264 -preset medium -crf 29 -pix_fmt yuv420p -movflags +faststart               "media/video/$n.mp4"
             ffmpeg -y -loglevel error -ss "$s" -i "$f" -t "$d" -an               -vf "scale='min(720,iw)':-2:flags=lanczos,fps=24"               -c:v libvpx-vp9 -b:v 0 -crf 39 -deadline good -cpu-used 3 -row-mt 1               "media/video/$n.webm"
-            mid=$(python3 - <<PY
-s=float("$s"); d=float("$d"); print(s+d/2)
-PY
-)
+            mid=$(python3 -c "print(float('$s') + float('$d')/2)")
             ffmpeg -y -loglevel error -ss "$mid" -i "$f" -frames:v 1               -vf "scale='min(960,iw)':-2:flags=lanczos"               -c:v libwebp -q:v 76 -compression_level 6               "media/video/$n-poster.webp"
           }
 
