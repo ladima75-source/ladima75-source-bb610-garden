@@ -10,5 +10,85 @@
   "rubus.jpg": "assets/media/PLD783AF60_PL_APPLICATION_LONG_CANE_PRODUCTION_SYSTEM_APPLICATION_0134.jpg",
   "drainage.jpg": "assets/media/PL32DEBDB8_PL_DRAINAGE_FOTO_COLECCION_DE_DRENAJE_PRODUCT_0450.jpg",
   "drawing.png": "assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png",
-  "featured.jpg": "assets/media/PLEFF1F111_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_PRODUCT_0535.jpg"
+  "featured.jpg": "assets/media/PLEFF1F111_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_PRODUCT_0535.jpg",
+  "video_loops": {
+    "blueberry": {
+      "source": "PlantLogic YouTube",
+      "source_id": "PzzXU4XxwdU",
+      "title": "MOST IMPORTANT features when choosing a pot for growing BLUEBERRIES",
+      "url": "https://www.youtube.com/watch?v=PzzXU4XxwdU",
+      "clip_start_seconds": 7,
+      "duration_seconds": 8,
+      "files": [
+        "media/video/blueberry.webm",
+        "media/video/blueberry.mp4",
+        "media/video/blueberry-poster.webp"
+      ]
+    },
+    "rubus-long-cane": {
+      "source": "PlantLogic YouTube",
+      "source_id": "BzqgDoNLHfE",
+      "title": "BEST Pots for RASPBERRY production in substrate",
+      "url": "https://www.youtube.com/watch?v=BzqgDoNLHfE",
+      "clip_start_seconds": 15,
+      "duration_seconds": 8,
+      "files": [
+        "media/video/rubus-long-cane.webm",
+        "media/video/rubus-long-cane.mp4",
+        "media/video/rubus-long-cane-poster.webp"
+      ]
+    },
+    "drainage-collection": {
+      "source": "PlantLogic YouTube",
+      "source_id": "BzqgDoNLHfE",
+      "title": "BEST Pots for RASPBERRY production in substrate",
+      "url": "https://www.youtube.com/watch?v=BzqgDoNLHfE",
+      "clip_start_seconds": 25,
+      "duration_seconds": 8,
+      "files": [
+        "media/video/drainage-collection.webm",
+        "media/video/drainage-collection.mp4",
+        "media/video/drainage-collection-poster.webp"
+      ]
+    },
+    "ugroove-irrigation": {
+      "source": "PlantLogic YouTube",
+      "source_id": "2tR1Wyt3JA4",
+      "title": "Plantlogic | New 40L Square Pot with U-grooves & Side holes",
+      "url": "https://www.youtube.com/watch?v=2tR1Wyt3JA4",
+      "clip_start_seconds": 7,
+      "duration_seconds": 8,
+      "files": [
+        "media/video/ugroove-irrigation.webm",
+        "media/video/ugroove-irrigation.mp4",
+        "media/video/ugroove-irrigation-poster.webp"
+      ]
+    },
+    "substrate-systems": {
+      "source": "PlantLogic YouTube",
+      "source_id": "s5TMQ409zio",
+      "title": "Plantlogic | Kratos Substrate Slab Spacer",
+      "url": "https://www.youtube.com/watch?v=s5TMQ409zio",
+      "clip_start_seconds": 0,
+      "duration_seconds": 8,
+      "files": [
+        "media/video/substrate-systems.webm",
+        "media/video/substrate-systems.mp4",
+        "media/video/substrate-systems-poster.webp"
+      ]
+    },
+    "monitoring": {
+      "source": "PlantLogic YouTube",
+      "source_id": "czsBj46j6oo",
+      "title": "Plantlogic | LDC System | pH sensor installation",
+      "url": "https://www.youtube.com/watch?v=czsBj46j6oo",
+      "clip_start_seconds": 31,
+      "duration_seconds": 8,
+      "files": [
+        "media/video/monitoring.webm",
+        "media/video/monitoring.mp4",
+        "media/video/monitoring-poster.webp"
+      ]
+    }
+  }
 }
