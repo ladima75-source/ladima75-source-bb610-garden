@@ -1,0 +1,131 @@
+name: Refine PlantLogic Video Cuts
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/refine-plantlogic-video-cuts.yml"]
+permissions:
+  contents: write
+jobs:
+  refine:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install media tools
+        run: python3 -m pip install --quiet --upgrade yt-dlp
+      - name: Build improved official PlantLogic loops
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .src media/video screenshots
+          for id in dvMo16c8MJM BzqgDoNLHfE 2tR1Wyt3JA4 EmNU--ZFwUE czsBj46j6oo; do
+            python3 -m yt_dlp --no-playlist -f "bv*[height<=720]/b[height<=720]" -o ".src/$id.%(ext)s" "https://www.youtube.com/watch?v=$id"
+          done
+
+          mk () {
+            n="$1"; i="$2"; s="$3"; d="$4"
+            f=$(find .src -name "$i.*" | head -1)
+            ffmpeg -y -loglevel error -ss "$s" -i "$f" -t "$d" -an               -vf "scale='min(720,iw)':-2:flags=lanczos,fps=24"               -c:v libx264 -preset medium -crf 29 -pix_fmt yuv420p -movflags +faststart               "media/video/$n.mp4"
+            ffmpeg -y -loglevel error -ss "$s" -i "$f" -t "$d" -an               -vf "scale='min(720,iw)':-2:flags=lanczos,fps=24"               -c:v libvpx-vp9 -b:v 0 -crf 39 -deadline good -cpu-used 3 -row-mt 1               "media/video/$n.webm"
+            mid=$(python3 - <<PY
+s=float("$s"); d=float("$d"); print(s+d/2)
+PY
+)
+            ffmpeg -y -loglevel error -ss "$mid" -i "$f" -frames:v 1               -vf "scale='min(960,iw)':-2:flags=lanczos"               -c:v libwebp -q:v 76 -compression_level 6               "media/video/$n-poster.webp"
+          }
+
+          # Application-first cuts. Avoid intros, talking-head fragments and transition frames.
+          mk blueberry          dvMo16c8MJM 39 9
+          mk rubus-long-cane    BzqgDoNLHfE 17 7
+          mk drainage-collection BzqgDoNLHfE 31 9
+          mk ugroove-irrigation 2tR1Wyt3JA4 15 8
+          mk substrate-systems  EmNU--ZFwUE 8 8
+          mk monitoring         czsBj46j6oo 22 8
+
+      - name: Update source register
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          p=pathlib.Path("media/sources.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+          specs={
+            "blueberry":{
+              "source_id":"dvMo16c8MJM",
+              "title":"Son estas las Macetas del FUTURO? Conoce las Macetas para Cultivo de BERRIES de Plantlogic",
+              "url":"https://www.youtube.com/watch?v=dvMo16c8MJM",
+              "clip_start_seconds":39,"duration_seconds":9,
+              "selection_note":"Application sequence: commercial blueberry rows and protected-crop tunnel; no interview fragment."
+            },
+            "rubus-long-cane":{
+              "source_id":"BzqgDoNLHfE",
+              "title":"BEST Pots for RASPBERRY production in substrate",
+              "url":"https://www.youtube.com/watch?v=BzqgDoNLHfE",
+              "clip_start_seconds":17,"duration_seconds":7,
+              "selection_note":"Crop-row application sequence emphasizing raspberry production rather than presenters."
+            },
+            "drainage-collection":{
+              "source_id":"BzqgDoNLHfE",
+              "title":"BEST Pots for RASPBERRY production in substrate",
+              "url":"https://www.youtube.com/watch?v=BzqgDoNLHfE",
+              "clip_start_seconds":31,"duration_seconds":9,
+              "selection_note":"On-farm Drainage Collection pot handling leading into visible root-zone inspection."
+            },
+            "ugroove-irrigation":{
+              "source_id":"2tR1Wyt3JA4",
+              "title":"Plantlogic | New 40L Square Pot with U-grooves & Side holes",
+              "url":"https://www.youtube.com/watch?v=2tR1Wyt3JA4",
+              "clip_start_seconds":15,"duration_seconds":8,
+              "selection_note":"Close application views of U-grooves securing irrigation lines and filled container."
+            },
+            "substrate-systems":{
+              "source_id":"EmNU--ZFwUE",
+              "title":"Plantlogic | Rivus 2-in-1 Slab Spacer",
+              "url":"https://www.youtube.com/watch?v=EmNU--ZFwUE",
+              "clip_start_seconds":8,"duration_seconds":8,
+              "selection_note":"Product/application close-ups of slab spacer beneath substrate system."
+            },
+            "monitoring":{
+              "source_id":"czsBj46j6oo",
+              "title":"Plantlogic | LDC System | pH sensor installation",
+              "url":"https://www.youtube.com/watch?v=czsBj46j6oo",
+              "clip_start_seconds":22,"duration_seconds":8,
+              "selection_note":"Clear close-up of monitoring hardware and sensor installation."
+            }
+          }
+          for k,v in specs.items():
+              v["source"]="PlantLogic YouTube"
+              v["files"]=[
+                  f"media/video/{k}.webm",
+                  f"media/video/{k}.mp4",
+                  f"media/video/{k}-poster.webp"
+              ]
+          d["video_loops"]=specs
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          PY
+
+      - name: Render review screenshots
+        shell: bash
+        run: |
+          python3 -m http.server 4173 >/tmp/garden-http.log 2>&1 &
+          sleep 2
+          CHROME=$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)
+          if [ -z "$CHROME" ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y chromium-browser >/dev/null 2>&1 || sudo apt-get install -y chromium >/dev/null 2>&1
+            CHROME=$(command -v chromium || command -v chromium-browser)
+          fi
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1050 --virtual-time-budget=6500 --screenshot="screenshots/video-blueberry.png" "http://127.0.0.1:4173/#blueberry"
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1050 --virtual-time-budget=6500 --screenshot="screenshots/video-drainage.png" "http://127.0.0.1:4173/#drainage"
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1050 --virtual-time-budget=6500 --screenshot="screenshots/video-monitoring.png" "http://127.0.0.1:4173/#lysimeter"
+
+      - name: Commit refined cuts
+        run: |
+          rm -rf .src
+          rm -f .github/workflows/refine-plantlogic-video-cuts.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Refine PlantLogic video cuts"
+          git push
