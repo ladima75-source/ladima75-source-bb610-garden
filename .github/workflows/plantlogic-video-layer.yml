@@ -1,0 +1,72 @@
+name: PlantLogic Video Storytelling
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/plantlogic-video-layer.yml"]
+permissions: {contents: write}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: python3 -m pip install --quiet --upgrade yt-dlp
+      - name: Build media
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .src media/video screenshots
+          for id in PzzXU4XxwdU BzqgDoNLHfE 2tR1Wyt3JA4 s5TMQ409zio czsBj46j6oo; do
+            python3 -m yt_dlp --no-playlist -f "bv*[height<=720]/b[height<=720]" -o ".src/$id.%(ext)s" "https://www.youtube.com/watch?v=$id"
+          done
+          mk(){ n=$1;i=$2;s=$3;d=$4; f=$(find .src -name "$i.*"|head -1); ffmpeg -y -loglevel error -ss "$s" -i "$f" -t "$d" -vf "scale='min(960,iw)':-2,fps=24" -an -c:v libx264 -crf 27 -preset medium -pix_fmt yuv420p -movflags +faststart "media/video/$n.mp4"; ffmpeg -y -loglevel error -ss "$s" -i "$f" -t "$d" -vf "scale='min(960,iw)':-2,fps=24" -an -c:v libvpx-vp9 -b:v 0 -crf 38 -deadline good -cpu-used 4 "media/video/$n.webm"; p=$((s+1)); ffmpeg -y -loglevel error -ss "$p" -i "$f" -frames:v 1 -vf "scale='min(960,iw)':-2" -c:v libwebp -quality 78 "media/video/$n-poster.webp"; }
+          mk blueberry PzzXU4XxwdU 7 8
+          mk rubus-long-cane BzqgDoNLHfE 15 8
+          mk drainage-collection BzqgDoNLHfE 25 8
+          mk ugroove-irrigation 2tR1Wyt3JA4 7 8
+          mk substrate-systems s5TMQ409zio 0 8
+          mk monitoring czsBj46j6oo 31 8
+      - name: Add code and sources
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          p=pathlib.Path("media/sources.json"); d=json.loads(p.read_text()) if p.exists() else {}
+          specs={
+          "blueberry":["PzzXU4XxwdU","MOST IMPORTANT features when choosing a pot for growing BLUEBERRIES",7],
+          "rubus-long-cane":["BzqgDoNLHfE","BEST Pots for RASPBERRY production in substrate",15],
+          "drainage-collection":["BzqgDoNLHfE","BEST Pots for RASPBERRY production in substrate",25],
+          "ugroove-irrigation":["2tR1Wyt3JA4","Plantlogic | New 40L Square Pot with U-grooves & Side holes",7],
+          "substrate-systems":["s5TMQ409zio","Plantlogic | Kratos Substrate Slab Spacer",0],
+          "monitoring":["czsBj46j6oo","Plantlogic | LDC System | pH sensor installation",31]}
+          d["video_loops"]={k:{"source":"PlantLogic YouTube","source_id":v[0],"title":v[1],"url":"https://www.youtube.com/watch?v="+v[0],"clip_start_seconds":v[2],"duration_seconds":8,"files":["media/video/"+k+".webm","media/video/"+k+".mp4","media/video/"+k+"-poster.webp"]} for k,v in specs.items()}
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n")
+          PY
+          cat > assets/video-storytelling.js <<'JS'
+          (()=>{const a=[["blueberry","#blueberry .crop-photo","r"],["rubus-long-cane","#rubus .rubus-photo","r"],["drainage-collection","#drainage .drainage-photo","r"],["ugroove-irrigation","#plantlogic .stage-image-2","r"],["substrate-systems","#offer .offer-grid","a"],["monitoring","#lysimeter .monitoring-diagram","b"]];const make=(k)=>{let f=document.createElement("figure");f.className="pl-video";f.dataset.videoStory=k;let v=document.createElement("video");v.muted=true;v.autoplay=true;v.loop=true;v.playsInline=true;v.preload="none";v.poster="/media/video/"+k+"-poster.webp";for(const x of [["webm","video/webm"],["mp4","video/mp4"]]){let s=document.createElement("source");s.type=x[1];s.dataset.src="/media/video/"+k+"."+x[0];v.append(s)}f.append(v);return f};const io=new IntersectionObserver(es=>es.forEach(e=>{let v=e.target;if(e.isIntersecting){if(!v.dataset.h){v.querySelectorAll("source").forEach(s=>s.src=s.dataset.src);v.dataset.h=1;v.load()}if(!matchMedia("(prefers-reduced-motion: reduce)").matches)v.play().catch(()=>{})}else v.pause()}),{rootMargin:"320px"});function mount(){let n=0;a.forEach(x=>{if(document.querySelector('[data-video-story="'+x[0]+'"]'))return n++;let t=document.querySelector(x[1]);if(!t)return;let f=make(x[0]);if(x[2]=="r"){t.querySelectorAll("img").forEach(i=>i.style.display="none");t.querySelectorAll(".photo-pill,.drainage-flow,.image-coordinate,.image-tag").forEach(i=>i.style.display="none");t.prepend(f);t.classList.add("pl-has-video")}else x[2]=="a"?t.after(f):t.before(f);io.observe(f.querySelector("video"));n++});return n===a.length}let q=0,z=setInterval(()=>{if(mount()||++q>60)clearInterval(z)},180)})();
+          JS
+          cat > assets/video-storytelling.css <<'CSS'
+          .pl-video{margin:0;position:relative;overflow:hidden;background:#10261d;border-radius:5px;min-height:260px}.pl-video video{display:block;width:100%;height:100%;min-height:260px;object-fit:cover}.pl-has-video{position:relative}.pl-has-video>.pl-video{position:absolute;inset:0;z-index:0;border-radius:inherit}.pl-has-video>.pl-video video{min-height:100%}#offer .pl-video,#lysimeter .pl-video{margin:34px 0;aspect-ratio:16/7}@media(max-width:760px){.pl-video,.pl-video video{min-height:220px}#offer .pl-video,#lysimeter .pl-video{aspect-ratio:4/3}}
+          CSS
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path("index.html"); s=p.read_text()
+          if "video-storytelling.css" not in s:s=s.replace("</head>",'<link rel="stylesheet" href="/assets/video-storytelling.css">\n</head>')
+          if "video-storytelling.js" not in s:s=s.replace("</body>",'<script defer src="/assets/video-storytelling.js"></script>\n</body>')
+          p.write_text(s)
+          PY
+      - name: Screenshots
+        run: |
+          python3 -m http.server 4173 >/tmp/http.log 2>&1 & sleep 2
+          C=$(command -v google-chrome || command -v chromium || true)
+          if [ -n "$C" ]; then
+            for s in blueberry drainage lysimeter; do "$C" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1050 --virtual-time-budget=5000 --screenshot="screenshots/video-$s.png" "http://127.0.0.1:4173/#$s"; done
+          fi
+      - name: Commit
+        run: |
+          rm -rf .src
+          rm -f .github/workflows/plantlogic-video-layer.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add PlantLogic video storytelling layer"
+          git push
