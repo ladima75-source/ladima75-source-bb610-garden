@@ -234,6 +234,167 @@
     return true;
   };
 
+  const makeFamilyEngineering = () => {
+    if (document.querySelector("#family-engineering")) return true;
+    const target = document.querySelector("#geometry");
+    if (!target) return false;
+
+    const section = document.createElement("section");
+    section.className = "family-engineering section";
+    section.id = "family-engineering";
+    section.innerHTML = `
+      <div class="wrap">
+        <div class="family-engineering-head">
+          <div>
+            <span class="tech-eyebrow">КОНСТРУКТИВНІ СІМЕЙСТВА / ЯК ОБИРАТИ</span>
+            <h2>Форма контейнера — це інженерний вибір, а не дизайн</h2>
+          </div>
+          <p>
+            Однаковий об’єм ще не означає однакову поведінку кореневої зони.
+            Вибір починається з субстрату, інтенсивності поливу, поверхні встановлення,
+            щільності посадки, способу прокладання поливної труби та необхідності контролю дренажу.
+          </p>
+        </div>
+
+        <div class="family-selector" role="list" aria-label="Порівняння конструктивних сімейств PlantLogic">
+          <article class="family-card" role="listitem">
+            <div class="family-card-media">
+              <img src="/media/round.webp" alt="Круглий контейнер PlantLogic" loading="lazy">
+              <span>ROUND</span>
+            </div>
+            <div class="family-card-copy">
+              <div class="family-card-label">БАЗОВА ЗАДАЧА</div>
+              <h3>Стабільний водно-повітряний режим</h3>
+              <p>Кругла геометрія PlantLogic поєднується з широкими ніжками, пірамідальним дном та центральною аерацією. Виробник окремо позиціонує Round для збалансованого поливу, у тому числі з високопоточними субстратами на кшталт крупного coco.</p>
+              <dl>
+                <div><dt>Обирати, коли</dt><dd>пріоритет — універсальна коренева зона та стійкість на м’якій поверхні.</dd></div>
+                <div><dt>Працює через</dt><dd>крайовий дренаж + центральний O₂ + широкі опори.</dd></div>
+                <div><dt>Не головна задача</dt><dd>максимальна щільність розміщення контейнерів у ряду.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="family-card" role="listitem">
+            <div class="family-card-media">
+              <img src="/media/square.webp" alt="Квадратний контейнер PlantLogic" loading="lazy">
+              <span>SQUARE</span>
+            </div>
+            <div class="family-card-copy">
+              <div class="family-card-label">БАЗОВА ЗАДАЧА</div>
+              <h3>Більша щільність використання площі</h3>
+              <p>Square зберігає ту саму базову логіку дренажу й аерації, але квадратний план краще використовує доступну площу. PlantLogic прямо позиціонує цю геометрію для високої щільності розміщення.</p>
+              <dl>
+                <div><dt>Обирати, коли</dt><dd>важлива щільність розміщення, логістика ряду та прогнозована геометрія посадки.</dd></div>
+                <div><dt>Працює через</dt><dd>пірамідальне дно, крайовий вихід води та центральні недренуючі отвори.</dd></div>
+                <div><dt>Особливість</dt><dd>у 25–30 л моделях центральна аерація реалізована десятками отворів у зоні дна.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="family-card family-card-accent" role="listitem">
+            <div class="family-card-media">
+              <img src="/media/ugroove.webp" alt="Контейнер PlantLogic з U-пазами" loading="lazy">
+              <span>U-GROOVE</span>
+            </div>
+            <div class="family-card-copy">
+              <div class="family-card-label">БАЗОВА ЗАДАЧА</div>
+              <h3>Інтегрувати полив у конструкцію контейнера</h3>
+              <p>U-Groove — це не інший принцип кореневої зони, а надбудова над Round або Square: поливна труба отримує фіксоване посадочне місце, щоб її положення було повторюваним уздовж ряду.</p>
+              <dl>
+                <div><dt>Обирати, коли</dt><dd>магістраль поливу проходить безпосередньо через ряд контейнерів і важлива стабільність її положення.</dd></div>
+                <div><dt>Працює через</dt><dd>U-пази під діаметр труби; в окремих моделях доступні 16 або 20 мм.</dd></div>
+                <div><dt>Практичний ефект</dt><dd>менше випадкового зміщення труби, простіший монтаж та обслуговування.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="family-card family-card-dark" role="listitem">
+            <div class="family-card-media">
+              <img src="/media/zephyr.webp" alt="Zephyr V2 PlantLogic" loading="lazy">
+              <span>ZEPHYR V2</span>
+            </div>
+            <div class="family-card-copy">
+              <div class="family-card-label">БАЗОВА ЗАДАЧА</div>
+              <h3>Максимально відокремити кореневу зону від поверхні</h3>
+              <p>Zephyr V2 піднімає кореневу зону на 70 мм, використовує широку опорну базу та окрему нижню платформу з посиленим з’єднанням зі стінками. Виробник заявляє більш ніж п’ятикратне збільшення опорної площі порівняно з типовими горщиками на ніжках.</p>
+              <dl>
+                <div><dt>Обирати, коли</dt><dd>критичні ізоляція від ґрунту, дренажний просвіт, стійкість і сервісний доступ під контейнером.</dd></div>
+                <div><dt>Працює через</dt><dd>70-мм ніжки, широку базу, gear-slot з’єднання та вузьку дренажну щілину.</dd></div>
+                <div><dt>Платформа</dt><dd>25 / 30 / 40 л в одній конструктивній концепції.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="family-card family-card-wide" role="listitem">
+            <div class="family-card-media">
+              <img src="/media/featured.webp" alt="Drainage Collection PlantLogic" loading="lazy">
+              <span>DRAINAGE COLLECTION</span>
+            </div>
+            <div class="family-card-copy">
+              <div class="family-card-label">БАЗОВА ЗАДАЧА</div>
+              <h3>Перетворити дренаж у керований потік</h3>
+              <p>Drainage Collection змінює саму архітектуру відведення води: замість випадкового стоку під горщик весь дренаж спрямовується у жолоб або окремий контур. Це дає можливість контролювати вологість у тунелі, відбирати пробу та організовувати повторне використання дренажу там, де це передбачено технологією.</p>
+              <dl>
+                <div><dt>Обирати, коли</dt><dd>потрібен 100% збір стоку, контроль вологості під конструкцією або аналітика OUT-потоку.</dd></div>
+                <div><dt>Працює через</dt><dd>центральний збірний вихід, високі ніжки та бічну аерацію кореневої зони.</dd></div>
+                <div><dt>Приклад #1304125</dt><dd>25 л, 7 центральних дренажних виходів, 38 бічних повітряних отворів, ніжки 71.7 мм.</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <div class="family-decision">
+          <div class="family-decision-title">
+            <span class="tech-eyebrow">ШВИДКА ЛОГІКА ВИБОРУ</span>
+            <h3>Починаємо не з літрів</h3>
+          </div>
+          <div class="family-decision-flow">
+            <div><b>01</b><strong>Субстрат</strong><span>водоутримання / швидкість дренажу</span></div>
+            <i>→</i>
+            <div><b>02</b><strong>Полив</strong><span>частота / витрата / положення труби</span></div>
+            <i>→</i>
+            <div><b>03</b><strong>Поверхня</strong><span>ґрунт / плівка / жолоб / стіл</span></div>
+            <i>→</i>
+            <div><b>04</b><strong>Дренаж</strong><span>вільний / збір / вимірювання</span></div>
+            <i>→</i>
+            <div><b>05</b><strong>Геометрія</strong><span>Round / Square / U / Zephyr / Collection</span></div>
+          </div>
+        </div>
+
+        <div class="family-special-note">
+          <strong>Окремий випадок: V-Rib</strong>
+          <p>Коли задача — стримати спіральний ріст коренів уздовж стінки, PlantLogic має 30-літровий Round V-Rib: ребра на стінках змінюють напрямок росту коренів, а базова дренажна й аераційна логіка зберігається.</p>
+        </div>
+      </div>
+    `;
+    target.after(section);
+    return true;
+  };
+
+  const rewriteFormatExamples = () => {
+    const heading = document.querySelector("#formats");
+    if (heading && heading.dataset.technicalDepth !== VERSION) {
+      heading.dataset.technicalDepth = VERSION;
+      const first = heading.querySelector(".eyebrow");
+      if (first) first.textContent = "ВІЗУАЛЬНІ ПРИКЛАДИ КОНСТРУКЦІЙ";
+      const last = heading.querySelector("span:last-child");
+      if (last) last.textContent = "Не каталог — приклади геометрії";
+    }
+
+    const copyByCode = {
+      "#1308020": "Round · базова геометрія для керованого дренажу та центральної аерації.",
+      "#1309020": "Square · та сама коренева логіка з акцентом на щільність розміщення.",
+      "#1308041": "U-Groove · інтегроване позиціонування поливної труби у геометрії контейнера.",
+      "#1301144": "Zephyr V2 · 70-мм відрив від поверхні та окрема посилена опорна база."
+    };
+
+    document.querySelectorAll("#formats + .product-grid .product-card, #formats ~ .product-grid .product-card").forEach((card) => {
+      const code = [...card.querySelectorAll("span")].map((n) => n.textContent.trim()).find((v) => copyByCode[v]);
+      const p = card.querySelector(":scope > p");
+      if (code && p) p.textContent = copyByCode[code];
+    });
+  };
+
   const makeZephyrDeep = () => {
     if (document.querySelector("#zephyr-engineering")) return true;
     const formats = document.querySelector("#formats");
@@ -427,6 +588,8 @@
     makeTechnicalCore();
     makeRootZone();
     makeGeometry();
+    makeFamilyEngineering();
+    rewriteFormatExamples();
     makeZephyrDeep();
     makeDrainageDeep();
     makeMonitoringDeep();
