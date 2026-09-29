@@ -77,7 +77,20 @@
   const rewriteNavigation = () => {
     document.querySelectorAll("a").forEach((link) => {
       const label = link.textContent.trim();
-      if (label === "Технологія") link.href = "#technical-core";
+      if (label === "Технологія") {
+        link.href = "#technical-core";
+      } else if (label === "Продукти") {
+        link.textContent = "Конструкції";
+        link.href = "#family-engineering";
+      } else if (label === "Приклади") {
+        link.textContent = "Коренева зона";
+        link.href = "#root-zone";
+      } else if (label === "Контроль") {
+        link.textContent = "Моніторинг";
+        link.href = "#system-interfaces";
+      } else if (label === "Культури") {
+        link.href = "#crop-engineering";
+      }
     });
   };
 
