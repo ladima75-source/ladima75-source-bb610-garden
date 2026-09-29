@@ -45,3 +45,13 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Cache-bust final assets
 - [x] Syntax validation
 - [ ] GitHub Pages deployment SUCCESS
+
+
+## Stage 1A — Upper-half visual discipline
+- [x] Remove duplicate culture chooser cards
+- [x] Keep one editorial crop-story block
+- [x] Reduce hero H1 and hero vertical scale
+- [x] Simplify hero overlay by removing product promo card
+- [x] Rebalance crop mosaic into one lead image + supporting stories
+- [x] Reduce corporate video heading scale
+- [~] Publish and verify Pages
