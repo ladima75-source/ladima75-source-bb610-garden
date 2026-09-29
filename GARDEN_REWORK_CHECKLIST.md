@@ -65,7 +65,7 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Use official Zephyr V2 technical plate
 - [x] Replace synthetic root-zone drawing with official media
 - [x] Remove duplicated root-zone proof strip
-- [~] Publish and verify Pages
+- [x] Publish and verify Pages
 
 
 ## Stage 3A — Video integration
