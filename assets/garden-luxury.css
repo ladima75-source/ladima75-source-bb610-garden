@@ -377,3 +377,29 @@ html,body{max-width:100%;overflow-x:hidden}
   .root-zone-proof-media{grid-template-columns:1fr;min-height:0}
   .root-zone-proof-media figure{min-height:300px}
 }
+
+
+/* STAGE 3 — VIDEO AS TECHNICAL EVIDENCE */
+.proof-principle{position:relative}
+.proof-motion-inset{position:absolute;right:14px;bottom:14px;width:min(46%,360px);z-index:4;padding:6px;background:rgba(255,255,255,.95);border-radius:8px;box-shadow:0 18px 45px rgba(7,23,16,.18)}
+.proof-motion-inset .plantlogic-video-story{width:100%;aspect-ratio:16/9;border-radius:5px}
+.proof-motion-inset .plantlogic-video-story figcaption{display:none}
+.proof-motion-inset .video-play-button{width:46px;height:46px;right:8px;bottom:8px}
+.proof-motion-label{display:block;padding:4px 4px 8px;color:#4f6256;font-size:8px;font-weight:850;letter-spacing:.13em}
+.proof-principle:nth-child(3)>div:not(.proof-motion-inset),
+.proof-principle:nth-child(4)>div:not(.proof-motion-inset){padding-bottom:150px}
+
+#corporate-video .plantlogic-video-story{aspect-ratio:16/7.5!important}
+#corporate-video .video-band-head{margin-bottom:24px!important}
+#strawberry .proof-higrow{grid-column:1/-1;margin-top:12px}
+#strawberry .proof-higrow img{max-height:520px;object-fit:contain}
+
+@media(max-width:900px){
+  .proof-motion-inset{position:relative;right:auto;bottom:auto;width:auto;margin:0 18px 18px}
+  .proof-principle:nth-child(3)>div:not(.proof-motion-inset),
+  .proof-principle:nth-child(4)>div:not(.proof-motion-inset){padding-bottom:24px}
+}
+@media(max-width:760px){
+  #corporate-video .plantlogic-video-story{aspect-ratio:16/9!important}
+  .proof-motion-inset{margin:0 12px 12px;padding:5px}
+}
