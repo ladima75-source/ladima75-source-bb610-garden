@@ -286,6 +286,66 @@
     return true;
   };
 
+  const cleanLegacySections = () => {
+    ["#offer","#about","#plantlogic","#monitoring-engineering","#crop-engineering"].forEach((selector) => {
+      const node = document.querySelector(selector);
+      if (node) node.remove();
+    });
+
+    const scrollButton = document.querySelector(".hero .scroll-button");
+    if (scrollButton) scrollButton.href = "#crops";
+
+    const fieldHead = document.querySelector("#field-stories .lux-field-head h2");
+    if (fieldHead) fieldHead.textContent = "PlantLogic у реальних виробничих системах.";
+
+    const rootTitle = document.querySelector("#root-evidence .lux-root-copy h2");
+    if (rootTitle) rootTitle.textContent = "Що можна оцінити по фактичній кореневій масі.";
+
+    const videoTitle = document.querySelector("#corporate-video .video-band-head h2");
+    if (videoTitle) videoTitle.textContent = "Технологічні вузли PlantLogic у русі.";
+
+    const drainageTitle = document.querySelector("#drainage .section-heading h2");
+    if (drainageTitle) drainageTitle.innerHTML = "Збір і контроль<br><span>дренажного потоку.</span>";
+    const drainageText = document.querySelector("#drainage .section-heading p");
+    if (drainageText) drainageText.textContent = "Показуємо шлях води після проходження через субстрат: від виходу з контейнера до організованого збору та контрольної точки OUT.";
+
+    const lysimeterTitle = document.querySelector("#lysimeter .section-heading h2");
+    if (lysimeterTitle) lysimeterTitle.innerHTML = "Контрольна проба<br><span class=\"soft\">IN / OUT.</span>";
+    const lysimeterText = document.querySelector("#lysimeter .section-heading p");
+    if (lysimeterText) lysimeterText.textContent = "Лізиметр потрібен для репрезентативного збору дренажу; pH та EC вимірюються зовнішніми приладами.";
+
+    const rubusTitle = document.querySelector("#rubus h3");
+    if (rubusTitle) rubusTitle.innerHTML = "Production і Long Cane:<br>різні виробничі сценарії.";
+    const rubusLead = document.querySelector("#rubus .rubus-copy > p");
+    if (rubusLead) rubusLead.textContent = "Для Rubus геометрію контейнера розглядаємо разом із щільністю ряду, cold storage, стабілізацією пагонів і дренажем.";
+
+    const blueberry = document.querySelector("#blueberry");
+    if (blueberry) {
+      blueberry.classList.add("lux-motion-proof");
+      blueberry.querySelectorAll(":scope > .section-index,:scope > .section-heading,.crop-feature").forEach((node) => node.remove());
+      const heading = blueberry.querySelector(".catalog-heading");
+      if (heading) {
+        const first = heading.querySelector(".eyebrow");
+        const last = heading.querySelector("span:last-child");
+        if (first) first.textContent = "MOTION PROOF / CONSTRUCTION";
+        if (last) last.textContent = "U-Groove / Zephyr V2";
+      }
+
+      const cards = [...blueberry.querySelectorAll(".product-card")];
+      const videoCards = cards.filter((card) => card.classList.contains("has-product-video-story"));
+      if (videoCards.length >= 2) {
+        cards.forEach((card) => {
+          const wrapper = card.parentElement;
+          if (!card.classList.contains("has-product-video-story") && wrapper) wrapper.classList.add("lux-hide-card");
+        });
+        const grid = blueberry.querySelector(".product-grid");
+        if (grid) grid.classList.add("lux-video-proof-grid");
+      }
+    }
+
+    return true;
+  };
+
   const reveal = () => {
     const nodes = document.querySelectorAll(".lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram");
     if (!("IntersectionObserver" in window)) {
@@ -315,6 +375,7 @@
     decorateZephyr();
     makeVisualRail();
     makeTechnicalProofs();
+    cleanLegacySections();
     reveal();
   };
 
