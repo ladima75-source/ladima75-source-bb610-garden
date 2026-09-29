@@ -4,7 +4,7 @@
   const products = [
     {
       no: "1308020",
-      name: "Горщик 20 л Round",
+      name: "Горщик для лохини 20 л круглий на стандартних ніжках",
       subtitle: "Круглий горщик для лохини",
       application: "blueberry",
       applicationLabel: "Лохина",
@@ -26,7 +26,7 @@
     },
     {
       no: "1309020",
-      name: "Горщик 20 л Square",
+      name: "Горщик для лохини 20 л квадратний на стандартних ніжках",
       subtitle: "Квадратний горщик для лохини",
       application: "blueberry",
       applicationLabel: "Лохина",
@@ -48,7 +48,7 @@
     },
     {
       no: "1308026",
-      name: "Горщик 25 л Round U-Groove",
+      name: "Горщик для лохини 25 л круглий з U-пазами",
       subtitle: "Круглий горщик з U-пазами",
       application: "blueberry",
       applicationLabel: "Лохина",
@@ -69,32 +69,77 @@
       source: "https://getplantlogic.com/portfolio-items/25-liter-round-pot-with-u-grooves/"
     },
     {
-      no: "1301144 / 1301153 / 1301143",
-      hashNo: "zephyr-v2",
-      name: "Zephyr V2",
-      subtitle: "25 / 30 / 40 л",
+      no: "1301144",
+      name: "Горщик для лохини 25 л Zephyr V2 на ніжках 7 см",
+      subtitle: "Zephyr V2 · 25 л",
       application: "blueberry",
       applicationLabel: "Лохина",
       family: "Zephyr V2",
       image: "/media/products/zephyr-v2.jpg?v=" + VERSION,
       diagram: "/media/lux/zephyr-v2-diagram.jpg?v=" + VERSION,
-      volume: "25 / 30 / 40 л",
-      dimensions: "сімейство V2",
+      volume: "25 л",
+      dimensions: "див. Tech Sheet",
       legs: "70 мм",
       focus: "70-мм ніжки + широка окрема база",
-      summary: "Окрема модульна платформа PlantLogic з найбільшим відривом кореневої зони від поверхні та посиленою опорною базою.",
+      summary: "25-літрова canonical модель Zephyr V2 з високим відривом кореневої зони від поверхні та окремою посиленою базою.",
       facts: [
+        "Product #1301144 у Product Master V5.",
         "Висота ніжок — 70 мм.",
-        "25 л: Product #1301144 · 30 л: #1301153 · 40 л: #1301143.",
-        "Широка база має значно більшу опорну площу; PlantLogic заявляє понад 5× порівняно з типовими горщиками на ніжках.",
-        "Вузька дренажна щілина близько 3 мм допомагає утримувати субстрат.",
-        "Gear-slot з’єднання посилює контакт бази зі стінками; конструкція розрахована на швидке складання."
+        "Широка база збільшує опорну площу; це характеристика конструкції Zephyr V2.",
+        "Вузька дренажна щілина допомагає утримувати субстрат.",
+        "Gear-slot з’єднання посилює контакт бази зі стінками."
+      ],
+      source: "https://getplantlogic.com/portfolio-items/zephyr-v2/"
+    },
+    {
+      no: "1301153",
+      name: "Горщик для лохини 30 л Zephyr V2 на ніжках 7 см",
+      subtitle: "Zephyr V2 · 30 л",
+      application: "blueberry",
+      applicationLabel: "Лохина",
+      family: "Zephyr V2",
+      image: "/media/products/zephyr-v2.jpg?v=" + VERSION,
+      diagram: "/media/lux/zephyr-v2-diagram.jpg?v=" + VERSION,
+      volume: "30 л",
+      dimensions: "див. Tech Sheet",
+      legs: "70 мм",
+      focus: "70-мм ніжки + широка окрема база",
+      summary: "30-літрова canonical модель Zephyr V2; назва і Product # синхронізовані з BB610 Market Product Master V5.",
+      facts: [
+        "Product #1301153 у Product Master V5.",
+        "Висота ніжок — 70 мм.",
+        "Конструкція належить до єдиної платформи Zephyr V2.",
+        "Широка окрема база збільшує відрив кореневої зони від поверхні.",
+        "Для картки використовується затверджене сімейне фото Zephyr V2."
+      ],
+      source: "https://getplantlogic.com/portfolio-items/zephyr-v2/"
+    },
+    {
+      no: "1301143",
+      name: "Горщик для лохини 40 л Zephyr V2 на ніжках 7 см",
+      subtitle: "Zephyr V2 · 40 л",
+      application: "blueberry",
+      applicationLabel: "Лохина",
+      family: "Zephyr V2",
+      image: "/media/products/zephyr-v2.jpg?v=" + VERSION,
+      diagram: "/media/lux/zephyr-v2-diagram.jpg?v=" + VERSION,
+      volume: "40 л",
+      dimensions: "див. Tech Sheet",
+      legs: "70 мм",
+      focus: "70-мм ніжки + широка окрема база",
+      summary: "40-літрова canonical модель Zephyr V2; назва і Product # синхронізовані з BB610 Market Product Master V5.",
+      facts: [
+        "Product #1301143 у Product Master V5.",
+        "Висота ніжок — 70 мм.",
+        "Конструкція належить до єдиної платформи Zephyr V2.",
+        "Висока опора фізично віддаляє кореневу зону від поверхні.",
+        "Технічна пластина показує базову геометрію сімейства Zephyr V2."
       ],
       source: "https://getplantlogic.com/portfolio-items/zephyr-v2/"
     },
     {
       no: "1308031",
-      name: "Горщик 30 л Round V-Rib",
+      name: "Горщик для лохини 30 л круглий з V-ребрами",
       subtitle: "Круглий горщик з V-ребрами",
       application: "blueberry",
       applicationLabel: "Лохина",
@@ -117,7 +162,7 @@
     },
     {
       no: "1309030",
-      name: "Горщик 30 л Square",
+      name: "Горщик для лохини 30 л квадратний на стандартних ніжках",
       subtitle: "Квадратний горщик для лохини",
       application: "blueberry",
       applicationLabel: "Лохина",
@@ -140,7 +185,7 @@
     },
     {
       no: "1308041",
-      name: "Горщик 40 л Round U-Groove",
+      name: "Горщик для лохини 40 л круглий з U-пазами",
       subtitle: "Круглий горщик з U-пазами",
       application: "blueberry",
       applicationLabel: "Лохина",
@@ -163,7 +208,7 @@
     },
     {
       no: "1304125",
-      name: "Горщик 25 л Drainage Collection",
+      name: "Горщик для лохини 25 л круглий зі збором дренажу",
       subtitle: "100% збір дренажу",
       application: "drainage",
       applicationLabel: "Лохина / овочі",
@@ -186,7 +231,7 @@
     },
     {
       no: "1305117",
-      name: "Горщик 17 л Drainage Collection",
+      name: "Горщик для овочів 17 л зі збором дренажу",
       subtitle: "Для овочів і полуниці",
       application: "vegetable",
       applicationLabel: "Овочі / полуниця",
@@ -209,7 +254,7 @@
     },
     {
       no: "1305909",
-      name: "Жолоб 18 л Strawberry Trough",
+      name: "Жолоб для вирощування полуниці 18 л з опорою для квітконосів",
       subtitle: "З опорою для квітконосів",
       application: "strawberry",
       applicationLabel: "Полуниця",
@@ -382,14 +427,14 @@
       '<div class="wrap">' +
         '<div class="garden-products-head">' +
           '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Продукти</h2></div>' +
-          '<p>Конкретні моделі PlantLogic з Product #, розмірами та конструктивними особливостями. Тут не ціни й не корзина — тут технічна логіка кожного виробу.</p>' +
+          '<p>Назви моделей синхронізовані 1:1 з BB610 Market Product Master V5. Garden додає до canonical назви Product #, конструктивні особливості, фото, схеми та технічне пояснення.</p>' +
         '</div>' +
         '<div class="garden-products-filter" role="group" aria-label="Фільтр продуктів">' +
           filters.map(([value,label]) => '<button type="button" data-product-filter="' + value + '"' + (value === "all" ? ' class="is-active"' : '') + '>' + label + '</button>').join("") +
         '</div>' +
         '<div class="garden-products-grid"></div>' +
         '<div class="garden-products-foot">' +
-          '<span>Перший реліз каталогу · 10 ключових моделей</span>' +
+          '<span>Перший реліз каталогу · 12 canonical моделей</span>' +
           '<p>Наступним блоком цей самий формат буде розширено на Rubus, Bag Bases, Slab Spacers та аксесуари.</p>' +
         '</div>' +
       '</div>';
