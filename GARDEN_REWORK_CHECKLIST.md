@@ -75,3 +75,14 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Shorten corporate video copy and keep it as one motion interlude
 - [x] Keep Hi-Grow video paired with official diagram
 - [~] Publish and verify Pages
+
+
+## Stage 4A — Deep-section consolidation
+- [x] Remove duplicate root-evidence section
+- [x] Remove duplicate generic geometry section
+- [x] Merge drainage application photo into Drainage Engineering
+- [x] Remove legacy Drainage section
+- [x] Redirect old drainage anchors to technical section
+- [x] Tighten family-selection copy
+- [x] Clarify official-source note
+- [~] Publish and verify Pages
