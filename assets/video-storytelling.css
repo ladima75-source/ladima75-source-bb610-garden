@@ -45,3 +45,12 @@
   .product-card.has-product-video-story .product-image{aspect-ratio:16/9}
   .product-grid>.has-product-video-grid-item{grid-column:1/-1}
 }
+@media(max-width:760px){
+  .plantlogic-video-story figcaption{bottom:16px;left:16px;right:82px}
+  .plantlogic-video-story figcaption strong{font-size:11px}
+  .video-play-button{right:14px;bottom:14px;width:54px;height:54px}
+  .video-play-button em{display:none}
+  .garden-video-band .plantlogic-video-story{border-radius:8px}
+  .garden-video-band .video-band-head p{font-size:13px}
+  .higrow-media .plantlogic-video-story{border-radius:8px}
+}
