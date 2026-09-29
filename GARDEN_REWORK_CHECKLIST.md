@@ -44,7 +44,7 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Check content order from overview → proof → system → crops
 - [x] Cache-bust final assets
 - [x] Syntax validation
-- [~] GitHub Pages deployment SUCCESS
+- [x] GitHub Pages deployment SUCCESS
 
 
 ## Stage 1A — Upper-half visual discipline
