@@ -74,7 +74,7 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Remove redundant standalone Blueberry motion-card section
 - [x] Shorten corporate video copy and keep it as one motion interlude
 - [x] Keep Hi-Grow video paired with official diagram
-- [~] Publish and verify Pages
+- [x] Publish and verify Pages
 
 
 ## Stage 4A — Deep-section consolidation
