@@ -64,6 +64,8 @@
     const figure = makeVideo(story);
     target.prepend(figure);
     target.classList.add("has-plantlogic-video");
+    const card = target.closest(".product-card");
+    if (card) card.classList.add("has-product-video-story");
     observe(figure);
   };
 
@@ -71,7 +73,7 @@
     const section = document.createElement("section");
     section.className = "garden-video-band corporate-video-band section";
     section.id = "corporate-video";
-    section.innerHTML = '<div class="wrap"><div class="video-band-head"><span class="eyebrow">PLANTLOGIC / ВИРОБНИЦТВО</span><span>BB610 Garden Video Pack V1</span></div></div>';
+    section.innerHTML = '<div class="wrap"><div class="video-band-head"><span class="eyebrow">PLANTLOGIC / ВИРОБНИЦТВО</span></div></div>';
     const inner = section.querySelector(".wrap");
     const figure = makeVideo(story);
     inner.append(figure);
