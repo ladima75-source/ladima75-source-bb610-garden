@@ -1,61 +1,140 @@
 (() => {
-  const VERSION = "20260929-pack-v1-final2";
+  const VERSION = "20260929-video-v2";
   const stories = [
-    { key: "corporate-quality", type: "band", selector: "#offer" },
-    { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image" },
-    { key: "ugroove-irrigation", type: "product", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image" },
-    { key: "higrow-strawberry", type: "section", selector: "#lysimeter" }
+    { key: "corporate-quality", type: "band", selector: "#offer", label: "PlantLogic / виробництво" },
+    { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image", label: "Zephyr V2 / assembly" },
+    { key: "ugroove-irrigation", type: "product", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image", label: "U-Groove / irrigation" },
+    { key: "higrow-strawberry", type: "section", selector: "#lysimeter", label: "Hi-Grow / strawberry" }
   ];
+
+  const prefersReduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const setState = (figure, state) => {
+    figure.dataset.state = state;
+    const button = figure.querySelector(".video-play-button");
+    if (!button) return;
+    button.setAttribute("aria-label", state === "playing" ? "Призупинити відео" : "Відтворити відео");
+    button.innerHTML = state === "playing"
+      ? '<span class="video-pause-icon"><i></i><i></i></span><em>Pause</em>'
+      : '<span class="video-play-icon"></span><em>Play</em>';
+  };
+
+  const tryPlay = async (video) => {
+    const figure = video.closest(".plantlogic-video-story");
+    if (!figure || prefersReduced()) {
+      if (figure) setState(figure, "paused");
+      return false;
+    }
+    try {
+      await video.play();
+      setState(figure, "playing");
+      return true;
+    } catch (error) {
+      setState(figure, "blocked");
+      return false;
+    }
+  };
 
   const makeVideo = (story) => {
     const figure = document.createElement("figure");
     figure.className = "plantlogic-video-story plantlogic-video-" + story.type;
     figure.dataset.videoStory = story.key;
+    figure.dataset.state = "loading";
 
     const video = document.createElement("video");
     video.muted = true;
+    video.defaultMuted = true;
     video.autoplay = true;
     video.loop = true;
     video.playsInline = true;
-    video.preload = "none";
+    video.preload = "metadata";
     video.poster = "/media/video/" + story.key + "-poster.webp?v=" + VERSION;
-    video.setAttribute("aria-label", "BB610 Garden / PlantLogic video");
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("loop", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.setAttribute("controlslist", "nodownload noplaybackrate noremoteplayback");
+    video.setAttribute("aria-label", story.label || "PlantLogic video");
+    video.disablePictureInPicture = true;
 
-    [["webm","video/webm"],["mp4","video/mp4"]].forEach(([ext,type]) => {
+    [["mp4","video/mp4"],["webm","video/webm"]].forEach(([ext,type]) => {
       const source = document.createElement("source");
       source.type = type;
-      source.dataset.src = "/media/video/" + story.key + "." + ext + "?v=" + VERSION;
+      source.src = "/media/video/" + story.key + "." + ext + "?v=" + VERSION;
       video.append(source);
     });
 
-    figure.append(video);
+    const shade = document.createElement("span");
+    shade.className = "video-shade";
+    shade.setAttribute("aria-hidden", "true");
+
+    const caption = document.createElement("figcaption");
+    caption.innerHTML = '<span>PLANTLOGIC / MOTION</span><strong>' + (story.label || "Engineering in motion") + '</strong>';
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "video-play-button";
+    button.setAttribute("aria-label", "Відтворити відео");
+    button.innerHTML = '<span class="video-play-icon"></span><em>Play</em>';
+
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (video.paused) {
+        const played = await tryPlay(video);
+        if (!played) {
+          video.controls = true;
+          video.load();
+        }
+      } else {
+        video.pause();
+        setState(figure, "paused");
+      }
+    });
+
+    video.addEventListener("playing", () => setState(figure, "playing"));
+    video.addEventListener("pause", () => {
+      if (figure.dataset.visible === "1") setState(figure, "paused");
+    });
+    video.addEventListener("canplay", () => {
+      figure.classList.add("is-ready");
+      if (figure.dataset.visible === "1") tryPlay(video);
+    });
+    video.addEventListener("loadeddata", () => figure.classList.add("is-ready"));
+    video.addEventListener("error", () => {
+      figure.classList.add("is-error");
+      video.controls = true;
+      setState(figure, "error");
+    });
+
+    figure.append(video, shade, caption, button);
     return figure;
   };
 
-  const hydrate = (video) => {
-    if (video.dataset.hydrated) return;
-    video.querySelectorAll("source[data-src]").forEach((source) => {
-      source.src = source.dataset.src;
-      source.removeAttribute("data-src");
-    });
-    video.dataset.hydrated = "1";
-    video.load();
-  };
-
-  const observer = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
-    entries.forEach(({target,isIntersecting}) => {
-      if (isIntersecting) {
-        hydrate(target);
-        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) target.play().catch(() => {});
-      } else {
-        target.pause();
-      }
-    });
-  }, { rootMargin: "320px 0px", threshold: 0.08 }) : null;
+  const observer = "IntersectionObserver" in window
+    ? new IntersectionObserver((entries) => {
+        entries.forEach(({target,isIntersecting}) => {
+          const figure = target.closest(".plantlogic-video-story");
+          if (!figure) return;
+          figure.dataset.visible = isIntersecting ? "1" : "0";
+          if (isIntersecting) {
+            tryPlay(target);
+          } else {
+            target.pause();
+          }
+        });
+      }, { rootMargin: "220px 0px", threshold: 0.12 })
+    : null;
 
   const observe = (figure) => {
     const video = figure.querySelector("video");
-    observer ? observer.observe(video) : hydrate(video);
+    if (observer) {
+      observer.observe(video);
+    } else {
+      figure.dataset.visible = "1";
+      tryPlay(video);
+    }
   };
 
   const mountProduct = (story, target) => {
@@ -76,7 +155,13 @@
     const section = document.createElement("section");
     section.className = "garden-video-band corporate-video-band section";
     section.id = "corporate-video";
-    section.innerHTML = '<div class="wrap"><div class="video-band-head"><span class="eyebrow">PLANTLOGIC / ВИРОБНИЦТВО</span></div></div>';
+    section.innerHTML =
+      '<div class="wrap">' +
+        '<div class="video-band-head">' +
+          '<div><span class="eyebrow">PLANTLOGIC / MOTION STUDY</span><h2>Інженерія, яку краще побачити в русі.</h2></div>' +
+          '<p>Монтаж, геометрія, полив і робота системи — короткі технологічні фрагменти без рекламного шуму.</p>' +
+        '</div>' +
+      '</div>';
     const inner = section.querySelector(".wrap");
     const figure = makeVideo(story);
     inner.append(figure);
@@ -88,7 +173,15 @@
     const section = document.createElement("section");
     section.className = "higrow-section section";
     section.id = "strawberry";
-    section.innerHTML = '<div class="wrap higrow-grid"><div class="higrow-copy"><span class="eyebrow">ПОЛУНИЦЯ / HI-GROW</span><h2>Hi-Grow — система для професійного вирощування полуниці</h2><p>Піднята система вирощування, де робоча зона культури організована над рівнем ґрунту.</p></div><div class="higrow-media"></div></div>';
+    section.innerHTML =
+      '<div class="wrap higrow-grid">' +
+        '<div class="higrow-copy">' +
+          '<span class="eyebrow">ПОЛУНИЦЯ / HI-GROW</span>' +
+          '<h2>Hi-Grow — система, яку треба бачити в роботі.</h2>' +
+          '<p>Піднята виробнича зона, модульна несуча конструкція та окремий дренажний контур. Відео показує просторову логіку краще за статичну схему.</p>' +
+        '</div>' +
+        '<div class="higrow-media"></div>' +
+      '</div>';
     const media = section.querySelector(".higrow-media");
     const figure = makeVideo(story);
     media.append(figure);
@@ -113,6 +206,13 @@
   const timer = setInterval(() => {
     const ready = stories.every(mountOne);
     tries += 1;
-    if (ready || tries > 80) clearInterval(timer);
-  }, 180);
+    if (ready || tries > 100) clearInterval(timer);
+  }, 160);
+
+  const boot = () => stories.forEach(mountOne);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot, { once: true });
+  } else {
+    boot();
+  }
 })();
