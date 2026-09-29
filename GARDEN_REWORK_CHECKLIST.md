@@ -106,3 +106,15 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] PlantLogic brand, Product #, family and technical explanations are separate fields, never substitutes for canonical title
 - [x] Separate Market canonical products remain separate Garden product cards (including Zephyr V2 25/30/40 L)
 - [x] Any future Garden product batch starts by reading current Product Master V5 titles before UI/content work
+
+
+## Stage 5B — Full technical product pages
+- [x] Create shared product data source for catalog + product pages
+- [x] Keep canonical titles from Market V5
+- [x] Route catalog cards to standalone product pages
+- [x] Add `product.html?id=PRODUCT_NO` template
+- [x] Add PlantLogic-style product structure: hero → Product # → specs → details → drawing → related products
+- [x] Add official source link on every page
+- [x] Keep legacy `#product-...` links redirect-compatible
+- [x] Do not substitute a drawing from another model
+- [~] Publish and verify Pages
