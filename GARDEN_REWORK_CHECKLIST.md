@@ -44,7 +44,7 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Check content order from overview → proof → system → crops
 - [x] Cache-bust final assets
 - [x] Syntax validation
-- [ ] GitHub Pages deployment SUCCESS
+- [~] GitHub Pages deployment SUCCESS
 
 
 ## Stage 1A — Upper-half visual discipline
@@ -54,7 +54,7 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Simplify hero overlay by removing product promo card
 - [x] Rebalance crop mosaic into one lead image + supporting stories
 - [x] Reduce corporate video heading scale
-- [~] Publish and verify Pages
+- [x] Publish and verify Pages
 
 
 ## Stage 2A — Proof-first technical presentation
