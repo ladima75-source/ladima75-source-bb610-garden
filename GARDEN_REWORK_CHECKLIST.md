@@ -86,3 +86,15 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Tighten family-selection copy
 - [x] Clarify official-source note
 - [~] Publish and verify Pages
+
+
+## Stage 5A — Products technical catalog
+- [x] Add dedicated `Продукти` section
+- [x] Add 10 concrete PlantLogic product cards with Product #
+- [x] Use product-specific official images
+- [x] Add application filters
+- [x] Add detailed technical modal with specs and construction facts
+- [x] Add official PlantLogic source link in each detail view
+- [x] Support deep links `#product-...` for future Market → Garden links
+- [x] Keep diagrams only when they match the exact product/family
+- [~] Publish and verify Pages
