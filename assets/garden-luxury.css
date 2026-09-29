@@ -290,3 +290,57 @@ html,body{max-width:100%;overflow-x:hidden}
   #lysimeter .monitor-flow>div{min-width:130px}
   .lux-motion-proof .catalog-heading{align-items:flex-start;gap:10px;flex-direction:column}
 }
+
+
+/* STAGE 1 — UPPER HALF VISUAL DISCIPLINE */
+.hero-grid{min-height:620px!important;grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr)!important;gap:clamp(30px,4vw,52px)!important}
+.hero-copy{padding-top:48px!important}
+.hero h1{max-width:650px!important;font-size:clamp(2.9rem,3.95vw,4.35rem)!important;line-height:1.01!important;letter-spacing:-.052em!important;margin:26px 0 22px!important}
+.hero-description{max-width:540px!important;font-size:14px!important;line-height:1.7!important}
+.hero-photo{min-height:620px!important;border-radius:10px!important}
+.hero-buttons{margin-top:24px!important}
+.lux-hero-metrics{max-width:600px!important;margin-top:28px!important}
+.lux-hero-metrics>div{min-height:78px!important;padding-top:14px!important;padding-bottom:13px!important}
+.lux-hero-metrics strong{font-size:10px!important}
+.lux-hero-metrics small{font-size:8px!important}
+.hero-foot{padding-top:26px!important;padding-bottom:20px!important}
+
+#field-stories{padding-block:84px!important}
+#field-stories .lux-field-head{grid-template-columns:minmax(0,1fr) minmax(280px,.52fr)!important;gap:52px!important;margin-bottom:34px!important}
+#field-stories .lux-field-head h2{max-width:740px!important;font-size:clamp(2.25rem,3.2vw,3.75rem)!important;line-height:1.02!important}
+#field-stories .lux-field-head>p{max-width:470px!important;font-size:13px!important;line-height:1.68!important}
+.lux-field-grid{grid-template-columns:repeat(12,minmax(0,1fr))!important;grid-auto-rows:225px!important;gap:14px!important}
+.lux-field-card-1{grid-column:span 6!important;grid-row:span 2!important}
+.lux-field-card-2{grid-column:span 6!important;grid-row:span 1!important}
+.lux-field-card-3{grid-column:span 3!important;grid-row:span 1!important}
+.lux-field-card-4{grid-column:span 3!important;grid-row:span 1!important}
+.lux-field-card{border-radius:9px!important}
+.lux-field-card-2 .lux-field-copy{max-width:540px}
+.lux-field-card-3 .lux-field-copy p,.lux-field-card-4 .lux-field-copy p,
+.lux-field-card-3 .lux-field-copy strong,.lux-field-card-4 .lux-field-copy strong{display:none!important}
+.lux-field-card-3 .lux-field-copy h3,.lux-field-card-4 .lux-field-copy h3{font-size:1.55rem!important;margin-bottom:0!important}
+.lux-field-copy{left:22px!important;right:22px!important;bottom:22px!important}
+.lux-field-copy h3{font-size:clamp(1.75rem,2.45vw,2.8rem)!important}
+.lux-field-copy strong{font-size:12px!important;max-width:480px!important}
+.lux-field-copy p{font-size:10px!important;line-height:1.5!important;max-width:520px!important}
+
+#corporate-video{padding-top:76px!important;padding-bottom:84px!important}
+#corporate-video .video-band-head{grid-template-columns:minmax(0,1fr) minmax(260px,.48fr)!important;gap:48px!important;margin-bottom:28px!important}
+#corporate-video .video-band-head h2{font-size:clamp(2.15rem,3.15vw,3.65rem)!important;max-width:720px!important}
+#corporate-video .video-band-head p{font-size:13px!important;max-width:450px!important}
+
+@media(max-width:1050px){
+  #field-stories .lux-field-head,#corporate-video .video-band-head{grid-template-columns:1fr!important;gap:18px!important}
+  .lux-field-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:320px!important}
+  .lux-field-card-1,.lux-field-card-2,.lux-field-card-3,.lux-field-card-4{grid-column:auto!important;grid-row:auto!important}
+  .lux-field-card-3 .lux-field-copy strong,.lux-field-card-4 .lux-field-copy strong{display:block!important}
+}
+@media(max-width:760px){
+  .hero-grid{min-height:auto!important}
+  .hero-copy{padding-top:30px!important}
+  .hero h1{font-size:clamp(2.45rem,10.5vw,3.25rem)!important;margin-top:20px!important}
+  .hero-photo{min-height:410px!important}
+  .lux-field-grid{display:flex!important;overflow-x:auto!important;grid-auto-rows:auto!important}
+  .lux-field-card{min-width:84vw!important;height:430px!important}
+  .lux-field-card-3 .lux-field-copy p,.lux-field-card-4 .lux-field-copy p{display:block!important}
+}
