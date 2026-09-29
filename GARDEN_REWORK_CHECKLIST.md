@@ -66,3 +66,12 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Replace synthetic root-zone drawing with official media
 - [x] Remove duplicated root-zone proof strip
 - [~] Publish and verify Pages
+
+
+## Stage 3A — Video integration
+- [x] Move U-Groove video into U-Groove technical proof
+- [x] Move Zephyr V2 video into Zephyr technical proof
+- [x] Remove redundant standalone Blueberry motion-card section
+- [x] Shorten corporate video copy and keep it as one motion interlude
+- [x] Keep Hi-Grow video paired with official diagram
+- [~] Publish and verify Pages
