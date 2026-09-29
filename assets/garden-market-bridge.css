@@ -1,0 +1,160 @@
+.market-hero-link,
+.featured-market-link,
+.section-market-link,
+.market-bridge-all{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease
+}
+.market-hero-link{
+  min-height:48px;
+  padding:0 18px;
+  border:1px solid rgba(16,38,29,.22);
+  border-radius:999px;
+  color:#10261d;
+  background:rgba(255,255,255,.58)
+}
+.market-hero-link:hover{transform:translateY(-1px);border-color:#10261d;background:#fff}
+.market-card-indicator{
+  margin-left:auto;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#355044
+}
+.market-card-note{
+  display:block;
+  margin-top:10px;
+  color:#66766c;
+  font-size:12px;
+  line-height:1.45
+}
+#formats .product-card[data-market-url]{cursor:pointer}
+#formats .product-card[data-market-url]:hover .market-card-indicator{color:#10261d}
+.market-bridge-section{
+  margin:72px 0 84px;
+  padding:38px;
+  border:1px solid rgba(16,38,29,.13);
+  border-radius:10px;
+  background:#f4f6f1
+}
+.market-bridge-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+  gap:48px;
+  align-items:end;
+  padding-bottom:28px;
+  border-bottom:1px solid rgba(16,38,29,.13)
+}
+.market-bridge-eyebrow{
+  display:block;
+  margin-bottom:14px;
+  color:#53655a;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em
+}
+.market-bridge-head h2{
+  margin:0;
+  color:#10261d;
+  font-size:clamp(2rem,3.5vw,3.8rem);
+  line-height:1.02;
+  letter-spacing:-.045em
+}
+.market-bridge-head p{
+  margin:0;
+  max-width:540px;
+  color:#617067;
+  font-size:15px;
+  line-height:1.65
+}
+.market-bridge-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:28px;
+  border-top:1px solid rgba(16,38,29,.12);
+  border-left:1px solid rgba(16,38,29,.12)
+}
+.market-bridge-card{
+  position:relative;
+  min-height:168px;
+  padding:22px 50px 22px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  color:#10261d;
+  text-decoration:none;
+  background:#fff;
+  border-right:1px solid rgba(16,38,29,.12);
+  border-bottom:1px solid rgba(16,38,29,.12);
+  transition:background .18s ease,transform .18s ease
+}
+.market-bridge-card:hover{background:#eaffaf}
+.market-bridge-card strong{font-size:20px;line-height:1.15;letter-spacing:-.02em}
+.market-bridge-card>span:not(.market-bridge-index){color:#69786f;font-size:13px;line-height:1.45}
+.market-bridge-card i{position:absolute;right:20px;bottom:20px;font-style:normal;font-size:22px}
+.market-bridge-index{color:#839086;font-size:11px;font-weight:700;letter-spacing:.08em}
+.market-bridge-all{
+  margin-top:24px;
+  min-height:48px;
+  padding:0 18px;
+  border-radius:999px;
+  background:#10261d;
+  color:#f6f8f3;
+  width:max-content;
+  max-width:100%
+}
+.market-bridge-all:hover{transform:translateY(-1px);background:#1a392c}
+.featured-market-link{
+  margin-top:12px;
+  min-height:46px;
+  padding:0 16px;
+  border:1px solid rgba(16,38,29,.28);
+  border-radius:999px;
+  color:#10261d
+}
+.featured-market-link:hover{background:#10261d;color:#fff}
+.section-market-link{
+  margin-top:22px;
+  width:max-content;
+  max-width:100%;
+  padding-bottom:4px;
+  border-bottom:1px solid currentColor;
+  color:inherit;
+  font-size:14px
+}
+.crop-card-market .clarity-card-top:after{
+  content:"MARKET ↗";
+  margin-left:auto;
+  color:#52635a;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em
+}
+@media(max-width:900px){
+  .market-bridge-section{margin:56px 0 68px;padding:28px}
+  .market-bridge-head{grid-template-columns:1fr;gap:18px}
+  .market-bridge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .market-hero-link{width:100%}
+  .market-bridge-section{margin:42px -2px 52px;padding:22px 16px;border-radius:6px}
+  .market-bridge-grid{grid-template-columns:1fr}
+  .market-bridge-card{min-height:128px}
+  .market-bridge-all{width:100%;text-align:center}
+  .market-card-indicator{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .market-hero-link,
+  .featured-market-link,
+  .section-market-link,
+  .market-bridge-all,
+  .market-bridge-card{transition:none}
+}
