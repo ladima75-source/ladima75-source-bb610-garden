@@ -403,3 +403,22 @@ html,body{max-width:100%;overflow-x:hidden}
   #corporate-video .plantlogic-video-story{aspect-ratio:16/9!important}
   .proof-motion-inset{margin:0 12px 12px;padding:5px}
 }
+
+
+/* STAGE 4 — CONSOLIDATED DEEP FLOW */
+.drainage-application-band{position:relative;margin:0 0 34px;min-height:430px;border-radius:9px;overflow:hidden;background:#173126}
+.drainage-application-band img{display:block;width:100%;height:430px;object-fit:cover;object-position:center 64%}
+.drainage-application-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,19,12,.04) 35%,rgba(5,19,12,.82) 100%)}
+.drainage-application-band figcaption{position:absolute;left:24px;right:24px;bottom:22px;color:#fff;display:flex;justify-content:space-between;gap:28px;align-items:end}
+.drainage-application-band figcaption span{font-size:9px;font-weight:850;letter-spacing:.14em;color:#d7ff79}
+.drainage-application-band figcaption strong{max-width:560px;font-size:14px;line-height:1.45;font-weight:560}
+#family-engineering{padding-top:84px!important}
+#drainage-engineering{padding-top:84px!important}
+#system-interfaces{padding-top:84px!important}
+#technical-source-note{margin-top:36px!important}
+@media(max-width:760px){
+  .drainage-application-band{min-height:330px}
+  .drainage-application-band img{height:330px}
+  .drainage-application-band figcaption{left:16px;right:16px;bottom:16px;display:block}
+  .drainage-application-band figcaption strong{display:block;margin-top:8px;font-size:12px}
+}
