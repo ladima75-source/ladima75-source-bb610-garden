@@ -98,3 +98,11 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Support deep links `#product-...` for future Market → Garden links
 - [x] Keep diagrams only when they match the exact product/family
 - [~] Publish and verify Pages
+
+
+## Permanent rule — Market ↔ Garden naming
+- [x] BB610 Market Product Master V5 is the only source of canonical customer-facing product names
+- [x] Garden must use canonical titles 1:1; no shortening, translation variants, family nicknames, or invented titles
+- [x] PlantLogic brand, Product #, family and technical explanations are separate fields, never substitutes for canonical title
+- [x] Separate Market canonical products remain separate Garden product cards (including Zephyr V2 25/30/40 L)
+- [x] Any future Garden product batch starts by reading current Product Master V5 titles before UI/content work
