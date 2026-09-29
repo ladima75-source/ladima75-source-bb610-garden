@@ -48,3 +48,62 @@
 .technical-source-note{margin-top:0;margin-bottom:72px;padding:22px 26px;border-left:3px solid #6a7e6d;background:#eef1e8}.technical-source-note strong{font-size:12px;letter-spacing:.08em}.technical-source-note p{margin:8px 0 0;color:#65736a;font-size:12px;line-height:1.65}
 @media(max-width:1000px){.technical-core-head,.root-zone-grid,.drainage-engineering-head,.drainage-engineering-grid,.zephyr-engineering-grid{grid-template-columns:1fr}.technical-core-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.geometry-grid{grid-template-columns:1fr}.geometry-feature,.geometry-feature-large{grid-column:auto;grid-template-columns:1fr 1fr}.root-zone-visual{min-height:500px}.monitoring-loop{grid-template-columns:1fr}.monitoring-loop>i{transform:rotate(90deg);text-align:center}.crop-engineering-grid{grid-template-columns:1fr}.zephyr-engineering{padding:30px}}
 @media(max-width:760px){.technical-core-grid{grid-template-columns:1fr}.technical-core-card{min-height:230px}.technical-core-card h3{margin-top:42px}.geometry-head{grid-template-columns:1fr}.geometry-feature,.geometry-feature-large{grid-template-columns:1fr}.geometry-media{min-height:300px}.root-zone-grid{gap:42px}.root-zone-visual{min-height:430px;padding:30px 18px}.root-zone-pot{height:290px}.root-zone-legend{flex-wrap:wrap}.zephyr-engineering{margin-left:-2px;margin-right:-2px;padding:22px 16px}.zephyr-engineering-media{min-height:340px}.zephyr-facts{grid-template-columns:1fr}.drainage-engineering-facts{grid-template-columns:1fr}.drainage-engineering-image{min-height:400px}.monitoring-engineering{padding:56px 18px}.crop-engineering-grid h3{margin-top:48px}.crop-engineering-grid article{min-height:360px;padding:26px}}
+
+.family-engineering{background:#fbfcf8;color:#10261d}
+.family-engineering-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.8fr);gap:72px;align-items:end;margin-bottom:46px}
+.family-engineering-head h2{margin:18px 0 0;font-size:clamp(2.7rem,4.5vw,5.3rem);line-height:.97;letter-spacing:-.058em}
+.family-engineering-head>p{margin:0;color:#617168;font-size:15px;line-height:1.78}
+.family-selector{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.family-card{display:grid;grid-template-columns:minmax(190px,.72fr) minmax(0,1.28fr);min-height:470px;border:1px solid rgba(16,38,29,.13);background:#fff;overflow:hidden}
+.family-card-wide{grid-column:1/-1;grid-template-columns:minmax(340px,.82fr) minmax(0,1.18fr)}
+.family-card-media{position:relative;min-height:100%;display:grid;place-items:center;background:#e9ede4;overflow:hidden}
+.family-card-media img{width:82%;height:82%;object-fit:contain;mix-blend-mode:multiply;transition:transform .45s ease}
+.family-card:hover .family-card-media img{transform:scale(1.035) translateY(-3px)}
+.family-card-media>span{position:absolute;left:18px;bottom:16px;padding:7px 9px;border-radius:999px;background:#10261d;color:#d7ff79;font-size:9px;font-weight:850;letter-spacing:.12em}
+.family-card-copy{padding:30px}
+.family-card-label{color:#708075;font-size:9px;font-weight:850;letter-spacing:.13em}
+.family-card h3{margin:34px 0 18px;font-size:30px;line-height:1.05;letter-spacing:-.038em}
+.family-card p{margin:0;color:#627168;font-size:13px;line-height:1.72}
+.family-card dl{margin:28px 0 0;border-top:1px solid rgba(16,38,29,.12)}
+.family-card dl>div{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid rgba(16,38,29,.1)}
+.family-card dt{color:#415649;font-size:10px;font-weight:800;letter-spacing:.03em}
+.family-card dd{margin:0;color:#67766d;font-size:11px;line-height:1.55}
+.family-card-accent{background:#f3f8e4}
+.family-card-accent .family-card-media{background:#e2ebcf}
+.family-card-dark{background:#10261d;color:#f4f6f2;border-color:#10261d}
+.family-card-dark .family-card-media{background:#dfe5db}
+.family-card-dark .family-card-label{color:#aebdb1}
+.family-card-dark p,.family-card-dark dd{color:#b8c6bb}
+.family-card-dark dt{color:#d7ff79}
+.family-card-dark dl{border-top-color:rgba(255,255,255,.16)}
+.family-card-dark dl>div{border-bottom-color:rgba(255,255,255,.12)}
+.family-decision{margin-top:44px;padding:34px;border:1px solid rgba(16,38,29,.13);background:#eef2e8}
+.family-decision-title{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:end;margin-bottom:28px}
+.family-decision-title h3{margin:0;font-size:34px;letter-spacing:-.04em}
+.family-decision-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;gap:10px;align-items:stretch}
+.family-decision-flow>div{min-height:132px;padding:16px;border:1px solid rgba(16,38,29,.13);background:#fff;display:flex;flex-direction:column}
+.family-decision-flow b{color:#748277;font-size:9px;letter-spacing:.1em}
+.family-decision-flow strong{margin-top:auto;font-size:17px}
+.family-decision-flow span{margin-top:7px;color:#68776e;font-size:10px;line-height:1.45}
+.family-decision-flow>i{align-self:center;font-style:normal;color:#758478;font-size:22px}
+.family-special-note{margin-top:18px;padding:20px 22px;border-left:3px solid #6f806f;background:#f4f6f1}
+.family-special-note strong{font-size:12px;letter-spacing:.04em}
+.family-special-note p{margin:8px 0 0;color:#65736a;font-size:12px;line-height:1.65}
+#formats + .product-grid .product-card>p,
+#formats ~ .product-grid .product-card>p{line-height:1.55}
+@media(max-width:1050px){
+  .family-engineering-head{grid-template-columns:1fr;gap:22px}
+  .family-selector{grid-template-columns:1fr}
+  .family-card,.family-card-wide{grid-column:auto;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr)}
+  .family-decision-flow{grid-template-columns:1fr}
+  .family-decision-flow>i{transform:rotate(90deg);text-align:center}
+}
+@media(max-width:760px){
+  .family-card,.family-card-wide{grid-template-columns:1fr;min-height:0}
+  .family-card-media{min-height:300px}
+  .family-card-copy{padding:24px 20px}
+  .family-card h3{margin-top:28px;font-size:27px}
+  .family-card dl>div{grid-template-columns:1fr;gap:5px}
+  .family-decision{padding:24px 16px}
+  .family-decision-title{grid-template-columns:1fr;gap:10px}
+}
