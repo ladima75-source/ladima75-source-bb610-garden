@@ -26,6 +26,11 @@ jobs:
           test -s ".master/plantlogic-40l-ugroove-master.mp4"
           test "$(stat -c%s .master/plantlogic-40l-ugroove-master.mp4)" -eq 22499420
 
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg >/dev/null
+
       - name: Encode approved cut
         run: |
           set -euo pipefail
