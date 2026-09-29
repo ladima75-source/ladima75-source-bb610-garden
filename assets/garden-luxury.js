@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-video-integrated-v1";
+  const VERSION = "20260929-flow-v1";
 
   const cropStories = [
     {
@@ -457,6 +457,47 @@
     return true;
   };
 
+  const consolidateDeepSections = () => {
+    ["#root-evidence","#geometry","#drainage"].forEach((selector) => {
+      const node = document.querySelector(selector);
+      if (node) node.remove();
+    });
+
+    document.querySelectorAll('a[href="#drainage"]').forEach((link) => {
+      link.href = "#drainage-engineering";
+    });
+
+    const drainage = document.querySelector("#drainage-engineering .wrap");
+    if (drainage && !drainage.querySelector(".drainage-application-band")) {
+      const head = drainage.querySelector(".drainage-engineering-head");
+      const band = document.createElement("figure");
+      band.className = "drainage-application-band";
+      band.innerHTML =
+        '<img src="/media/drainage.webp" alt="Drainage Collection PlantLogic у виробничій системі" loading="lazy">' +
+        '<span class="drainage-application-shade"></span>' +
+        '<figcaption>' +
+          '<span>APPLICATION / DRAINAGE COLLECTION</span>' +
+          '<strong>Спочатку показуємо систему в ряду. Нижче — конструкцію та технічне креслення.</strong>' +
+        '</figcaption>';
+      if (head) head.after(band); else drainage.prepend(band);
+    }
+
+    const familyHead = document.querySelector("#family-engineering .family-engineering-head h2");
+    const familyLead = document.querySelector("#family-engineering .family-engineering-head > p");
+    if (familyHead) familyHead.textContent = "Коли потрібен Round, Square, U-Groove, Zephyr або Drainage Collection.";
+    if (familyLead) familyLead.textContent = "Порівнюємо сімейства за умовами застосування: субстрат, поливна труба, поверхня встановлення, щільність ряду та спосіб відведення дренажу.";
+
+    const source = document.querySelector("#technical-source-note");
+    if (source) {
+      const strong = source.querySelector("strong");
+      const p = source.querySelector("p");
+      if (strong) strong.textContent = "Джерело технічних матеріалів";
+      if (p) p.textContent = "Фото, креслення та схеми на сторінці взяті з офіційного медіаархіву й технічних матеріалів PlantLogic. Текст використовується тільки для пояснення того, що показано візуально.";
+    }
+
+    return true;
+  };
+
   const reveal = () => {
     const nodes = document.querySelectorAll(".lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram");
     if (!("IntersectionObserver" in window)) {
@@ -489,6 +530,7 @@
     cleanLegacySections();
     rebuildTechnicalProof();
     integrateVideoProofs();
+    consolidateDeepSections();
     reveal();
   };
 
