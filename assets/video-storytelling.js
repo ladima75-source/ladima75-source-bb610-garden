@@ -17,12 +17,12 @@
     video.loop = true;
     video.playsInline = true;
     video.preload = "none";
-    video.poster = "/media/video/" + key + "-poster.webp";
+    video.poster = "/media/video/" + key + "-poster.webp?v=20260929-u40-approved";
     video.setAttribute("aria-label", "Офіційний відеоматеріал PlantLogic");
     [["webm","video/webm"],["mp4","video/mp4"]].forEach(([ext,type]) => {
       const source = document.createElement("source");
       source.type = type;
-      source.dataset.src = "/media/video/" + key + "." + ext;
+      source.dataset.src = "/media/video/" + key + "." + ext + "?v=20260929-u40-approved";
       video.append(source);
     });
     figure.append(video);
