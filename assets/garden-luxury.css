@@ -111,3 +111,105 @@ body{background:var(--lux-paper)}
   .lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram{opacity:1;transform:none;transition:none}
   .lux-field-card img,.lux-crop-thumb img{transition:none}
 }
+
+/* DESIGN SYSTEM REWORK V2 — restrained scale, one grid, proof-first */
+:root{--garden-max:1320px;--garden-side:clamp(22px,4vw,56px);--garden-section:clamp(72px,7vw,100px)}
+.wrap{width:min(var(--garden-max),calc(100% - (var(--garden-side) * 2)))}
+.section{padding-block:var(--garden-section)}
+.hero-grid{min-height:680px;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(28px,4vw,56px)}
+.hero-copy{padding-top:clamp(42px,5vw,66px)}
+.hero h1{max-width:700px;font-size:clamp(3.15rem,4.45vw,5rem);line-height:1.005;letter-spacing:-.058em}
+.hero-description{max-width:560px;font-size:15px;line-height:1.72}
+.hero-photo{min-height:680px}
+.lux-field-head h2,.lux-root-copy h2,
+.technical-core-head h2,.geometry-head h2,.drainage-engineering-head h2,
+.crop-engineering-head h2,.family-engineering-head h2,.system-interfaces-head h2,
+.monitoring-engineering h2,.root-zone-copy h2,.zephyr-engineering-copy h2,
+.higrow-copy h2,.video-band-head h2{
+  font-size:clamp(2.25rem,3.6vw,4.35rem)!important;
+  line-height:1.02!important;
+  letter-spacing:-.047em!important;
+}
+.technical-core-head,.family-engineering-head,.system-interfaces-head,.drainage-engineering-head,.lux-field-head{
+  grid-template-columns:minmax(0,1fr) minmax(300px,.58fr)!important;
+  gap:clamp(34px,5vw,64px)!important;
+  margin-bottom:clamp(32px,4vw,48px)!important;
+}
+.technical-core-head p,.family-engineering-head>p,.system-interfaces-head>p,.drainage-engineering-head>p,.lux-field-head>p{
+  max-width:520px;
+  font-size:14px;
+  line-height:1.72;
+}
+.technical-core-card{min-height:245px;padding:26px}
+.technical-core-card h3{margin-top:44px;font-size:22px;line-height:1.12}
+.family-card h3,.geometry-copy h3,.crop-engineering-grid h3{font-size:clamp(1.45rem,2vw,2rem)!important;line-height:1.12!important}
+.family-card-copy,.geometry-copy{padding:clamp(24px,3vw,34px)}
+.crop-engineering-grid article{min-height:360px}
+.crop-engineering-grid h3{margin-top:48px}
+.lux-field-stories{padding-block:var(--garden-section)}
+.lux-field-grid{grid-auto-rows:225px}
+.lux-field-copy h3{font-size:clamp(1.8rem,2.6vw,3rem)}
+.lux-root-photo{min-height:560px}
+.lux-root-evidence-grid{gap:clamp(40px,5vw,68px)}
+.monitoring-engineering{padding-block:var(--garden-section)}
+.zephyr-engineering{margin-top:56px}
+.garden-video-band{padding-block:var(--garden-section)}
+#crops .crop-card{min-height:430px}
+.lux-crop-thumb{height:200px}
+
+/* proof plates */
+.proof-label{display:block;color:#64766a;font-size:9px;font-weight:850;letter-spacing:.14em}
+.proof-band{margin-top:clamp(42px,5vw,68px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(16,38,29,.16);display:grid;grid-template-columns:minmax(260px,.48fr) minmax(0,1.52fr);gap:clamp(34px,5vw,70px);align-items:center}
+.root-zone .proof-band{border-top-color:rgba(255,255,255,.16)}
+.root-zone .proof-label{color:#d7ff79}
+.proof-band-copy h3,.proof-feature-copy h3{margin:14px 0 15px;font-size:clamp(1.7rem,2.45vw,2.65rem);line-height:1.08;letter-spacing:-.04em}
+.proof-band-copy p,.proof-feature-copy p{margin:0;color:#66766d;font-size:13px;line-height:1.7}
+.root-zone .proof-band-copy p{color:#b8c6ba}
+.proof-band-media{min-width:0}
+.proof-band-media-double{display:grid;grid-template-columns:1.18fr .82fr;gap:14px}
+.proof-band figure,.proof-higrow,.proof-rubus{margin:0;position:relative;overflow:hidden;border-radius:9px;background:#dfe5dc}
+.proof-band figure{min-height:360px}
+.proof-band figure img{width:100%;height:100%;object-fit:cover;display:block}
+.proof-band figure.proof-white img{object-fit:contain}
+.proof-band figcaption,.proof-higrow figcaption,.proof-rubus figcaption{
+  position:absolute;left:14px;bottom:12px;padding:7px 9px;background:rgba(8,23,17,.78);color:#fff;border-radius:4px;
+  font-size:8px;font-weight:800;letter-spacing:.1em
+}
+.proof-white{background:#fff!important}
+.proof-feature{width:min(var(--garden-max),calc(100% - (var(--garden-side) * 2)));margin:clamp(42px,5vw,70px) auto 0;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);gap:clamp(34px,5vw,70px);align-items:center;padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(16,38,29,.15)}
+.proof-feature-lysimeter{grid-template-columns:minmax(300px,.7fr) minmax(0,1.3fr);width:100%;margin-left:0;margin-right:0}
+.proof-feature-media{min-height:430px;border-radius:9px;overflow:hidden;display:grid;place-items:center}
+.proof-feature-media img{display:block;width:100%;height:100%;object-fit:contain}
+.proof-higrow{margin-top:24px;min-height:360px}
+.proof-higrow img,.proof-rubus img{display:block;width:100%;height:auto;object-fit:contain}
+.proof-higrow figcaption,.proof-rubus figcaption{display:flex;gap:12px;align-items:center}
+.proof-higrow figcaption span,.proof-rubus figcaption span{color:#d7ff79}
+.proof-rubus{width:min(var(--garden-max),calc(100% - (var(--garden-side) * 2)));margin:34px auto 0;max-height:520px;display:grid;place-items:center}
+.proof-rubus img{max-height:520px}
+
+/* remove decorative excess */
+.lux-field-index{background:rgba(5,18,12,.42)}
+.lux-visual-rail{padding:16px 0}
+.lux-hero-metrics{margin-top:34px}
+.lux-hero-metrics>div{min-height:94px}
+.technical-source-note{margin-bottom:56px}
+
+@media(max-width:1050px){
+  .technical-core-head,.family-engineering-head,.system-interfaces-head,.drainage-engineering-head,.lux-field-head{grid-template-columns:1fr!important}
+  .proof-band,.proof-feature,.proof-feature-lysimeter{grid-template-columns:1fr}
+  .proof-band-media-double{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  :root{--garden-side:18px;--garden-section:64px}
+  .hero h1{font-size:clamp(2.55rem,11vw,3.65rem)}
+  .hero-photo{min-height:480px}
+  .lux-field-head h2,.lux-root-copy h2,
+  .technical-core-head h2,.geometry-head h2,.drainage-engineering-head h2,
+  .crop-engineering-head h2,.family-engineering-head h2,.system-interfaces-head h2,
+  .monitoring-engineering h2,.root-zone-copy h2,.zephyr-engineering-copy h2,
+  .higrow-copy h2,.video-band-head h2{font-size:clamp(2rem,9.5vw,3rem)!important}
+  .proof-band-media-double{grid-template-columns:1fr}
+  .proof-band figure{min-height:300px}
+  .proof-feature-media{min-height:300px}
+  .proof-rubus{max-height:none}
+}
