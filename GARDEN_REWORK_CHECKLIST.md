@@ -3,28 +3,28 @@
 Status legend: [ ] pending · [~] in progress · [x] done
 
 ## Stage 1 — Typography & grid
-- [~] Normalize H1/H2/H3 scale across legacy / technical / luxury layers
-- [ ] One content width / one alignment system for major sections
-- [ ] Normalize vertical rhythm and section padding
-- [ ] Reduce oversized slogans and narrow text measures
+- [x] Normalize H1/H2/H3 scale across legacy / technical / luxury layers
+- [x] One content width / one alignment system for major sections
+- [x] Normalize vertical rhythm and section padding
+- [x] Reduce oversized slogans and narrow text measures
 - [ ] Recheck desktop/tablet/mobile hierarchy
 
 ## Stage 2 — Organic visual fill
-- [ ] Replace empty/text-heavy zones with real PlantLogic application imagery
+- [x] Replace empty/text-heavy zones with real PlantLogic application imagery
 - [ ] Keep product images for product geometry only
-- [ ] Use application photos for field/crop stories
-- [ ] Use diagrams for technical explanations
+- [x] Use application photos for field/crop stories
+- [x] Use diagrams for technical explanations
 - [ ] Keep visual density balanced: no random filler blocks
 
 ## Stage 3 — Technical proof visuals
-- [ ] Root-zone claim → root photo + explanatory diagram
-- [ ] Round → official technical diagram
-- [ ] U-Groove → official technical drawing
-- [ ] Zephyr V2 → official technical plate
-- [ ] Drainage Collection → official technical drawing
-- [ ] Lysimeter / IN-OUT → Ukrainian official diagram
-- [ ] Hi-Grow → official system diagram
-- [ ] Convert unsupported slogans into claim + visual + explanation
+- [x] Root-zone claim → root photo + explanatory diagram
+- [x] Round → official technical diagram
+- [x] U-Groove → official technical drawing
+- [x] Zephyr V2 → official technical plate
+- [x] Drainage Collection → official technical drawing
+- [x] Lysimeter / IN-OUT → Ukrainian official diagram
+- [x] Hi-Grow → official system diagram
+- [~] Convert unsupported slogans into claim + visual + explanation
 
 ## Stage 4 — Video
 - [x] Reliable source loading (MP4 first, WebM fallback)
