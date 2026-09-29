@@ -344,3 +344,36 @@ html,body{max-width:100%;overflow-x:hidden}
   .lux-field-card{min-width:84vw!important;height:430px!important}
   .lux-field-card-3 .lux-field-copy p,.lux-field-card-4 .lux-field-copy p{display:block!important}
 }
+
+
+/* STAGE 2 — TECHNICAL PROOF FIRST */
+.proof-principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:34px}
+.proof-principle{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.95fr);min-height:390px;background:#fff;border:1px solid rgba(16,38,29,.11);border-radius:9px;overflow:hidden}
+.proof-principle figure{margin:0;min-height:390px;background:#e7ece3;overflow:hidden}
+.proof-principle figure img{display:block;width:100%;height:100%;object-fit:cover}
+.proof-principle-diagram figure img{object-fit:contain;padding:18px}
+.proof-principle>div{padding:28px;display:flex;flex-direction:column}
+.proof-principle>div>span{font-size:9px;font-weight:850;letter-spacing:.14em;color:#67796c}
+.proof-principle h3{margin:auto 0 14px;font-size:clamp(1.45rem,2vw,2rem);line-height:1.08;letter-spacing:-.035em}
+.proof-principle p{margin:0;color:#627168;font-size:12px;line-height:1.65}
+
+.root-zone-proof-media{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:14px;min-height:500px}
+.root-zone-proof-media figure{margin:0;position:relative;border-radius:8px;overflow:hidden;background:#fff}
+.root-zone-proof-media img{display:block;width:100%;height:100%;object-fit:cover}
+.root-zone-proof-drawing img{object-fit:contain;padding:18px}
+.root-zone-proof-media figcaption{position:absolute;left:14px;bottom:12px;padding:7px 9px;background:rgba(8,23,17,.78);color:#fff;border-radius:4px;font-size:8px;font-weight:800;letter-spacing:.1em}
+
+#geometry .proof-feature-ugroove{display:none!important}
+#zephyr-engineering .lux-zephyr-diagram{display:none!important}
+
+@media(max-width:1100px){
+  .proof-principles{grid-template-columns:1fr}
+  .proof-principle{grid-template-columns:minmax(0,1fr) minmax(250px,.8fr)}
+}
+@media(max-width:760px){
+  .proof-principle{grid-template-columns:1fr;min-height:0}
+  .proof-principle figure{min-height:280px}
+  .proof-principle>div{min-height:210px;padding:22px 18px}
+  .root-zone-proof-media{grid-template-columns:1fr;min-height:0}
+  .root-zone-proof-media figure{min-height:300px}
+}
