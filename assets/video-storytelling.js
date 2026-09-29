@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-video-v2";
+  const VERSION = "20260929-video-v3";
   const stories = [
     { key: "corporate-quality", type: "band", selector: "#offer", label: "PlantLogic / виробництво" },
     { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image", label: "Zephyr V2 / assembly" },
