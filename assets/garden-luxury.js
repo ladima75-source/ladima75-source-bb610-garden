@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-upper-v1";
+  const VERSION = "20260929-proof-v1";
 
   const cropStories = [
     {
@@ -357,6 +357,65 @@
     return true;
   };
 
+  const rebuildTechnicalProof = () => {
+    const technical = document.querySelector("#technical-core");
+    if (technical && !technical.querySelector(".proof-principles")) {
+      const grid = technical.querySelector(".technical-core-grid");
+      if (grid) grid.remove();
+
+      const head = technical.querySelector(".technical-core-head");
+      if (head) {
+        const h2 = head.querySelector("h2");
+        const p = head.querySelector("p");
+        if (h2) h2.textContent = "Що саме підтверджує конструкцію PlantLogic.";
+        if (p) p.textContent = "Не перелік переваг, а чотири речі, які можна побачити: кореневу масу, геометрію дна, інтеграцію поливу та конструкцію Zephyr V2.";
+      }
+
+      const proof = document.createElement("div");
+      proof.className = "proof-principles";
+      proof.innerHTML =
+        '<article class="proof-principle proof-principle-photo">' +
+          '<figure><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Root zone PlantLogic blueberry" loading="lazy"></figure>' +
+          '<div><span>01 / ROOT ZONE</span><h3>Фактична коренева маса</h3><p>Фото показує результат роботи кореневої зони без декоративної інтерпретації. Далі пояснюємо, які елементи конструкції впливають на рух води та повітря.</p></div>' +
+        '</article>' +
+        '<article class="proof-principle proof-principle-diagram">' +
+          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="20L Round Pot official diagram" loading="lazy"></figure>' +
+          '<div><span>02 / ROUND BASE</span><h3>Геометрія дна і опор</h3><p>Офіційна схема дозволяє побачити профіль контейнера, основу та розташування конструктивних зон замість абстрактної розмови про «дренаж».</p></div>' +
+        '</article>' +
+        '<article class="proof-principle proof-principle-diagram">' +
+          '<figure class="proof-white"><img src="/media/proof/ugroove-tech-drawing.png?v=' + VERSION + '" alt="U-Groove official technical drawing" loading="lazy"></figure>' +
+          '<div><span>03 / U-GROOVE</span><h3>Поливна труба інтегрована у форму</h3><p>На кресленні видно сам паз і його положення. Технічне пояснення залишається коротким: навіщо це монтажу та повторюваності ряду.</p></div>' +
+        '</article>' +
+        '<article class="proof-principle proof-principle-diagram">' +
+          '<figure class="proof-white"><img src="/media/lux/zephyr-v2-diagram.jpg?v=' + VERSION + '" alt="Zephyr V2 official technical plate" loading="lazy"></figure>' +
+          '<div><span>04 / ZEPHYR V2</span><h3>Висока опора і окрема база</h3><p>Офіційна технічна пластина показує, чому Zephyr V2 — окрема конструктивна платформа, а не просто інша форма контейнера.</p></div>' +
+        '</article>';
+      technical.querySelector(".wrap")?.append(proof);
+    }
+
+    const rootZone = document.querySelector("#root-zone");
+    if (rootZone && !rootZone.dataset.proofRebuilt) {
+      rootZone.dataset.proofRebuilt = "1";
+      const visual = rootZone.querySelector(".root-zone-visual");
+      if (visual) {
+        visual.className = "root-zone-proof-media";
+        visual.innerHTML =
+          '<figure class="root-zone-proof-main"><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Blueberry root zone PlantLogic" loading="lazy"><figcaption>FIELD PHOTO / ROOT ZONE</figcaption></figure>' +
+          '<figure class="root-zone-proof-drawing proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Round Pot official diagram PlantLogic" loading="lazy"><figcaption>OFFICIAL ROUND DIAGRAM</figcaption></figure>';
+      }
+
+      const heading = rootZone.querySelector(".root-zone-copy h2");
+      const lead = rootZone.querySelector(".root-zone-copy > p");
+      if (heading) heading.textContent = "Як читати воду й повітря через конструкцію контейнера.";
+      if (lead) lead.textContent = "Зліва — коротка логіка процесу. Справа — реальна коренева маса та офіційна схема Round. Так твердження прив’язане до того, що можна побачити.";
+    }
+
+    const duplicateRootProof = document.querySelector("#proof-root-zone");
+    if (duplicateRootProof) duplicateRootProof.remove();
+
+    return true;
+  };
+
   const reveal = () => {
     const nodes = document.querySelectorAll(".lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram");
     if (!("IntersectionObserver" in window)) {
@@ -387,6 +446,7 @@
     makeVisualRail();
     makeTechnicalProofs();
     cleanLegacySections();
+    rebuildTechnicalProof();
     reveal();
   };
 
