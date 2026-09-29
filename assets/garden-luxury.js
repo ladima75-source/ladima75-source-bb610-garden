@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-rework-v2";
+  const VERSION = "20260929-rework-v3";
 
   const cropStories = [
     {
