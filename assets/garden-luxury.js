@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-lux-v1";
+  const VERSION = "20260929-rework-v2";
 
   const cropStories = [
     {
@@ -197,6 +197,95 @@
     return true;
   };
 
+  const makeTechnicalProofs = () => {
+    const rootZone = document.querySelector("#root-zone");
+    if (rootZone && !document.querySelector("#proof-root-zone")) {
+      const band = document.createElement("div");
+      band.className = "wrap proof-band proof-root-band";
+      band.id = "proof-root-zone";
+      band.innerHTML =
+        '<div class="proof-band-copy">' +
+          '<span class="proof-label">PROOF 01 / ROOT ZONE</span>' +
+          '<h3>Не схема заради схеми — дивимось на фактичну кореневу масу.</h3>' +
+          '<p>Фото кореневої зони ставимо поруч з офіційною схемою Round, щоб пояснення води, повітря та дренажу читалось через реальний результат і геометрію контейнера.</p>' +
+        '</div>' +
+        '<div class="proof-band-media proof-band-media-double">' +
+          '<figure><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Root zone blueberry PlantLogic" loading="lazy"><figcaption>ROOT ZONE / FIELD PHOTO</figcaption></figure>' +
+          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="20L Round Pot official PlantLogic diagram" loading="lazy"><figcaption>20L ROUND / OFFICIAL DIAGRAM</figcaption></figure>' +
+        '</div>';
+      rootZone.append(band);
+    }
+
+    const geometry = document.querySelector("#geometry .geometry-grid");
+    if (geometry && !document.querySelector("#proof-ugroove")) {
+      const block = document.createElement("article");
+      block.className = "proof-feature proof-feature-ugroove";
+      block.id = "proof-ugroove";
+      block.innerHTML =
+        '<div class="proof-feature-media proof-white"><img src="/media/proof/ugroove-tech-drawing.png?v=' + VERSION + '" alt="U-Groove official PlantLogic technical drawing" loading="lazy"></div>' +
+        '<div class="proof-feature-copy">' +
+          '<span class="proof-label">PROOF 02 / U-GROOVE</span>' +
+          '<h3>Паз видно у кресленні — тому його роль не треба пояснювати лозунгом.</h3>' +
+          '<p>Офіційне технічне креслення показує саму геометрію посадочного місця для поливної труби. Поруч залишаємо тільки коротке пояснення монтажної логіки.</p>' +
+        '</div>';
+      geometry.after(block);
+    }
+
+    const drainage = document.querySelector("#drainage-engineering .wrap");
+    if (drainage && !document.querySelector("#proof-drainage")) {
+      const block = document.createElement("div");
+      block.className = "proof-band proof-drainage-band";
+      block.id = "proof-drainage";
+      block.innerHTML =
+        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="25L Drainage Collection official technical drawing" loading="lazy"><figcaption>25L DRAINAGE COLLECTION / TECH DRAWING</figcaption></figure></div>' +
+        '<div class="proof-band-copy">' +
+          '<span class="proof-label">PROOF 03 / DRAINAGE</span>' +
+          '<h3>Вихід дренажу має конкретну геометрію, а не абстрактну «керованість».</h3>' +
+          '<p>Технічна пластина доповнює фото виробу: видно форму основи, висоту опор і організацію відведення. Текст пояснює лише те, що неможливо побачити безпосередньо.</p>' +
+        '</div>';
+      drainage.append(block);
+    }
+
+    const interfaces = document.querySelector("#system-interfaces .wrap");
+    if (interfaces && !document.querySelector("#proof-lysimeter")) {
+      const block = document.createElement("div");
+      block.className = "proof-feature proof-feature-lysimeter";
+      block.id = "proof-lysimeter";
+      block.innerHTML =
+        '<div class="proof-feature-copy">' +
+          '<span class="proof-label">PROOF 04 / IN → OUT</span>' +
+          '<h3>Лізиметр показує, як виглядає вимірювальний контур фізично.</h3>' +
+          '<p>Використовуємо українську офіційну схему комплекту PlantLogic: вона наочно пояснює IN/OUT набагато краще за чотири текстові картки.</p>' +
+        '</div>' +
+        '<div class="proof-feature-media proof-white"><img src="/media/proof/lysimeter-kit-ua.png?v=' + VERSION + '" alt="Lysimeter Kit PlantLogic Ukrainian diagram" loading="lazy"></div>';
+      interfaces.append(block);
+    }
+
+    const strawberry = document.querySelector("#strawberry .wrap");
+    if (strawberry && !document.querySelector("#proof-higrow")) {
+      const block = document.createElement("figure");
+      block.className = "proof-higrow proof-white";
+      block.id = "proof-higrow";
+      block.innerHTML =
+        '<img src="/media/proof/higrow-trough-system.png?v=' + VERSION + '" alt="Hi-Grow trough system official PlantLogic diagram" loading="lazy">' +
+        '<figcaption><span>PROOF 05 / HI-GROW</span><strong>OFFICIAL SYSTEM DIAGRAM</strong></figcaption>';
+      strawberry.append(block);
+    }
+
+    const rubus = document.querySelector("#rubus");
+    if (rubus && !document.querySelector("#proof-rubus")) {
+      const figure = document.createElement("figure");
+      figure.className = "proof-rubus proof-white";
+      figure.id = "proof-rubus";
+      figure.innerHTML =
+        '<img src="/media/proof/rubus-production-diagram.jpg?v=' + VERSION + '" alt="Rubus production official PlantLogic diagram" loading="lazy">' +
+        '<figcaption><span>RUBUS / PRODUCTION LOGIC</span><strong>OFFICIAL PLANTLOGIC DIAGRAM</strong></figcaption>';
+      rubus.after(figure);
+    }
+
+    return true;
+  };
+
   const reveal = () => {
     const nodes = document.querySelectorAll(".lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram");
     if (!("IntersectionObserver" in window)) {
@@ -225,6 +314,7 @@
     makeRootEvidence();
     decorateZephyr();
     makeVisualRail();
+    makeTechnicalProofs();
     reveal();
   };
 
