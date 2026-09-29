@@ -213,3 +213,24 @@ body{background:var(--lux-paper)}
   .proof-feature-media{min-height:300px}
   .proof-rubus{max-height:none}
 }
+
+
+/* ORGANIC FLOW — remove duplicated legacy layers and keep visual evidence */
+.lux-motion-proof{padding-top:72px!important;padding-bottom:84px!important}
+.lux-motion-proof .catalog-heading{margin-top:0;margin-bottom:24px}
+.lux-hide-card{display:none!important}
+.lux-video-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px!important}
+.lux-video-proof-grid>.has-product-video-grid-item{grid-column:auto!important}
+.lux-video-proof-grid .product-card.has-product-video-story .product-image{aspect-ratio:16/10;background:#e8ece4;border-radius:9px}
+.lux-video-proof-grid .product-card-info{margin-top:14px}
+.lux-video-proof-grid .product-card>p{max-width:440px}
+#rubus{margin-top:72px}
+#rubus h3{font-size:clamp(2rem,3.1vw,3.45rem);line-height:1.03;letter-spacing:-.045em}
+#drainage .section-heading h2,#lysimeter .section-heading h2{font-size:clamp(2.25rem,3.6vw,4.35rem);line-height:1.02;letter-spacing:-.047em}
+#drainage .section-heading p,#lysimeter .section-heading p{max-width:520px;line-height:1.7}
+#field-stories .lux-field-head h2{max-width:790px}
+#root-evidence .lux-root-copy h2{max-width:640px}
+@media(max-width:760px){
+  .lux-video-proof-grid{grid-template-columns:1fr!important}
+  .lux-motion-proof{padding-top:56px!important;padding-bottom:64px!important}
+}
