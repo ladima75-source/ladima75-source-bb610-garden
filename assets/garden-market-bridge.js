@@ -29,19 +29,11 @@
     card.setAttribute("aria-label", `${card.getAttribute("aria-label") || "Товар PlantLogic"}. Відкрити картку в BB610 Market`);
     card.title = "Відкрити картку товару в BB610 Market";
 
-    const info = card.querySelector(".product-card-info");
-    if (info && !info.querySelector(".market-card-indicator")) {
-      const indicator = document.createElement("span");
-      indicator.className = "market-card-indicator";
-      indicator.innerHTML = '<span>BB610 Market</span><span aria-hidden="true">↗</span>';
-      info.append(indicator);
-    }
-
     const desc = card.querySelector("p");
     if (desc && !card.querySelector(".market-card-note")) {
       const note = document.createElement("span");
       note.className = "market-card-note";
-      note.textContent = "Актуальна картка, характеристики та запит ціни — у Market";
+      note.innerHTML = '<span>Картка товару в BB610 Market</span><span aria-hidden="true">↗</span>';
       desc.after(note);
     }
   };
