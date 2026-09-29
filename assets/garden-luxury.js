@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-rework-v3";
+  const VERSION = "20260929-upper-v1";
 
   const cropStories = [
     {
@@ -109,8 +109,8 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="lux-field-head">' +
-          '<div><span class="lux-kicker">PLANTLOGIC / IN THE FIELD</span><h2>Технологія виглядає переконливо, коли видно всю систему.</h2></div>' +
-          '<p>Тому Garden показує не лише окремий контейнер. Показуємо ряд, теплицю, робочу висоту, рослину, полив і те, як конструкція входить у виробничий процес.</p>' +
+          '<div><span class="lux-kicker">PLANTLOGIC / CULTURES IN SYSTEM</span><h2>Чотири культури. Чотири різні виробничі сценарії.</h2></div>' +
+          '<p>Фото показують не окремий виріб, а середовище його роботи: ряд, теплицю, висоту культури, полив, дренаж і доступ персоналу.</p>' +
         '</div>' +
         '<div class="lux-field-grid">' +
           cropStories.map((story, i) =>
@@ -291,6 +291,17 @@
       const node = document.querySelector(selector);
       if (node) node.remove();
     });
+
+    const fieldStories = document.querySelector("#field-stories");
+    const legacyCrops = document.querySelector("#crops");
+    if (fieldStories && legacyCrops) legacyCrops.remove();
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.textContent.trim() === "Культури") link.href = "#field-stories";
+    });
+
+    const heroProduct = document.querySelector(".hero-product");
+    if (heroProduct) heroProduct.remove();
 
     const scrollButton = document.querySelector(".hero .scroll-button");
     if (scrollButton) scrollButton.href = "#crops";
