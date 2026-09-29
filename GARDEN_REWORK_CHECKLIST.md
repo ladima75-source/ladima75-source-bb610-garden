@@ -55,3 +55,14 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Rebalance crop mosaic into one lead image + supporting stories
 - [x] Reduce corporate video heading scale
 - [~] Publish and verify Pages
+
+
+## Stage 2A — Proof-first technical presentation
+- [x] Replace six text-only principle cards with four visual proof modules
+- [x] Use real root-zone photo as first proof
+- [x] Use official Round diagram for base geometry
+- [x] Use official U-Groove technical drawing
+- [x] Use official Zephyr V2 technical plate
+- [x] Replace synthetic root-zone drawing with official media
+- [x] Remove duplicated root-zone proof strip
+- [~] Publish and verify Pages
