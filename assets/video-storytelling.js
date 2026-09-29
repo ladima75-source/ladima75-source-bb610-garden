@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-pack-v1-final";
+  const VERSION = "20260929-pack-v1-final2";
   const stories = [
     { key: "corporate-quality", type: "band", selector: "#offer" },
     { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image" },
