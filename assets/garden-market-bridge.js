@@ -212,8 +212,6 @@
     enhanceForms();
     attachSectionMarketLink("#rubus", "Моделі для малини та ожини у Market", "малина");
     attachSectionMarketLink("#strawberry", "Системи для полуниці у Market", "полуниця");
-    attachSectionMarketLink("#drainage", "Дренажні рішення у Market", "дренаж");
-    attachSectionMarketLink("#lysimeter", "Лізиметри та контроль у Market", "лізиметр");
   };
 
   let queued = false;
