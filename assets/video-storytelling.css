@@ -34,3 +34,7 @@
   .product-card.has-product-video-story .plantlogic-video-story{aspect-ratio:16/9}
   .product-card.has-product-video-story .product-card-info{margin-top:14px}
 }
+
+@media(max-width:760px){
+  .product-grid>.has-product-video-grid-item{grid-column:1/-1}
+}

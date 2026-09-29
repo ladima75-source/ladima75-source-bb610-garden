@@ -65,7 +65,10 @@
     target.prepend(figure);
     target.classList.add("has-plantlogic-video");
     const card = target.closest(".product-card");
-    if (card) card.classList.add("has-product-video-story");
+    if (card) {
+      card.classList.add("has-product-video-story");
+      if (card.parentElement) card.parentElement.classList.add("has-product-video-grid-item");
+    }
     observe(figure);
   };
 
