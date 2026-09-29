@@ -234,3 +234,59 @@ body{background:var(--lux-paper)}
   .lux-video-proof-grid{grid-template-columns:1fr!important}
   .lux-motion-proof{padding-top:56px!important;padding-bottom:64px!important}
 }
+
+
+/* MOBILE / TABLET FINAL PASS */
+html,body{max-width:100%;overflow-x:hidden}
+#geometry .proof-feature{width:100%;margin-left:0;margin-right:0}
+@media(max-width:1050px){
+  .root-zone-grid,.zephyr-engineering-grid,.drainage-engineering-grid{gap:42px!important}
+  .family-selector{gap:16px!important}
+  .interfaces-detail-grid{gap:12px!important}
+  .proof-band{padding-left:0;padding-right:0}
+}
+@media(max-width:760px){
+  .header{height:78px}
+  .hero{padding-top:0}
+  .hero-copy{padding-top:36px}
+  .hero-description{font-size:14px;line-height:1.65}
+  .hero-buttons{flex-wrap:wrap;gap:14px;margin-top:22px}
+  .hero-buttons .button{width:100%}
+  .hero-buttons .text-button{padding-block:8px}
+  .hero-foot{width:100%;padding-top:26px}
+  .hero-photo{min-height:440px}
+  .hero-product{right:14px;bottom:14px;width:218px;padding:9px}
+  .hero-product>div{width:68px}
+  .photo-label{left:18px;bottom:20px;max-width:52%}
+  #crops .crop-card{min-height:390px;padding-bottom:22px}
+  .lux-crop-thumb{height:190px}
+  .lux-field-card{min-width:86vw;height:470px}
+  .lux-field-copy h3{font-size:2rem}
+  .lux-field-copy strong{font-size:12px}
+  .lux-field-copy p{display:none}
+  .technical-core-card{min-height:210px;padding:22px}
+  .technical-core-card h3{margin-top:32px;font-size:20px}
+  .root-zone-visual{min-height:390px}
+  .geometry-media{min-height:260px}
+  .family-card-media{min-height:260px}
+  .family-card-copy{padding:22px 18px}
+  .family-card h3{font-size:1.65rem!important}
+  .family-decision{padding:20px 14px}
+  .zephyr-engineering-media{min-height:300px}
+  .drainage-engineering-image{min-height:330px}
+  .interfaces-flow article{min-height:260px;padding:20px}
+  .proof-band,.proof-feature{gap:24px;margin-top:36px;padding-top:28px}
+  .proof-band-copy h3,.proof-feature-copy h3{font-size:1.75rem}
+  .proof-band figure{min-height:260px}
+  .proof-feature-media{min-height:260px}
+  .proof-higrow{min-height:0}
+  .proof-rubus{width:calc(100% - 36px)}
+  #rubus{grid-template-columns:1fr!important;gap:28px!important;margin-top:56px}
+  .rubus-photo{min-height:440px!important}
+  #drainage .drainage-flow{position:static;margin-top:12px;display:grid;grid-template-columns:1fr;padding:18px}
+  #drainage .drainage-photo{aspect-ratio:auto}
+  #drainage .drainage-photo>img{height:330px}
+  #lysimeter .monitor-flow{overflow-x:auto;justify-content:flex-start}
+  #lysimeter .monitor-flow>div{min-width:130px}
+  .lux-motion-proof .catalog-heading{align-items:flex-start;gap:10px;flex-direction:column}
+}
