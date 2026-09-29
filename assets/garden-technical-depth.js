@@ -74,6 +74,13 @@
     }
   };
 
+  const rewriteNavigation = () => {
+    document.querySelectorAll("a").forEach((link) => {
+      const label = link.textContent.trim();
+      if (label === "Технологія") link.href = "#technical-core";
+    });
+  };
+
   const rewriteOffer = () => {
     const offer = document.querySelector("#offer");
     if (!offer || offer.dataset.technicalDepth === VERSION) return;
@@ -415,6 +422,7 @@
   const run = () => {
     removeMarketBridge();
     rewriteHero();
+    rewriteNavigation();
     rewriteOffer();
     makeTechnicalCore();
     makeRootZone();
