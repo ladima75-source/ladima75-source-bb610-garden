@@ -141,11 +141,52 @@
     document.querySelectorAll("#crops .crop-card").forEach((card) => {
       const title = card.querySelector("h3")?.textContent.trim();
       if (title === "Полуниця") card.href = "#strawberry";
-      if (title === "Овочі") {
-        card.href = catalogUrl("овочі");
-        card.classList.add("crop-card-market");
-      }
+      if (title === "Овочі") card.href = "#vegetable";
     });
+  };
+
+  const ensureVegetableSection = () => {
+    if (document.querySelector("#vegetable")) return;
+    const anchor = document.querySelector("#strawberry") || document.querySelector("#lysimeter");
+    if (!anchor) return;
+
+    const section = document.createElement("section");
+    section.className = "vegetable-story section";
+    section.id = "vegetable";
+    section.innerHTML = `
+      <div class="wrap vegetable-story-grid">
+        <div class="vegetable-story-media">
+          <img
+            src="https://market.bb610.com.ua/assets/culture/photos/vegetables.jpg"
+            alt="Професійне вирощування овочів у субстраті"
+            loading="lazy"
+            width="1200"
+            height="800"
+          >
+          <span>PLANTLOGIC / VEGETABLE SYSTEMS</span>
+        </div>
+        <div class="vegetable-story-copy">
+          <span class="vegetable-story-eyebrow">VEGETABLE / ОВОЧІ</span>
+          <h2>Субстратні рішення для овочевих культур</h2>
+          <p>Горщики, мішки для субстрату, основи та дренажні елементи PlantLogic для професійних систем вирощування.</p>
+          <div class="vegetable-story-tags">
+            <span>Горщики</span>
+            <span>Мішки</span>
+            <span>Основи</span>
+            <span>Дренаж</span>
+          </div>
+          <div class="vegetable-story-actions">
+            <a class="vegetable-story-primary" href="${catalogUrl("овочі")}">
+              <span>Рішення для овочів у Market</span><span aria-hidden="true">↗</span>
+            </a>
+            <a class="vegetable-story-secondary" href="${productUrl("plantlogic-vegetable-pot-8l-1305008")}">
+              Горщик 8 л · #1305008
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    anchor.after(section);
   };
 
   const enhanceForms = () => {
@@ -167,6 +208,7 @@
     ensureMarketBridge();
     ensureFeaturedMarketLink();
     enhanceCropCards();
+    ensureVegetableSection();
     enhanceForms();
     attachSectionMarketLink("#rubus", "Моделі для малини та ожини у Market", "малина");
     attachSectionMarketLink("#strawberry", "Системи для полуниці у Market", "полуниця");
