@@ -12,23 +12,89 @@
   "drawing.png": "assets/media/PL2F33730B_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_TECH_DRAWING_0526.png",
   "featured.jpg": "assets/media/PLEFF1F111_PL_DRAINAGE_25_LITER_ROUND_DRAINAGE_COLLECTION_PRODUCT_0535.jpg",
   "video_loops": {
+    "corporate-quality": {
+      "source_id": "3uS_RvFK5pQ",
+      "drive_file_id": "1fhikwZXTvfeYl-uuq0yqHc6J96vUcfbA",
+      "drive_file_name": "01_corporate_quality_ua.mp4",
+      "poster_file_name": "01_corporate_quality_ua-poster.jpg",
+      "placement": "after #offer / before technology concept",
+      "source": "BB610 Garden Video Pack V1",
+      "pack_drive_url": "https://drive.google.com/drive/folders/1aHjGhLXAdYLU3ZgPXw4Em7FcojjGMLPx",
+      "mp4_size_bytes": 6626963,
+      "webm_size_bytes": 5050437,
+      "poster_size_bytes": 124600,
+      "duration_seconds": 15.982633,
+      "webm_duration_seconds": 16.016,
+      "width": 1920,
+      "height": 800,
+      "files": [
+        "media/video/corporate-quality.webm",
+        "media/video/corporate-quality.mp4",
+        "media/video/corporate-quality-poster.webp"
+      ]
+    },
+    "zephyr-v2-install": {
+      "source_id": "qIm_5pw8CJA",
+      "drive_file_id": "1DBeDsRunH4z4zQNJ1i0ekJCvXEtncWwm",
+      "drive_file_name": "02_zephyr_v2_install_ua.mp4",
+      "poster_file_name": "02_zephyr_v2_install_ua-poster.jpg",
+      "placement": "Blueberry / Zephyr V2 product visual",
+      "source": "BB610 Garden Video Pack V1",
+      "pack_drive_url": "https://drive.google.com/drive/folders/1aHjGhLXAdYLU3ZgPXw4Em7FcojjGMLPx",
+      "mp4_size_bytes": 5059402,
+      "webm_size_bytes": 3807747,
+      "poster_size_bytes": 76008,
+      "duration_seconds": 12.0,
+      "webm_duration_seconds": 12.0,
+      "width": 1280,
+      "height": 720,
+      "files": [
+        "media/video/zephyr-v2-install.webm",
+        "media/video/zephyr-v2-install.mp4",
+        "media/video/zephyr-v2-install-poster.webp"
+      ]
+    },
     "ugroove-irrigation": {
-      "source": "PlantLogic official MASTER / Google Drive",
       "source_id": "2tR1Wyt3JA4",
-      "title": "Plantlogic® | New 40L Square Pot with U-grooves & Side holes",
-      "master_drive_url": "https://drive.google.com/file/d/1mQUXl1dzu4GiqsmRqJrsJZ6Fz5a6DAYk/view",
-      "master_file_name": "20260604 - Plantlogic® ｜ New 40L Square Pot with U-grooves & Side holes [2tR1Wyt3JA4].mp4",
-      "master_sha256": "20af608b878a0c92e0a531470e657ee6da12fda7b4f47003fe514e4bc09f8dc8",
-      "clip_start_seconds": 5,
-      "clip_end_seconds": 12.97,
-      "duration_seconds": 7.97,
-      "final_mp4_duration_seconds": 7.966667,
-      "final_webm_duration_seconds": 7.966,
-      "caption_uk": "Квадратний горщик 40 л з U-пазами та бічними отворами",
+      "drive_file_id": "167CtVbrkZJu5KYwg4nXRAkuDb7d5ghoT",
+      "drive_file_name": "03_40l_ugroove_ua_trimmed.mp4",
+      "poster_file_name": "03_40l_ugroove_ua-poster.jpg",
+      "placement": "Blueberry / 40L U-Groove product visual",
+      "trimmed_version_confirmed": true,
+      "source": "BB610 Garden Video Pack V1",
+      "pack_drive_url": "https://drive.google.com/drive/folders/1aHjGhLXAdYLU3ZgPXw4Em7FcojjGMLPx",
+      "mp4_size_bytes": 2874413,
+      "webm_size_bytes": 1507356,
+      "poster_size_bytes": 65070,
+      "duration_seconds": 7.966667,
+      "webm_duration_seconds": 7.966,
+      "width": 1280,
+      "height": 720,
       "files": [
         "media/video/ugroove-irrigation.webm",
         "media/video/ugroove-irrigation.mp4",
         "media/video/ugroove-irrigation-poster.webp"
+      ]
+    },
+    "higrow-strawberry": {
+      "source_id": "cjwHWuPH-H8",
+      "drive_file_id": "1mFK2Z057EzW6a08pmJvPaxfkGXXqBT60",
+      "drive_file_name": "04_higrow_strawberry_ua.mp4",
+      "poster_file_name": "04_higrow_strawberry_ua-poster.jpg",
+      "placement": "after Lysimeter / compact Strawberry Hi-Grow section",
+      "source": "BB610 Garden Video Pack V1",
+      "pack_drive_url": "https://drive.google.com/drive/folders/1aHjGhLXAdYLU3ZgPXw4Em7FcojjGMLPx",
+      "mp4_size_bytes": 6711407,
+      "webm_size_bytes": 5005744,
+      "poster_size_bytes": 189438,
+      "duration_seconds": 16.0,
+      "webm_duration_seconds": 16.0,
+      "width": 1920,
+      "height": 800,
+      "files": [
+        "media/video/higrow-strawberry.webm",
+        "media/video/higrow-strawberry.mp4",
+        "media/video/higrow-strawberry-poster.webp"
       ]
     }
   }

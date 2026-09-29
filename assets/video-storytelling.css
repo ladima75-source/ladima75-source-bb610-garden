@@ -1,16 +1,27 @@
-.plantlogic-video-story{margin:0;position:relative;overflow:hidden;background:#10261d;border-radius:5px;min-height:260px}
-.plantlogic-video-story video{display:block;width:100%;height:100%;min-height:260px;object-fit:cover;background:#10261d}
+.plantlogic-video-story{margin:0;position:relative;overflow:hidden;background:#0f2119;border-radius:5px;aspect-ratio:16/9}
+.plantlogic-video-story video{display:block;width:100%;height:100%;object-fit:contain;background:#0f2119}
 .has-plantlogic-video{position:relative}
 .has-plantlogic-video>.plantlogic-video-story{position:absolute;inset:0;z-index:1;border-radius:inherit}
-.has-plantlogic-video>.plantlogic-video-story video{height:100%;min-height:100%}
-#offer .plantlogic-video-story,#lysimeter .plantlogic-video-story{margin:34px 0;aspect-ratio:16/7}
-#blueberry .product-image.has-plantlogic-video>.plantlogic-video-story{position:absolute;inset:0}
-@media(max-width:760px){
-  .plantlogic-video-story,.plantlogic-video-story video{min-height:220px}
-  #offer .plantlogic-video-story,#lysimeter .plantlogic-video-story{aspect-ratio:4/3}
+.has-plantlogic-video>.plantlogic-video-story video{height:100%;object-fit:contain;background:#edf0eb}
+.garden-video-band{background:#10261d;color:#f4f6f1;padding-block:58px 72px}
+.garden-video-band .video-band-head{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:22px;font-size:12px;color:#bac7be}
+.garden-video-band .eyebrow{color:#d7ff79}
+.garden-video-band .plantlogic-video-story{width:100%;aspect-ratio:12/5;border-radius:8px}
+.garden-video-band .plantlogic-video-story video{object-fit:contain;background:#10261d}
+.higrow-section{background:#eef1e8}
+.higrow-grid{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:72px;align-items:center}
+.higrow-copy h2{font-size:clamp(2.3rem,4vw,4.6rem);line-height:1.02;letter-spacing:-.055em;margin:20px 0 24px}
+.higrow-copy p{max-width:520px;color:#5e6d63;font-size:17px;line-height:1.7}
+.higrow-media .plantlogic-video-story{aspect-ratio:12/5;border-radius:8px}
+.higrow-media .plantlogic-video-story video{object-fit:contain;background:#10261d}
+@media(max-width:900px){
+  .garden-video-band{padding-block:46px 56px}
+  .garden-video-band .video-band-head{align-items:flex-start;flex-direction:column;gap:6px}
+  .garden-video-band .plantlogic-video-story,.higrow-media .plantlogic-video-story{aspect-ratio:16/9}
+  .higrow-grid{grid-template-columns:1fr;gap:32px}
 }
-/* U-GROOVE APPROVED INSERT */
-[data-video-story="ugroove-irrigation"]{background:#edf0eb}
-[data-video-story="ugroove-irrigation"] video{object-fit:contain;background:#edf0eb}
-.plantlogic-video-caption{position:absolute;left:10px;right:10px;bottom:10px;z-index:3;margin:0;padding:7px 9px;border-radius:4px;background:rgba(8,18,13,.68);color:#fff;font-size:12px;font-weight:650;line-height:1.28;letter-spacing:-.01em;text-align:left;backdrop-filter:blur(3px)}
-@media(max-width:760px){.plantlogic-video-caption{left:8px;right:8px;bottom:8px;padding:7px 8px;font-size:12px;line-height:1.25}}
+@media(max-width:760px){
+  .garden-video-band{padding-block:36px 44px}
+  .garden-video-band .plantlogic-video-story,.higrow-media .plantlogic-video-story{aspect-ratio:16/9}
+  .higrow-copy h2{font-size:clamp(2.2rem,10vw,3.35rem)}
+}
