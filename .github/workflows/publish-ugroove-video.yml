@@ -1,125 +1,47 @@
 name: Publish 40L U-Groove Video
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - ".github/workflows/publish-ugroove-video.yml"
+      - .github/workflows/publish-ugroove-video.yml
+
 permissions:
   contents: write
 
 jobs:
   publish:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Download exact PlantLogic MASTER from Drive
+      - name: Download exact PlantLogic MASTER
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --upgrade gdown
           mkdir -p .master
-          python3 -m gdown "https://drive.google.com/uc?id=1mQUXl1dzu4GiqsmRqJrsJZ6Fz5a6DAYk" -O ".master/plantlogic-40l-ugroove-master.mp4"
+          gdown "https://drive.google.com/uc?id=1mQUXl1dzu4GiqsmRqJrsJZ6Fz5a6DAYk" -O ".master/plantlogic-40l-ugroove-master.mp4"
           test -s ".master/plantlogic-40l-ugroove-master.mp4"
-          bytes=$(stat -c%s ".master/plantlogic-40l-ugroove-master.mp4")
-          test "$bytes" -gt 20000000
-          ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 ".master/plantlogic-40l-ugroove-master.mp4"
+          test "$(stat -c%s .master/plantlogic-40l-ugroove-master.mp4)" -gt 20000000
 
-      - name: Encode approved 00:05.00 to 00:12.97 cut
-        shell: bash
+      - name: Encode approved cut
         run: |
           set -euo pipefail
           SRC=".master/plantlogic-40l-ugroove-master.mp4"
           mkdir -p media/video
-          ffmpeg -y -loglevel error -i "$SRC" -ss 5.000 -t 7.970 -an             -vf "scale=1280:-2:flags=lanczos,fps=30"             -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart             "media/video/ugroove-irrigation.mp4"
-          ffmpeg -y -loglevel error -i "$SRC" -ss 5.000 -t 7.970 -an             -vf "scale=1280:-2:flags=lanczos,fps=30"             -c:v libvpx-vp9 -crf 30 -b:v 0 -deadline good -cpu-used 2 -row-mt 1             "media/video/ugroove-irrigation.webm"
-          ffmpeg -y -loglevel error -i "$SRC" -ss 8.000 -frames:v 1             -vf "scale=1280:-2:flags=lanczos"             -c:v libwebp -q:v 82 -compression_level 6             "media/video/ugroove-irrigation-poster.webp"
+          ffmpeg -y -loglevel error -i "$SRC" -ss 5.000 -t 7.970 -an -vf "scale=1280:-2:flags=lanczos,fps=30" -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p -movflags +faststart media/video/ugroove-irrigation.mp4
+          ffmpeg -y -loglevel error -i "$SRC" -ss 5.000 -t 7.970 -an -vf "scale=1280:-2:flags=lanczos,fps=30" -c:v libvpx-vp9 -crf 30 -b:v 0 -deadline good -cpu-used 2 -row-mt 1 media/video/ugroove-irrigation.webm
+          ffmpeg -y -loglevel error -i "$SRC" -ss 8.000 -frames:v 1 -vf "scale=1280:-2:flags=lanczos" -c:v libwebp -q:v 82 -compression_level 6 media/video/ugroove-irrigation-poster.webp
 
-      - name: Add approved Ukrainian caption and update source register
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import hashlib, json, subprocess
+      - name: Update Garden integration and source registry
+        run: python3 .github/scripts/publish_ugroove.py
 
-          js_path=Path("assets/video-storytelling.js")
-          js=js_path.read_text(encoding="utf-8")
-          if "Квадратний горщик 40 л з U-пазами та бічними отворами" not in js:
-              marker='  const makeVideo = (key) => {'
-              captions='  const captions = {\n    "ugroove-irrigation": "Квадратний горщик 40 л з U-пазами та бічними отворами"\n  };\n\n'
-              if marker not in js:
-                  raise SystemExit("makeVideo marker not found")
-              js=js.replace(marker,captions+marker,1)
-              old='    figure.append(video);\n    return figure;'
-              new='    figure.append(video);\n    if (captions[key]) {\n      const caption = document.createElement("figcaption");\n      caption.className = "plantlogic-video-caption";\n      caption.textContent = captions[key];\n      figure.append(caption);\n      video.setAttribute("aria-label", captions[key]);\n    }\n    return figure;'
-              if old not in js:
-                  raise SystemExit("figure append marker not found")
-              js=js.replace(old,new,1)
-              js_path.write_text(js,encoding="utf-8")
-
-          css_path=Path("assets/video-storytelling.css")
-          css=css_path.read_text(encoding="utf-8")
-          token='/* U-GROOVE APPROVED INSERT */'
-          if token not in css:
-              css += '''
-/* U-GROOVE APPROVED INSERT */
-[data-video-story="ugroove-irrigation"]{background:#edf0eb}
-[data-video-story="ugroove-irrigation"] video{object-fit:contain;background:#edf0eb}
-.plantlogic-video-caption{position:absolute;left:10px;right:10px;bottom:10px;z-index:3;margin:0;padding:7px 9px;border-radius:4px;background:rgba(8,18,13,.68);color:#fff;font-size:12px;font-weight:650;line-height:1.28;letter-spacing:-.01em;text-align:left;backdrop-filter:blur(3px)}
-@media(max-width:760px){.plantlogic-video-caption{left:8px;right:8px;bottom:8px;padding:7px 8px;font-size:12px;line-height:1.25}}
-'''
-              css_path.write_text(css,encoding="utf-8")
-
-          src_path=Path("media/sources.json")
-          data=json.loads(src_path.read_text(encoding="utf-8"))
-          master=Path(".master/plantlogic-40l-ugroove-master.mp4")
-          sha=hashlib.sha256(master.read_bytes()).hexdigest()
-          def duration(path):
-              return round(float(subprocess.check_output([
-                  "ffprobe","-v","error","-show_entries","format=duration",
-                  "-of","default=nw=1:nk=1",str(path)
-              ],text=True).strip()),6)
-          data["video_loops"]["ugroove-irrigation"]={
-              "source":"PlantLogic official MASTER / Google Drive",
-              "source_id":"2tR1Wyt3JA4",
-              "title":"Plantlogic® | New 40L Square Pot with U-grooves & Side holes",
-              "master_drive_url":"https://drive.google.com/file/d/1mQUXl1dzu4GiqsmRqJrsJZ6Fz5a6DAYk/view",
-              "master_file_name":"20260604 - Plantlogic® ｜ New 40L Square Pot with U-grooves & Side holes [2tR1Wyt3JA4].mp4",
-              "master_sha256":sha,
-              "clip_start_seconds":5,
-              "clip_end_seconds":12.97,
-              "duration_seconds":7.97,
-              "final_mp4_duration_seconds":duration(Path("media/video/ugroove-irrigation.mp4")),
-              "final_webm_duration_seconds":duration(Path("media/video/ugroove-irrigation.webm")),
-              "caption_uk":"Квадратний горщик 40 л з U-пазами та бічними отворами",
-              "files":[
-                  "media/video/ugroove-irrigation.webm",
-                  "media/video/ugroove-irrigation.mp4",
-                  "media/video/ugroove-irrigation-poster.webp"
-              ]
-          }
-          src_path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-          PY
-
-      - name: Verify only approved U-Groove assets changed
-        shell: bash
+      - name: Verify scoped changes
         run: |
           set -euo pipefail
-          mp4_d=$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 media/video/ugroove-irrigation.mp4)
-          webm_d=$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 media/video/ugroove-irrigation.webm)
-          python3 - "$mp4_d" "$webm_d" <<'PY'
-          import sys
-          for raw in sys.argv[1:]:
-              d=float(raw)
-              assert 7.90 <= d <= 7.99, d
-          PY
-          test -s media/video/ugroove-irrigation.mp4
-          test -s media/video/ugroove-irrigation.webm
-          test -s media/video/ugroove-irrigation-poster.webp
-          grep -q 'clip_start_seconds.*5' media/sources.json
-          grep -q 'clip_end_seconds.*12.97' media/sources.json
-          grep -q 'Квадратний горщик 40 л з U-пазами та бічними отворами' assets/video-storytelling.js
           git diff --name-only | sort
           bad=$(git diff --name-only | grep -E '^media/video/' | grep -v -E '^media/video/ugroove-irrigation\.(mp4|webm)$|^media/video/ugroove-irrigation-poster\.webp$' || true)
           test -z "$bad"
@@ -127,6 +49,7 @@ jobs:
       - name: Commit and publish
         run: |
           rm -rf .master
+          rm -f .github/scripts/publish_ugroove.py
           rm -f .github/workflows/publish-ugroove-video.yml
           rm -f .github/workflows/refine-plantlogic-video-cuts.yml
           git config user.name "github-actions[bot]"
