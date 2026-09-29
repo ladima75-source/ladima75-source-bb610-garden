@@ -469,6 +469,101 @@
     return true;
   };
 
+  const makeSystemInterfaces = () => {
+    if (document.querySelector("#system-interfaces")) return true;
+    const target = document.querySelector("#drainage-engineering") || document.querySelector("#drainage");
+    if (!target) return false;
+
+    const section = document.createElement("section");
+    section.className = "system-interfaces section";
+    section.id = "system-interfaces";
+    section.innerHTML = `
+      <div class="wrap">
+        <div class="system-interfaces-head">
+          <div>
+            <span class="tech-eyebrow">SYSTEM INTERFACES / ВІД ПОДАЧІ ДО OUT</span>
+            <h2>Перевага PlantLogic — у тому, як елементи стикуються між собою</h2>
+          </div>
+          <p>
+            Контейнер сам по собі не керує фертигацією. Його задача — зробити шлях води,
+            повітря та дренажу передбачуванішим і дати господарству фізичні точки для
+            правильного монтажу поливу, відведення стоку та відбору проб.
+          </p>
+        </div>
+
+        <div class="interfaces-flow">
+          <article>
+            <span class="interfaces-no">01</span>
+            <div class="interfaces-icon">IN</div>
+            <h3>Подача розчину</h3>
+            <p>Поливна магістраль повинна бути стабільно розміщена відносно контейнера, щоб конфігурація повторювалась уздовж ряду.</p>
+            <ul>
+              <li>U-Groove — посадочне місце для труби;</li>
+              <li>окремі моделі мають пази під 16 або 20 мм;</li>
+              <li>кліпси утримують шланг і допомагають прибрати мікротрубку із зони проходу працівників.</li>
+            </ul>
+          </article>
+          <div class="interfaces-arrow">→</div>
+          <article>
+            <span class="interfaces-no">02</span>
+            <div class="interfaces-icon">ROOT</div>
+            <h3>Коренева зона</h3>
+            <p>Пірамідальне дно, крайові дренажні отвори та центральна аерація формують фізичний шлях для води й кисню.</p>
+            <ul>
+              <li>надлишок води зміщується до периферії;</li>
+              <li>центральні недренуючі отвори подають O₂;</li>
+              <li>відкрита зона під горщиком підтримує self-pruning.</li>
+            </ul>
+          </article>
+          <div class="interfaces-arrow">→</div>
+          <article>
+            <span class="interfaces-no">03</span>
+            <div class="interfaces-icon">OUT</div>
+            <h3>Відведення дренажу</h3>
+            <p>У стандартних контейнерах дренаж виходить у відкриту повітряну зону. У Drainage Collection весь потік можна направити в жолоб.</p>
+            <ul>
+              <li>менше застійної води під контейнером;</li>
+              <li>можливий централізований відвід із тунелю;</li>
+              <li>з’являється контрольована точка OUT.</li>
+            </ul>
+          </article>
+          <div class="interfaces-arrow">→</div>
+          <article>
+            <span class="interfaces-no">04</span>
+            <div class="interfaces-icon">QC</div>
+            <h3>Чиста проба</h3>
+            <p>Лізиметр щільно працює з відповідним горщиком і збирає дренаж так, щоб зменшити вплив випаровування та забруднення проби.</p>
+            <ul>
+              <li>порівняння IN і OUT;</li>
+              <li>об’єм дренажу;</li>
+              <li>pH та EC вимірюються зовнішніми приладами.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="interfaces-detail-grid">
+          <article class="interfaces-detail-card">
+            <span>HOSE CLIP</span>
+            <h3>Одна точка кріплення — кілька функцій</h3>
+            <p>Актуальна багатофункціональна кліпса PlantLogic підтримує труби 14–16 та 17–22 мм, може фіксувати поливний шланг, cooling skirt і дріт шпалери. Виробник також заявляє економію мікротрубки до 50% завдяки іншій схемі розміщення емітера.</p>
+          </article>
+          <article class="interfaces-detail-card">
+            <span>LYSIMETER KIT</span>
+            <h3>Моніторинг без вбудованої електроніки</h3>
+            <p>PlantLogic пропонує два розміри лізиметрів — приблизно 22×22 та 31.6×31.6 см. Комплект із лізиметрами та IN/OUT ємностями потрібен не для автоматичного аналізу, а для отримання репрезентативної чистої проби.</p>
+          </article>
+          <article class="interfaces-detail-card">
+            <span>DESIGN PRINCIPLE</span>
+            <h3>Горщик не замінює агрономію</h3>
+            <p>Навіть хороша геометрія не виправляє неправильний EC, pH, частоту поливу чи невідповідний субстрат. Її цінність у тому, що вона зменшує конструктивні причини застою води й дає більш контрольований дренажний контур.</p>
+          </article>
+        </div>
+      </div>
+    `;
+    target.after(section);
+    return true;
+  };
+
   const makeMonitoringDeep = () => {
     if (document.querySelector("#monitoring-engineering")) return true;
     const target = document.querySelector("#lysimeter");
@@ -592,6 +687,7 @@
     rewriteFormatExamples();
     makeZephyrDeep();
     makeDrainageDeep();
+    makeSystemInterfaces();
     makeMonitoringDeep();
     makeCropEngineering();
     makeSourceNote();
