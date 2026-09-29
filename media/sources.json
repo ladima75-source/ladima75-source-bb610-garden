@@ -52,12 +52,18 @@
       ]
     },
     "ugroove-irrigation": {
-      "source": "PlantLogic YouTube",
+      "source": "PlantLogic official MASTER / Google Drive",
       "source_id": "2tR1Wyt3JA4",
-      "title": "Plantlogic | New 40L Square Pot with U-grooves & Side holes",
-      "url": "https://www.youtube.com/watch?v=2tR1Wyt3JA4",
-      "clip_start_seconds": 7,
-      "duration_seconds": 8,
+      "title": "Plantlogic® | New 40L Square Pot with U-grooves & Side holes",
+      "master_drive_url": "https://drive.google.com/file/d/1mQUXl1dzu4GiqsmRqJrsJZ6Fz5a6DAYk/view",
+      "master_file_name": "20260604 - Plantlogic® ｜ New 40L Square Pot with U-grooves & Side holes [2tR1Wyt3JA4].mp4",
+      "master_sha256": "20af608b878a0c92e0a531470e657ee6da12fda7b4f47003fe514e4bc09f8dc8",
+      "clip_start_seconds": 5,
+      "clip_end_seconds": 12.97,
+      "duration_seconds": 7.97,
+      "final_mp4_duration_seconds": 7.966667,
+      "final_webm_duration_seconds": 7.966,
+      "caption_uk": "Квадратний горщик 40 л з U-пазами та бічними отворами",
       "files": [
         "media/video/ugroove-irrigation.webm",
         "media/video/ugroove-irrigation.mp4",

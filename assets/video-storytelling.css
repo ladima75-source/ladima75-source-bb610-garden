@@ -9,3 +9,8 @@
   .plantlogic-video-story,.plantlogic-video-story video{min-height:220px}
   #offer .plantlogic-video-story,#lysimeter .plantlogic-video-story{aspect-ratio:4/3}
 }
+/* U-GROOVE APPROVED INSERT */
+[data-video-story="ugroove-irrigation"]{background:#edf0eb}
+[data-video-story="ugroove-irrigation"] video{object-fit:contain;background:#edf0eb}
+.plantlogic-video-caption{position:absolute;left:10px;right:10px;bottom:10px;z-index:3;margin:0;padding:7px 9px;border-radius:4px;background:rgba(8,18,13,.68);color:#fff;font-size:12px;font-weight:650;line-height:1.28;letter-spacing:-.01em;text-align:left;backdrop-filter:blur(3px)}
+@media(max-width:760px){.plantlogic-video-caption{left:8px;right:8px;bottom:8px;padding:7px 8px;font-size:12px;line-height:1.25}}

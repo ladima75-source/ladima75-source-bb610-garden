@@ -8,6 +8,10 @@
     { key: "monitoring", selector: "#lysimeter .monitor-flow", mode: "before" }
   ];
 
+  const captions = {
+    "ugroove-irrigation": "Квадратний горщик 40 л з U-пазами та бічними отворами"
+  };
+
   const makeVideo = (key) => {
     const figure = document.createElement("figure");
     figure.className = "plantlogic-video-story";
@@ -27,6 +31,13 @@
       video.append(source);
     });
     figure.append(video);
+    if (captions[key]) {
+      const caption = document.createElement("figcaption");
+      caption.className = "plantlogic-video-caption";
+      caption.textContent = captions[key];
+      figure.append(caption);
+      video.setAttribute("aria-label", captions[key]);
+    }
     return figure;
   };
 
