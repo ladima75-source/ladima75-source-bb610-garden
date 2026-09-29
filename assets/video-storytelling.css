@@ -25,3 +25,12 @@
   .garden-video-band .plantlogic-video-story,.higrow-media .plantlogic-video-story{aspect-ratio:16/9}
   .higrow-copy h2{font-size:clamp(2.2rem,10vw,3.35rem)}
 }
+
+/* Video Pack V1 product insert refinement */
+.has-plantlogic-video>.plantlogic-video-story{width:100%;height:100%;aspect-ratio:auto}
+@media(max-width:760px){
+  .product-card.has-product-video-story{grid-column:1/-1}
+  .product-card.has-product-video-story .product-image{aspect-ratio:16/9}
+  .product-card.has-product-video-story .plantlogic-video-story{aspect-ratio:16/9}
+  .product-card.has-product-video-story .product-card-info{margin-top:14px}
+}
