@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = "20260929-proof-v1";
+  const VERSION = "20260929-video-integrated-v1";
 
   const cropStories = [
     {
@@ -416,6 +416,47 @@
     return true;
   };
 
+  const integrateVideoProofs = () => {
+    const proofArticles = document.querySelectorAll("#technical-core .proof-principle");
+    if (proofArticles.length >= 4) {
+      const placements = [
+        { key: "ugroove-irrigation", index: 2, label: "U-GROOVE / MOTION" },
+        { key: "zephyr-v2-install", index: 3, label: "ZEPHYR V2 / MOTION" }
+      ];
+
+      placements.forEach(({key,index,label}) => {
+        const figure = document.querySelector('[data-video-story="' + key + '"]');
+        const article = proofArticles[index];
+        if (!figure || !article || article.querySelector('[data-proof-motion="' + key + '"]')) return;
+
+        const inset = document.createElement("div");
+        inset.className = "proof-motion-inset";
+        inset.dataset.proofMotion = key;
+        inset.innerHTML = '<span class="proof-motion-label">' + label + '</span>';
+        inset.append(figure);
+        article.append(inset);
+      });
+
+      const blueberry = document.querySelector("#blueberry");
+      if (blueberry) blueberry.remove();
+    }
+
+    const corporateTitle = document.querySelector("#corporate-video .video-band-head h2");
+    const corporateLead = document.querySelector("#corporate-video .video-band-head p");
+    if (corporateTitle) corporateTitle.textContent = "PlantLogic у русі.";
+    if (corporateLead) corporateLead.textContent = "Короткі фрагменти показують монтаж і роботу системи там, де статичного фото недостатньо.";
+
+    const hiGrow = document.querySelector("#strawberry");
+    if (hiGrow) {
+      const title = hiGrow.querySelector(".higrow-copy h2");
+      const lead = hiGrow.querySelector(".higrow-copy p");
+      if (title) title.textContent = "Hi-Grow: схема плюс реальна робота системи.";
+      if (lead) lead.textContent = "Відео показує просторову логіку установки, а офіційна схема нижче фіксує конструкцію без рекламної інтерпретації.";
+    }
+
+    return true;
+  };
+
   const reveal = () => {
     const nodes = document.querySelectorAll(".lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram");
     if (!("IntersectionObserver" in window)) {
@@ -447,6 +488,7 @@
     makeTechnicalProofs();
     cleanLegacySections();
     rebuildTechnicalProof();
+    integrateVideoProofs();
     reveal();
   };
 
