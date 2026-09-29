@@ -1,11 +1,6 @@
 (() => {
   const stories = [
-    { key: "blueberry", selector: "#blueberry .crop-photo", mode: "replace" },
-    { key: "rubus-long-cane", selector: "#rubus .rubus-photo", mode: "replace" },
-    { key: "drainage-collection", selector: "#drainage .drainage-photo", mode: "replace" },
-    { key: "ugroove-irrigation", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image", mode: "replace" },
-    { key: "substrate-systems", selector: "#offer .offer-grid", mode: "after" },
-    { key: "monitoring", selector: "#lysimeter .monitor-flow", mode: "before" }
+    { key: "ugroove-irrigation", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image", mode: "replace" }
   ];
 
   const captions = {
