@@ -85,15 +85,24 @@
   };
 
   const enhanceArrows = (root=document) => {
+    const icon = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19L19 5M10 5h9v9" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    root.querySelectorAll(".lux-arrow-chip").forEach(el => {
+      el.className = "lux-arrow-mark";
+      el.removeAttribute("style");
+      el.innerHTML = icon;
+    });
+
     root.querySelectorAll("a,button,.culture-link").forEach(el => {
-      if (el.querySelector(".lux-arrow-chip,.lux-arrow-mark")) return;
+      if (el.querySelector(".lux-arrow-mark")) return;
 
       const existing = [...el.children].find(child =>
         child.matches?.('span[aria-hidden="true"]') && /^[↗→]$/.test(child.textContent.trim())
       );
       if (existing) {
         existing.className = "lux-arrow-mark";
-        existing.innerHTML = '<svg viewBox="0 0 28 18" fill="none" aria-hidden="true"><path d="M2 16L18 2M10 2h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        existing.removeAttribute("style");
+        existing.innerHTML = icon;
         return;
       }
 
@@ -106,7 +115,7 @@
         const mark=document.createElement("span");
         mark.className="lux-arrow-mark";
         mark.setAttribute("aria-hidden","true");
-        mark.innerHTML='<svg viewBox="0 0 28 18" fill="none"><path d="M2 16L18 2M10 2h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        mark.innerHTML=icon;
         el.append(mark);
         break;
       }
