@@ -24,11 +24,20 @@
     ["OUT", "Вихід"],
     ["QC", "Контроль"],
     ["AIR FLOW → ROOT SELF-PRUNING", "Повітряний потік → повітряне підрізання коренів"],
-    ["PROFESSIONAL HORTICULTURE · UKRAINE", "ПРОФЕСІЙНЕ САДІВНИЦТВО · УКРАЇНА"]
+    ["PROFESSIONAL HORTICULTURE · UKRAINE", "ПРОФЕСІЙНЕ САДІВНИЦТВО · УКРАЇНА"],
+    ["PRODUCTION / LONG CANE", ""],
+    ["LONG CANE / PLANTLOGIC", "Long Cane · PlantLogic"],
+    ["Production", "Виробничий цикл"],
+    ["Cold Storage / Long Cane", "Холодне зберігання / Long Cane"],
+    ["У ФОКУСІ / FEATURED PRODUCT", "У ФОКУСІ"],
+    ["DRAINAGE", "Дренаж"],
+    ["ROOT ARCHITECTURE", "Коренева система"]
   ]);
 
   const phraseReplacements = [
     [/\bDrainage Collection\b/g, "збір дренажу"],
+    [/\bProduction\b/g, "виробничий цикл"],
+    [/\bCold Storage\b/g, "холодне зберігання"],
     [/\bRound V-Rib\b/g, "круглий горщик з V-ребрами"],
     [/\bRound\b/g, "круглий"],
     [/\bSquare\b/g, "квадратний"],
@@ -112,9 +121,31 @@
     ).forEach(el => el.remove());
   };
 
+  const syncCanonicalNames = () => {
+    const featured = document.querySelector(".featured-copy h3");
+    if (featured) featured.textContent = "Горщик для лохини 25 л круглий зі збором дренажу";
+
+    const familyHead = document.querySelector("#family-engineering .family-engineering-head h2");
+    if (familyHead) familyHead.textContent = "Коли потрібен круглий, квадратний, з U-пазами, Zephyr V2 або горщик зі збором дренажу.";
+
+    const familyCards = [...document.querySelectorAll("#family-engineering .family-card")];
+    familyCards.forEach(card => {
+      const media = card.querySelector(".family-card-media>span");
+      if (media) media.remove();
+    });
+
+    document.querySelectorAll(".scenario strong").forEach(node => {
+      const t=node.textContent.trim();
+      if(t==="Production") node.textContent="Виробничий цикл";
+      if(t==="Cold Storage / Long Cane") node.textContent="Холодне зберігання / Long Cane";
+      if(t==="Drainage Collection") node.textContent="Збір дренажу";
+    });
+  };
+
   const run = () => {
     removeDecorative();
     cleanText();
+    syncCanonicalNames();
     enhanceArrows();
   };
 
@@ -130,5 +161,5 @@
 
   const observer = new MutationObserver(schedule);
   observer.observe(document.documentElement,{subtree:true,childList:true});
-  setTimeout(() => observer.disconnect(), 15000);
+  const canonicalTimer=setInterval(run,500); setTimeout(()=>{clearInterval(canonicalTimer);observer.disconnect();},15000);
 })();
