@@ -192,3 +192,23 @@ body{padding-top:104px!important}
 a:has(>.lux-arrow-chip),button:has(>.lux-arrow-chip){display:inline-flex;align-items:center}
 a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip{transform:translate(2px,-2px);background:#173828;border-color:rgba(215,255,121,.72)}
 .product-primary-action .lux-arrow-chip{background:rgba(16,38,29,.9);color:#eaffba;border-color:rgba(16,38,29,.16)}
+
+
+/* 2026-10-05 — readable product typography + editorial arrows */
+.product-site-header nav{font-size:15px!important;gap:24px!important}
+.product-detail-summary{font-size:16px!important;line-height:1.72!important}
+.product-section-heading>p,.product-section-copy>p{font-size:16px!important;line-height:1.72!important}
+.product-detail-cards p{font-size:14px!important;line-height:1.68!important}
+.related-product-card p{font-size:13px!important;line-height:1.58!important}
+.product-section-kicker{display:none!important}
+.lux-arrow-chip{
+  width:46px!important;height:22px!important;min-width:46px!important;border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;margin-left:13px!important;display:inline-flex!important;
+  align-items:center!important;justify-content:flex-end!important;position:relative!important;color:currentColor!important
+}
+.lux-arrow-chip::before{content:"";position:absolute;left:0;top:50%;width:24px;height:1px;background:currentColor;opacity:.48;transform:translateY(-50%);transition:.22s}
+.lux-arrow-chip svg{width:18px!important;height:18px!important;position:relative}
+a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip{transform:translateX(3px)!important;background:transparent!important;border-color:transparent!important}
+a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:30px;opacity:.9}
+.product-primary-action .lux-arrow-chip{background:transparent!important;color:inherit!important;border:0!important}
+@media(max-width:720px){.product-site-header nav{font-size:11px!important}}
