@@ -226,3 +226,17 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:30px;
 @media(max-width:720px){
   .product-site-header nav a{font-size:11px!important}
 }
+
+/* product typography v4 */
+.product-site-header nav{font-size:17px!important;font-weight:590!important}
+.product-detail-summary{font-size:16.5px!important;line-height:1.72!important}
+.product-detail-facts li,.related-product-card p{font-size:14.5px!important;line-height:1.62!important}
+.product-section-kicker{display:none!important}
+.product-detail-copy h1{font-size:clamp(2.8rem,4.2vw,4.8rem)!important}
+.lux-arrow-chip,.lux-arrow-mark{
+  width:30px!important;height:18px!important;min-width:30px!important;margin-left:14px!important;padding-left:12px!important;
+  border:0!important;border-left:1px solid currentColor!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;opacity:.72!important
+}
+.lux-arrow-chip svg,.lux-arrow-mark svg{width:17px!important;height:17px!important}
+a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip,a:hover>.lux-arrow-mark,button:hover>.lux-arrow-mark{transform:translate(4px,-2px)!important;opacity:1!important}
+@media(max-width:720px){.product-site-header nav{font-size:11px!important}}
