@@ -250,3 +250,121 @@ button:hover>.lux-arrow-mark{
   .interfaces-flow p,
   main p{font-size:14.5px!important}
 }
+
+
+/* 2026-10-05 polish v4 — readability, language, quieter luxury */
+.desktop-nav,
+.site-header nav,
+.product-site-header nav,
+.culture-header .desktop-nav,
+.system-header .desktop-nav,
+.catalog-header .desktop-nav{
+  font-size:17px!important;
+  font-weight:590!important;
+  letter-spacing:-.012em!important;
+}
+
+.eyebrow,
+.clarity-num,
+.scenario>span,
+.drainage-flow small,
+.photo-pill,
+.featured-caption,
+.catalog-heading>.eyebrow,
+.rubus-copy>.eyebrow,
+.tech-eyebrow,
+.lux-kicker,
+.lux-field-index,
+.family-card-label,
+.family-card-media>span,
+.geometry-copy>span,
+.proof-motion-label,
+.proof-label,
+.technical-core-no,
+.section-index,
+.interfaces-no,
+.garden-products-kicker{
+  display:none!important;
+}
+
+.hero-description,
+.lux-field-head>p,
+.technical-core-head p,
+.drainage-engineering-head>p,
+.family-engineering-head>p,
+.system-interfaces-head>p,
+.root-zone-copy>p,
+.zephyr-engineering-copy>p,
+.garden-products-head>p{
+  font-size:17px!important;
+  line-height:1.72!important;
+}
+.lux-field-copy strong{font-size:17px!important;line-height:1.46!important}
+.lux-field-copy p{font-size:15px!important;line-height:1.62!important}
+.technical-core-card p,
+.geometry-copy p,
+.family-card p,
+.family-card dd,
+.root-zone-points span,
+.interfaces-flow p,
+.interfaces-flow li,
+.proof-band-copy p,
+.proof-feature-copy p,
+.garden-product-focus,
+.garden-product-subtitle,
+.related-product-card p{
+  font-size:15.5px!important;
+  line-height:1.65!important;
+}
+main p,.culture-copy p,.contact-inner p,.hub-card p,.detail-copy p{
+  font-size:16.5px!important;
+  line-height:1.68!important;
+}
+
+/* editorial CTA: no circle, no badge, just a fine directional gesture */
+.lux-arrow-chip,.lux-arrow-mark{
+  width:30px!important;
+  height:18px!important;
+  min-width:30px!important;
+  margin-left:14px!important;
+  padding-left:12px!important;
+  border:0!important;
+  border-left:1px solid currentColor!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  opacity:.72!important;
+}
+.lux-arrow-chip svg,.lux-arrow-mark svg{width:17px!important;height:17px!important}
+a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip,
+a:hover>.lux-arrow-mark,button:hover>.lux-arrow-mark{
+  transform:translate(4px,-2px)!important;
+  opacity:1!important;
+}
+.header-cta .lux-arrow-chip,.hero .button .lux-arrow-chip,.product-primary-action .lux-arrow-chip{
+  background:transparent!important;
+  color:currentColor!important;
+  border-left-color:rgba(16,38,29,.38)!important;
+}
+.market-link .lux-arrow-chip,.text-button .lux-arrow-chip{
+  background:transparent!important;
+  color:currentColor!important;
+  border-left-color:rgba(215,255,121,.42)!important;
+}
+
+.hero h1{font-size:clamp(3.1rem,4.15vw,4.55rem)!important;line-height:1.015!important}
+.lux-field-head h2,
+.technical-core-head h2,
+.family-engineering-head h2,
+.drainage-engineering-head h2,
+.system-interfaces-head h2{
+  font-size:clamp(2.35rem,3.35vw,3.9rem)!important;
+}
+
+@media(max-width:1180px){
+  .desktop-nav,.site-header nav,.product-site-header nav{font-size:15px!important}
+}
+@media(max-width:760px){
+  .hero-description{font-size:16px!important}
+  main p,.culture-copy p,.detail-copy p{font-size:15px!important}
+}
