@@ -261,7 +261,7 @@ window.GARDEN_PRODUCT_DATA = [
       diagram: "/media/products/1305909-strawberry18-infographic.png?v=" + GARDEN_PRODUCT_DATA_VERSION,
       volume: "18 л",
       dimensions: "255 × 1014 мм",
-      legs: "tabletop",
+      legs: "піднята система",
       focus: "жолоб довжиною 1 м + опора для квітконосів",
       summary: "Жорсткий метровий жолоб для піднятого вирощування полуниці з широкими ручками, які одночасно підтримують квітконоси.",
       facts: [
