@@ -496,3 +496,61 @@ body{padding-top:112px!important}
   .header-inner{height:80px!important}
   .brand img{width:92px!important;max-height:72px!important}
 }
+
+
+/* 2026-10-05 — luxury cleanup: no service labels, unified arrow chips */
+.hero-copy>.eyebrow,
+.hero .photo-top,
+.hero .hero-bottom,
+.hero-foot>span,
+.hero .photo-label .micro,
+.section-index,
+.proof-label,
+.proof-principle>div>span,
+.interfaces-no{display:none!important}
+.hero-foot{justify-content:flex-end!important;border-top:0!important;padding-top:18px!important}
+.hero .photo-label{bottom:24px!important}
+.hero .photo-label p{margin:0!important;font-size:14px!important;line-height:1.35!important}
+.lux-arrow-chip{
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:inline-grid;
+  place-items:center;
+  margin-left:10px;
+  color:#d7ff79;
+  background:
+    radial-gradient(circle at 30% 25%,rgba(255,255,255,.12),transparent 46%),
+    rgba(8,23,16,.58);
+  border:1px solid rgba(215,255,121,.38);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.035),0 8px 22px rgba(0,0,0,.16);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+  transition:transform .24s ease,background .24s ease,border-color .24s ease,box-shadow .24s ease;
+}
+.lux-arrow-chip svg{width:16px!important;height:16px!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important}
+a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip{
+  transform:translate(2px,-2px);
+  background:rgba(29,61,42,.84);
+  border-color:rgba(215,255,121,.72);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.05),0 11px 26px rgba(0,0,0,.22);
+}
+.header .market-link,.header .header-cta,.hero .button,.hero .text-button{
+  display:inline-flex!important;
+  align-items:center!important;
+}
+.header .market-link .lux-arrow-chip{width:30px;height:30px;margin-left:8px}
+.header .header-cta .lux-arrow-chip{width:31px;height:31px;margin-left:9px;background:rgba(16,38,29,.82);border-color:rgba(16,38,29,.18);color:#e9ffb7}
+.hero .button .lux-arrow-chip{background:rgba(16,38,29,.88);border-color:rgba(16,38,29,.16);color:#e9ffb7}
+.hero .text-button .lux-arrow-chip{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.24);color:#d7ff79}
+.scroll-button{
+  width:46px!important;height:46px!important;border:1px solid rgba(255,255,255,.22)!important;
+  background:rgba(255,255,255,.045)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025),0 12px 28px rgba(0,0,0,.14)!important;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.scroll-button:hover{transform:translateY(3px)!important;border-color:rgba(215,255,121,.5)!important;background:rgba(215,255,121,.08)!important}
+@media(max-width:760px){
+  .lux-arrow-chip{width:31px;height:31px;margin-left:8px}
+  .hero .photo-label{display:none!important}
+}
