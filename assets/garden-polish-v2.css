@@ -419,3 +419,64 @@ a:hover>.lux-arrow-mark,button:hover>.lux-arrow-mark{
 .culture-copy h2{
   margin-top:0!important;
 }
+
+
+/* STEP 3 — luxury editorial arrows: no circles, no badges */
+.lux-arrow-chip,
+.lux-arrow-mark,
+.header-cta>span[aria-hidden="true"],
+.culture-link>span[aria-hidden="true"]{
+  width:24px!important;
+  height:24px!important;
+  min-width:24px!important;
+  margin-left:13px!important;
+  padding:0!important;
+  border:0!important;
+  border-left:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  color:currentColor!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  opacity:.76!important;
+  line-height:1!important;
+  transition:transform .22s cubic-bezier(.2,.7,.2,1),opacity .22s ease!important;
+}
+.lux-arrow-chip::before,
+.lux-arrow-mark::before,
+.header-cta>span[aria-hidden="true"]::before,
+.culture-link>span[aria-hidden="true"]::before{
+  display:none!important;
+  content:none!important;
+}
+.lux-arrow-chip svg,
+.lux-arrow-mark svg{
+  width:20px!important;
+  height:20px!important;
+  display:block!important;
+  overflow:visible!important;
+}
+a:hover>.lux-arrow-chip,
+button:hover>.lux-arrow-chip,
+a:hover>.lux-arrow-mark,
+button:hover>.lux-arrow-mark,
+.header-cta:hover>span[aria-hidden="true"],
+.culture-link:hover>span[aria-hidden="true"]{
+  transform:translate(4px,-3px)!important;
+  opacity:1!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.header-cta .lux-arrow-mark,
+.hero .button .lux-arrow-mark,
+.product-primary-action .lux-arrow-mark,
+.market-link .lux-arrow-mark,
+.text-button .lux-arrow-mark{
+  color:currentColor!important;
+  border:0!important;
+  background:transparent!important;
+}
