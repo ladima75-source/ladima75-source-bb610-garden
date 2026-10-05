@@ -87,7 +87,7 @@
           '<figure><img src="' + product.diagram + '" alt="Технічна схема ' + product.name + '" loading="lazy"><figcaption>PlantLogic · Product #' + product.no + '</figcaption></figure>' +
         '</div>' +
       '</section>'
-    : '<section class="product-tech-note product-page-section"><div class="product-page-wrap"><strong>Технічне креслення</strong><p>Для цієї canonical моделі окреме точне креслення ще не додане в Garden. Ми не підміняємо його схемою іншої моделі.</p></div></section>';
+    : '<section class="product-tech-note product-page-section"><div class="product-page-wrap"><strong>Технічне креслення</strong><p>Для цієї моделі окреме точне креслення ще не додане в Garden. Ми не підміняємо його схемою іншого виробу.</p></div></section>';
 
   root.innerHTML =
     '<article class="product-detail-page">' +
@@ -167,7 +167,7 @@
       '<section class="product-source product-page-section">' +
         '<div class="product-page-wrap product-source-inner">' +
           '<div><span>Технічне джерело</span><strong>Офіційні матеріали PlantLogic</strong></div>' +
-          '<p>Canonical назва синхронізована з BB610 Market Product Master V5. Garden додає технічне пояснення, офіційні фото та схеми.</p>' +
+          '<p>Назва моделі відповідає каталогу BB610 Market. Garden доповнює її технічним поясненням, офіційними фото та схемами.</p>' +
           '<a href="' + product.source + '" target="_blank" rel="noreferrer">Перевірити першоджерело ↗</a>' +
         '</div>' +
       '</section>' +
