@@ -9,7 +9,7 @@
   const idealText = (item) => {
     if (item.application === "strawberry") return "Для професійного tabletop-вирощування полуниці";
     if (item.application === "vegetable") return "Для професійного вирощування овочів і полуниці";
-    if (item.family === "Drainage Collection") return "Для субстратного вирощування з контрольованим збором дренажу";
+    if (item.family === "Збір дренажу") return "Для субстратного вирощування з контрольованим збором дренажу";
     return "Для професійного субстратного вирощування";
   };
 
