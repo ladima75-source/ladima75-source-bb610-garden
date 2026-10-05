@@ -422,3 +422,38 @@ html,body{max-width:100%;overflow-x:hidden}
   .drainage-application-band figcaption{left:16px;right:16px;bottom:16px;display:block}
   .drainage-application-band figcaption strong{display:block;margin-top:8px;font-size:12px}
 }
+
+
+/* 2026-10-05 — unified approved Garden header */
+.header{
+  position:sticky!important;
+  top:0!important;
+  z-index:120!important;
+  height:78px!important;
+  background:rgba(11,29,21,.94)!important;
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.11)!important;
+}
+.header-inner{gap:24px!important}
+.brand{gap:0!important}
+.brand img{
+  width:176px!important;
+  height:auto!important;
+  max-height:58px!important;
+  object-fit:contain!important;
+}
+.brand>span{display:none!important}
+.desktop-nav{gap:24px!important;font-size:13px!important}
+.desktop-nav a{padding:28px 0 24px!important}
+.header-actions{gap:18px!important}
+.header-cta{min-height:42px!important;padding:11px 16px!important}
+@media(max-width:1180px){
+  .desktop-nav{gap:16px!important;font-size:12px!important}
+  .header-actions{gap:10px!important}
+  .market-link{font-size:12px!important}
+}
+@media(max-width:980px){
+  .header{height:70px!important}
+  .brand img{width:148px!important;max-height:50px!important}
+}
