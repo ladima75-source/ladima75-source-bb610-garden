@@ -368,3 +368,54 @@ a:hover>.lux-arrow-mark,button:hover>.lux-arrow-mark{
   .hero-description{font-size:16px!important}
   main p,.culture-copy p,.detail-copy p{font-size:15px!important}
 }
+
+
+/* STEP 2 — remove decorative technical labels everywhere */
+.lux-hero-metrics,
+.tech-eyebrow,
+.technical-core-no,
+.section-index,
+.lux-kicker,
+.lux-field-index,
+.lux-field-copy>span,
+.proof-motion-label,
+.proof-label,
+.family-card-label,
+.family-card-media>span,
+.geometry-copy>span,
+.garden-products-kicker,
+.photo-top,
+.photo-pill,
+.photo-corner,
+.hero-bottom,
+.hero-copy>.eyebrow,
+.hero-foot>span,
+.interfaces-no,
+.product-section-kicker,
+.eyebrow,
+.clarity-num,
+.scenario>span,
+.drainage-flow small,
+.featured-caption,
+.catalog-heading>.eyebrow,
+.rubus-copy>.eyebrow,
+.culture-number,
+.proof-principle>div>span{
+  display:none!important;
+}
+
+/* remove empty rhythm left by labels */
+.lux-field-head h2,
+.technical-core-head h2,
+.geometry-head h2,
+.drainage-engineering-head h2,
+.crop-engineering-head h2,
+.family-engineering-head h2,
+.system-interfaces-head h2,
+.root-zone-copy h2,
+.product-section-heading h2,
+.product-section-copy h2,
+.culture-heading h1,
+.culture-copy h2{
+  margin-top:0!important;
+}
