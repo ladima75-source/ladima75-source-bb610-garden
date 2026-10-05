@@ -498,6 +498,55 @@
     return true;
   };
 
+  const polishPublicChrome = () => {
+    const hero = document.querySelector(".hero");
+    if (hero) {
+      hero.querySelector(".hero-copy .eyebrow")?.remove();
+      hero.querySelector(".photo-top")?.remove();
+      hero.querySelector(".hero-bottom")?.remove();
+      hero.querySelector(".hero-foot > span")?.remove();
+      hero.querySelector(".photo-label .micro")?.remove();
+    }
+
+    document.querySelectorAll(".section-index").forEach((node) => node.remove());
+    document.querySelectorAll(".proof-label,.proof-principle > div > span,.interfaces-no").forEach((node) => node.remove());
+
+    const wrapTextArrow = (root = document) => {
+      const selectors = [
+        ".market-link",".header-cta",".button",".text-button",
+        ".garden-product-more",".product-primary-action",
+        ".product-detail-source a",".product-source-inner a",
+        ".related-product-card",".garden-products-foot a"
+      ];
+      root.querySelectorAll(selectors.join(",")).forEach((el) => {
+        if (el.querySelector(".lux-arrow-chip")) return;
+        const svg = el.querySelector("svg");
+        if (svg) {
+          const chip = document.createElement("span");
+          chip.className = "lux-arrow-chip";
+          svg.replaceWith(chip);
+          chip.append(svg);
+          return;
+        }
+        const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+        let node;
+        while ((node = walker.nextNode())) {
+          const value = node.nodeValue || "";
+          if (!/[↗→]\s*$/.test(value)) continue;
+          node.nodeValue = value.replace(/[↗→]\s*$/, "").replace(/\s+$/, "");
+          const chip = document.createElement("span");
+          chip.className = "lux-arrow-chip";
+          chip.setAttribute("aria-hidden","true");
+          chip.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          el.append(chip);
+          break;
+        }
+      });
+    };
+    wrapTextArrow();
+    return true;
+  };
+
   const reveal = () => {
     const nodes = document.querySelectorAll(".lux-field-card,.lux-root-photo,.lux-root-copy,.lux-zephyr-diagram");
     if (!("IntersectionObserver" in window)) {
@@ -531,6 +580,7 @@
     rebuildTechnicalProof();
     integrateVideoProofs();
     consolidateDeepSections();
+    polishPublicChrome();
     reveal();
   };
 
