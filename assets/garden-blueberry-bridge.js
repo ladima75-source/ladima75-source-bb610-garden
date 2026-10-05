@@ -17,13 +17,17 @@
     });
     document.querySelectorAll('a[href="#blueberry"],a[href="#lux-blueberry"]').forEach(link => link.setAttribute('href','/blueberry-production/'));
     document.querySelectorAll('a[href="#strawberry"],a[href="#lux-strawberry"]').forEach(link => link.setAttribute('href','/strawberry-production/'));
+    document.querySelectorAll('a[href="#rubus"],a[href="#lux-rubus"]').forEach(link => link.setAttribute('href','/rubus-production/'));
+    document.querySelectorAll('a[href="#vegetable"],a[href="#vegetables"],a[href="#lux-vegetable"]').forEach(link => link.setAttribute('href','/vegetable-production/'));
+    appendLink(document.querySelector('#lux-rubus .lux-field-copy'),'/rubus-production/','Малина та ожина · 13 моделей і технологія →','rubus-crop-entry');
+    appendLink(document.querySelector('#lux-vegetable .lux-field-copy'),'/vegetable-production/','Овочі · система, горщики та основи →','vegetable-crop-entry');
     appendLink(document.querySelector('#lux-blueberry .lux-field-copy'),'/blueberry-production/','Вирощування лохини · каталог і технологія →','blueberry-crop-entry');
     appendLink(document.querySelector('#lux-strawberry .lux-field-copy'),'/strawberry-production/','Вирощування полуниці · Hi-Grow і компоненти →','strawberry-crop-entry');
     appendLink(document.querySelector('#strawberry .section-heading') || document.querySelector('#strawberry'),'/systems/hi-grow/','Hi-Grow · настільна та підвісна система →','strawberry-system-entry');
     const foot = document.querySelector('.garden-products-foot');
     if (foot && !foot.dataset.catalogRoute) {
       foot.querySelectorAll('.blueberry-entry').forEach(link => link.remove());
-      appendLink(foot,'/catalog/','Повний каталог · лохина, полуниця та аксесуари →','catalog-entry');
+      appendLink(foot,'/catalog/','Повний каталог · горщики, жолоби та аксесуари →','catalog-entry');
       foot.dataset.catalogRoute = 'hi-grow';
     }
     const nav = document.querySelector('.desktop-nav');

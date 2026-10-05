@@ -21,3 +21,7 @@ Product photographs, technical diagrams and technical PDFs are sourced from Plan
 ## PlantLogic Hi-Grow and strawberry materials
 
 Original product photographs, diagrams, brochures and technical sheets in `media/plantlogic-strawberry/` are from PlantLogic. Source URLs are recorded in that directory’s `sources.json`. Ukrainian descriptions are adapted for BB610 Garden. Reference: https://getplantlogic.com/hydroponic-tabletop-strawberry-growing-system/ and the three linked product pages.
+
+## PlantLogic Rubus and vegetable materials
+
+Original photographs, diagrams and technical PDFs in `media/plantlogic-rubus-vegetables/` are from PlantLogic and remain the property of their respective owners. `sources.json` records the original URLs. Ukrainian descriptions are adapted for BB610 Garden. References: https://getplantlogic.com/rubus-production-2/, https://getplantlogic.com/vegetable-production/, https://getplantlogic.com/hydroponic-tomatoes-vegetables-growing-system/ and the linked product pages.

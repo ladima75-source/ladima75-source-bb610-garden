@@ -16,5 +16,22 @@ window.GARDEN_BLUEBERRY_ROUTES = {
   "1308041": "/portfolio-items/40l-round-pot-with-u-grooves/",
   "1308040": "/portfolio-items/40-liter-round-pot/",
   "1305909": "/portfolio-items/18-liter-strawberry-trough-with-truss-support/",
-  "1305209": "/portfolio-items/9-liter-trough-with-truss-support/"
+  "1305209": "/portfolio-items/9-liter-trough-with-truss-support/",
+  "1307110": "/portfolio-items/10-liter-drainage-collection-pot/",
+  "1306010": "/portfolio-items/10-liter-square-pot/",
+  "1304115": "/portfolio-items/15-liter-round-drainage-collection-pot/",
+  "1309015": "/portfolio-items/15-liter-square-pot/",
+  "1305117": "/portfolio-items/17-liter-drainage-collection-pot/",
+  "1306003": "/portfolio-items/3-liter-square-pot/",
+  "13050040": "/portfolio-items/4-7-liter-square-pot-for-cold-storage/",
+  "13050440": "/portfolio-items/4-7-liter-square-pot-for-cold-storage/",
+  "1305005": "/portfolio-items/5-liter-drainage-collection-pot/",
+  "1305051": "/portfolio-items/5-liter-drainage-collection-pot/",
+  "1306051": "/portfolio-items/5-liter-square-short-pot/",
+  "1307107": "/portfolio-items/7-liter-drainage-collection-pot/",
+  "1305071": "/portfolio-items/7-liter-square-pot-for-cold-storage/",
+  "1306007": "/portfolio-items/7-liter-square-pot/",
+  "1309008": "/portfolio-items/8-liter-square-pot/",
+  "1301081": "/portfolio-items/kratos-slab-base/",
+  "1302050": "/portfolio-items/rivus-slab-base/"
 };

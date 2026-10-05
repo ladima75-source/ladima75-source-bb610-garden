@@ -170,3 +170,10 @@ main>section p,.detail-copy p,.intro p,.source-note p{font-size:16px!important;l
 a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip{transform:translateX(3px)!important;background:transparent!important;border-color:transparent!important}
 a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:28px;opacity:.85}
 @media(max-width:900px){.site-header nav{font-size:12px!important}}
+
+/* Keep linked product and system cards vertical when the shared arrow is added. */
+.catalog-card:has(>.lux-arrow-chip),.hub-card:has(>.lux-arrow-chip){display:block}
+.catalog-card>div>span{font-size:12px;line-height:1.6;color:#768079}
+.catalog-card>.lux-arrow-chip{margin:12px auto 0!important}
+.hub-card>.lux-arrow-chip{margin:0 25px 25px!important}
+.thumbnails:has(>.thumbnail:nth-child(5):last-child){grid-template-columns:repeat(5,minmax(0,1fr))}
