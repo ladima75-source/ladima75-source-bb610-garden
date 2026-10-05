@@ -193,13 +193,13 @@
       band.id = "proof-root-zone";
       band.innerHTML =
         '<div class="proof-band-copy">' +
-          '<span class="proof-label">PROOF 01 / ROOT ZONE</span>' +
+          '<span class="proof-label">КОРЕНЕВА ЗОНА</span>' +
           '<h3>Не схема заради схеми — дивимось на фактичну кореневу масу.</h3>' +
           '<p>Фото кореневої зони ставимо поруч з офіційною схемою Round, щоб пояснення води, повітря та дренажу читалось через реальний результат і геометрію контейнера.</p>' +
         '</div>' +
         '<div class="proof-band-media proof-band-media-double">' +
-          '<figure><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Root zone blueberry PlantLogic" loading="lazy"><figcaption>ROOT ZONE / FIELD PHOTO</figcaption></figure>' +
-          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="20L Round Pot official PlantLogic diagram" loading="lazy"><figcaption>20L ROUND / OFFICIAL DIAGRAM</figcaption></figure>' +
+          '<figure><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Root zone blueberry PlantLogic" loading="lazy"><figcaption>Фактична коренева зона</figcaption></figure>' +
+          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="20L Round Pot official PlantLogic diagram" loading="lazy"><figcaption>Офіційна схема · 20 л</figcaption></figure>' +
         '</div>';
       rootZone.append(band);
     }
@@ -212,7 +212,7 @@
       block.innerHTML =
         '<div class="proof-feature-media proof-white"><img src="/media/proof/ugroove-tech-drawing.png?v=' + VERSION + '" alt="U-Groove official PlantLogic technical drawing" loading="lazy"></div>' +
         '<div class="proof-feature-copy">' +
-          '<span class="proof-label">PROOF 02 / U-GROOVE</span>' +
+          '<span class="proof-label">U-ПАЗИ</span>' +
           '<h3>Паз видно у кресленні — тому його роль не треба пояснювати лозунгом.</h3>' +
           '<p>Офіційне технічне креслення показує саму геометрію посадочного місця для поливної труби. Поруч залишаємо тільки коротке пояснення монтажної логіки.</p>' +
         '</div>';
@@ -225,9 +225,9 @@
       block.className = "proof-band proof-drainage-band";
       block.id = "proof-drainage";
       block.innerHTML =
-        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="25L Drainage Collection official technical drawing" loading="lazy"><figcaption>25L DRAINAGE COLLECTION / TECH DRAWING</figcaption></figure></div>' +
+        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="25L Drainage Collection official technical drawing" loading="lazy"><figcaption>Офіційне креслення · горщик 25 л зі збором дренажу</figcaption></figure></div>' +
         '<div class="proof-band-copy">' +
-          '<span class="proof-label">PROOF 03 / DRAINAGE</span>' +
+          '<span class="proof-label">ЗБІР ДРЕНАЖУ</span>' +
           '<h3>Вихід дренажу має конкретну геометрію, а не абстрактну «керованість».</h3>' +
           '<p>Технічна пластина доповнює фото виробу: видно форму основи, висоту опор і організацію відведення. Текст пояснює лише те, що неможливо побачити безпосередньо.</p>' +
         '</div>';
@@ -241,7 +241,7 @@
       block.id = "proof-lysimeter";
       block.innerHTML =
         '<div class="proof-feature-copy">' +
-          '<span class="proof-label">PROOF 04 / IN → OUT</span>' +
+          '<span class="proof-label">ПОЛИВ / ДРЕНАЖ</span>' +
           '<h3>Лізиметр показує, як виглядає вимірювальний контур фізично.</h3>' +
           '<p>Використовуємо українську офіційну схему комплекту PlantLogic: вона наочно пояснює IN/OUT набагато краще за чотири текстові картки.</p>' +
         '</div>' +
@@ -256,7 +256,7 @@
       block.id = "proof-higrow";
       block.innerHTML =
         '<img src="/media/proof/higrow-trough-system.png?v=' + VERSION + '" alt="Hi-Grow trough system official PlantLogic diagram" loading="lazy">' +
-        '<figcaption><span>PROOF 05 / HI-GROW</span><strong>OFFICIAL SYSTEM DIAGRAM</strong></figcaption>';
+        '<figcaption><span>HI-GROW</span><strong>Офіційна схема системи</strong></figcaption>';
       strawberry.append(block);
     }
 
@@ -267,7 +267,7 @@
       figure.id = "proof-rubus";
       figure.innerHTML =
         '<img src="/media/proof/rubus-production-diagram.jpg?v=' + VERSION + '" alt="Rubus production official PlantLogic diagram" loading="lazy">' +
-        '<figcaption><span>RUBUS / PRODUCTION LOGIC</span><strong>OFFICIAL PLANTLOGIC DIAGRAM</strong></figcaption>';
+        '<figcaption><span>Малина та ожина · виробнича схема</span><strong>Офіційна схема PlantLogic</strong></figcaption>';
       rubus.after(figure);
     }
 
@@ -326,8 +326,8 @@
       if (heading) {
         const first = heading.querySelector(".eyebrow");
         const last = heading.querySelector("span:last-child");
-        if (first) first.textContent = "MOTION PROOF / CONSTRUCTION";
-        if (last) last.textContent = "U-Groove / Zephyr V2";
+        if (first) first.textContent = "Відео конструкції";
+        if (last) last.textContent = "U-пази / Zephyr V2";
       }
 
       const cards = [...blueberry.querySelectorAll(".product-card")];
@@ -464,7 +464,7 @@
         '<img src="/media/drainage.webp" alt="Drainage Collection PlantLogic у виробничій системі" loading="lazy">' +
         '<span class="drainage-application-shade"></span>' +
         '<figcaption>' +
-          '<span>APPLICATION / DRAINAGE COLLECTION</span>' +
+          '<span>Застосування · збір дренажу</span>' +
           '<strong>Спочатку показуємо систему в ряду. Нижче — конструкцію та технічне креслення.</strong>' +
         '</figcaption>';
       if (head) head.after(band); else drainage.prepend(band);
