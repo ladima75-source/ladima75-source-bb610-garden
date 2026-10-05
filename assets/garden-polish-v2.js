@@ -66,11 +66,41 @@
         return;
       }
 
+      if (/^H[1-3]$/.test(parent.tagName)) return;
       let next = raw;
       phraseReplacements.forEach(([pattern,replacement]) => {
         next = next.replace(pattern,replacement);
       });
       if (next !== raw) node.nodeValue = next;
+    });
+  };
+
+  const enhanceArrows = (root=document) => {
+    root.querySelectorAll("a,button,.culture-link").forEach(el => {
+      if (el.querySelector(".lux-arrow-chip,.lux-arrow-mark")) return;
+
+      const existing = [...el.children].find(child =>
+        child.matches?.('span[aria-hidden="true"]') && /^[↗→]$/.test(child.textContent.trim())
+      );
+      if (existing) {
+        existing.className = "lux-arrow-mark";
+        existing.innerHTML = '<svg viewBox="0 0 28 18" fill="none" aria-hidden="true"><path d="M2 16L18 2M10 2h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        return;
+      }
+
+      const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+      let node;
+      while((node=walker.nextNode())){
+        const value=node.nodeValue||"";
+        if(!/[↗→]\s*$/.test(value)) continue;
+        node.nodeValue=value.replace(/[↗→]\s*$/,"").replace(/\s+$/,"");
+        const mark=document.createElement("span");
+        mark.className="lux-arrow-mark";
+        mark.setAttribute("aria-hidden","true");
+        mark.innerHTML='<svg viewBox="0 0 28 18" fill="none"><path d="M2 16L18 2M10 2h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        el.append(mark);
+        break;
+      }
     });
   };
 
@@ -85,6 +115,7 @@
   const run = () => {
     removeDecorative();
     cleanText();
+    enhanceArrows();
   };
 
   let raf = 0;
