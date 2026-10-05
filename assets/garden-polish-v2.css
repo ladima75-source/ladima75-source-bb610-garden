@@ -1,0 +1,252 @@
+/* BB610 Garden — global polish v2 · 2026-10-05 */
+
+/* 1. Navigation: readable, calm, premium */
+.desktop-nav,
+.site-header nav,
+.product-site-header nav,
+.culture-header .desktop-nav,
+.system-header .desktop-nav,
+.catalog-header .desktop-nav{
+  font-size:15.5px!important;
+  font-weight:560!important;
+  letter-spacing:-.01em!important;
+}
+.desktop-nav a,
+.site-header nav a,
+.product-site-header nav a{
+  color:rgba(242,247,242,.86)!important;
+}
+.desktop-nav a:hover,
+.site-header nav a:hover,
+.product-site-header nav a:hover,
+.desktop-nav a[aria-current="page"]{
+  color:#fff!important;
+}
+
+/* 2. Decorative technical micro-labels are not public content */
+.lux-hero-metrics,
+.tech-eyebrow,
+.technical-core-no,
+.section-index,
+.lux-kicker,
+.lux-field-index,
+.lux-field-copy>span,
+.proof-motion-label,
+.proof-label,
+.family-card-label,
+.family-card-media>span,
+.geometry-copy>span,
+.garden-products-kicker,
+.photo-top,
+.photo-pill,
+.photo-corner,
+.hero-bottom,
+.hero-copy>.eyebrow,
+.hero-foot>span,
+.interfaces-no,
+.product-section-kicker{
+  display:none!important;
+}
+
+/* Do not leave blank rhythm after removed labels */
+.technical-core-head h2,
+.geometry-head h2,
+.drainage-engineering-head h2,
+.crop-engineering-head h2,
+.family-engineering-head h2,
+.system-interfaces-head h2,
+.root-zone-copy h2,
+.product-section-heading h2,
+.product-section-copy h2{
+  margin-top:0!important;
+}
+
+/* 3. Typography: heading stays editorial, body copy becomes readable */
+.hero-description{
+  font-size:17px!important;
+  line-height:1.72!important;
+  max-width:620px!important;
+}
+.lux-field-head>p{
+  font-size:16px!important;
+  line-height:1.68!important;
+  max-width:560px!important;
+}
+.lux-field-copy strong{
+  font-size:16px!important;
+  line-height:1.46!important;
+}
+.lux-field-copy p{
+  font-size:14px!important;
+  line-height:1.62!important;
+  color:rgba(241,246,241,.86)!important;
+}
+.technical-core-head p,
+.drainage-engineering-head>p,
+.family-engineering-head>p,
+.system-interfaces-head>p,
+.root-zone-copy>p,
+.zephyr-engineering-copy>p,
+.product-section-heading>p,
+.product-section-copy>p{
+  font-size:16px!important;
+  line-height:1.7!important;
+}
+.technical-core-card p,
+.geometry-copy p,
+.family-card p,
+.family-card dd,
+.root-zone-points span,
+.interfaces-flow p,
+.interfaces-flow li,
+.proof-band-copy p,
+.proof-feature-copy p,
+.garden-products-head>p,
+.product-detail-lead,
+.product-detail-facts li,
+.related-product-card p{
+  font-size:14.5px!important;
+  line-height:1.65!important;
+}
+.garden-product-focus,
+.garden-product-subtitle{
+  font-size:14px!important;
+  line-height:1.55!important;
+}
+.garden-product-meta{font-size:10px!important}
+.garden-product-specs span{font-size:11px!important}
+.garden-product-specs b{font-size:9px!important}
+
+/* Static hubs / culture pages */
+main p,
+.culture-copy p,
+.contact-inner p,
+.hub-card p,
+.detail-copy p{
+  font-size:15.5px;
+  line-height:1.65;
+}
+
+/* 4. CTA arrow language: no circle, no badge, no acid square */
+.lux-arrow-chip,
+.lux-arrow-mark{
+  width:26px!important;
+  height:20px!important;
+  min-width:26px!important;
+  margin-left:12px!important;
+  padding:0 0 0 11px!important;
+  border:0!important;
+  border-left:1px solid currentColor!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  color:currentColor!important;
+  display:inline-grid!important;
+  place-items:center!important;
+  opacity:.82;
+  transition:transform .22s ease,opacity .22s ease!important;
+}
+.lux-arrow-chip svg,
+.lux-arrow-mark svg{
+  width:15px!important;
+  height:15px!important;
+  overflow:visible!important;
+}
+a:hover>.lux-arrow-chip,
+button:hover>.lux-arrow-chip,
+a:hover>.lux-arrow-mark,
+button:hover>.lux-arrow-mark{
+  transform:translate(3px,-2px)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  opacity:1;
+}
+.header-cta .lux-arrow-chip,
+.hero .button .lux-arrow-chip,
+.product-primary-action .lux-arrow-chip{
+  color:#173323!important;
+  border-left-color:rgba(23,51,35,.36)!important;
+}
+.market-link .lux-arrow-chip,
+.text-button .lux-arrow-chip{
+  color:#d7ff79!important;
+  border-left-color:rgba(215,255,121,.34)!important;
+}
+
+/* Bare arrows used by static pages */
+.header-cta>span[aria-hidden="true"],
+.culture-link>span[aria-hidden="true"],
+.mobile-nav a,
+.inline-link{
+  transition:transform .22s ease,color .22s ease;
+}
+.header-cta>span[aria-hidden="true"],
+.culture-link>span[aria-hidden="true"]{
+  display:inline-block!important;
+  margin-left:11px!important;
+  padding-left:11px!important;
+  border-left:1px solid currentColor!important;
+  font-size:16px!important;
+  line-height:1!important;
+}
+.header-cta:hover>span[aria-hidden="true"],
+.culture-link:hover>span[aria-hidden="true"]{
+  transform:translate(3px,-2px);
+}
+
+/* Scroll action: not a circle icon */
+.scroll-button{
+  width:auto!important;
+  height:auto!important;
+  min-width:0!important;
+  padding:8px 0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.scroll-button svg{width:21px!important;height:21px!important}
+.scroll-button:hover{
+  transform:translateY(4px)!important;
+  border:0!important;
+  background:transparent!important;
+}
+
+/* Process arrows are quiet dividers, not CTA icons */
+.family-decision-flow>i,
+.interfaces-arrow{
+  color:rgba(16,38,29,.38)!important;
+  font-style:normal!important;
+  font-size:18px!important;
+}
+
+/* 5. Remove stale English schematic captions while keeping real names */
+.root-zone-airflow{font-size:12px!important;letter-spacing:.02em!important}
+.proof-band figcaption,
+.proof-higrow figcaption,
+.proof-rubus figcaption{
+  font-size:10px!important;
+  letter-spacing:.045em!important;
+}
+
+/* Mobile */
+@media(max-width:980px){
+  .desktop-nav,
+  .site-header nav,
+  .product-site-header nav{
+    font-size:12px!important;
+  }
+}
+@media(max-width:760px){
+  .hero-description{font-size:16px!important}
+  .lux-field-head>p{font-size:15px!important}
+  .lux-field-copy strong{font-size:15px!important}
+  .lux-field-copy p{font-size:13.5px!important}
+  .technical-core-card p,
+  .geometry-copy p,
+  .family-card p,
+  .interfaces-flow p,
+  main p{font-size:14.5px!important}
+}
