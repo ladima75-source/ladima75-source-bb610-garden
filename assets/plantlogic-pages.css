@@ -70,3 +70,71 @@
   .site-header .brand img{width:126px}
   .site-header nav{gap:14px;font-size:10px}
 }
+
+
+/* 2026-10-05 — user-approved logo + truly fixed header */
+html{scroll-padding-top:116px}
+body{margin:0}
+.site-shell{padding-top:104px}
+.topbar{display:none!important}
+.site-header{
+  position:fixed!important;
+  top:0!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  width:min(1220px,100%)!important;
+  height:104px!important;
+  min-height:104px!important;
+  padding:6px 26px!important;
+  z-index:1000!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  background:rgba(8,23,16,.97)!important;
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.12)!important;
+}
+.site-header .brand{gap:0!important;flex:0 0 auto}
+.site-header .brand img{
+  width:122px!important;
+  height:auto!important;
+  max-height:92px!important;
+  object-fit:contain!important;
+}
+.site-header .brand>span{display:none!important}
+.site-header nav{
+  margin-left:auto;
+  align-items:center!important;
+  gap:21px!important;
+  flex-wrap:nowrap!important;
+  font-size:13px!important;
+}
+.site-header nav a{
+  color:#cbd5cd!important;
+  white-space:nowrap!important;
+  padding:38px 0 34px!important;
+}
+.site-header nav a:hover,.site-header nav a.is-active{color:#fff!important}
+.site-header nav a::after{bottom:27px!important;background:#7ee000!important}
+.site-header nav .nav-market{color:#a9ef54!important}
+@media(max-width:900px){
+  html{scroll-padding-top:86px}
+  .site-shell{padding-top:78px}
+  .site-header{
+    height:78px!important;
+    min-height:78px!important;
+    padding:4px 14px!important;
+    gap:14px!important;
+  }
+  .site-header .brand img{width:88px!important;max-height:68px!important}
+  .site-header nav{
+    overflow-x:auto!important;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:none;
+    gap:15px!important;
+    font-size:10px!important;
+  }
+  .site-header nav::-webkit-scrollbar{display:none}
+  .site-header nav a{padding:28px 0 24px!important}
+  .site-header nav a::after{bottom:19px!important}
+}
