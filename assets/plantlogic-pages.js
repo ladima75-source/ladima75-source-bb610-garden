@@ -79,3 +79,23 @@
   removeDecorativeLabels();
   enhanceArrows();
 })();
+
+;(() => {
+  const translations = new Map([
+    ["PLANTLOGIC / CULTURES IN SYSTEM",""],
+    ["ROOT ZONE / CONTAINER SYSTEM",""],
+    ["PRODUCTION / LONG CANE",""],
+    ["HI-GROW / TABLETOP",""],
+    ["SUBSTRATE / ELEVATED SYSTEM",""],
+    ["PRODUCT DETAILS","Деталі продукту"],
+    ["RELATED PRODUCTS","Пов’язані продукти"],
+    ["OFFICIAL TECHNICAL MATERIAL","Офіційний технічний матеріал"]
+  ]);
+  document.querySelectorAll("span,small,div,p").forEach(el => {
+    if(el.children.length) return;
+    const t=el.textContent.trim();
+    if(!translations.has(t)) return;
+    const next=translations.get(t);
+    if(next) el.textContent=next; else el.remove();
+  });
+})();
