@@ -76,16 +76,16 @@ window.GARDEN_PRODUCT_DATA = [
       image: "/media/products/zephyr-v2.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
       diagram: "/media/lux/zephyr-v2-diagram.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
       volume: "25 л",
-      dimensions: "див. Tech Sheet",
+      dimensions: "див. технічний лист",
       legs: "70 мм",
       focus: "70-мм ніжки + широка окрема база",
-      summary: "25-літрова canonical модель Zephyr V2 з високим відривом кореневої зони від поверхні та окремою посиленою базою.",
+      summary: "25-літрова модель Zephyr V2 з високим відривом кореневої зони від поверхні та окремою посиленою базою.",
       facts: [
-        "Product #1301144 у Product Master V5.",
+        "Product #1301144.",
         "Висота ніжок — 70 мм.",
         "Широка база збільшує опорну площу; це характеристика конструкції Zephyr V2.",
         "Вузька дренажна щілина допомагає утримувати субстрат.",
-        "Gear-slot з’єднання посилює контакт бази зі стінками."
+        "Зубчасте пазове з’єднання посилює контакт бази зі стінками."
       ],
       source: "https://getplantlogic.com/portfolio-items/zephyr-v2/"
     },
@@ -99,12 +99,12 @@ window.GARDEN_PRODUCT_DATA = [
       image: "/media/products/zephyr-v2.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
       diagram: "/media/lux/zephyr-v2-diagram.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
       volume: "30 л",
-      dimensions: "див. Tech Sheet",
+      dimensions: "див. технічний лист",
       legs: "70 мм",
       focus: "70-мм ніжки + широка окрема база",
-      summary: "30-літрова canonical модель Zephyr V2; назва і Product # синхронізовані з BB610 Market Product Master V5.",
+      summary: "30-літрова модель Zephyr V2 з високими ніжками 7 см та окремою посиленою базою.",
       facts: [
-        "Product #1301153 у Product Master V5.",
+        "Product #1301153.",
         "Висота ніжок — 70 мм.",
         "Конструкція належить до єдиної платформи Zephyr V2.",
         "Широка окрема база збільшує відрив кореневої зони від поверхні.",
@@ -122,12 +122,12 @@ window.GARDEN_PRODUCT_DATA = [
       image: "/media/products/zephyr-v2.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
       diagram: "/media/lux/zephyr-v2-diagram.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
       volume: "40 л",
-      dimensions: "див. Tech Sheet",
+      dimensions: "див. технічний лист",
       legs: "70 мм",
       focus: "70-мм ніжки + широка окрема база",
-      summary: "40-літрова canonical модель Zephyr V2; назва і Product # синхронізовані з BB610 Market Product Master V5.",
+      summary: "40-літрова модель Zephyr V2 з високими ніжками 7 см та окремою посиленою базою.",
       facts: [
-        "Product #1301143 у Product Master V5.",
+        "Product #1301143.",
         "Висота ніжок — 70 мм.",
         "Конструкція належить до єдиної платформи Zephyr V2.",
         "Висока опора фізично віддаляє кореневу зону від поверхні.",
@@ -246,7 +246,7 @@ window.GARDEN_PRODUCT_DATA = [
         "Ручки, що перекриваються, дозволяють щільніше компонувати горщики вздовж ряду.",
         "Жорстка конструкція дає можливість переміщати рослини між розсадною та виробничою зонами без руйнування кореневої зони.",
         "Горщик утримує корені над дренажною водою.",
-        "Сумісний із PlantLogic Low-Grow System."
+        "Сумісний із системою PlantLogic Low-Grow."
       ],
       source: "https://getplantlogic.com/portfolio-items/17-liter-drainage-collection-pot/"
     },
