@@ -624,3 +624,24 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
 @media(max-width:980px){
   .desktop-nav{font-size:13px!important}
 }
+
+
+/* STEP 1 — larger global navigation */
+.desktop-nav{
+  font-size:15px!important;
+  font-weight:600!important;
+  letter-spacing:.01em!important;
+}
+.desktop-nav a{line-height:1.1!important}
+.header .market-link,
+.header .header-cta{
+  font-size:14px!important;
+  font-weight:650!important;
+}
+@media(max-width:1180px){
+  .desktop-nav{font-size:14px!important;gap:16px!important}
+  .header .market-link,.header .header-cta{font-size:13px!important}
+}
+@media(max-width:980px){
+  .desktop-nav{font-size:13px!important}
+}
