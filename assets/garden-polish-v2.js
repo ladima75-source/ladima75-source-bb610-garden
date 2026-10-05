@@ -31,7 +31,25 @@
     ["Cold Storage / Long Cane", "Холодне зберігання / Long Cane"],
     ["У ФОКУСІ / FEATURED PRODUCT", "У ФОКУСІ"],
     ["DRAINAGE", "Дренаж"],
-    ["ROOT ARCHITECTURE", "Коренева система"]
+    ["ROOT ARCHITECTURE", "Коренева система"],
+    ["PLANTLOGIC / MOTION", ""],
+    ["PLANTLOGIC / MOTION STUDY", ""],
+    ["MOTION PROOF / CONSTRUCTION", ""],
+    ["FIELD PHOTO / ROOT ZONE", "Коренева зона · фото з виробництва"],
+    ["OFFICIAL ROUND DIAGRAM", "Офіційна схема круглої моделі"],
+    ["OFFICIAL TECHNICAL PLATE", "Офіційна технічна схема"],
+    ["OFFICIAL TECHNICAL MATERIAL", ""],
+    ["PRODUCT DETAILS", ""],
+    ["WHY THIS CONSTRUCTION", ""],
+    ["RELATED PRODUCTS", ""],
+    ["APPLICATION / DRAINAGE COLLECTION", "Застосування · збір дренажу"],
+    ["SYSTEM INTERFACES / ВІД ПОДАЧІ ДО OUT", "Від подачі поливу до контрольованого виходу дренажу"],
+    ["HOSE CLIP", "Кліпса для поливного шланга"],
+    ["LYSIMETER KIT", "Комплект лізиметра"],
+    ["DESIGN PRINCIPLE", "Принцип конструкції"],
+    ["ROOT ZONE", "Коренева зона"],
+    ["IRRIGATION", "Полив"],
+    ["MEASUREMENT", "Вимірювання"]
   ]);
 
   const phraseReplacements = [
@@ -44,7 +62,13 @@
     [/\bU-Groove\b/g, "U-пази"],
     [/\bV-Rib\b/g, "V-ребра"],
     [/\bair-pruning\b/gi, "повітряне підрізання коренів"],
-    [/\bself-pruning\b/gi, "повітряне підрізання коренів"]
+    [/\bself-pruning\b/gi, "повітряне підрізання коренів"],
+    [/\bRoot Zone\b/gi, "коренева зона"],
+    [/\bIrrigation\b/gi, "полив"],
+    [/\bMeasurement\b/gi, "вимірювання"],
+    [/\bApplication\b/gi, "застосування"],
+    [/\bTechnical Drawing\b/gi, "технічне креслення"],
+    [/\bOfficial Diagram\b/gi, "офіційна схема"]
   ];
 
   const protectedTags = new Set(["SCRIPT","STYLE","NOSCRIPT","CODE","PRE","TEXTAREA"]);
@@ -75,7 +99,6 @@
         return;
       }
 
-      if (/^H[1-3]$/.test(parent.tagName)) return;
       let next = raw;
       phraseReplacements.forEach(([pattern,replacement]) => {
         next = next.replace(pattern,replacement);
@@ -130,6 +153,26 @@
     ).forEach(el => el.remove());
   };
 
+  const normalizePublicTerms = () => {
+    document.querySelectorAll("h1,h2,h3,p,li,dt,dd,strong,figcaption,span").forEach(node => {
+      if (node.closest(".product-number,.garden-product-meta,.product-detail-kicker")) return;
+      if (node.children.length) return;
+      let t = node.textContent || "";
+      const original = t;
+      t = t
+        .replace(/Drainage Collection/g, "збір дренажу")
+        .replace(/\bRound\b/g, "круглий")
+        .replace(/\bSquare\b/g, "квадратний")
+        .replace(/U-Groove/g, "U-пази")
+        .replace(/V-Rib/g, "V-ребра")
+        .replace(/Cold Storage/g, "холодне зберігання")
+        .replace(/\bProduction\b/g, "виробничий цикл")
+        .replace(/Root Zone/gi, "коренева зона")
+        .replace(/Irrigation/gi, "полив");
+      if (t !== original) node.textContent = t;
+    });
+  };
+
   const syncCanonicalNames = () => {
     const featured = document.querySelector(".featured-copy h3");
     if (featured) featured.textContent = "Горщик для лохини 25 л круглий зі збором дренажу";
@@ -155,6 +198,7 @@
     removeDecorative();
     cleanText();
     syncCanonicalNames();
+    normalizePublicTerms();
     enhanceArrows();
   };
 
