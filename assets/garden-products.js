@@ -21,7 +21,7 @@
   const renderCards = (grid) => {
     grid.innerHTML = "";
     products
-      .filter((p) => activeFilter === "all" || p.application === activeFilter || (activeFilter === "drainage" && p.family === "Drainage Collection"))
+      .filter((p) => activeFilter === "all" || p.application === activeFilter || (activeFilter === "drainage" && p.family === "Збір дренажу"))
       .forEach((p) => {
         const article = document.createElement("article");
         article.className = "garden-product-card";
