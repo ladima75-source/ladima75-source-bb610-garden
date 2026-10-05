@@ -17,3 +17,7 @@ Brand marks and photographs remain the property of their respective owners. Incl
 ## Blueberry production pages (2026-10-05)
 
 Product photographs, technical diagrams and technical PDFs are sourced from PlantLogic (https://getplantlogic.com/blueberry-production/) and remain the property of their respective owners. See media/plantlogic-blueberry/sources.json for per-product source URLs. Ukrainian explanatory text and BB610 navigation were prepared for the requested Garden integration.
+
+## PlantLogic Hi-Grow and strawberry materials
+
+Original product photographs, diagrams, brochures and technical sheets in `media/plantlogic-strawberry/` are from PlantLogic. Source URLs are recorded in that directory’s `sources.json`. Ukrainian descriptions are adapted for BB610 Garden. Reference: https://getplantlogic.com/hydroponic-tabletop-strawberry-growing-system/ and the three linked product pages.

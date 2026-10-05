@@ -14,5 +14,7 @@ window.GARDEN_BLUEBERRY_ROUTES = {
   "1309030": "/portfolio-items/30-liter-square-pot/",
   "13090350": "/portfolio-items/35-liter-square-pot-with-u-grooves-copy/",
   "1308041": "/portfolio-items/40l-round-pot-with-u-grooves/",
-  "1308040": "/portfolio-items/40-liter-round-pot/"
+  "1308040": "/portfolio-items/40-liter-round-pot/",
+  "1305909": "/portfolio-items/18-liter-strawberry-trough-with-truss-support/",
+  "1305209": "/portfolio-items/9-liter-trough-with-truss-support/"
 };

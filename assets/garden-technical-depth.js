@@ -89,7 +89,7 @@
         link.textContent = "Моніторинг";
         link.href = "#system-interfaces";
       } else if (label === "Культури") {
-        link.href = "#crop-engineering";
+        link.href = "/crops/";
       }
     });
   };

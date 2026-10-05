@@ -297,7 +297,7 @@
     if (fieldStories && legacyCrops) legacyCrops.remove();
 
     document.querySelectorAll("a").forEach((link) => {
-      if (link.textContent.trim() === "Культури") link.href = "#field-stories";
+      if (link.textContent.trim() === "Культури") link.href = "/crops/";
     });
 
     const heroProduct = document.querySelector(".hero-product");

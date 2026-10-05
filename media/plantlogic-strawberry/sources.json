@@ -1,0 +1,326 @@
+{
+  "reference": "https://getplantlogic.com/hydroponic-tabletop-strawberry-growing-system/",
+  "assets": {
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Strawberry-Tabletop-System-Plantlogic.png?fit=1365%2C769&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Strawberry-Tabletop-System-Plantlogic.png",
+      "path": "/media/plantlogic-strawberry/4dea2bc1b382.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/Recurso-1.png?fit=300%2C90&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/Recurso-1.png",
+      "path": "/media/plantlogic-strawberry/320c5087ff46.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Strawberry-tabletop-pot-system.png?fit=648%2C1024&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Strawberry-tabletop-pot-system.png",
+      "path": "/media/plantlogic-strawberry/496d75a06d2d.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Best-hydroponic-system-strawberries.jpg?fit=500%2C357&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Best-hydroponic-system-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/5d3745bf6ce9.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-system-for-hydroponic-strawberries.jpg?fit=500%2C355&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-system-for-hydroponic-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/e86bf8b349e8.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Strawberries-elevated-system.png?fit=669%2C346&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Strawberries-elevated-system.png",
+      "path": "/media/plantlogic-strawberry/7354e5e87418.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/cost-less-hi-grow-plantlogic.png?resize=227%2C165&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/cost-less-hi-grow-plantlogic.png",
+      "path": "/media/plantlogic-strawberry/195e9488c58d.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/pot-oxygenation.png?resize=229%2C165&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/pot-oxygenation.png",
+      "path": "/media/plantlogic-strawberry/5a14f0551cbd.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/pot-drainage.png?resize=229%2C164&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/pot-drainage.png",
+      "path": "/media/plantlogic-strawberry/470ad3ce0d9e.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/best-tabletop-system-for-strawberries.png?resize=220%2C161&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/best-tabletop-system-for-strawberries.png",
+      "path": "/media/plantlogic-strawberry/4e4d3299cab9.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/narrow-metal-gutter-for-strawberries.png?resize=220%2C161&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/narrow-metal-gutter-for-strawberries.png",
+      "path": "/media/plantlogic-strawberry/a7db10a1192b.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/irrigation-hi-grow-system.png?resize=229%2C164&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/irrigation-hi-grow-system.png",
+      "path": "/media/plantlogic-strawberry/466d54a7b044.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Best-hydroponic-system-for-strawberries-in-grow-bags.png?fit=592%2C1024&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Best-hydroponic-system-for-strawberries-in-grow-bags.png",
+      "path": "/media/plantlogic-strawberry/7e80fc60a89c.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/strawberry-hydroponic-system-for-bags-and-slabs.png?fit=669%2C384&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/strawberry-hydroponic-system-for-bags-and-slabs.png",
+      "path": "/media/plantlogic-strawberry/dc58f6adae95.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hanging-system-for-hydroponic-strawberries.png?fit=530%2C1024&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hanging-system-for-hydroponic-strawberries.png",
+      "path": "/media/plantlogic-strawberry/34d9fdf41ba5.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hydroponic-strawberries-hanging-system.png?fit=669%2C276&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hydroponic-strawberries-hanging-system.png",
+      "path": "/media/plantlogic-strawberry/b828f7bf55ae.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/9L-trough-for-stawberries-scaled.jpg?resize=300%2C214&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/9L-trough-for-stawberries-scaled.jpg",
+      "path": "/media/plantlogic-strawberry/0bb73e2102eb.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/9-liter-strawberry-pot.png?resize=273%2C149&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/9-liter-strawberry-pot.png",
+      "path": "/media/plantlogic-strawberry/cc0dafd4675a.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/9-liter-pot-plantlogic.png?resize=217%2C130&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/9-liter-pot-plantlogic.png",
+      "path": "/media/plantlogic-strawberry/55f421287672.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/1-meter-pot-for-stawberries.png?resize=335%2C170&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/1-meter-pot-for-stawberries.png",
+      "path": "/media/plantlogic-strawberry/499819bbdb49.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/18-liter-strawberry-trough.png?fit=342%2C195&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/18-liter-strawberry-trough.png",
+      "path": "/media/plantlogic-strawberry/624ce33e5796.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/1-meter-strawberry-trough.png?resize=258%2C147&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/1-meter-strawberry-trough.png",
+      "path": "/media/plantlogic-strawberry/8f7543afe00d.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberry-pot-1.jpg?resize=540%2C272&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberry-pot-1.jpg",
+      "path": "/media/plantlogic-strawberry/129cb9118ec4.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/strawberry-pots-colors-available.jpg?fit=669%2C133&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/strawberry-pots-colors-available.jpg",
+      "path": "/media/plantlogic-strawberry/d56e1e276c63.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/hydoponic-system-for-strawberries-best.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/hydoponic-system-for-strawberries-best.jpg",
+      "path": "/media/plantlogic-strawberry/8850d82783c9.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/hydroponic-system-handles.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/hydroponic-system-handles.jpg",
+      "path": "/media/plantlogic-strawberry/5352d6515e1d.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/tabletop-system-strawberries.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/tabletop-system-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/abbd9798140d.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hydroponic-system-for-strawberries-double-rows.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hydroponic-system-for-strawberries-double-rows.jpg",
+      "path": "/media/plantlogic-strawberry/f215dcea5636.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/11/Stellagen-System-Version-fur-Substratsacke.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/11/Stellagen-System-Version-fur-Substratsacke.jpg",
+      "path": "/media/plantlogic-strawberry/d231d5595558.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Strawberry-Hydroponic-system-slabs.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Strawberry-Hydroponic-system-slabs.jpg",
+      "path": "/media/plantlogic-strawberry/b1f6ba0db14b.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-strawberries.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/8165b35251bc.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-grow-bags.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-grow-bags.jpg",
+      "path": "/media/plantlogic-strawberry/bb7f6c70ab54.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/hydroponic-system-drainage.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/hydroponic-system-drainage.jpg",
+      "path": "/media/plantlogic-strawberry/d1358f64d6e3.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2023/12/hydroponic-system-metal-gutter-strawberries.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/hydroponic-system-metal-gutter-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/d9eee06a6266.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-hydroponics.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-hydroponics.jpg",
+      "path": "/media/plantlogic-strawberry/8c12847d4c34.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-hydroponic-strawberries.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2025/02/Hi-Grow-hanging-system-for-hydroponic-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/e7dc8cec5c29.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/11/Erdbeerproduktion-Hydroponische-scaled.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/11/Erdbeerproduktion-Hydroponische-scaled.jpg",
+      "path": "/media/plantlogic-strawberry/8dc4fded3f58.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/11/Hydroponische-Erdbeerproduktion-1-scaled.jpg?resize=460%2C295&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/11/Hydroponische-Erdbeerproduktion-1-scaled.jpg",
+      "path": "/media/plantlogic-strawberry/8d6c904179ab.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2026/03/Plantlogic_Hi-Grow_Brochure_2026_ENG_Email.pdf": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2026/03/Plantlogic_Hi-Grow_Brochure_2026_ENG_Email.pdf",
+      "path": "/media/plantlogic-strawberry/e00484341455.pdf"
+    },
+    "https://getplantlogic.com//wp-content/uploads/2024/03/9-liter-through-for-strawberries_Item_1305091_Eng.pdf": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/9-liter-through-for-strawberries_Item_1305091_Eng.pdf",
+      "path": "/media/plantlogic-strawberry/7e8b023c2663.pdf"
+    },
+    "https://getplantlogic.com//wp-content/uploads/2023/12/Techsheet_18L-1-meter-pot-1305909_ENG.pdf": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2023/12/Techsheet_18L-1-meter-pot-1305909_ENG.pdf",
+      "path": "/media/plantlogic-strawberry/1d3df1f8d68d.pdf"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209.jpg",
+      "path": "/media/plantlogic-strawberry/aa29a393c3f3.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_front.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_front.jpg",
+      "path": "/media/plantlogic-strawberry/3378b139ccf4.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_top-view.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_top-view.jpg",
+      "path": "/media/plantlogic-strawberry/f1faefdd10fe.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_bottom.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_bottom.jpg",
+      "path": "/media/plantlogic-strawberry/180f48dcefdb.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2021/09/9-liter-trough-for-strawberries.jpg?resize=584%2C512&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2021/09/9-liter-trough-for-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/920bf386762e.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2021/09/9L-TROUGH-PLANTLOGIC.jpg?resize=565%2C887&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2021/09/9L-TROUGH-PLANTLOGIC.jpg",
+      "path": "/media/plantlogic-strawberry/549c7abb0d94.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2021/09/9-liter-trough-for-strawberry-production-50-cm.jpg?resize=644%2C412&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2021/09/9-liter-trough-for-strawberry-production-50-cm.jpg",
+      "path": "/media/plantlogic-strawberry/7e0441fa60e0.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/9-liter-through-for-strawberries_Item_1305091_Eng.pdf": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/9-liter-through-for-strawberries_Item_1305091_Eng.pdf",
+      "path": "/media/plantlogic-strawberry/7e8b023c2663.pdf"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909.jpg",
+      "path": "/media/plantlogic-strawberry/6dedd865dc15.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_front-view.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_front-view.jpg",
+      "path": "/media/plantlogic-strawberry/98dfabb991d4.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_top-view.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_top-view.jpg",
+      "path": "/media/plantlogic-strawberry/5158a804fda5.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_bottom-view.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_bottom-view.jpg",
+      "path": "/media/plantlogic-strawberry/d9238a7358ac.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/18-liter-trough-for-strawberries-1-meter-pot.jpg?resize=580%2C571&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-trough-for-strawberries-1-meter-pot.jpg",
+      "path": "/media/plantlogic-strawberry/1e49318d5de2.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/18L-Pot-for-strawberries.png?resize=512%2C801&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18L-Pot-for-strawberries.png",
+      "path": "/media/plantlogic-strawberry/ceb2159793b4.png"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/18-liter-trough-for-strawberry-production-1-meter-pot-1.jpg?resize=589%2C383&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-trough-for-strawberry-production-1-meter-pot-1.jpg",
+      "path": "/media/plantlogic-strawberry/4c6b5c3e8f7e.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2024/03/Techsheet_Item_1305909_Eng-1.pdf": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2024/03/Techsheet_Item_1305909_Eng-1.pdf",
+      "path": "/media/plantlogic-strawberry/14b8e6238e90.pdf"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberry-pot.jpg": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberry-pot.jpg",
+      "path": "/media/plantlogic-strawberry/b7de5628c536.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberries.jpg?resize=615%2C383&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/f9dc35734ac7.jpg"
+    },
+    "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2026/07/Biodegradable-trough-cover-for-strawberries.jpg?resize=624%2C457&ssl=1": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2026/07/Biodegradable-trough-cover-for-strawberries.jpg",
+      "path": "/media/plantlogic-strawberry/a40b382b540a.jpg"
+    },
+    "https://getplantlogic.com/wp-content/uploads/2026/07/Techsheet_Item_Trough-Cover_ENG.pdf": {
+      "url": "https://getplantlogic.com/wp-content/uploads/2026/07/Techsheet_Item_Trough-Cover_ENG.pdf",
+      "path": "/media/plantlogic-strawberry/66c713bef6d4.pdf"
+    }
+  },
+  "products": [
+    {
+      "slug": "9-liter-trough-with-truss-support",
+      "source": "https://getplantlogic.com/portfolio-items/9-liter-trough-with-truss-support/",
+      "images": [
+        "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_front.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_top-view.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2024/03/9L-Trough-for-strawberries_Item_1305209_bottom.jpg",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2021/09/9-liter-trough-for-strawberries.jpg?resize=584%2C512&ssl=1",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2021/09/9L-TROUGH-PLANTLOGIC.jpg?resize=565%2C887&ssl=1",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2021/09/9-liter-trough-for-strawberry-production-50-cm.jpg?resize=644%2C412&ssl=1"
+      ],
+      "pdf": [
+        "https://getplantlogic.com/wp-content/uploads/2024/03/9-liter-through-for-strawberries_Item_1305091_Eng.pdf"
+      ],
+      "name": "Жолоб 9 л з підтримкою квітконосів",
+      "no": "1305209",
+      "volume": "9 л",
+      "dimensions": "257 × 511 мм",
+      "facts": [
+        "Для настільної системи Hi-Grow",
+        "Підтримка квітконосів по краях жолоба",
+        "Дренаж і вентиляція кореневої зони",
+        "Компактне штабелювання"
+      ]
+    },
+    {
+      "slug": "18-liter-strawberry-trough-with-truss-support",
+      "source": "https://getplantlogic.com/portfolio-items/18-liter-strawberry-trough-with-truss-support/",
+      "images": [
+        "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_front-view.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_top-view.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2024/03/18-liter-strawberry-trough_Item_1305909_bottom-view.jpg",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/18-liter-trough-for-strawberries-1-meter-pot.jpg?resize=580%2C571&ssl=1",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/18L-Pot-for-strawberries.png?resize=512%2C801&ssl=1",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/18-liter-trough-for-strawberry-production-1-meter-pot-1.jpg?resize=589%2C383&ssl=1"
+      ],
+      "pdf": [
+        "https://getplantlogic.com/wp-content/uploads/2024/03/Techsheet_Item_1305909_Eng-1.pdf"
+      ],
+      "name": "Жолоб 18 л з підтримкою квітконосів",
+      "no": "1305909",
+      "volume": "18 л",
+      "dimensions": "255 × 1014 мм",
+      "facts": [
+        "Для настільної системи Hi-Grow",
+        "Широкі ручки підтримують квітконоси",
+        "Дренаж і вентиляція кореневої зони",
+        "Довжина близько 1 метра"
+      ]
+    },
+    {
+      "slug": "trough-cover-for-strawberries",
+      "source": "https://getplantlogic.com/portfolio-items/trough-cover-for-strawberries/",
+      "images": [
+        "https://getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberry-pot.jpg",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2026/07/Trough-cover-for-strawberries.jpg?resize=615%2C383&ssl=1",
+        "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2026/07/Biodegradable-trough-cover-for-strawberries.jpg?resize=624%2C457&ssl=1"
+      ],
+      "pdf": [
+        "https://getplantlogic.com/wp-content/uploads/2026/07/Techsheet_Item_Trough-Cover_ENG.pdf"
+      ],
+      "name": "Кришка для полуничного жолоба 18 л",
+      "no": null,
+      "volume": null,
+      "dimensions": null,
+      "facts": [
+        "Сумісна з полуничним жолобом PlantLogic 18 л",
+        "Варіанти з отворами та без отворів",
+        "Зменшує випаровування вологи",
+        "Перекриває доступ світла до субстрату"
+      ]
+    }
+  ],
+  "canonical": "/systems/hi-grow/"
+}
