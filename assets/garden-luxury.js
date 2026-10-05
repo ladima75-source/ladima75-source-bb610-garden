@@ -7,36 +7,36 @@
       en: "BLUEBERRY",
       image: "/media/greenhouse.webp",
       href: "#lux-blueberry",
-      tag: "ROOT ZONE / CONTAINER SYSTEM",
+      tag: "",
       title: "Коренева зона як керований виробничий модуль.",
-      text: "Round, Square, U-Groove, Zephyr і Drainage Collection — різні конструктивні відповіді на одну задачу: передбачуваний рух води й повітря в субстраті."
+      text: "Круглі, квадратні, моделі з U-пазами, Zephyr V2 та горщики зі збором дренажу — різні конструктивні рішення для керованого руху води й повітря в субстраті."
     },
     {
-      name: "Малина + ожина",
+      name: "Малина та ожина",
       en: "RUBUS",
       image: "/media/lux/rubus-greenhouse.jpg?v=" + VERSION,
       href: "#lux-rubus",
-      tag: "PRODUCTION / LONG CANE",
+      tag: "",
       title: "Контейнер працює разом із логістикою рослини.",
-      text: "Для Rubus важливі не тільки дренаж і аерація, а й щільність ряду, стабілізація високих пагонів, cold storage та швидка робота персоналу."
+      text: "Для малини та ожини важливі не тільки дренаж і аерація, а й щільність ряду, стабілізація високих пагонів, холодне зберігання та швидка робота персоналу."
     },
     {
       name: "Полуниця",
       en: "STRAWBERRY",
       image: "/media/lux/strawberry-hydroponics.jpg?v=" + VERSION,
       href: "#lux-strawberry",
-      tag: "HI-GROW / TABLETOP",
+      tag: "",
       title: "Піднята культура як окрема інженерна система.",
-      text: "Hi-Grow відділяє робочу зону культури від ґрунту й дозволяє будувати tabletop або hanging конфігурації з окремою логікою дренажу."
+      text: "Hi-Grow відділяє робочу зону культури від ґрунту й дозволяє будувати підняті та підвісні конфігурації з окремою логікою дренажу."
     },
     {
       name: "Овочі",
       en: "VEGETABLES",
       image: "/media/lux/vegetable-production.jpg?v=" + VERSION,
       href: "#lux-vegetable",
-      tag: "SUBSTRATE / ELEVATED SYSTEM",
+      tag: "",
       title: "Субстрат, опора і дренаж мають працювати як одне ціле.",
-      text: "Для томатів, перцю та інших культур PlantLogic комбінує slabs, мішки, основи, контейнери та drainage collection залежно від технології господарства."
+      text: "Для томатів, перцю та інших культур PlantLogic комбінує субстратні плити, мішки, основи, горщики та системи збору дренажу залежно від технології господарства."
     }
   ];
 
@@ -45,17 +45,7 @@
     if (!hero || hero.dataset.luxury === VERSION) return !!hero;
     hero.dataset.luxury = VERSION;
 
-    const copy = hero.querySelector(".hero-copy");
-    const buttons = hero.querySelector(".hero-buttons");
-    if (copy && buttons && !copy.querySelector(".lux-hero-metrics")) {
-      const metrics = document.createElement("div");
-      metrics.className = "lux-hero-metrics";
-      metrics.innerHTML =
-        '<div><span>01</span><strong>DRAINAGE</strong><small>керований відвід води</small></div>' +
-        '<div><span>02</span><strong>O₂</strong><small>повітря в центр кореневої маси</small></div>' +
-        '<div><span>03</span><strong>ROOT ARCHITECTURE</strong><small>геометрія замість випадковості</small></div>';
-      buttons.after(metrics);
-    }
+    hero.querySelector(".lux-hero-metrics")?.remove();
 
     const product = hero.querySelector(".hero-product");
     if (product) {
@@ -63,9 +53,9 @@
       const micro = product.querySelector(".micro");
       const strong = product.querySelector("strong");
       const label = product.querySelector(".product-link-label");
-      if (micro) micro.textContent = "ENGINEERING DETAIL";
-      if (strong) strong.innerHTML = "Дренаж як<br>система.";
-      if (label) label.textContent = "Drainage Collection";
+      if (micro) micro.remove();
+      if (strong) strong.innerHTML = "Керований<br>збір дренажу.";
+      if (label) label.textContent = "Горщик зі збором дренажу";
     }
 
     const footMuted = hero.querySelector(".hero-foot .muted");
@@ -109,7 +99,7 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="lux-field-head">' +
-          '<div><span class="lux-kicker">PLANTLOGIC / CULTURES IN SYSTEM</span><h2>Чотири культури. Чотири різні виробничі сценарії.</h2></div>' +
+          '<div><h2>Чотири культури. Чотири різні виробничі сценарії.</h2></div>' +
           '<p>Фото показують не окремий виріб, а середовище його роботи: ряд, теплицю, висоту культури, полив, дренаж і доступ персоналу.</p>' +
         '</div>' +
         '<div class="lux-field-grid">' +
@@ -117,9 +107,7 @@
             '<article class="lux-field-card lux-field-card-' + (i + 1) + '" id="' + story.href.slice(1) + '">' +
               '<img src="' + story.image + '" alt="' + story.name + ' — application PlantLogic" loading="lazy">' +
               '<span class="lux-field-shade"></span>' +
-              '<div class="lux-field-index">0' + (i + 1) + '</div>' +
               '<div class="lux-field-copy">' +
-                '<span>' + story.tag + '</span>' +
                 '<h3>' + story.name + '</h3>' +
                 '<strong>' + story.title + '</strong>' +
                 '<p>' + story.text + '</p>' +
@@ -145,10 +133,10 @@
       '<div class="wrap lux-root-evidence-grid">' +
         '<figure class="lux-root-photo">' +
           '<img src="/media/lux/blueberry-production.jpg?v=' + VERSION + '" alt="Коренева маса лохини після вирощування в контейнерній системі PlantLogic" loading="lazy">' +
-          '<figcaption><span>FIELD VIEW / ROOT MASS</span><strong>Коренева зона після виробничого циклу</strong></figcaption>' +
+          '<figcaption><strong>Коренева зона після виробничого циклу</strong></figcaption>' +
         '</figure>' +
         '<div class="lux-root-copy">' +
-          '<span class="lux-kicker">FROM DRAWING TO ROOT MASS</span>' +
+          '' +
           '<h2>Геометрію оцінюють не по пластику. Її оцінюють по кореневій зоні.</h2>' +
           '<p>Для професійного вирощування важливо, чи залишається внизу застійна насичена зона, як розподіляється корінь, де виходить дренаж і чи є повітряний обмін у центральній частині субстрату.</p>' +
           '<div class="lux-root-points">' +
@@ -176,7 +164,7 @@
     figure.className = "lux-zephyr-diagram";
     figure.innerHTML =
       '<img src="/media/lux/zephyr-v2-diagram.jpg?v=' + VERSION + '" alt="Офіційна технічна схема Zephyr V2 PlantLogic" loading="lazy">' +
-      '<figcaption><span>OFFICIAL TECHNICAL PLATE</span><strong>Zephyr V2 · root-zone geometry</strong></figcaption>';
+      '<figcaption><strong>Zephyr V2 · геометрія кореневої зони</strong></figcaption>';
     copy.append(figure);
     return true;
   };
@@ -191,7 +179,7 @@
     rail.id = "lux-visual-rail";
     rail.innerHTML =
       '<div class="wrap lux-visual-rail-inner">' +
-        '<span>ROOT ZONE</span><i></i><span>IRRIGATION</span><i></i><span>DRAINAGE</span><i></i><span>MEASUREMENT</span>' +
+        '<span>Коренева зона</span><i></i><span>Полив</span><i></i><span>Дренаж</span><i></i><span>Контроль</span>' +
       '</div>';
     target.before(rail);
     return true;
@@ -506,9 +494,10 @@
       hero.querySelector(".hero-bottom")?.remove();
       hero.querySelector(".hero-foot > span")?.remove();
       hero.querySelector(".photo-label .micro")?.remove();
+      hero.querySelector(".lux-hero-metrics")?.remove();
     }
 
-    document.querySelectorAll(".section-index").forEach((node) => node.remove());
+    document.querySelectorAll(".section-index,.lux-kicker,.lux-field-index,.lux-field-copy>span,.proof-motion-label").forEach((node) => node.remove());
     document.querySelectorAll(".proof-label,.proof-principle > div > span,.interfaces-no").forEach((node) => node.remove());
 
     const wrapTextArrow = (root = document) => {
