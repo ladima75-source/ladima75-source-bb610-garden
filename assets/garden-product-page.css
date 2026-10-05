@@ -177,3 +177,18 @@ body{padding-top:104px!important}
   .product-site-header nav a{padding:28px 0 24px!important;font-size:9px!important}
   .product-site-header nav a::after{bottom:19px!important}
 }
+
+
+/* 2026-10-05 — luxury arrow language on product pages */
+.product-detail-eyebrow{font-size:10px;letter-spacing:.08em;color:#aebdb0}
+.product-section-kicker{display:none}
+.lux-arrow-chip{
+  flex:0 0 auto;width:33px;height:33px;border-radius:999px;display:inline-grid;place-items:center;margin-left:9px;
+  color:#d7ff79;background:rgba(8,23,16,.62);border:1px solid rgba(215,255,121,.38);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.035),0 8px 20px rgba(0,0,0,.13);
+  transition:transform .22s ease,background .22s ease,border-color .22s ease;
+}
+.lux-arrow-chip svg{width:15px;height:15px}
+a:has(>.lux-arrow-chip),button:has(>.lux-arrow-chip){display:inline-flex;align-items:center}
+a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip{transform:translate(2px,-2px);background:#173828;border-color:rgba(215,255,121,.72)}
+.product-primary-action .lux-arrow-chip{background:rgba(16,38,29,.9);color:#eaffba;border-color:rgba(16,38,29,.16)}
