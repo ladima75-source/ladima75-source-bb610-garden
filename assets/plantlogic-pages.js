@@ -1,7 +1,7 @@
 (() => {
   const logo = document.querySelector('.site-header .brand img');
   if (logo) {
-    logo.src = '/media/bb610-garden-approved.webp';
+    logo.src = '/media/bb610-garden-user-logo.webp';
     logo.alt = 'BB610 Garden';
     logo.removeAttribute('width');
     logo.removeAttribute('height');
