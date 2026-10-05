@@ -212,3 +212,17 @@ a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip{transform:translateX(3px)!i
 a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:30px;opacity:.9}
 .product-primary-action .lux-arrow-chip{background:transparent!important;color:inherit!important;border:0!important}
 @media(max-width:720px){.product-site-header nav{font-size:11px!important}}
+
+
+/* STEP 1 — larger global navigation */
+.product-site-header nav a{
+  font-size:15px!important;
+  font-weight:600!important;
+  letter-spacing:.01em!important;
+}
+@media(max-width:980px){
+  .product-site-header nav a{font-size:13px!important}
+}
+@media(max-width:720px){
+  .product-site-header nav a{font-size:11px!important}
+}
