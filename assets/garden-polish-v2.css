@@ -480,3 +480,91 @@ button:hover>.lux-arrow-mark,
   border:0!important;
   background:transparent!important;
 }
+
+
+/* STEP 4 — rebalance typography: readable body, calmer headings */
+body{
+  font-size:17px!important;
+}
+.hero h1{
+  font-size:clamp(3rem,3.85vw,4.3rem)!important;
+  line-height:1.025!important;
+}
+.hero-description{
+  font-size:18px!important;
+  line-height:1.72!important;
+  max-width:650px!important;
+}
+.lux-field-head h2,
+.technical-core-head h2,
+.family-engineering-head h2,
+.drainage-engineering-head h2,
+.system-interfaces-head h2,
+.root-zone-copy h2,
+.product-section-heading h2,
+.product-section-copy h2,
+.culture-heading h1{
+  font-size:clamp(2.2rem,3.05vw,3.55rem)!important;
+  line-height:1.035!important;
+}
+.lux-field-head>p,
+.technical-core-head p,
+.drainage-engineering-head>p,
+.family-engineering-head>p,
+.system-interfaces-head>p,
+.root-zone-copy>p,
+.zephyr-engineering-copy>p,
+.garden-products-head>p,
+.product-section-heading>p,
+.product-section-copy>p,
+.culture-heading>p{
+  font-size:17.5px!important;
+  line-height:1.72!important;
+}
+.lux-field-copy strong{
+  font-size:17px!important;
+  line-height:1.48!important;
+}
+.lux-field-copy p,
+.technical-core-card p,
+.geometry-copy p,
+.family-card p,
+.family-card dd,
+.root-zone-points span,
+.interfaces-flow p,
+.interfaces-flow li,
+.proof-band-copy p,
+.proof-feature-copy p,
+.garden-product-focus,
+.garden-product-subtitle,
+.product-detail-lead,
+.product-detail-facts li{
+  font-size:15.5px!important;
+  line-height:1.67!important;
+}
+main p,
+.culture-copy p,
+.contact-inner p,
+.hub-card p,
+.detail-copy p{
+  font-size:16.5px!important;
+  line-height:1.7!important;
+}
+.garden-product-meta{font-size:10.5px!important}
+.garden-product-specs span{font-size:11.5px!important}
+.related-product-card p{font-size:14.5px!important;line-height:1.62!important}
+.product-detail-summary{font-size:17px!important;line-height:1.72!important}
+.product-detail-copy>h2{font-size:19px!important;line-height:1.35!important}
+
+@media(max-width:760px){
+  body{font-size:16px!important}
+  .hero h1{font-size:clamp(2.5rem,10vw,3.25rem)!important}
+  .hero-description{font-size:16.5px!important}
+  .lux-field-head>p,
+  .technical-core-head p,
+  .family-engineering-head>p,
+  .drainage-engineering-head>p,
+  .system-interfaces-head>p,
+  .culture-heading>p{font-size:16px!important}
+  main p,.culture-copy p,.detail-copy p{font-size:15.5px!important}
+}
