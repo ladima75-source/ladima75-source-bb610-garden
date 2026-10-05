@@ -118,3 +118,25 @@ button{font:inherit}
   .product-page-footer .product-page-wrap{display:block}
   .product-page-footer span{display:block;margin-top:8px}
 }
+
+/* 2026-10-05 — unified approved Garden header */
+.product-site-header{
+  height:78px;
+  background:rgba(11,29,21,.95);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.11);
+}
+.product-site-brand img{width:176px;height:auto;max-height:56px;object-fit:contain}
+.product-site-header nav{display:flex;align-items:center;gap:22px;overflow-x:auto;scrollbar-width:none}
+.product-site-header nav::-webkit-scrollbar{display:none}
+.product-site-header nav a{position:relative;white-space:nowrap;padding:29px 0 25px;font-size:12px;color:#c8d3ca}
+.product-site-header nav a::after{content:"";position:absolute;left:0;bottom:18px;width:0;height:1px;background:#d7ff79;transition:width .2s}
+.product-site-header nav a:hover::after{width:100%}
+@media(max-width:720px){
+  .product-site-header{height:68px}
+  .product-site-brand img{width:128px;max-height:46px}
+  .product-site-header-inner{gap:16px}
+  .product-site-header nav{gap:14px}
+  .product-site-header nav a{padding:25px 0 21px;font-size:9px}
+}
