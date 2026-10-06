@@ -1,0 +1,488 @@
+{
+  "technical_sheets": [
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/7de5543c1d0a.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/10-liter-drainage-collection-pot-uk.pdf",
+      "product": "10-liter-drainage-collection-pot",
+      "source_sha256": "3b9832be436570e74e18bb8629b558aca68b05606d47eb96b84669a985a6596a",
+      "sha256": "654938a9458874b51c3d3b4ffd5e594c69f2b2a3eceb66f3f1c7ce33651bfae9",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/7c6efc9e4390.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/10-liter-square-pot-uk.pdf",
+      "product": "10-liter-square-pot",
+      "source_sha256": "f87007e6195ee185e319d47077bbc610bd703ea127ab413a1772d962c144af39",
+      "sha256": "ec4db7daa0c316b0767d78f9d44d55544cb196f046075346daa54395f6065586",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/7420ed9c1788.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/15-liter-round-drainage-collection-pot-uk.pdf",
+      "product": "15-liter-round-drainage-collection-pot",
+      "source_sha256": "04d70e96e52bbe84ebe10fc793feca00555bab0ab2df54aaf6c6b5d0ff66f9f1",
+      "sha256": "83e5f239e1da53d8c5df84b621f151b257c575334220b3943a3aa5e0aab28e51",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/55c76901f42b.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/15-liter-square-pot-uk.pdf",
+      "product": "15-liter-square-pot",
+      "source_sha256": "f701a58dc1db29b6d4016135200fba88d3faa3f22e796491f25f6ba8a5769cb2",
+      "sha256": "c94050fd7ac2f9bb7d3fb75ce02fd2aac5d3072457da9546393ea0f447373acf",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/34829ac9a7cb.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/17-liter-drainage-collection-pot-uk.pdf",
+      "product": "17-liter-drainage-collection-pot",
+      "source_sha256": "2f08f3504310cca9408ef576f4fa06bd817608cf76bbf3536b6832025e6f4bf0",
+      "sha256": "e43a919ed33f0522c54505b2a1c18a18d98d3d0c50d7b08a38973b14919ffebe",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-strawberry/14b8e6238e90.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/18-liter-strawberry-trough-with-truss-support-uk.pdf",
+      "product": "18-liter-strawberry-trough-with-truss-support",
+      "source_sha256": "0758649c0157e916551899f1d68d0c1a8c61d52e86df141eef7db9583b4dac2d",
+      "sha256": "6e78dddf7223f3c61e45095b057ea233399cf273631d9ebed4e5d43be6e88dfd",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/7cb363bd65a6.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/20-liter-round-pot-uk.pdf",
+      "product": "20-liter-round-pot",
+      "source_sha256": "04b7849ffdcdf302bb54df6b0cd5d39f9d8f35c68cbd9f5237de1ac13fea3554",
+      "sha256": "bf9b803cdba89220aaede6393e3a892032482eff7ffdcfab3a6bd5fff95452e9",
+      "pages": 2,
+      "source_notes": [
+        "Підпис у джерелі: 11.9 in 30.3 mm. Дюймове й метричне значення не узгоджуються. Обидва значення збережено без змін; перед замовленням уточніть розмір у виробника."
+      ],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/43ef3bb7addc.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/20-liter-square-pot-uk.pdf",
+      "product": "20-liter-square-pot",
+      "source_sha256": "0db8b1877fc31bc484b2058d80c270a4be234cdbb2628d48a47f66f344d7e165",
+      "sha256": "c96c88c06b99b94103dcaef82555e03cc5a31c586e34b833bf6fbc9a49aec940",
+      "pages": 2,
+      "source_notes": [
+        "Підпис у джерелі: 12.44 in 301 mm. Дюймове й метричне значення не узгоджуються. Обидва значення збережено без змін; перед замовленням уточніть розмір у виробника."
+      ],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/a484ae92cfa4.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/25-liter-round-drainage-collection-pot-uk.pdf",
+      "product": "25-liter-round-drainage-collection-pot",
+      "source_sha256": "819ca500a59990eef755fa27fa75105da0b0bf03f4b015e42bf8a023eeb478bd",
+      "sha256": "fe0597fd11ba485b027a20388c0e5588241615612142e795d38473a392f4a07e",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/6cfcb6c8d4d9.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/25-liter-round-drainage-collection-pot-short-legs-uk.pdf",
+      "product": "25-liter-round-drainage-collection-pot-short-legs",
+      "source_sha256": "add2184c295d02f7c9bb6e3bace57e65049b8860593a538518269b92ef9caec7",
+      "sha256": "533eb1fa7244e5b6b0bbea3d446ba401cc5e7f410bc93b578ae9f55839d5b40d",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/25c3f53f0c71.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/25-liter-round-pot-short-legs-uk.pdf",
+      "product": "25-liter-round-pot-short-legs",
+      "source_sha256": "5676ba90628cd59bb5424587eb1e1ddfeb86cbb78975e11c613446b10cbea9cc",
+      "sha256": "613bebe5f353f232f9bdad669b3cbb3d7837e8460e9620583f3932ab0aad4cee",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/3850e1e86c06.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/25-liter-round-pot-wide-leg-uk.pdf",
+      "product": "25-liter-round-pot-wide-leg",
+      "source_sha256": "d50d1312599ebdc5de0570b63c7c4c31d8500acb96107ea53af0ced10917ffbe",
+      "sha256": "78fc8ac1dba073f02314eaa7f6dea516573e88456f58623c13422df94bcc8653",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/1422b7ecac32.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/25-liter-square-pot-with-u-grooves-uk.pdf",
+      "product": "25-liter-square-pot-with-u-grooves",
+      "source_sha256": "683305366e3fa81155fd90b640e75d1758060531a11a7d19fac6712b702a6f80",
+      "sha256": "edc2b725f4e3b9141b8ae4ee7d09fc2a5b9906a9e5b53e7277734d5d24c865f9",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/a0fd46184b5f.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/3-liter-square-pot-uk.pdf",
+      "product": "3-liter-square-pot",
+      "source_sha256": "2712c62db8ea724ec2805aee91a409cdb21e05230189b7f458c127516c2bb90e",
+      "sha256": "a6918349f6d17dfd7065ff1932ff0be99105a29e9546ac4a74e9ac6e52765190",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/a2adc7f1628a.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/30-liter-round-pot-u-groove-uk.pdf",
+      "product": "30-liter-round-pot-u-groove",
+      "source_sha256": "afa31d83ef3411a521240230edaee12060b67b25a0cb5d95f9bb0832389472d2",
+      "sha256": "227e7444e6f34020c43dcea48cd1f16fdddec43987a0048b98e4dd13289dbde5",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/bf74c6f5c555.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/30-liter-round-v-rib-uk.pdf",
+      "product": "30-liter-round-v-rib",
+      "source_sha256": "974862c8fe499d20ed6059fd3d00310f718e81b6b9c8f733570a2c413ae0d51c",
+      "sha256": "a175a08c5b8611a812211ec236f9a411491ec7eeffeb1e53cf7db838b148e835",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/4abed936e4e1.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/30-liter-square-pot-uk.pdf",
+      "product": "30-liter-square-pot",
+      "source_sha256": "2f191d70d4369e5962ec0d6d61df1b64a9825e6f409e9a95489486c15ac74386",
+      "sha256": "03a3ec4821f786fba6eb1d88a7279384fb388863bc58c6843b04da9a39833601",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/423747f8bace.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/35-liter-square-pot-with-u-grooves-copy-uk.pdf",
+      "product": "35-liter-square-pot-with-u-grooves-copy",
+      "source_sha256": "4439a95b14fd1993625e2f385ce0f83a63f3160a8ef7b0fa6c7226941bd22e5a",
+      "sha256": "5c2e21ac771736ad1eaa5421f3b16aae72757ca4acb3afc63b8d4f7647bd3933",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/2f0e4160a042.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/4-7-liter-square-pot-for-cold-storage-uk.pdf",
+      "product": "4-7-liter-square-pot-for-cold-storage",
+      "source_sha256": "ea508d12441a8bcd91e83ebdaf5e288aaf72f62dc3a601e455d79f468026c580",
+      "sha256": "dbd50914c11f731ae38b5d9dad1ef3b3035ddcbcfd12a358532dfc916c38af07",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/c7d0ddf1fb75.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/40-liter-round-pot-uk.pdf",
+      "product": "40-liter-round-pot",
+      "source_sha256": "354774c8e1347f552f32162c7521c2ad44bba161c7f2b2f48f3dcb94bee0fcb8",
+      "sha256": "8d7ce98154ebe014205667f448cc41cbb367b579ae20a3604ee0e1c832d77fcb",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/b1252c43899d.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/40l-round-pot-with-u-grooves-uk.pdf",
+      "product": "40l-round-pot-with-u-grooves",
+      "source_sha256": "98189dc318e88b542aa0caf81eaf0818c74a6d173328d19636978f91d6a6b901",
+      "sha256": "e78aaa33380f58309cc43c9e8bd33f484680b0e4f4ec98d3a94bfcff1939d1ec",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/e0395e3fb39d.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/5-liter-drainage-collection-pot-uk.pdf",
+      "product": "5-liter-drainage-collection-pot",
+      "source_sha256": "b5517d2b89c2af647dce8107e2855be1f9429043f1fa7f7095f217c33edc5763",
+      "sha256": "24da516d18d10d195c84f1d3257ef9ff9d8160e7a7a55b5f4c30e5da0caa815e",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/7d18c1527472.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/5-liter-square-short-pot-uk.pdf",
+      "product": "5-liter-square-short-pot",
+      "source_sha256": "b569e9891195004978c33007a8b7774812a25376ba9b49ef2bb136d0c89c8a9d",
+      "sha256": "ea048b5c4bc8d02e78efcbeb8fe138883eb7b22eb9529e8682abd85430ba9d6f",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/77cde3a3c71c.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/7-liter-drainage-collection-pot-uk.pdf",
+      "product": "7-liter-drainage-collection-pot",
+      "source_sha256": "a71675d19ece1b4a21c3233b9dede527a6d4f895fc175d041e3fa4cdf7fefabe",
+      "sha256": "992480083a095a88c8f696a743fb0ae7deb50ac50d684ae5de3abc5977a77425",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/f2ea334c8a75.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/7-liter-square-pot-uk.pdf",
+      "product": "7-liter-square-pot",
+      "source_sha256": "5171f3b3412b7bc2dc529c9f1f43fcca228018a9f0b201976dc7a8e1efd99e56",
+      "sha256": "8f63a5af60d1a7a61d4f3f630fa7eed84e7f3399afb43b5d70d7e79dbe28e093",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/6c35c0329021.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/7-liter-square-pot-for-cold-storage-uk.pdf",
+      "product": "7-liter-square-pot-for-cold-storage",
+      "source_sha256": "77d73070eec93414fb68a3d107520b815af57e843b8795fb4ceff03fe1bc4769",
+      "sha256": "a2fc8ec1fac0c83706d2d2cde7322472d1ec869fc77cc5e72cee4441299f2082",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/2cd6ce6efa2a.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/8-liter-square-pot-uk.pdf",
+      "product": "8-liter-square-pot",
+      "source_sha256": "5367a4734de83358e0feb965e8c84d4590e1df332e4ecfcde368bb5f73fae80f",
+      "sha256": "549570e6fb324933b7821e239c555c2de8ea6cfc758c6dafff6df824d7cd9dfa",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-strawberry/7e8b023c2663.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/9-liter-trough-with-truss-support-uk.pdf",
+      "product": "9-liter-trough-with-truss-support",
+      "source_sha256": "35f660f780b80cdebf7101315df6963c1cbfbc32f1f10a7d3d4a1f7e4ed64b87",
+      "sha256": "c1b9f3beea7d2a1a63b95f4e11e685a69b4257b8b0fd667ffdcc20a6ab11d007",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-bag-bases/ffdf31038e00.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/bag-base-drainage-collection-uk.pdf",
+      "product": "bag-base-drainage-collection",
+      "source_sha256": "dfe30e945c52064f8106b9ed35b07fd575fb8947b5771028ecdcdf1b4c5772d3",
+      "sha256": "bc13c7e2a7b759bcd58eac9c72924d479ca8e26cf24f3a49aa0d085ffcd6e391",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/b1a358d85bd8.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/cooling-skirt-uk.pdf",
+      "product": "cooling-skirt",
+      "source_sha256": "c9dfec0114884396e76bad3fb999b3fba3fada8823bd817454f161e672f5de38",
+      "sha256": "9720fb90a7ce3bebc6d9d98d30a0092c85aba13c819aacaf8d44929b8aae3f58",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-bag-bases/89f86ca9e22d.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/culti-base-grow-bag-with-integrated-base-uk.pdf",
+      "product": "culti-base-grow-bag-with-integrated-base",
+      "source_sha256": "6a19e5066ab2bed7e4864c3f10196f43a60f31beab4021dfda40f5816228291b",
+      "sha256": "f9c7803fcf8984d4b7a1f1c076e9875879c93213d8a8da1fa6f52e01aff1c864",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/6d7ffa876da9.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/ground-cover-uk.pdf",
+      "product": "ground-cover",
+      "source_sha256": "f2c83fe9af02e1cd98c6268c6f637ef5747329217a3eca3022ff1ae5fc5dabf8",
+      "sha256": "7cb58cba2c62d3aa30eb048ea3eabb8c66bb90bf0c6d69b8a5b35ea8631b95e7",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/50d6a58ed5bf.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/hose-clip-uk.pdf",
+      "product": "hose-clip",
+      "source_sha256": "9e1c2b4391567a99d262f16b654b80a693d60cb690746a38f41b68ef4a797898",
+      "sha256": "bf53fd749933efbd22ef96752d7bfba9ab7180cb2803560c259acf0a7abdbd87",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/e76e716af9a8.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/kratos-slab-base-uk.pdf",
+      "product": "kratos-slab-base",
+      "source_sha256": "58fa42c7f69185d9fef8678241946fcbc5a733b008f149300d8ba0aca2704734",
+      "sha256": "988f9357a62d63bfae5f77779dcc156e951b020d6ea63cd8535b758b62568730",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/2dfc30f0ccc7.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/lysimeters-uk.pdf",
+      "product": "lysimeters",
+      "source_sha256": "686dfda92fe6318d35bb58b7b9e576c2f39837fda016504d1b3bd5b4f087578b",
+      "sha256": "bd5041ea5b1f17f9af8b2928ca1481269dcfb3c96ff545c6006cbb2f33da8c05",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/24f3cc9eefe1.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/metal-hose-clip-uk.pdf",
+      "product": "metal-hose-clip",
+      "source_sha256": "1502593816d808f42283d0efbfb38d07267bd1cb12cca4d638bc35fe940fc017",
+      "sha256": "94eac43182043fecde4c18cde18f4045173bf6ec8051792e18081cfb13914996",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/f7bc4365c9d2.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/metal-stakes-for-gutter-uk.pdf",
+      "product": "metal-stakes-for-gutter",
+      "source_sha256": "4a5548126e1e30b795ba121dd1a024f01f7aaf29ef9967e9b8703203c461b741",
+      "sha256": "80c30892b398481c90c32edccd655f29038cb80fc675b702ed20eebf208a4925",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/b2b7ec4a36d2.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/micro-tube-stake-uk.pdf",
+      "product": "micro-tube-stake",
+      "source_sha256": "be581562dc9575011ec807d51e11f93ad2e489c04be390ee69debe199c28bf10",
+      "sha256": "8f5cc8b3ac78984cd63d6afbbf62eeef596d6205098029466d18c95409000954",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-accessories/b7622ffcf1aa.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/pot-anchor-uk.pdf",
+      "product": "pot-anchor",
+      "source_sha256": "7aebd7e434ff2f2a0f4a962abee6631baa8bfdca2bd58437ee5716018fb07951",
+      "sha256": "56d57dc34a09999b765999c4568900e9473e176af31b062e79c4e2f25c4e1129",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-rubus-vegetables/ca80b14a4985.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/rivus-slab-base-uk.pdf",
+      "product": "rivus-slab-base",
+      "source_sha256": "e40a56ec67f9b6507ed278a33426a86d00a156ebba59615e64329cf563286231",
+      "sha256": "1ee99ce5f8e4c6c4858ac5c0716ff0e05fec01e031503a3fd0e9bce14e006cd9",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-strawberry/66c713bef6d4.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/trough-cover-for-strawberries-uk.pdf",
+      "product": "trough-cover-for-strawberries",
+      "source_sha256": "3b6c90d49ea54d67fd331cea9a1fa3e082439d9985e1a9d584cfd0ec9139d594",
+      "sha256": "68d53dc2002fc923b358cfb32a8121d1c821ccce011606e0a14eba9fe80496c9",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-bag-bases/ab01ba1ad332.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/vf-base-for-open-top-grow-bags-uk.pdf",
+      "product": "vf-base-for-open-top-grow-bags",
+      "source_sha256": "392d1db33ef5c80f2bbae6602dca1f246ff4768ca5b3b89951ed5143b50a7c82",
+      "sha256": "b84cec9ea01b366ecc666c961e7afddc2cd0edd4838d1b3f463088b13e65bb0e",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    },
+    {
+      "source_pdf": "/media/plantlogic-blueberry/bdee04ecb070.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/zephyr-v2-uk.pdf",
+      "product": "zephyr-v2",
+      "source_sha256": "7905b2f96c1bf0ef2f334beeaed041f03883eb1fe59d8f1a598eb462800e6ebe",
+      "sha256": "c100bcb421520187e588ff80ec14fb57559088a9fb404c11408756e01f8725d3",
+      "pages": 1,
+      "source_notes": [],
+      "language": "uk-UA",
+      "date": "2026-10-06"
+    }
+  ],
+  "catalog": {
+    "pdf": "/media/tech-sheets-uk/plantlogic-catalog-2026-uk.pdf",
+    "source": "PlantLogic_Catalog_2026_UA_BB610_WEB.pdf",
+    "translation_date": "2026-09-28",
+    "pages": 30
+  },
+  "original_library": "https://drive.google.com/drive/folders/116RTG3evsQN96Ta2FlwIo7LiR-HcoZi8"
+}
