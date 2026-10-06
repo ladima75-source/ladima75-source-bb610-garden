@@ -122,6 +122,13 @@
   const marketByPath={"/portfolio-items/cooling-skirt/":{"id":"plantlogic-blueberry-cooling-cover","sku":"PL-BB-COOLING-COVER","title":"Охолоджувальна спідниця та захист горщика"},"/portfolio-items/trough-cover-for-strawberries/":{"id":"plantlogic-trough-cover","sku":"PL-30020012","title":"Кришка для полуничного жолоба"}};
   const marketBase='https://market.bb610.com.ua/product.html';
 
+  if(!document.getElementById('garden-market-handoff-style')){
+    const style=document.createElement('style');
+    style.id='garden-market-handoff-style';
+    style.textContent='.market-buy-block{margin:26px 0 12px;padding:18px;border:1px solid #d9e6da;background:#f6faf4}.market-buy-block>strong{display:block;margin-bottom:4px;color:#173d25;font-size:18px;font-weight:650}.market-buy-block>span{display:block;margin-bottom:12px;color:#6f7b72;font-size:13px}.market-buy-options{display:flex;flex-wrap:wrap;gap:8px}.market-buy-options a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 14px;border:1px solid #2ca448;background:#2ca448;color:#fff;font-size:13px;font-weight:650;text-decoration:none}.market-buy-options a:hover{background:#23883b;border-color:#23883b;color:#fff;text-decoration:none}@media(max-width:600px){.market-buy-options{display:grid;grid-template-columns:1fr}.market-buy-options a{width:100%}}';
+    document.head.append(style);
+  }
+
   const marketUrl=(item)=>{
     const q=new URLSearchParams({id:item.id});
     if(item.sku) q.set('sku',item.sku);
