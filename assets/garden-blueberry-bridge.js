@@ -12,10 +12,12 @@
   };
   const polishFieldStories = () => {
     const section = document.querySelector('#field-stories');
-    if (!section) return;
+    if (!section || section.dataset.fieldStoriesPolished === '1') return;
 
     const title = section.querySelector('.lux-field-head h2');
-    if (title) title.textContent = 'PlantLogic у реальних системах';
+    if (title && title.textContent !== 'PlantLogic у реальних системах') {
+      title.textContent = 'PlantLogic у реальних системах';
+    }
 
     const note = section.querySelector('.lux-field-head > p');
     if (note) note.remove();
@@ -24,9 +26,15 @@
     if (rubus) {
       const strong = rubus.querySelector('strong');
       const body = rubus.querySelector('p');
-      if (strong) strong.textContent = 'Горщик у виробничому ряду.';
-      if (body) body.textContent = 'Полив, дренаж, стабільність високих пагонів і зручний доступ персоналу.';
+      if (strong && strong.textContent !== 'Горщик у виробничому ряду.') {
+        strong.textContent = 'Горщик у виробничому ряду.';
+      }
+      if (body && body.textContent !== 'Полив, дренаж, стабільність високих пагонів і зручний доступ персоналу.') {
+        body.textContent = 'Полив, дренаж, стабільність високих пагонів і зручний доступ персоналу.';
+      }
     }
+
+    section.dataset.fieldStoriesPolished = '1';
   };
 
   const enhance = () => {
@@ -60,6 +68,14 @@
   else start();
   function start() {
     enhance();
-    new MutationObserver(enhance).observe(document.querySelector('#root') || document.body, {childList:true,subtree:true});
+    let scheduled = false;
+    new MutationObserver(() => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(() => {
+        scheduled = false;
+        enhance();
+      });
+    }).observe(document.querySelector('#root') || document.body, {childList:true,subtree:true});
   }
 })();
