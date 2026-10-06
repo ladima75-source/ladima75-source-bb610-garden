@@ -242,11 +242,18 @@
       block.innerHTML =
         '<div class="proof-feature-copy">' +
           '<span class="proof-label">ПОЛИВ / ДРЕНАЖ</span>' +
-          '<h3>Лізиметр показує, як виглядає вимірювальний контур фізично.</h3>' +
-          '<p>Використовуємо українську офіційну схему комплекту PlantLogic: вона наочно пояснює IN/OUT набагато краще за чотири текстові картки.</p>' +
+          '<h3>Лізиметр збирає чисту контрольну пробу дренажу.</h3>' +
+          '<p>Пластиковий лізиметр встановлюється під горщиком і спрямовує пробу в ємність OUT. Комплект IN/OUT допомагає порівнювати полив і дренаж; pH та EC вимірюються зовнішніми приладами.</p>' +
         '</div>' +
-        '<div class="proof-feature-media proof-white"><img src="/media/proof/lysimeter-kit-ua.png?v=' + VERSION + '" alt="Lysimeter Kit PlantLogic Ukrainian diagram" loading="lazy"></div>';
+        '<div class="proof-feature-media proof-white"><a href="/portfolio-items/lysimeters/"><img src="/media/plantlogic-accessories/d31fe8ba66e2.jpg" alt="Пластиковий лізиметр PlantLogic — лоток для збору дренажу під горщиком" loading="lazy"></a></div>';
       interfaces.append(block);
+      block.querySelector('.proof-feature-copy').insertAdjacentHTML('beforeend','<a class="text-button accessory-proof-link" href="/portfolio-items/lysimeters/">Лізиметри та комплект IN/OUT ↗</a>');
+      const steel = document.createElement('div');
+      steel.className = 'proof-feature proof-feature-lysimeter';
+      steel.id = 'proof-steel-lysimeter';
+      steel.innerHTML = '<div class="proof-feature-copy"><h3>Сталевий лізиметр для круглих горщиків.</h3><p>V-подібна основа відводить пробу до регульованого виходу. Кришка захищає її від листя, плодів і бруду. Виконання підбирається для відповідних горщиків PlantLogic 25, 30 та 40 л.</p><a class="text-button accessory-proof-link" href="/portfolio-items/steel-lysimeter-for-blueberry-pots/">Сталева модель · характеристики ↗</a></div><div class="proof-feature-media proof-white"><a href="/portfolio-items/steel-lysimeter-for-blueberry-pots/"><img src="/media/plantlogic-accessories/b2a15865775a.jpg" alt="Сталевий лізиметр PlantLogic з кришкою та виходом для дренажу" loading="lazy"></a></div>';
+      interfaces.append(steel);
+
     }
 
     const strawberry = document.querySelector("#strawberry .wrap");

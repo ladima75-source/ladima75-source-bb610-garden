@@ -15,6 +15,7 @@
       '<a href="/crops/">Культури</a>' +
       '<a href="/systems/">Системи</a>' +
       '<a href="/catalog/">Каталог</a>' +
+      '<a href="/accessories/">Аксесуари</a>' +
       '<a href="/#technical-core">Технологія</a>' +
       '<a href="/#system-interfaces">Моніторинг</a>' +
       '<a class="nav-market" href="https://market.bb610.com.ua/">Market ↗</a>';
@@ -25,6 +26,7 @@
       const active =
         (href === '/crops/' && path.startsWith('/crops/')) ||
         (href === '/systems/' && path.startsWith('/systems/')) ||
+        (href === '/accessories/' && path.startsWith('/accessories/')) ||
         (href === '/catalog/' && (path.startsWith('/catalog/') || path.startsWith('/portfolio-items/')));
       if (active) link.classList.add('is-active');
     });

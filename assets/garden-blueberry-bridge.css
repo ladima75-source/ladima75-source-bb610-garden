@@ -1,3 +1,6 @@
 .lux-field-copy .blueberry-entry{display:inline-block;color:#d8f4ae!important;border-bottom:1px solid #c5e3a1;padding:8px 0;margin-top:13px;font-size:13px;font-weight:600;position:relative;z-index:3}.lux-field-copy .blueberry-entry:hover{color:white!important}.garden-products-foot .blueberry-entry{display:inline-block;color:#375b28;font-weight:600;margin-top:12px;text-decoration:underline;text-underline-offset:4px}.blueberry-entry:focus-visible{outline:3px solid #95c96b;outline-offset:5px}
 
 .strawberry-system-entry{display:inline-block;margin:18px 0;color:#95dab0;font-size:14px;text-decoration:underline;text-underline-offset:5px}.garden-products-foot .catalog-entry{display:block;margin-top:12px}
+.garden-mobile-architecture-nav[hidden]{display:none!important}
+.garden-mobile-architecture-nav{display:none}
+@media(max-width:760px){.garden-mobile-architecture-nav:not([hidden]){position:absolute;display:block;top:100%;left:0;right:0;padding:12px 24px 24px;background:#081710;border-bottom:1px solid #ffffff26;box-shadow:0 18px 30px #0003;max-height:calc(100dvh - 80px);overflow-y:auto}.garden-mobile-architecture-nav>a{display:block;padding:13px 0;border-bottom:1px solid #ffffff1c;color:#f4f6f0;font-size:17px;line-height:1.5}.garden-mobile-architecture-nav>a:focus-visible{outline:2px solid #d7ff79;outline-offset:3px}}

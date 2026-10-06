@@ -177,3 +177,4 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:28px;
 .catalog-card>.lux-arrow-chip{margin:12px auto 0!important}
 .hub-card>.lux-arrow-chip{margin:0 25px 25px!important}
 .thumbnails:has(>.thumbnail:nth-child(5):last-child){grid-template-columns:repeat(5,minmax(0,1fr))}
+.thumbnails:has(>.thumbnail:only-child){display:none}

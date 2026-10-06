@@ -10,7 +10,41 @@
     link.className = 'blueberry-entry ' + marker;
     link.href = href; link.textContent = text; target.append(link);
   };
+  const enhanceMobileMenu = () => {
+    const button = document.querySelector('#root header .menu-button');
+    const header = button?.closest('header');
+    if (!button || !header || button.dataset.gardenMobileMenu) return;
+    button.dataset.gardenMobileMenu = 'accessories';
+    const navigation = document.createElement('nav');
+    navigation.id = 'garden-mobile-architecture-nav';
+    navigation.className = 'garden-mobile-architecture-nav';
+    navigation.setAttribute('aria-label', 'Мобільна навігація');
+    navigation.hidden = true;
+    navigation.innerHTML = '<a href="/crops/">Культури</a><a href="/systems/">Системи</a><a href="/catalog/">Каталог</a><a href="/accessories/">Аксесуари</a><a href="#technical-core">Технологія</a><a href="#system-interfaces">Моніторинг</a><a href="https://market.bb610.com.ua/">Market ↗</a>';
+    header.append(navigation);
+    button.setAttribute('aria-controls', navigation.id);
+    const setOpen = open => {
+      navigation.hidden = !open;
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
+    };
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      setOpen(navigation.hidden);
+    }, true);
+    navigation.addEventListener('click', event => {
+      if (event.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !navigation.hidden) { setOpen(false); button.focus(); }
+    });
+    matchMedia('(min-width:761px)').addEventListener('change', event => {
+      if (event.matches) setOpen(false);
+    });
+  };
   const enhance = () => {
+    enhanceMobileMenu();
     document.querySelectorAll('a[href*="product.html?id="]').forEach(link => {
       const id = new URL(link.href).searchParams.get('id');
       if (routes[id]) link.setAttribute('href', routes[id]);
@@ -30,9 +64,10 @@
       appendLink(foot,'/catalog/','Повний каталог · горщики, жолоби та аксесуари →','catalog-entry');
       foot.dataset.catalogRoute = 'hi-grow';
     }
+    appendLink(foot,'/accessories/','Аксесуари · лізиметри, полив і захист →','accessories-entry');
     const nav = document.querySelector('.desktop-nav');
     if (nav && !nav.dataset.gardenArchitecture) {
-      nav.innerHTML = '<a href="/crops/">Культури</a><a href="/systems/">Системи</a><a href="/catalog/">Каталог</a><a href="#technical-core">Технологія</a><a href="#system-interfaces">Моніторинг</a>';
+      nav.innerHTML = '<a href="/crops/">Культури</a><a href="/systems/">Системи</a><a href="/catalog/">Каталог</a><a href="/accessories/">Аксесуари</a><a href="#technical-core">Технологія</a><a href="#system-interfaces">Моніторинг</a>';
       nav.dataset.gardenArchitecture = 'hi-grow';
     }
     document.querySelectorAll('a[href="#field-stories"]').forEach(link => link.setAttribute('href','/crops/'));

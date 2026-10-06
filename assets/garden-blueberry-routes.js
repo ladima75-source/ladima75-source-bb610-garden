@@ -33,5 +33,21 @@ window.GARDEN_BLUEBERRY_ROUTES = {
   "1306007": "/portfolio-items/7-liter-square-pot/",
   "1309008": "/portfolio-items/8-liter-square-pot/",
   "1301081": "/portfolio-items/kratos-slab-base/",
-  "1302050": "/portfolio-items/rivus-slab-base/"
+  "1302050": "/portfolio-items/rivus-slab-base/",
+  "12050010": "/portfolio-items/hose-clip/",
+  "13046025": "/portfolio-items/steel-lysimeter-for-blueberry-pots/",
+  "13046026": "/portfolio-items/steel-lysimeter-for-blueberry-pots/",
+  "13046031": "/portfolio-items/steel-lysimeter-for-blueberry-pots/",
+  "13046041": "/portfolio-items/steel-lysimeter-for-blueberry-pots/",
+  "1301010": "/portfolio-items/lysimeters/",
+  "1301030": "/portfolio-items/lysimeters/",
+  "1205012": "/portfolio-items/metal-hose-clip/",
+  "1700146": "/portfolio-items/metal-stakes-for-gutter/",
+  "1700147": "/portfolio-items/metal-stakes-for-gutter/",
+  "1205018": "/portfolio-items/micro-tube-stake/",
+  "1205019": "/portfolio-items/micro-tube-stake/",
+  "1200021": "/portfolio-items/plastic-gutter/",
+  "1300010": "/portfolio-items/plastic-gutter/",
+  "1300011": "/portfolio-items/plastic-gutter/",
+  "1700021": "/portfolio-items/pot-anchor/"
 };

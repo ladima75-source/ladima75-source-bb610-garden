@@ -25,3 +25,7 @@ Original product photographs, diagrams, brochures and technical sheets in `media
 ## PlantLogic Rubus and vegetable materials
 
 Original photographs, diagrams and technical PDFs in `media/plantlogic-rubus-vegetables/` are from PlantLogic and remain the property of their respective owners. `sources.json` records the original URLs. Ukrainian descriptions are adapted for BB610 Garden. References: https://getplantlogic.com/rubus-production-2/, https://getplantlogic.com/vegetable-production/, https://getplantlogic.com/hydroponic-tomatoes-vegetables-growing-system/ and the linked product pages.
+
+## PlantLogic accessories
+
+Original product photographs and technical sheets in `media/plantlogic-accessories/` are sourced from the official PlantLogic accessory product pages. Per-product URLs are recorded in `sources.json`. Ukrainian descriptions are adapted for BB610 Garden.
