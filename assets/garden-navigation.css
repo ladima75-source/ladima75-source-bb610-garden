@@ -27,3 +27,4 @@ main [id],section[id]{scroll-margin-top:20px}
 @media(max-width:360px){.garden-site-header .garden-header-inner{width:calc(100% - 28px)!important}.garden-site-header .garden-brand,.garden-site-header .garden-brand img{width:80px!important;max-width:80px!important}.garden-site-header .garden-project{font-size:10px!important;padding:10px!important}}
 .solution-page .garden-breadcrumbs,.culture-page .garden-breadcrumbs{color:#a8b7aa}
 .intro>.garden-breadcrumbs{margin-top:0;margin-bottom:24px}
+body.garden-has-header .site-shell{padding-top:0!important}
