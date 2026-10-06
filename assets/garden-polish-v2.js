@@ -85,6 +85,7 @@
       if (parent.closest(".product-number,.garden-product-meta,.product-detail-kicker")) return;
 
       const raw = node.nodeValue || "";
+      if (raw.includes("Bag Base Drainage Collection")) return;
       const trimmed = raw.trim();
       if (!trimmed) return;
 
@@ -158,6 +159,7 @@
       if (node.closest(".product-number,.garden-product-meta,.product-detail-kicker")) return;
       if (node.children.length) return;
       let t = node.textContent || "";
+      if (t.includes("Bag Base Drainage Collection")) return;
       const original = t;
       t = t
         .replace(/Drainage Collection/g, "збір дренажу")

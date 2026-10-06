@@ -1,0 +1,21 @@
+.catalog-page [hidden]{display:none!important}
+.catalog-page .solution-intro .garden-breadcrumbs{margin-bottom:58px}
+.catalog-page .culture-heading>p a{color:#d7ff79;text-decoration:underline;text-underline-offset:4px}
+.catalog-controls .solution-nav{margin-bottom:28px}
+.catalog-filter{display:flex;align-items:baseline;gap:28px}
+.catalog-filter>span{font-size:13px;color:#a8b7aa}
+.catalog-filter>div{display:flex;flex-wrap:wrap;gap:10px}
+.catalog-filter button{color:#dce7dc;background:transparent;border:1px solid #ffffff35;border-radius:6px;padding:11px 17px;cursor:pointer;font-size:14px;line-height:1.4}
+.catalog-filter button:hover{border-color:#d7ff79}
+.catalog-filter button[aria-pressed=true]{background:#d7ff79;border-color:#d7ff79;color:#10261d}
+.catalog-status{margin-top:22px;color:#a8b7aa;font-size:13px;line-height:1.7}
+.catalog-category{padding:72px 0;border-bottom:1px solid #ffffff1c}
+.catalog-category-heading{display:flex;align-items:baseline;gap:20px}
+.catalog-category-heading h2{margin-bottom:20px}
+.catalog-category-count{color:#a8b7aa;font-size:16px}
+.catalog-category .solution-products{margin-top:30px}
+.catalog-category .solution-products .catalog-card>img{height:250px}
+.catalog-category .solution-products h3{font-size:20px;line-height:1.4;margin-bottom:20px}
+.catalog-legacy-anchors{height:0;overflow:hidden}
+@media(max-width:760px){.catalog-page .solution-intro .garden-breadcrumbs{margin-bottom:36px}.catalog-filter{display:block}.catalog-filter>span{display:block;margin-bottom:14px}.catalog-filter button{font-size:13px;padding:10px 13px}.catalog-category{padding:50px 0}.catalog-category .solution-products .catalog-card>img{height:190px}.catalog-category .solution-products h3{font-size:17px}}
+@media(max-width:480px){.catalog-category .solution-products{grid-template-columns:1fr}.catalog-category .solution-products .catalog-card>img{height:240px}.catalog-category .solution-products h3{font-size:21px}.catalog-status{font-size:12px}.catalog-category-heading{gap:12px}.catalog-category-heading h2{font-size:30px}}

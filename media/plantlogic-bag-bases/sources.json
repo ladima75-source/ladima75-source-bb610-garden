@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "slug": "culti-base-grow-bag-with-integrated-base",
+      "source": "https://getplantlogic.com/portfolio-items/culti-base-grow-bag-with-integrated-base/",
+      "images": [
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-13079300-bolsa-de-cultivo-con-base.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-13079300.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-bolsa-con-base-de-maceta-integrada.png",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/culti-base-base-piramidal-mejor-drenaje.png",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/culti-base-mejor-oxigenacion.png",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/culti-base-patas-altas.png"
+      ],
+      "gallery": [
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-13079300-bolsa-de-cultivo-con-base.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-13079300.jpg"
+      ],
+      "pdfs": [
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Techsheet_Item_13079300_Culti_base_ENG.pdf"
+      ]
+    },
+    {
+      "slug": "vf-base-for-open-top-grow-bags",
+      "source": "https://getplantlogic.com/portfolio-items/vf-base-for-open-top-grow-bags/",
+      "images": [
+        "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-ISOMETRICO.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-FRENTE.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-CENITAL.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/Best-base-for-open-top-bags.png",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/open-top-bags-base.png",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/bag-base-for-open-top-grow-bags.png",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/economi-open-top-bags-base.png"
+      ],
+      "gallery": [
+        "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-ISOMETRICO.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-FRENTE.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-CENITAL.jpg"
+      ],
+      "pdfs": [
+        "https://getplantlogic.com/wp-content/uploads/2026/04/Techsheet_Item_VF_Base_12010300_12010320_-12010400_ENG.pdf"
+      ]
+    },
+    {
+      "slug": "bag-base-drainage-collection",
+      "source": "https://getplantlogic.com/portfolio-items/bag-base-drainage-collection/",
+      "images": [
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_1.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_2.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_3.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_4.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_5.jpg"
+      ],
+      "gallery": [
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_1.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_2.jpg",
+        "https://getplantlogic.com/wp-content/uploads/2019/04/1036_3.jpg"
+      ],
+      "pdfs": [
+        "https://getplantlogic.com/wp-content/uploads/2022/09/DC-BagBase_Item_1301036_Eng.pdf"
+      ]
+    }
+  ],
+  "assets": {
+    "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-13079300-bolsa-de-cultivo-con-base.jpg": "/media/plantlogic-bag-bases/5cbd2a3536e8.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-13079300.jpg": "/media/plantlogic-bag-bases/29b8c0bef60a.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/Culti-base-bolsa-con-base-de-maceta-integrada.png": "/media/plantlogic-bag-bases/5056c903821e.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/culti-base-base-piramidal-mejor-drenaje.png": "/media/plantlogic-bag-bases/5eca20af012d.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/culti-base-mejor-oxigenacion.png": "/media/plantlogic-bag-bases/801799638dad.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/culti-base-patas-altas.png": "/media/plantlogic-bag-bases/4cc6df0dd1bd.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/Techsheet_Item_13079300_Culti_base_ENG.pdf": "/media/plantlogic-bag-bases/89f86ca9e22d.pdf",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-ISOMETRICO.jpg": "/media/plantlogic-bag-bases/0df6e54eea15.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-FRENTE.jpg": "/media/plantlogic-bag-bases/454f43304b00.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/VF-BAG-BASE-12010300-CENITAL.jpg": "/media/plantlogic-bag-bases/cc2be3b8e1a8.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/Best-base-for-open-top-bags.png": "/media/plantlogic-bag-bases/6dc69ceebb4c.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/open-top-bags-base.png": "/media/plantlogic-bag-bases/b6d02a0ea477.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/bag-base-for-open-top-grow-bags.png": "/media/plantlogic-bag-bases/0a79491a782c.png",
+    "https://getplantlogic.com/wp-content/uploads/2025/03/economi-open-top-bags-base.png": "/media/plantlogic-bag-bases/d762d4f61ece.png",
+    "https://getplantlogic.com/wp-content/uploads/2026/04/Techsheet_Item_VF_Base_12010300_12010320_-12010400_ENG.pdf": "/media/plantlogic-bag-bases/ab01ba1ad332.pdf",
+    "https://getplantlogic.com/wp-content/uploads/2019/04/1036_1.jpg": "/media/plantlogic-bag-bases/b86de5f6653d.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2019/04/1036_2.jpg": "/media/plantlogic-bag-bases/f0ec05d7b15f.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2019/04/1036_3.jpg": "/media/plantlogic-bag-bases/5112fff692a7.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2019/04/1036_4.jpg": "/media/plantlogic-bag-bases/1143700d5fc2.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2019/04/1036_5.jpg": "/media/plantlogic-bag-bases/e94dbef6df28.jpg",
+    "https://getplantlogic.com/wp-content/uploads/2022/09/DC-BagBase_Item_1301036_Eng.pdf": "/media/plantlogic-bag-bases/ffdf31038e00.pdf"
+  }
+}
