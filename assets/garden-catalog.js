@@ -15,6 +15,35 @@
       if(compact) media.classList.add('catalog-card-media-zoom');
     });
 
+    const normalizeImageBackground=(img)=>{
+      const run=()=>{
+        if(!img.naturalWidth||!img.naturalHeight||img.dataset.bgChecked==='1') return;
+        img.dataset.bgChecked='1';
+        try{
+          const canvas=document.createElement('canvas');
+          const size=40;
+          canvas.width=size; canvas.height=size;
+          const ctx=canvas.getContext('2d',{willReadFrequently:true});
+          ctx.drawImage(img,0,0,size,size);
+          const data=ctx.getImageData(0,0,size,size).data;
+          let sum=0,count=0;
+          for(let y=0;y<size;y++){
+            for(let x=0;x<size;x++){
+              if(x>2&&x<size-3&&y>2&&y<size-3) continue;
+              const i=(y*size+x)*4;
+              const r=data[i],g=data[i+1],b=data[i+2];
+              sum+=(r+g+b)/3;
+              count++;
+            }
+          }
+          const edge=sum/count;
+          if(edge<248) img.classList.add('catalog-image-bg-normalize');
+        }catch(e){}
+      };
+      if(img.complete) run(); else img.addEventListener('load',run,{once:true});
+    };
+    document.querySelectorAll('.catalog-card-media>img').forEach(normalizeImageBackground);
+
     const total=document.querySelectorAll('.catalog-category .catalog-card').length;
     const names={all:'Усі культури',blueberry:'Лохина',strawberry:'Полуниця',rubus:'Малина та ожина',vegetables:'Овочі'};
     const cultureHashes=new Set(Object.keys(names).filter(key=>key!=='all'));
