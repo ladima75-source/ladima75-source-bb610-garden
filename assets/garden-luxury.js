@@ -479,8 +479,8 @@
 
     const familyHead = document.querySelector("#family-engineering .family-engineering-head h2");
     const familyLead = document.querySelector("#family-engineering .family-engineering-head > p");
-    if (familyHead) familyHead.textContent = "Коли потрібен Round, Square, U-Groove, Zephyr або Drainage Collection.";
-    if (familyLead) familyLead.textContent = "Порівнюємо сімейства за умовами застосування: субстрат, поливна труба, поверхня встановлення, щільність ряду та спосіб відведення дренажу.";
+    if (familyHead) familyHead.textContent = "Порівняння конструкцій горщиків PlantLogic";
+    if (familyLead) familyLead.textContent = "Круглий · Квадратний · U-пази · Zephyr V2 · Збір дренажу. Порівнюємо за поливом, дренажем, поверхнею встановлення та щільністю ряду.";
 
     const source = document.querySelector("#technical-source-note");
     if (source) {
