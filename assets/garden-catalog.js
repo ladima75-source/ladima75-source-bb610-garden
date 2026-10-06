@@ -24,7 +24,7 @@
         if(link)link.hidden=visible===0;
         count+=visible;
       });
-      document.querySelector('.catalog-status').textContent=`${names[culture]} · Показано: ${count} з ${total}. Сумісність аксесуарів перевіряйте у картці.`;
+      document.querySelector('.catalog-status').textContent=culture==='all'?`${count} моделей`:`${names[culture]} · ${count}`;
     };
     const readURL=()=>{
       const url=new URL(location.href),hash=url.hash.slice(1);
@@ -46,6 +46,22 @@
       apply(culture);
     }));
     controls.hidden=false;readURL();
+
+    const typeLinks=[...document.querySelectorAll('.catalog-controls .solution-nav a[href^="#"]')];
+    const syncType=(id)=>{
+      typeLinks.forEach(link=>link.setAttribute('aria-current',String(link.getAttribute('href')==='#'+id)));
+    };
+    typeLinks.forEach(link=>link.addEventListener('click',()=>syncType(link.getAttribute('href').slice(1))));
+    if('IntersectionObserver' in window){
+      const observer=new IntersectionObserver(entries=>{
+        const visible=entries
+          .filter(entry=>entry.isIntersecting&&!entry.target.hidden)
+          .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+        if(visible)syncType(visible.target.id);
+      },{rootMargin:'-190px 0px -62% 0px',threshold:[0,.05,.2,.5]});
+      sections.forEach(section=>observer.observe(section));
+    }
+
     addEventListener('popstate',readURL);addEventListener('hashchange',readURL);
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
