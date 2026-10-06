@@ -454,3 +454,81 @@
     gap:6px;
   }
 }
+
+
+/* 2026-10-06 family block refinement v2 */
+#family-engineering .family-engineering-head{
+  display:block!important;
+  margin-bottom:34px!important;
+  padding-top:24px!important;
+}
+#family-engineering .family-engineering-head>div{
+  width:100%!important;
+}
+#family-engineering .family-engineering-head h2{
+  max-width:none!important;
+  width:100%!important;
+  margin:0!important;
+  font-size:clamp(2.6rem,4vw,5.1rem)!important;
+  line-height:.98!important;
+}
+#family-engineering .family-engineering-head>p{
+  max-width:none!important;
+  width:100%!important;
+  margin:18px 0 0!important;
+  padding-top:17px!important;
+  border-top:1px solid rgba(16,38,29,.10)!important;
+  color:#69776f!important;
+  font-size:14px!important;
+  line-height:1.55!important;
+}
+#family-engineering .family-card-media,
+#family-engineering .family-card-accent .family-card-media,
+#family-engineering .family-card-dark .family-card-media{
+  height:315px!important;
+  min-height:315px!important;
+  padding:2px 8px 0!important;
+}
+#family-engineering .family-card-media img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  transform:scale(1.32)!important;
+  transform-origin:center center!important;
+}
+#family-engineering .family-card:hover .family-card-media img{
+  transform:scale(1.36)!important;
+}
+#family-engineering .family-card:nth-child(3) .family-card-media img{
+  transform:scale(1.40)!important;
+}
+#family-engineering .family-card:nth-child(3):hover .family-card-media img{
+  transform:scale(1.44)!important;
+}
+#family-engineering .family-card-copy{
+  padding-top:18px!important;
+}
+@media(max-width:1240px){
+  #family-engineering .family-card-media{
+    height:300px!important;
+    min-height:300px!important;
+  }
+}
+@media(max-width:900px){
+  #family-engineering .family-engineering-head h2{
+    font-size:clamp(2.4rem,7vw,4rem)!important;
+  }
+  #family-engineering .family-card-media{
+    height:290px!important;
+    min-height:290px!important;
+  }
+}
+@media(max-width:600px){
+  #family-engineering .family-engineering-head>p{
+    font-size:13px!important;
+  }
+  #family-engineering .family-card-media{
+    height:280px!important;
+    min-height:280px!important;
+  }
+}
