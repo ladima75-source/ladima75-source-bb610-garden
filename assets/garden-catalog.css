@@ -19,3 +19,143 @@
 .catalog-legacy-anchors{height:0;overflow:hidden}
 @media(max-width:760px){.catalog-page .solution-intro .garden-breadcrumbs{margin-bottom:36px}.catalog-filter{display:block}.catalog-filter>span{display:block;margin-bottom:14px}.catalog-filter button{font-size:13px;padding:10px 13px}.catalog-category{padding:50px 0}.catalog-category .solution-products .catalog-card>img{height:190px}.catalog-category .solution-products h3{font-size:17px}}
 @media(max-width:480px){.catalog-category .solution-products{grid-template-columns:1fr}.catalog-category .solution-products .catalog-card>img{height:240px}.catalog-category .solution-products h3{font-size:21px}.catalog-status{font-size:12px}.catalog-category-heading{gap:12px}.catalog-category-heading h2{font-size:30px}}
+
+
+/* 2026-10-06 compact sticky catalog controls */
+.catalog-page .solution-intro{padding-top:20px}
+.catalog-page .solution-intro .garden-breadcrumbs{margin-bottom:22px}
+.catalog-page .solution-intro .culture-heading{margin-bottom:24px}
+.catalog-page .solution-intro .culture-heading h1{margin-bottom:0}
+
+.catalog-controls{
+  position:sticky;
+  top:112px;
+  z-index:45;
+  width:100%;
+  background:rgba(8,23,16,.97);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+.catalog-controls-inner{
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.catalog-control-group{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.catalog-type-group{flex:0 1 auto}
+.catalog-culture-group{flex:1 1 auto}
+.catalog-control-label{
+  flex:0 0 auto;
+  color:#8fa095;
+  font-size:10px;
+  font-weight:750;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.catalog-controls .solution-nav{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:4px;
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:12px;
+}
+.catalog-controls .solution-nav a{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:7px 10px;
+  border:1px solid transparent;
+  border-radius:6px;
+  color:#dce7dc;
+  white-space:nowrap;
+  text-decoration:none;
+}
+.catalog-controls .solution-nav a:hover,
+.catalog-controls .solution-nav a[aria-current="true"]{
+  color:#10261d;
+  background:#d7ff79;
+  border-color:#d7ff79;
+  text-decoration:none;
+}
+.catalog-filter{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.catalog-filter>span{display:none}
+.catalog-filter>div{display:contents}
+.catalog-filter button{
+  min-height:34px;
+  padding:7px 10px;
+  border-radius:6px;
+  font-size:12px;
+  line-height:1.2;
+  white-space:nowrap;
+}
+.catalog-status{
+  flex:0 0 auto;
+  margin:0 0 0 auto;
+  color:#95a49a;
+  font-size:11px;
+  line-height:1.3;
+  white-space:nowrap;
+}
+.catalog-category{
+  padding:56px 0;
+  scroll-margin-top:190px;
+}
+.catalog-category:first-of-type{padding-top:46px}
+
+@media(max-width:1180px){
+  .catalog-controls-inner{
+    min-height:0;
+    padding-top:9px;
+    padding-bottom:9px;
+    flex-wrap:wrap;
+    gap:8px 14px;
+  }
+  .catalog-type-group,
+  .catalog-culture-group{flex:1 1 100%}
+  .catalog-status{
+    position:absolute;
+    right:max(18px,calc((100vw - 1440px)/2 + 32px));
+    top:12px;
+  }
+}
+@media(max-width:760px){
+  .catalog-page .solution-intro{padding-top:14px}
+  .catalog-page .solution-intro .garden-breadcrumbs{margin-bottom:14px}
+  .catalog-page .solution-intro .culture-heading{margin-bottom:18px}
+  .catalog-controls{top:78px}
+  .catalog-controls-inner{
+    width:100%;
+    padding:8px 14px 9px;
+    gap:7px;
+  }
+  .catalog-control-group{
+    width:100%;
+    overflow-x:auto;
+    scrollbar-width:none;
+    gap:7px;
+  }
+  .catalog-control-group::-webkit-scrollbar{display:none}
+  .catalog-control-label{position:sticky;left:0;z-index:2;background:rgba(8,23,16,.98);padding-right:4px}
+  .catalog-controls .solution-nav,
+  .catalog-filter{overflow:visible;flex:0 0 auto}
+  .catalog-controls .solution-nav a,
+  .catalog-filter button{min-height:32px;padding:6px 9px;font-size:11px}
+  .catalog-status{display:none}
+  .catalog-category{padding:44px 0;scroll-margin-top:178px}
+}
