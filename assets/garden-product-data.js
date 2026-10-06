@@ -34,13 +34,13 @@ window.GARDEN_PRODUCT_DATA = [
       volume: "20 л",
       dimensions: "326.2 × H332.6 мм",
       legs: "30 мм",
-      focus: "32 центральні отвори + сумісність з Small Lysimeter",
+      focus: "32 центральні отвори + сумісність з малим лізиметром",
       summary: "Квадратна геометрія для більш щільного використання площі зі збереженням пірамідальної основи, крайового дренажу та центральної аерації.",
       facts: [
         "32 центральні отвори забезпечують доступ кисню в центр кореневої маси.",
         "Крайові отвори та ніжки працюють як єдиний дренажний вузол.",
         "Пірамідальна основа зміщує надлишок води до країв контейнера.",
-        "Сумісний із Small PlantLogic Lysimeter для контрольного збору дренажу."
+        "Сумісний із малим лізиметром PlantLogic для контрольного збору дренажу."
       ],
       source: "https://getplantlogic.com/portfolio-items/20-liter-square-pot/"
     },
@@ -51,7 +51,7 @@ window.GARDEN_PRODUCT_DATA = [
       application: "blueberry",
       applicationLabel: "Лохина",
       family: "U-пази",
-      image: "/media/products/1308026-round25-u.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
+      image: "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2020/04/25LRD_4.jpg?ssl=1&w=669",
       diagram: null,
       volume: "25 л",
       dimensions: "Ø385 × H354 мм",
@@ -81,7 +81,7 @@ window.GARDEN_PRODUCT_DATA = [
       focus: "70-мм ніжки + широка окрема база",
       summary: "25-літрова модель Zephyr V2 з високим відривом кореневої зони від поверхні та окремою посиленою базою.",
       facts: [
-        "Product #1301144.",
+        "Код моделі 1301144.",
         "Висота ніжок — 70 мм.",
         "Широка база збільшує опорну площу; це характеристика конструкції Zephyr V2.",
         "Вузька дренажна щілина допомагає утримувати субстрат.",
@@ -104,7 +104,7 @@ window.GARDEN_PRODUCT_DATA = [
       focus: "70-мм ніжки + широка окрема база",
       summary: "30-літрова модель Zephyr V2 з високими ніжками 7 см та окремою посиленою базою.",
       facts: [
-        "Product #1301153.",
+        "Код моделі 1301153.",
         "Висота ніжок — 70 мм.",
         "Конструкція належить до єдиної платформи Zephyr V2.",
         "Широка окрема база збільшує відрив кореневої зони від поверхні.",
@@ -127,7 +127,7 @@ window.GARDEN_PRODUCT_DATA = [
       focus: "70-мм ніжки + широка окрема база",
       summary: "40-літрова модель Zephyr V2 з високими ніжками 7 см та окремою посиленою базою.",
       facts: [
-        "Product #1301143.",
+        "Код моделі 1301143.",
         "Висота ніжок — 70 мм.",
         "Конструкція належить до єдиної платформи Zephyr V2.",
         "Висока опора фізично віддаляє кореневу зону від поверхні.",
@@ -154,7 +154,7 @@ window.GARDEN_PRODUCT_DATA = [
         "40 отворів у нижній зоні підтримують надходження кисню в центр кореневої маси.",
         "8 крайових дренажних отворів пов’язані з ніжками.",
         "Пірамідальна форма основи зменшує застійну мокру зону.",
-        "Сумісний із Large PlantLogic Lysimeter."
+        "Сумісний із великим лізиметром PlantLogic."
       ],
       source: "https://getplantlogic.com/portfolio-items/30-liter-round-v-rib/"
     },
@@ -170,14 +170,14 @@ window.GARDEN_PRODUCT_DATA = [
       volume: "30 л",
       dimensions: "385 × H324 мм",
       legs: "30 мм",
-      focus: "32 центральні отвори + Large Lysimeter",
+      focus: "32 центральні отвори + великим лізиметром",
       summary: "30-літрова квадратна платформа для щільного розміщення з центральною аерацією та контрольованим крайовим дренажем.",
       facts: [
         "32 центральні отвори для надходження кисню в центр кореневої маси.",
         "12 крайових дренажних точок пов’язані з ніжками.",
         "Пірамідальна основа направляє дренаж до зовнішньої зони.",
         "Ніжки 30 мм зменшують прямий контакт коренів із ґрунтом.",
-        "Сумісний із Large PlantLogic Lysimeter."
+        "Сумісний із великим лізиметром PlantLogic."
       ],
       source: "https://getplantlogic.com/portfolio-items/30-liter-square-pot/"
     },
@@ -211,7 +211,7 @@ window.GARDEN_PRODUCT_DATA = [
       application: "drainage",
       applicationLabel: "Лохина / овочі",
       family: "Збір дренажу",
-      image: "/media/products/1304125-drainage25.jpg?v=" + GARDEN_PRODUCT_DATA_VERSION,
+      image: "https://i0.wp.com/getplantlogic.com/wp-content/uploads/2024/03/25L-Drainage-collection-pot_Item_1304125.jpg?w=669",
       diagram: "/media/proof/drainage-25l-tech-drawing.png?v=" + GARDEN_PRODUCT_DATA_VERSION,
       volume: "25 л",
       dimensions: "Ø420 × H320 мм",
