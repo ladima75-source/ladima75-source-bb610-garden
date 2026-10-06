@@ -420,3 +420,16 @@
 @media(max-width:600px){
   .catalog-page .catalog-card-media{height:220px}
 }
+
+
+/* 2026-10-06 enforce white media background for every catalog card */
+.catalog-page .catalog-card,
+.catalog-page .catalog-card-media{
+  background:#fff!important;
+}
+.catalog-page .catalog-card-media>img{
+  background:#fff!important;
+}
+.catalog-page .catalog-card-media>img.catalog-image-bg-normalize{
+  filter:brightness(1.08) contrast(1.10);
+}
