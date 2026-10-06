@@ -4,6 +4,17 @@
     if(!controls)return;
     const buttons=[...controls.querySelectorAll('[data-culture]')];
     const sections=[...document.querySelectorAll('.catalog-category')];
+    document.querySelectorAll('.catalog-category .catalog-card').forEach(card=>{
+      const img=card.querySelector(':scope > img');
+      if(!img || img.parentElement.classList.contains('catalog-card-media')) return;
+      const media=document.createElement('div');
+      media.className='catalog-card-media';
+      img.before(media);
+      media.append(img);
+      const compact=/\/(3-liter-square-pot|4-7-liter-square-pot-for-cold-storage|5-liter-square-short-pot|5-liter-drainage-collection-pot|7-liter-square-pot|7-liter-square-pot-for-cold-storage|7-liter-drainage-collection-pot|8-liter-square-pot|10-liter-square-pot|10-liter-drainage-collection-pot|15-liter-square-pot)\//.test(card.getAttribute('href')||'');
+      if(compact) media.classList.add('catalog-card-media-zoom');
+    });
+
     const total=document.querySelectorAll('.catalog-category .catalog-card').length;
     const names={all:'Усі культури',blueberry:'Лохина',strawberry:'Полуниця',rubus:'Малина та ожина',vegetables:'Овочі'};
     const cultureHashes=new Set(Object.keys(names).filter(key=>key!=='all'));
