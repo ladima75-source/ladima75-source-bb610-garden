@@ -91,3 +91,22 @@
   .garden-product-detail-source a{display:inline-block;margin-top:9px}
   .garden-product-close{position:fixed;top:12px;right:12px}
 }
+
+/* 2026-10-06 product section cleanup */
+.garden-products-head{
+  grid-template-columns:1fr!important;
+  gap:0!important;
+  align-items:start!important;
+}
+.garden-products-head>p{display:none!important}
+.garden-products-head h2{margin-top:0!important}
+.garden-products-foot{
+  justify-content:flex-end!important;
+  gap:42px!important;
+  flex-wrap:wrap!important;
+}
+.garden-products-foot>span,
+.garden-products-foot>p{display:none!important}
+.garden-products-foot .blueberry-entry{
+  margin-top:0!important;
+}
