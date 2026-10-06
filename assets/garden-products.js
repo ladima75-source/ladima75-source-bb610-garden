@@ -35,7 +35,7 @@
               '<span class="garden-product-volume">' + p.volume + '</span>' +
             '</div>' +
             '<div class="garden-product-body">' +
-              '<div class="garden-product-meta"><span>' + p.applicationLabel + '</span><span>Product #' + p.no + '</span></div>' +
+              '<div class="garden-product-meta"><span>' + p.applicationLabel + '</span><span>Код ' + p.no + '</span></div>' +
               '<h3>' + p.name + '</h3>' +
               '<p class="garden-product-subtitle">' + p.subtitle + '</p>' +
               '<p class="garden-product-focus">' + p.focus + '</p>' +
@@ -110,7 +110,7 @@
     const dialog = document.querySelector("#garden-product-dialog");
     if (!dialog) return;
     dialog.dataset.productNo = product.no;
-    dialog.querySelector(".garden-product-detail-kicker").textContent = product.applicationLabel + " / " + product.family + " / Product #" + product.no;
+    dialog.querySelector(".garden-product-detail-kicker").textContent = product.applicationLabel + " / " + product.family + " / Код " + product.no;
     dialog.querySelector("#garden-product-dialog-title").textContent = product.name;
     dialog.querySelector(".garden-product-detail-lead").textContent = product.summary;
     dialog.querySelector(".garden-product-detail-specs").innerHTML =
@@ -150,17 +150,13 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="garden-products-head">' +
-          '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Вибрані продукти</h2></div>' +
-          '<p>Приклади продуктів PlantLogic для різних виробничих задач. Повний асортимент горщиків, жолобів, основ та аксесуарів зібраний у каталозі.</p>' +
+          '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Продукти</h2></div>' +
         '</div>' +
         '<div class="garden-products-filter" role="group" aria-label="Фільтр продуктів">' +
           filters.map(([value,label]) => '<button type="button" data-product-filter="' + value + '"' + (value === "all" ? ' class="is-active"' : '') + '>' + label + '</button>').join("") +
         '</div>' +
         '<div class="garden-products-grid"></div>' +
-        '<div class="garden-products-foot">' +
-          '<span>Повний каталог · 45 сторінок продуктів</span>' +
-          '<p>Для кожної моделі показуємо призначення, геометрію, дренаж, аерацію та доступні технічні матеріали.</p>' +
-        '</div>' +
+        '<div class="garden-products-foot"></div>' +
       '</div>';
 
     target.after(section);
