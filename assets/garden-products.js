@@ -150,15 +150,15 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="garden-products-head">' +
-          '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Продукти</h2></div>' +
-          '<p>Назви моделей повністю відповідають каталогу BB610 Market. Тут зібрані Product #, конструктивні особливості, офіційні фото, схеми та технічне пояснення кожного виробу.</p>' +
+          '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Вибрані продукти</h2></div>' +
+          '<p>Приклади продуктів PlantLogic для різних виробничих задач. Повний асортимент горщиків, жолобів, основ та аксесуарів зібраний у каталозі.</p>' +
         '</div>' +
         '<div class="garden-products-filter" role="group" aria-label="Фільтр продуктів">' +
           filters.map(([value,label]) => '<button type="button" data-product-filter="' + value + '"' + (value === "all" ? ' class="is-active"' : '') + '>' + label + '</button>').join("") +
         '</div>' +
         '<div class="garden-products-grid"></div>' +
         '<div class="garden-products-foot">' +
-          '<span>12 моделей у технічному каталозі</span>' +
+          '<span>Повний каталог · 42 сторінки продуктів</span>' +
           '<p>Для кожної моделі показуємо призначення, геометрію, дренаж, аерацію та доступні технічні матеріали.</p>' +
         '</div>' +
       '</div>';

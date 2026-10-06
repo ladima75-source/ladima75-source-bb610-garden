@@ -9,29 +9,6 @@
   const brandSuffix = document.querySelector('.site-header .brand > span');
   if (brandSuffix) brandSuffix.remove();
 
-  const nav = document.querySelector('.site-header nav');
-  if (nav) {
-    nav.innerHTML =
-      '<a href="/crops/">Культури</a>' +
-      '<a href="/systems/">Системи</a>' +
-      '<a href="/catalog/">Каталог</a>' +
-      '<a href="/accessories/">Аксесуари</a>' +
-      '<a href="/#technical-core">Технологія</a>' +
-      '<a href="/#system-interfaces">Моніторинг</a>' +
-      '<a class="nav-market" href="https://market.bb610.com.ua/">Market ↗</a>';
-
-    const path = location.pathname;
-    nav.querySelectorAll('a').forEach((link) => {
-      const href = link.getAttribute('href') || '';
-      const active =
-        (href === '/crops/' && path.startsWith('/crops/')) ||
-        (href === '/systems/' && path.startsWith('/systems/')) ||
-        (href === '/accessories/' && path.startsWith('/accessories/')) ||
-        (href === '/catalog/' && (path.startsWith('/catalog/') || path.startsWith('/portfolio-items/')));
-      if (active) link.classList.add('is-active');
-    });
-  }
-
   const gallery = document.querySelector('.gallery');
   if (!gallery) return;
   const image = gallery.querySelector('.gallery-image');
