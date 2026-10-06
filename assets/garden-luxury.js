@@ -163,7 +163,7 @@
     const figure = document.createElement("figure");
     figure.className = "lux-zephyr-diagram";
     figure.innerHTML =
-      '<img src="/media/lux/zephyr-v2-diagram.jpg?v=' + VERSION + '" alt="Офіційна технічна схема Zephyr V2 PlantLogic" loading="lazy">' +
+      '<img src="/media/diagrams-uk/zephyr-v2-section-11-uk.webp?v=' + VERSION + '" alt="Офіційна технічна схема Zephyr V2 PlantLogic" loading="lazy">' +
       '<figcaption><strong>Zephyr V2 · геометрія кореневої зони</strong></figcaption>';
     copy.append(figure);
     return true;
@@ -210,7 +210,7 @@
       block.className = "proof-feature proof-feature-ugroove";
       block.id = "proof-ugroove";
       block.innerHTML =
-        '<div class="proof-feature-media proof-white"><img src="/media/proof/ugroove-tech-drawing.png?v=' + VERSION + '" alt="U-Groove official PlantLogic technical drawing" loading="lazy"></div>' +
+        '<div class="proof-feature-media proof-white"><img src="/media/diagrams-uk/ugroove-item-13080350-dimensions-uk.webp?v=' + VERSION + '" alt="Офіційне технічне креслення PlantLogic з U-пазами" loading="lazy"></div>' +
         '<div class="proof-feature-copy">' +
           '<span class="proof-label">U-ПАЗИ</span>' +
           '<h3>Паз видно у кресленні — тому його роль не треба пояснювати лозунгом.</h3>' +
@@ -262,7 +262,7 @@
       block.className = "proof-higrow proof-white";
       block.id = "proof-higrow";
       block.innerHTML =
-        '<img src="/media/proof/higrow-trough-system.png?v=' + VERSION + '" alt="Hi-Grow trough system official PlantLogic diagram" loading="lazy">' +
+        '<img src="/media/diagrams-uk/pl_technology_hi_grow_trough_system_plantlogic_1_diagram_1680_ua.webp?v=' + VERSION + '" alt="Офіційна схема PlantLogic Hi-Grow для жолобів" loading="lazy">' +
         '<figcaption><span>HI-GROW</span><strong>Офіційна схема системи</strong></figcaption>';
       strawberry.append(block);
     }
@@ -273,7 +273,7 @@
       figure.className = "proof-rubus proof-white";
       figure.id = "proof-rubus";
       figure.innerHTML =
-        '<img src="/media/proof/rubus-production-diagram.jpg?v=' + VERSION + '" alt="Rubus production official PlantLogic diagram" loading="lazy">' +
+        '<img src="/media/diagrams-uk/image-348-uk-v2.webp?v=' + VERSION + '" alt="Офіційна схема PlantLogic для малини та ожини" loading="lazy">' +
         '<figcaption><span>Малина та ожина · виробнича схема</span><strong>Офіційна схема PlantLogic</strong></figcaption>';
       rubus.after(figure);
     }
@@ -378,11 +378,11 @@
           '<div><span>02 / ROUND BASE</span><h3>Геометрія дна і опор</h3><p>Офіційна схема дозволяє побачити профіль контейнера, основу та розташування конструктивних зон замість абстрактної розмови про «дренаж».</p></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-diagram">' +
-          '<figure class="proof-white"><img src="/media/proof/ugroove-tech-drawing.png?v=' + VERSION + '" alt="U-Groove official technical drawing" loading="lazy"></figure>' +
+          '<figure class="proof-white"><img src="/media/diagrams-uk/ugroove-item-13080350-dimensions-uk.webp?v=' + VERSION + '" alt="Офіційне технічне креслення з U-пазами" loading="lazy"></figure>' +
           '<div><span>03 / U-GROOVE</span><h3>Поливна труба інтегрована у форму</h3><p>На кресленні видно сам паз і його положення. Технічне пояснення залишається коротким: навіщо це монтажу та повторюваності ряду.</p></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-diagram">' +
-          '<figure class="proof-white"><img src="/media/lux/zephyr-v2-diagram.jpg?v=' + VERSION + '" alt="Zephyr V2 official technical plate" loading="lazy"></figure>' +
+          '<figure class="proof-white"><img src="/media/diagrams-uk/zephyr-v2-section-11-uk.webp?v=' + VERSION + '" alt="Офіційна технічна схема Zephyr V2" loading="lazy"></figure>' +
           '<div><span>04 / ZEPHYR V2</span><h3>Висока опора і окрема база</h3><p>Офіційна технічна пластина показує, чому Zephyr V2 — окрема конструктивна платформа, а не просто інша форма контейнера.</p></div>' +
         '</article>';
       technical.querySelector(".wrap")?.append(proof);
