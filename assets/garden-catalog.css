@@ -298,3 +298,68 @@
     font-size:10px;
   }
 }
+
+
+/* 2026-10-06 catalog title contrast + normalized large product images */
+.catalog-page .solution-intro{
+  background:#fff;
+}
+.catalog-page .solution-intro .garden-breadcrumbs,
+.catalog-page .solution-intro .garden-breadcrumbs a,
+.catalog-page .solution-intro .garden-breadcrumbs span{
+  color:#6f7972!important;
+}
+.catalog-page .solution-intro .culture-heading h1{
+  color:#10261d!important;
+}
+
+.catalog-page .catalog-category .catalog-card{
+  overflow:hidden;
+}
+.catalog-page .catalog-category .catalog-card>img{
+  width:100%!important;
+  height:340px!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:scale(1.14);
+  transform-origin:center center;
+}
+.catalog-page .catalog-category .catalog-card:hover>img{
+  transform:scale(1.18);
+}
+
+/* source files with especially generous white margins */
+.catalog-page .catalog-category .catalog-card[href*="/3-liter-square-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/4-7-liter-square-pot-for-cold-storage/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/5-liter-square-short-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/5-liter-drainage-collection-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/7-liter-square-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/7-liter-square-pot-for-cold-storage/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/7-liter-drainage-collection-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/8-liter-square-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/10-liter-square-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/10-liter-drainage-collection-pot/"]>img,
+.catalog-page .catalog-category .catalog-card[href*="/15-liter-square-pot/"]>img{
+  transform:scale(1.35);
+}
+.catalog-page .catalog-category .catalog-card[href*="/3-liter-square-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/4-7-liter-square-pot-for-cold-storage/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/5-liter-square-short-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/5-liter-drainage-collection-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/7-liter-square-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/7-liter-square-pot-for-cold-storage/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/7-liter-drainage-collection-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/8-liter-square-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/10-liter-square-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/10-liter-drainage-collection-pot/"]:hover>img,
+.catalog-page .catalog-category .catalog-card[href*="/15-liter-square-pot/"]:hover>img{
+  transform:scale(1.39);
+}
+
+@media(max-width:900px){
+  .catalog-page .catalog-category .catalog-card>img{height:300px!important}
+}
+@media(max-width:600px){
+  .catalog-page .catalog-category .catalog-card>img{height:220px!important}
+}
