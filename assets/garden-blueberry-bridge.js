@@ -10,7 +10,27 @@
     link.className = 'blueberry-entry ' + marker;
     link.href = href; link.textContent = text; target.append(link);
   };
+  const polishFieldStories = () => {
+    const section = document.querySelector('#field-stories');
+    if (!section) return;
+
+    const title = section.querySelector('.lux-field-head h2');
+    if (title) title.textContent = 'PlantLogic у реальних системах';
+
+    const note = section.querySelector('.lux-field-head > p');
+    if (note) note.remove();
+
+    const rubus = section.querySelector('#lux-rubus .lux-field-copy');
+    if (rubus) {
+      const strong = rubus.querySelector('strong');
+      const body = rubus.querySelector('p');
+      if (strong) strong.textContent = 'Горщик у виробничому ряду.';
+      if (body) body.textContent = 'Полив, дренаж, стабільність високих пагонів і зручний доступ персоналу.';
+    }
+  };
+
   const enhance = () => {
+    polishFieldStories();
     document.querySelectorAll('a[href*="product.html?id="]').forEach(link => {
       const id = new URL(link.href).searchParams.get('id');
       if (routes[id]) link.setAttribute('href', routes[id]);
@@ -19,7 +39,7 @@
     document.querySelectorAll('a[href="#strawberry"],a[href="#lux-strawberry"]').forEach(link => link.setAttribute('href','/strawberry-production/'));
     document.querySelectorAll('a[href="#rubus"],a[href="#lux-rubus"]').forEach(link => link.setAttribute('href','/rubus-production/'));
     document.querySelectorAll('a[href="#vegetable"],a[href="#vegetables"],a[href="#lux-vegetable"]').forEach(link => link.setAttribute('href','/vegetable-production/'));
-    appendLink(document.querySelector('#lux-rubus .lux-field-copy'),'/rubus-production/','Малина та ожина · 13 моделей і технологія →','rubus-crop-entry');
+    appendLink(document.querySelector('#lux-rubus .lux-field-copy'),'/rubus-production/','13 моделей · технологія →','rubus-crop-entry');
     appendLink(document.querySelector('#lux-vegetable .lux-field-copy'),'/vegetable-production/','Овочі · система, горщики та основи →','vegetable-crop-entry');
     appendLink(document.querySelector('#lux-blueberry .lux-field-copy'),'/blueberry-production/','Вирощування лохини · каталог і технологія →','blueberry-crop-entry');
     appendLink(document.querySelector('#lux-strawberry .lux-field-copy'),'/strawberry-production/','Вирощування полуниці · Hi-Grow і компоненти →','strawberry-crop-entry');
