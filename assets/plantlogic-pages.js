@@ -178,8 +178,6 @@
     targets.forEach((item,index)=>{
       const a=document.createElement('a');
       a.href=marketUrl(item);
-      a.rel='noopener';
-      a.target='_blank';
       a.textContent=targets.length===1 ? 'Перейти до товару в Market ↗' : ((item.no ? '№'+item.no : 'Модель '+(index+1))+' · Market ↗');
       options.append(a);
     });
