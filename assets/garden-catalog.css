@@ -159,3 +159,6 @@
   .catalog-status{display:none}
   .catalog-category{padding:44px 0;scroll-margin-top:178px}
 }
+
+/* hard-remove redundant catalog intro copy */
+.catalog-page .solution-intro .culture-heading>p{display:none!important}
