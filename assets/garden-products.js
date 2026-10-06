@@ -6,7 +6,7 @@
   const filters = [
     ["all", "Усі"],
     ["blueberry", "Лохина"],
-    ["drainage", "Drainage"],
+    ["drainage", "Збір дренажу"],
     ["vegetable", "Овочі"],
     ["strawberry", "Полуниця"]
   ];
@@ -151,15 +151,15 @@
       '<div class="wrap">' +
         '<div class="garden-products-head">' +
           '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Продукти</h2></div>' +
-          '<p>Назви моделей синхронізовані 1:1 з BB610 Market Product Master V5. Garden додає до canonical назви Product #, конструктивні особливості, фото, схеми та технічне пояснення.</p>' +
+          '<p>Назви моделей повністю відповідають каталогу BB610 Market. Тут зібрані Product #, конструктивні особливості, офіційні фото, схеми та технічне пояснення кожного виробу.</p>' +
         '</div>' +
         '<div class="garden-products-filter" role="group" aria-label="Фільтр продуктів">' +
           filters.map(([value,label]) => '<button type="button" data-product-filter="' + value + '"' + (value === "all" ? ' class="is-active"' : '') + '>' + label + '</button>').join("") +
         '</div>' +
         '<div class="garden-products-grid"></div>' +
         '<div class="garden-products-foot">' +
-          '<span>Перший реліз каталогу · 12 canonical моделей</span>' +
-          '<p>Наступним блоком цей самий формат буде розширено на Rubus, Bag Bases, Slab Spacers та аксесуари.</p>' +
+          '<span>12 моделей у технічному каталозі</span>' +
+          '<p>Для кожної моделі показуємо призначення, геометрію, дренаж, аерацію та доступні технічні матеріали.</p>' +
         '</div>' +
       '</div>';
 

@@ -62,7 +62,7 @@
   };
   const enhanceArrows = () => {
     document.querySelectorAll("a,button").forEach(el => {
-      if (el.querySelector(".lux-arrow-chip")) return;
+      if (el.querySelector(".lux-arrow-chip,.lux-arrow-mark")) return;
       const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
       let node;
       while((node=walker.nextNode())){
@@ -100,4 +100,40 @@
     const next=translations.get(t);
     if(next) el.textContent=next; else el.remove();
   });
+})();
+
+;(() => {
+  const exact = new Map([
+    ["ROUND","Круглий"],
+    ["SQUARE","Квадратний"],
+    ["U-GROOVE","U-пази"],
+    ["DRAINAGE COLLECTION","Збір дренажу"],
+    ["PRODUCT DETAILS","Деталі продукту"],
+    ["TECHNICAL DATA","Технічні дані"],
+    ["RELATED PRODUCTS","Пов’язані продукти"],
+    ["FEATURED PRODUCT","У фокусі"]
+  ]);
+  const protectedTags=new Set(["SCRIPT","STYLE","NOSCRIPT","CODE","PRE","TEXTAREA"]);
+  const clean=()=>{
+    document.querySelectorAll(".eyebrow,.section-index,.page-index,.slide-index").forEach(n=>n.remove());
+    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+    const nodes=[]; let n; while((n=walker.nextNode())) nodes.push(n);
+    nodes.forEach(node=>{
+      const p=node.parentElement;
+      if(!p||protectedTags.has(p.tagName)||p.closest(".product-number")) return;
+      const raw=node.nodeValue||""; const t=raw.trim(); if(!t) return;
+      if(exact.has(t)){node.nodeValue=raw.replace(t,exact.get(t));return;}
+      if(/^H[1-3]$/.test(p.tagName)) return;
+      let v=raw
+        .replace(/\bDrainage Collection\b/g,"збір дренажу")
+        .replace(/\bRound\b/g,"круглий")
+        .replace(/\bSquare\b/g,"квадратний")
+        .replace(/\bU-Groove\b/g,"U-пази");
+      if(v!==raw) node.nodeValue=v;
+    });
+  };
+  clean();
+  const mo=new MutationObserver(clean);
+  mo.observe(document.documentElement,{subtree:true,childList:true});
+  setTimeout(()=>mo.disconnect(),12000);
 })();

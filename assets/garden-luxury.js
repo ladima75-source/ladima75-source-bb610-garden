@@ -515,7 +515,7 @@
         ".related-product-card",".garden-products-foot a"
       ];
       root.querySelectorAll(selectors.join(",")).forEach((el) => {
-        if (el.querySelector(".lux-arrow-chip")) return;
+        if (el.querySelector(".lux-arrow-chip,.lux-arrow-mark")) return;
         const svg = el.querySelector("svg");
         if (svg) {
           const chip = document.createElement("span");
