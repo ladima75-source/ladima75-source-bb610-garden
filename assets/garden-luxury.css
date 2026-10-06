@@ -662,3 +662,71 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
   .hero-grid{grid-template-columns:minmax(0,1fr)!important;min-height:auto!important;gap:30px!important}
   .hero-grid>*{min-width:0;max-width:100%}
 }
+
+
+/* HOME HERO FIX — 2026-10-06 */
+.tiny-cross{display:none!important}
+
+.hero h1{
+  max-width:760px!important;
+  font-size:clamp(3rem,4.05vw,4.55rem)!important;
+  line-height:1.015!important;
+  letter-spacing:-.052em!important;
+  text-wrap:balance;
+}
+
+.hero-copy{
+  max-width:760px!important;
+}
+
+.hero .photo-label{
+  left:24px!important;
+  right:24px!important;
+  bottom:22px!important;
+  max-width:none!important;
+  width:auto!important;
+  align-items:flex-end!important;
+}
+
+.hero .photo-label>div{
+  max-width:220px!important;
+}
+
+.hero .photo-label p{
+  max-width:none!important;
+  margin:0!important;
+  font-size:13px!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+}
+
+.hero .photo-rule{
+  height:34px!important;
+}
+
+@media(max-width:1180px){
+  .hero h1{
+    max-width:700px!important;
+    font-size:clamp(2.85rem,4vw,4.2rem)!important;
+  }
+}
+
+@media(max-width:760px){
+  .hero h1{
+    max-width:100%!important;
+    font-size:clamp(2.45rem,10vw,3.25rem)!important;
+    line-height:1.02!important;
+  }
+  .hero .photo-label{
+    display:flex!important;
+    left:16px!important;
+    right:16px!important;
+    bottom:16px!important;
+  }
+  .hero .photo-label>div{
+    max-width:180px!important;
+  }
+  .hero .photo-label p{
+    font-size:12px!important;
+  }
+}
