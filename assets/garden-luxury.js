@@ -411,7 +411,7 @@
       const heading = rootZone.querySelector(".root-zone-copy h2");
       const lead = rootZone.querySelector(".root-zone-copy > p");
       if (heading) heading.textContent = "Як вода й повітря проходять через конструкцію горщика.";
-      if (lead) lead.textContent = "Зліва — коротка логіка процесу. Справа — реальна коренева маса та офіційна схема Round. Так твердження прив’язане до того, що можна побачити.";
+      if (lead) lead.textContent = "Порівнюємо логіку руху води й повітря з реальною кореневою масою та офіційною схемою конструкції.";
     }
 
     const duplicateRootProof = document.querySelector("#proof-root-zone");
