@@ -3,15 +3,87 @@
 
   const products = window.GARDEN_PRODUCT_DATA || [];
 
-  const filters = [
-    ["all", "Усі"],
-    ["blueberry", "Лохина"],
-    ["drainage", "Збір дренажу"],
-    ["vegetable", "Овочі"],
-    ["strawberry", "Полуниця"]
+  const featuredProducts = [
+    {
+      no: "1308125",
+      name: "Горщик для лохини 25 л круглий покращеної конструкції",
+      subtitle: "Оновлена кругла конструкція",
+      applicationLabel: "Лохина",
+      family: "Круглий",
+      image: "https://market.bb610.com.ua/assets/img/real/stage16b/plantlogic-25-round-1308125.webp",
+      volume: "25 л",
+      dimensions: "Ø385 × H362.5 мм",
+      legs: "30 мм",
+      focus: "Центральна аерація + крайовий дренаж",
+      href: "/product.html?id=1308125"
+    },
+    {
+      no: "1301144 / 1301153 / 1301143",
+      name: "Горщики для лохини Zephyr V2 — 25 / 30 / 40 л",
+      subtitle: "Висока опора та широка база",
+      applicationLabel: "Лохина",
+      family: "Zephyr V2",
+      image: "/media/plantlogic-blueberry/f6c2ebae4e60.jpg",
+      volume: "25 / 30 / 40 л",
+      dimensions: "3 моделі",
+      legs: "70 мм",
+      focus: "Коренева зона вище поверхні",
+      href: "/portfolio-items/zephyr-v2/"
+    },
+    {
+      no: "1309026",
+      name: "Горщик для лохини 25 л квадратний з U-пазами",
+      subtitle: "Квадратна геометрія з фіксацією поливної труби",
+      applicationLabel: "Лохина",
+      family: "U-пази",
+      image: "/media/plantlogic-blueberry/020d50a6f1b3.jpg",
+      volume: "25 л",
+      dimensions: "355 × H322 мм",
+      legs: "30 мм",
+      focus: "U-пази + центральна аерація",
+      href: "/portfolio-items/25-liter-square-pot-with-u-grooves/"
+    },
+    {
+      no: "13079250 / 13079300",
+      name: "Culti-base · мішок для субстрату з інтегрованою основою",
+      subtitle: "Готова конструкція: мішок + опорна база",
+      applicationLabel: "Овочі / універсальне",
+      family: "Culti-base",
+      image: "/media/plantlogic-bag-bases/5cbd2a3536e8.jpg",
+      volume: "25 / 30 л",
+      dimensions: "2 виконання",
+      legs: "50 мм",
+      focus: "Інтегрована основа + дренаж",
+      href: "/portfolio-items/culti-base-grow-bag-with-integrated-base/"
+    },
+    {
+      no: "1305909",
+      name: "Жолоб для вирощування полуниці 18 л з опорою для квітконосів",
+      subtitle: "Метровий жолоб для піднятих систем",
+      applicationLabel: "Полуниця",
+      family: "Жолоб",
+      image: "/media/plantlogic-strawberry/6dedd865dc15.jpg",
+      volume: "18 л",
+      dimensions: "255 × 1014 мм",
+      legs: "піднята система",
+      focus: "Опора для квітконосів + збір дренажу",
+      href: "/portfolio-items/18-liter-strawberry-trough-with-truss-support/"
+    },
+    {
+      no: "1301010 / 1301030",
+      name: "Лізиметри та комплект IN / OUT",
+      subtitle: "Контрольна проба поливу та дренажу",
+      applicationLabel: "Контроль дренажу",
+      family: "Лізиметри",
+      image: "/media/plantlogic-accessories/d31fe8ba66e2.jpg",
+      volume: "Small / Large",
+      dimensions: "219 × 216 / 315 × 310 мм",
+      legs: "під горщиком",
+      focus: "Порівняння поливу IN та дренажу OUT",
+      href: "/portfolio-items/lysimeters/"
+    }
   ];
 
-  let activeFilter = "all";
   let lastFocus = null;
 
   const cardId = (product) => "product-" + (product.hashNo || product.no.split(" ")[0].split("/")[0]);
@@ -20,35 +92,33 @@
 
   const renderCards = (grid) => {
     grid.innerHTML = "";
-    products
-      .filter((p) => activeFilter === "all" || p.application === activeFilter || (activeFilter === "drainage" && p.family === "Збір дренажу"))
-      .forEach((p) => {
-        const article = document.createElement("article");
-        article.className = "garden-product-card";
-        article.id = cardId(p);
-        article.dataset.productNo = p.no;
-        article.innerHTML =
-          '<a class="garden-product-open" href="' + productUrl(p) + '" aria-label="Детальніше про ' + p.name + '">' +
-            '<div class="garden-product-media">' +
-              '<img src="' + p.image + '" alt="' + p.name + ' PlantLogic" loading="lazy">' +
-              '<span class="garden-product-family">' + p.family + '</span>' +
-              '<span class="garden-product-volume">' + p.volume + '</span>' +
+    featuredProducts.forEach((p) => {
+      const article = document.createElement("article");
+      article.className = "garden-product-card";
+      article.id = cardId(p);
+      article.dataset.productNo = p.no;
+      article.innerHTML =
+        '<a class="garden-product-open" href="' + p.href + '" aria-label="Детальніше про ' + p.name + '">' +
+          '<div class="garden-product-media">' +
+            '<img src="' + p.image + '" alt="' + p.name + ' PlantLogic" loading="lazy">' +
+            '<span class="garden-product-family">' + p.family + '</span>' +
+            '<span class="garden-product-volume">' + p.volume + '</span>' +
+          '</div>' +
+          '<div class="garden-product-body">' +
+            '<div class="garden-product-meta"><span>' + p.applicationLabel + '</span><span>Код ' + p.no + '</span></div>' +
+            '<h3>' + p.name + '</h3>' +
+            '<p class="garden-product-subtitle">' + p.subtitle + '</p>' +
+            '<p class="garden-product-focus">' + p.focus + '</p>' +
+            '<div class="garden-product-specs">' +
+              '<span><b>Об’єм</b>' + p.volume + '</span>' +
+              '<span><b>Габарити</b>' + p.dimensions + '</span>' +
+              '<span><b>Опора</b>' + p.legs + '</span>' +
             '</div>' +
-            '<div class="garden-product-body">' +
-              '<div class="garden-product-meta"><span>' + p.applicationLabel + '</span><span>Код ' + p.no + '</span></div>' +
-              '<h3>' + p.name + '</h3>' +
-              '<p class="garden-product-subtitle">' + p.subtitle + '</p>' +
-              '<p class="garden-product-focus">' + p.focus + '</p>' +
-              '<div class="garden-product-specs">' +
-                '<span><b>Об’єм</b>' + p.volume + '</span>' +
-                '<span><b>Габарити</b>' + p.dimensions + '</span>' +
-                '<span><b>Опора</b>' + p.legs + '</span>' +
-              '</div>' +
-              '<span class="garden-product-more">Відкрити сторінку <i>↗</i></span>' +
-            '</div>' +
-          '</a>';
-        grid.append(article);
-      });
+            '<span class="garden-product-more">Відкрити сторінку <i>↗</i></span>' +
+          '</div>' +
+        '</a>';
+      grid.append(article);
+    });
   };
 
   const buildDialog = () => {
@@ -150,10 +220,7 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="garden-products-head">' +
-          '<div><span class="garden-products-kicker">PLANTLOGIC / PRODUCTS</span><h2>Продукти</h2></div>' +
-        '</div>' +
-        '<div class="garden-products-filter" role="group" aria-label="Фільтр продуктів">' +
-          filters.map(([value,label]) => '<button type="button" data-product-filter="' + value + '"' + (value === "all" ? ' class="is-active"' : '') + '>' + label + '</button>').join("") +
+          '<div><span class="garden-products-kicker">PLANTLOGIC / ДОБІРКА</span><h2>ТОП продукти</h2></div>' +
         '</div>' +
         '<div class="garden-products-grid"></div>' +
         '<div class="garden-products-foot"></div>' +
@@ -163,17 +230,9 @@
     const grid = section.querySelector(".garden-products-grid");
     renderCards(grid);
 
-    section.querySelectorAll("[data-product-filter]").forEach((button) => {
-      button.addEventListener("click", () => {
-        activeFilter = button.dataset.productFilter;
-        section.querySelectorAll("[data-product-filter]").forEach((b) => b.classList.toggle("is-active", b === button));
-        renderCards(grid);
-      });
-    });
-
     document.querySelectorAll("a").forEach((link) => {
       const label = link.textContent.trim();
-      if (label === "Конструкції" || label === "Продукти") {
+      if (label === "Конструкції" || label === "Продукти" || label === "ТОП продукти") {
         link.textContent = "Продукти";
         link.href = "#products";
       }
@@ -186,9 +245,9 @@
   const openFromHash = () => {
     if (!location.hash.startsWith("#product-")) return;
     const key = location.hash.replace("#product-", "");
-    const product = products.find((p) => (p.hashNo || p.no.split(" ")[0].split("/")[0]) === key);
+    const product = featuredProducts.find((p) => (p.hashNo || p.no.split(" ")[0].split("/")[0]) === key);
     if (!product) return;
-    location.replace(productUrl(product));
+    location.replace(product.href);
   };
 
   document.addEventListener("keydown", (event) => {
