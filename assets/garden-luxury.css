@@ -751,3 +751,40 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
     font-size:12px!important;
   }
 }
+
+
+/* 2026-10-07 lysimeter visual tone + readability */
+#proof-lysimeter .proof-feature-media,
+#proof-steel-lysimeter .proof-feature-media,
+#proof-lysimeter .proof-white,
+#proof-steel-lysimeter .proof-white{
+  background:#e8ede4!important;
+  border:1px solid rgba(16,38,29,.08);
+}
+#proof-lysimeter .proof-feature-media img,
+#proof-steel-lysimeter .proof-feature-media img{
+  mix-blend-mode:multiply;
+  background:transparent!important;
+}
+#proof-lysimeter .proof-feature-copy h3,
+#proof-steel-lysimeter .proof-feature-copy h3{
+  color:#10261d!important;
+}
+#proof-lysimeter .proof-feature-copy p,
+#proof-steel-lysimeter .proof-feature-copy p{
+  color:#4f5f55!important;
+  font-size:14px!important;
+  line-height:1.65!important;
+}
+#proof-lysimeter .accessory-proof-link,
+#proof-steel-lysimeter .accessory-proof-link{
+  color:#587a21!important;
+  font-weight:700!important;
+  font-size:14px!important;
+  text-decoration-thickness:1px;
+  text-underline-offset:5px;
+}
+#proof-lysimeter .accessory-proof-link:hover,
+#proof-steel-lysimeter .accessory-proof-link:hover{
+  color:#365514!important;
+}
