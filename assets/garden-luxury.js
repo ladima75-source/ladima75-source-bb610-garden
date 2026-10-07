@@ -312,22 +312,18 @@
 
           <div class="plantlogic-quality-facts">
             <article>
-              <span>01</span>
               <strong>Власне виробництво</strong>
               <p>PlantLogic виробляє продукцію на власному заводі в Нінбо, Китай.</p>
             </article>
             <article>
-              <span>02</span>
               <strong>Повна автоматизація</strong>
               <p>Горщики виготовляються на повністю автоматизованому обладнанні.</p>
             </article>
             <article>
-              <span>03</span>
               <strong>Якісна сировина</strong>
               <p>PlantLogic вказує використання високоякісної сировини для стабільних виробничих стандартів.</p>
             </article>
             <article>
-              <span>04</span>
               <strong>Повторне використання</strong>
               <p>PlantLogic підкреслює стабільну якість продукції для повторного використання цикл за циклом.</p>
             </article>
