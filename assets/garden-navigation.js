@@ -44,42 +44,96 @@
     matchMedia('(min-width:1101px)').addEventListener('change',event=>{if(event.matches)close();});
     close();
   };
+  const navIsCurrent = nav => {
+    if (!nav) return false;
+    const links=[...nav.querySelectorAll(':scope > a')];
+    if (links.length!==sections.length) return false;
+    return links.every((a,index)=>{
+      const [href,label,className]=sections[index];
+      return a.getAttribute('href')===href &&
+        a.textContent.trim()===label &&
+        (!!className===a.classList.contains(className));
+    });
+  };
+  const syncHeader = header => {
+    header.dataset.gardenArchitectureAudit='20261007-nav-v3';
+    header.classList.add('garden-site-header');
+    document.body.classList.add('garden-has-header');
+
+    header.querySelector('.header-inner')?.classList.add('garden-header-inner');
+    header.querySelector('.brand')?.classList.add('garden-brand');
+    header.querySelector('.header-actions')?.classList.add('garden-header-actions');
+    header.querySelector('.header-cta')?.classList.add('garden-project');
+
+    const desktop=header.querySelector('.garden-desktop-nav,.desktop-nav');
+    if(desktop){
+      desktop.classList.add('garden-desktop-nav');
+      desktop.setAttribute('aria-label','Головна навігація');
+      if(!navIsCurrent(desktop)) desktop.innerHTML=markup;
+    }
+
+    const actions=header.querySelector('.garden-header-actions,.header-actions');
+    actions?.classList.add('garden-header-actions');
+    const shop=actions?.querySelector('.garden-market,.market-link');
+    if(shop){
+      shop.classList.add('garden-market');
+      shop.textContent='BB610 Market ↗';
+      shop.href='https://market.bb610.com.ua/';
+      shop.target='_blank';
+      shop.rel='noopener';
+    }
+
+    const project=actions?.querySelector('.garden-project,.header-cta');
+    project?.classList.add('garden-project');
+
+    const button=header.querySelector('.garden-menu-button,.menu-button');
+    button?.classList.add('garden-menu-button');
+
+    let menu=header.querySelector('.garden-mobile-nav');
+    if(!menu){
+      menu=document.createElement('nav');
+      menu.className='garden-mobile-nav';
+      menu.id='garden-mobile-nav';
+      menu.setAttribute('aria-label','Мобільна навігація');
+      menu.hidden=true;
+      header.append(menu);
+    }
+    if(!menu.id) menu.id='garden-mobile-nav';
+    const mobileLinks=[...menu.querySelectorAll(':scope > a')];
+    const mobileCurrent=
+      mobileLinks.length===sections.length+1 &&
+      sections.every(([href,label,className],index)=>{
+        const a=mobileLinks[index];
+        return a?.getAttribute('href')===href &&
+          a.textContent.trim()===label &&
+          (!!className===a.classList.contains(className));
+      }) &&
+      mobileLinks.at(-1)?.getAttribute('href')==='https://market.bb610.com.ua/' &&
+      mobileLinks.at(-1)?.textContent.trim()==='BB610 Market ↗';
+    if(!mobileCurrent) menu.innerHTML=markup+market;
+  };
   const enhance = () => {
     const header=document.querySelector('header');
     if (!header) return;
-    if (!header.dataset.gardenArchitectureAudit) {
-      header.dataset.gardenArchitectureAudit='20261006';
-      header.classList.add('garden-site-header');document.body.classList.add('garden-has-header');
-      // Keep the main page's project dialog button connected to React.
-      if (header.closest('#root')) {
-        header.querySelector('.header-inner')?.classList.add('garden-header-inner');
-        header.querySelector('.brand')?.classList.add('garden-brand');
-        const nav=header.querySelector('.desktop-nav');
-        if(nav){nav.classList.add('garden-desktop-nav');nav.setAttribute('aria-label','Головна навігація');nav.innerHTML=markup;}
-        header.querySelector('.header-actions')?.classList.add('garden-header-actions');
-        const shop=header.querySelector('.market-link');
-        if(shop){
-          shop.classList.add('garden-market');
-          shop.textContent='BB610 Market ↗';
-          shop.target='_blank';
-          shop.rel='noopener';
-        }
-        header.querySelector('.header-cta')?.classList.add('garden-project');
-        const button=header.querySelector('.menu-button');if(button)button.classList.add('garden-menu-button');
-        let menu=header.querySelector('.garden-mobile-nav');
-        if(!menu){menu=document.createElement('nav');menu.className='garden-mobile-nav';menu.id='garden-mobile-nav';menu.setAttribute('aria-label','Мобільна навігація');menu.hidden=true;menu.innerHTML=markup+market;header.append(menu);}
-      }
-    }
+
+    syncHeader(header);
     bindMenu(header,header.querySelector('.garden-menu-button'),header.querySelector('.garden-mobile-nav'));
     updateActive(header);
+
     document.querySelectorAll('a[href="#crops"]').forEach(a=>a.href='/crops/');
     document.querySelectorAll('a[href="#plantlogic"]').forEach(a=>a.href='/blog/');
+
     const footer=document.querySelector('footer');
     if (footer && !footer.dataset.gardenArchitectureAudit) {
-      footer.dataset.gardenArchitectureAudit='20261006';
+      footer.dataset.gardenArchitectureAudit='20261007-nav-v3';
       const heading=[...footer.querySelectorAll('h2,h3')].find(h=>h.textContent.trim()==='GARDEN');
       const group=heading?.parentElement || footer.querySelector('a[href="/catalog/"]')?.parentElement;
-      if(group){group.querySelectorAll('a').forEach(a=>{if(a.getAttribute('href')?.startsWith('/')||a.getAttribute('href')?.startsWith('#'))a.remove();});group.insertAdjacentHTML('beforeend',markup);}
+      if(group){
+        group.querySelectorAll('a').forEach(a=>{
+          if(a.getAttribute('href')?.startsWith('/')||a.getAttribute('href')?.startsWith('#')) a.remove();
+        });
+        group.insertAdjacentHTML('beforeend',markup);
+      }
     }
   };
   const settleInitialAnchor = () => {
