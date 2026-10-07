@@ -211,7 +211,7 @@
         </div>
         <div class="geometry-grid">
           <article class="geometry-feature geometry-feature-large">
-            <div class="geometry-media"><img src="/media/ugroove.webp" alt="Горщик PlantLogic з U-пазами" loading="lazy"></div>
+            <div class="geometry-media"><img src="/media/family-u-groove-40l.webp" alt="Горщик PlantLogic з U-пазами" loading="lazy"></div>
             <div class="geometry-copy">
               <span>U-GROOVE</span>
               <h3>Поливна труба має своє місце</h3>
@@ -284,7 +284,7 @@
 
           <article class="family-card" role="listitem">
             <div class="family-card-media">
-              <img src="/media/square.webp" alt="Квадратний горщик PlantLogic" loading="lazy">
+              <img src="/media/family-square-20l.webp" alt="Квадратний горщик PlantLogic" loading="lazy">
             </div>
             <div class="family-card-copy">
               <h3>Квадратний</h3>
@@ -300,7 +300,7 @@
 
           <article class="family-card family-card-accent" role="listitem">
             <div class="family-card-media">
-              <img src="/media/ugroove.webp" alt="Горщик PlantLogic з U-пазами" loading="lazy">
+              <img src="/media/family-u-groove-40l.webp" alt="Горщик PlantLogic з U-пазами" loading="lazy">
             </div>
             <div class="family-card-copy">
               <h3>U-пази</h3>

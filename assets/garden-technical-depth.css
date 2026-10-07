@@ -532,3 +532,93 @@
     min-height:280px!important;
   }
 }
+
+/* 2026-10-07 family comparison alignment v3 */
+#family-engineering .family-card-media,
+#family-engineering .family-card-accent .family-card-media,
+#family-engineering .family-card-dark .family-card-media{
+  height:330px!important;
+  min-height:330px!important;
+  padding:0 4px!important;
+}
+#family-engineering .family-card-media img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform-origin:center center!important;
+}
+#family-engineering .family-card:nth-child(1) .family-card-media img{
+  transform:scale(1.42)!important;
+}
+#family-engineering .family-card:nth-child(2) .family-card-media img{
+  transform:scale(1.38)!important;
+}
+#family-engineering .family-card:nth-child(3) .family-card-media img{
+  transform:scale(1.38)!important;
+}
+#family-engineering .family-card:nth-child(4) .family-card-media img{
+  transform:scale(1.38)!important;
+}
+#family-engineering .family-card:nth-child(5) .family-card-media img{
+  transform:scale(1.16)!important;
+}
+#family-engineering .family-card:nth-child(1):hover .family-card-media img{transform:scale(1.42)!important;}
+#family-engineering .family-card:nth-child(2):hover .family-card-media img{transform:scale(1.38)!important;}
+#family-engineering .family-card:nth-child(3):hover .family-card-media img{transform:scale(1.38)!important;}
+#family-engineering .family-card:nth-child(4):hover .family-card-media img{transform:scale(1.38)!important;}
+#family-engineering .family-card:nth-child(5):hover .family-card-media img{transform:scale(1.16)!important;}
+
+@media(min-width:1241px){
+  #family-engineering .family-card-copy{
+    display:grid!important;
+    grid-template-rows:46px 58px 112px auto!important;
+    align-content:start!important;
+    padding:18px 20px 24px!important;
+  }
+  #family-engineering .family-card h3{
+    margin:0!important;
+    align-self:start!important;
+  }
+  #family-engineering .family-card-purpose{
+    min-height:0!important;
+    margin:0!important;
+    align-self:start!important;
+  }
+  #family-engineering .family-card p,
+  #family-engineering .family-card-dark p{
+    margin:0!important;
+    align-self:start!important;
+  }
+  #family-engineering .family-card dl{
+    display:grid!important;
+    grid-template-rows:repeat(3,84px)!important;
+    margin:0!important;
+    padding-top:0!important;
+    border-top:1px solid rgba(16,38,29,.1)!important;
+  }
+  #family-engineering .family-card dl>div{
+    min-height:84px!important;
+    padding:10px 0 11px!important;
+    box-sizing:border-box!important;
+  }
+}
+
+@media(max-width:1240px){
+  #family-engineering .family-card-media{
+    height:310px!important;
+    min-height:310px!important;
+  }
+}
+@media(max-width:900px){
+  #family-engineering .family-card-media{
+    height:295px!important;
+    min-height:295px!important;
+  }
+}
+@media(max-width:600px){
+  #family-engineering .family-card-media{
+    height:285px!important;
+    min-height:285px!important;
+  }
+}
