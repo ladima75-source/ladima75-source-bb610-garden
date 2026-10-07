@@ -1,6 +1,6 @@
 (() => {
   const sections = [
-    ['/crops/', 'Культури'], ['/systems/', 'Системи'], ['/catalog/', 'Каталог'], ['/technologies/', 'Технології']
+    ['/crops/', 'Культури'], ['/systems/', 'Системи'], ['/catalog/', 'Каталог'], ['/blog/', 'Блог']
   ];
   const markup = sections.map(([href,label]) => `<a href="${href}">${label}</a>`).join('');
   const market = '<a href="https://market.bb610.com.ua/" target="_blank" rel="noopener">Market ↗</a>';
@@ -10,9 +10,8 @@
     if (culturePaths.has(path)) return '/crops/';
     if (path.startsWith('/systems/')) return '/systems/';
     if (path.startsWith('/accessories/')) return '/catalog/';
-    if (path.startsWith('/technologies/')) return '/technologies/';
+    if (path.startsWith('/blog/')) return '/blog/';
     if (path.startsWith('/catalog/') || path.startsWith('/portfolio-items/') || path==='/product.html') return '/catalog/';
-    if (path==='/' && ['#technical-core','#system-interfaces'].includes(location.hash)) return '/technologies/';
     return '';
   };
   const updateActive = header => {
@@ -64,7 +63,7 @@
     bindMenu(header,header.querySelector('.garden-menu-button'),header.querySelector('.garden-mobile-nav'));
     updateActive(header);
     document.querySelectorAll('a[href="#crops"]').forEach(a=>a.href='/crops/');
-    document.querySelectorAll('a[href="#plantlogic"]').forEach(a=>a.href='/technologies/');
+    document.querySelectorAll('a[href="#plantlogic"]').forEach(a=>a.href='/blog/');
     const footer=document.querySelector('footer');
     if (footer && !footer.dataset.gardenArchitectureAudit) {
       footer.dataset.gardenArchitectureAudit='20261006';

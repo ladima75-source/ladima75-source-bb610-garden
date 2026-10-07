@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1,
+    "path": "/media/blog/01.jpeg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2026/07/strawberry-hydroponic-system.jpeg",
+    "size": [
+      1024,
+      682
+    ]
+  },
+  {
+    "id": 2,
+    "path": "/media/blog/02.png",
+    "source": "https://getplantlogic.com/wp-content/uploads/2024/09/strawberries-in-slabs.png",
+    "size": [
+      506,
+      380
+    ]
+  },
+  {
+    "id": 3,
+    "path": "/media/blog/03.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2023/08/elevated-system-for-stawberries.jpg",
+    "size": [
+      2105,
+      1579
+    ]
+  },
+  {
+    "id": 4,
+    "path": "/media/blog/04.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/11/espaciador-para-bolsa.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 5,
+    "path": "/media/blog/05.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/03/fresa-en-cultivo-elevado-1.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 6,
+    "path": "/media/blog/06.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/03/best-pots-for-blueberries.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 7,
+    "path": "/media/blog/07.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/02/raspberries-in-pots-1.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 8,
+    "path": "/media/blog/08.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/01/produccion-de-uva-1.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 9,
+    "path": "/media/blog/09.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/12/maceta-para-arandanos-25-litros-1.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 10,
+    "path": "/media/blog/10.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/10/flat-spacer-wide-gutter-1.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 11,
+    "path": "/media/blog/11.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/08/slab-base-kratos.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 12,
+    "path": "/media/blog/12.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/08/tomas-gonzales-1.jpg",
+    "size": [
+      800,
+      800
+    ]
+  },
+  {
+    "id": 13,
+    "path": "/media/blog/13.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/07/vegetable-production-pots-1.jpg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": 14,
+    "path": "/media/blog/14.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/06/maceta-para-fresas-1.jpg",
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "id": 15,
+    "path": "/media/diagrams-uk/zephyr-v2-airflow-wide-uk.webp",
+    "source": "https://getplantlogic.com/rethinking-the-zephyr/"
+  },
+  {
+    "id": 16,
+    "path": "/media/blog/16.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/05/blueberry-in-containers-pots.jpg",
+    "size": [
+      1440,
+      900
+    ]
+  },
+  {
+    "id": 17,
+    "path": "/media/blog/17.jpg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/01/IMG_20180328_102510-1.jpg",
+    "size": [
+      1500,
+      1125
+    ]
+  },
+  {
+    "id": 18,
+    "path": "/media/blog/18.jpeg",
+    "source": "https://getplantlogic.com/wp-content/uploads/2020/12/tomato-production.jpeg",
+    "size": [
+      940,
+      788
+    ]
+  }
+]
