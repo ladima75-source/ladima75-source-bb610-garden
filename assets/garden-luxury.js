@@ -281,6 +281,95 @@
     return true;
   };
 
+  const makeQualitySection = () => {
+    const section = document.querySelector("#lysimeter");
+    if (!section) return false;
+    if (section.dataset.plantlogicQuality === "v1") return true;
+
+    section.dataset.plantlogicQuality = "v1";
+    section.className = "plantlogic-quality section";
+    section.innerHTML = `
+      <div class="wrap plantlogic-quality-grid">
+        <div class="plantlogic-quality-media">
+          <video class="plantlogic-quality-video" muted loop playsinline preload="none"
+            poster="/media/video/corporate-quality-poster.webp?v=20261007-quality-v1"
+            aria-label="Виробництво PlantLogic">
+            <source data-src="/media/video/corporate-quality.webm?v=20261007-quality-v1" type="video/webm">
+            <source data-src="/media/video/corporate-quality.mp4?v=20261007-quality-v1" type="video/mp4">
+          </video>
+          <div class="plantlogic-quality-media-caption">
+            <span>PLANTLOGIC / ВИРОБНИЦТВО</span>
+            <strong>Власний завод · Ningbo, China</strong>
+          </div>
+        </div>
+
+        <div class="plantlogic-quality-copy">
+          <span class="plantlogic-quality-eyebrow">ЯКІСТЬ PLANTLOGIC</span>
+          <h2>Якість, закладена у виробництві.</h2>
+          <p class="plantlogic-quality-lead">
+            PlantLogic виробляє продукцію на власному заводі в Нінбо. Автоматизоване виробництво,
+            високоякісна сировина та єдиний контроль процесу дають стабільну якість від виробу до виробу.
+          </p>
+
+          <div class="plantlogic-quality-facts">
+            <article>
+              <span>01</span>
+              <strong>Власне виробництво</strong>
+              <p>Завод PlantLogic у Нінбо, Китай — виробництво не передане сторонньому підряднику.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>Повна автоматизація</strong>
+              <p>Горщики виготовляються на повністю автоматизованому обладнанні.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>Якісна сировина</strong>
+              <p>PlantLogic вказує використання високоякісної сировини для стабільних виробничих стандартів.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <strong>Повторне використання</strong>
+              <p>Стабільність продукції розрахована на повторне використання цикл за циклом.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const video = section.querySelector(".plantlogic-quality-video");
+    if (video) {
+      const activate = () => {
+        if (video.dataset.loaded) return;
+        video.dataset.loaded = "1";
+        video.querySelectorAll("source[data-src]").forEach((source) => {
+          source.src = source.dataset.src;
+          source.removeAttribute("data-src");
+        });
+        video.load();
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          video.autoplay = true;
+          video.setAttribute("autoplay","");
+          video.play().catch(() => {});
+        }
+      };
+
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver((entries, observer) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          activate();
+          observer.disconnect();
+        }, { rootMargin: "500px 0px", threshold: 0 });
+        io.observe(video);
+      } else {
+        activate();
+      }
+    }
+
+    document.querySelector("#corporate-video")?.remove();
+    return true;
+  };
+
   const cleanLegacySections = () => {
     ["#offer","#about","#plantlogic","#monitoring-engineering","#crop-engineering"].forEach((selector) => {
       const node = document.querySelector(selector);
@@ -314,11 +403,6 @@
     if (drainageTitle) drainageTitle.innerHTML = "Збір і контроль<br><span>дренажного потоку.</span>";
     const drainageText = document.querySelector("#drainage .section-heading p");
     if (drainageText) drainageText.textContent = "Показуємо шлях води після проходження через субстрат: від виходу з контейнера до організованого збору та контрольної точки OUT.";
-
-    const lysimeterTitle = document.querySelector("#lysimeter .section-heading h2");
-    if (lysimeterTitle) lysimeterTitle.innerHTML = "Контрольна проба<br><span class=\"soft\">IN / OUT.</span>";
-    const lysimeterText = document.querySelector("#lysimeter .section-heading p");
-    if (lysimeterText) lysimeterText.textContent = "Лізиметр потрібен для репрезентативного збору дренажу; pH та EC вимірюються зовнішніми приладами.";
 
     const rubusTitle = document.querySelector("#rubus h3");
     if (rubusTitle) rubusTitle.innerHTML = "Production і Long Cane:<br>різні виробничі сценарії.";
@@ -573,6 +657,7 @@
     decorateZephyr();
     makeVisualRail();
     makeTechnicalProofs();
+    makeQualitySection();
     cleanLegacySections();
     rebuildTechnicalProof();
     integrateVideoProofs();
