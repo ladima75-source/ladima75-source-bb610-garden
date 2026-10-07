@@ -194,7 +194,7 @@
       band.innerHTML =
         '<div class="proof-band-copy">' +
           '<span class="proof-label">КОРЕНЕВА ЗОНА</span>' +
-          '<h3>Не схема заради схеми — дивимось на фактичну кореневу масу.</h3>' +
+          '<h3>Фактична коренева маса показує розподіл коренів у робочому об’ємі.</h3>' +
           '<p>Фото кореневої зони ставимо поруч з офіційною схемою Round, щоб пояснення води, повітря та дренажу читалось через реальний результат і геометрію контейнера.</p>' +
         '</div>' +
         '<div class="proof-band-media proof-band-media-double">' +
@@ -213,7 +213,7 @@
         '<div class="proof-feature-media proof-white"><img src="/media/diagrams-uk/ugroove-item-13080350-dimensions-uk.webp?v=' + VERSION + '" alt="Офіційне технічне креслення PlantLogic з U-пазами" loading="lazy"></div>' +
         '<div class="proof-feature-copy">' +
           '<span class="proof-label">U-ПАЗИ</span>' +
-          '<h3>Паз видно у кресленні — тому його роль не треба пояснювати лозунгом.</h3>' +
+          '<h3>U-пази задають фіксоване положення поливної труби.</h3>' +
           '<p>Офіційне технічне креслення показує саму геометрію посадочного місця для поливної труби. Поруч залишаємо тільки коротке пояснення монтажної логіки.</p>' +
         '</div>';
       geometry.after(block);
@@ -228,7 +228,7 @@
         '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="25L Drainage Collection official technical drawing" loading="lazy"><figcaption>Офіційне креслення · горщик 25 л зі збором дренажу</figcaption></figure></div>' +
         '<div class="proof-band-copy">' +
           '<span class="proof-label">ЗБІР ДРЕНАЖУ</span>' +
-          '<h3>Вихід дренажу має конкретну геометрію, а не абстрактну «керованість».</h3>' +
+          '<h3>Геометрія виходу спрямовує дренаж у визначений контур.</h3>' +
           '<p>Технічна пластина доповнює фото виробу: видно форму основи, висоту опор і організацію відведення. Текст пояснює лише те, що неможливо побачити безпосередньо.</p>' +
         '</div>';
       drainage.append(block);
@@ -251,7 +251,7 @@
       const steel = document.createElement('div');
       steel.className = 'proof-feature proof-feature-lysimeter';
       steel.id = 'proof-steel-lysimeter';
-      steel.innerHTML = '<div class="proof-feature-copy"><h3>Сталевий лізиметр для круглих горщиків.</h3><p>V-подібна основа відводить пробу до регульованого виходу. Кришка захищає її від листя, плодів і бруду. Виконання підбирається для відповідних горщиків PlantLogic 25, 30 та 40 л.</p><a class="text-button accessory-proof-link" href="/portfolio-items/steel-lysimeter-for-blueberry-pots/">Сталева модель · характеристики ↗</a></div><div class="proof-feature-media proof-white"><a href="/portfolio-items/steel-lysimeter-for-blueberry-pots/"><img src="/media/plantlogic-accessories/b2a15865775a.jpg" alt="Сталевий лізиметр PlantLogic з кришкою та виходом для дренажу" loading="lazy"></a></div>';
+      steel.innerHTML = '<div class="proof-feature-copy"><h3>Сталевий лізиметр для круглих горщиків.</h3><p>V-подібна основа відводить пробу до регульованого виходу. Кришка захищає її від листя, плодів і бруду. Виконання відповідає горщикам PlantLogic 25, 30 та 40 л.</p><a class="text-button accessory-proof-link" href="/portfolio-items/steel-lysimeter-for-blueberry-pots/">Сталева модель · характеристики ↗</a></div><div class="proof-feature-media proof-white"><a href="/portfolio-items/steel-lysimeter-for-blueberry-pots/"><img src="/media/plantlogic-accessories/b2a15865775a.jpg" alt="Сталевий лізиметр PlantLogic з кришкою та виходом для дренажу" loading="lazy"></a></div>';
       interfaces.append(steel);
 
     }
