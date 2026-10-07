@@ -1,4 +1,4 @@
-const GARDEN_PRODUCT_DATA_VERSION = "20260929-products-v3";
+const GARDEN_PRODUCT_DATA_VERSION = "20261007-products-v4";
 window.GARDEN_PRODUCT_DATA = [
     {
       no: "1308020",
@@ -43,6 +43,29 @@ window.GARDEN_PRODUCT_DATA = [
         "Сумісний із малим лізиметром PlantLogic для контрольного збору дренажу."
       ],
       source: "https://getplantlogic.com/portfolio-items/20-liter-square-pot/"
+    },
+    {
+      no: "1308125",
+      name: "Горщик для лохини 25 л круглий покращеної конструкції",
+      subtitle: "Круглий горщик 25 л · оновлена конструкція",
+      application: "blueberry",
+      applicationLabel: "Лохина",
+      family: "Круглий",
+      image: "https://market.bb610.com.ua/assets/img/real/stage16b/plantlogic-25-round-1308125.webp",
+      diagram: null,
+      volume: "25 л",
+      dimensions: "Ø385 × H362.5 мм",
+      legs: "30 мм",
+      focus: "Пірамідальна основа + центральна аерація + нові точки кріплення",
+      summary: "Оновлена 25-літрова кругла конструкція для контейнерного вирощування лохини: крайовий дренаж, центральна аерація, 30-мм ніжки та точки кріплення поливу й стабілізації.",
+      facts: [
+        "Код моделі 1308125.",
+        "Нові отвори у верхній зоні дають кілька варіантів фіксації поливної труби, крапельниць або стабілізувального дроту.",
+        "Центральні недренуючі отвори подають повітря в середину кореневої маси.",
+        "Пірамідальна основа спрямовує надлишок води до зовнішнього периметра.",
+        "Ніжки 30 мм зменшують контакт кореневої зони з ґрунтом; нахил ніжок зменшує втрати субстрату."
+      ],
+      source: "https://getplantlogic.com/portfolio-items/new-25-liter-round-pot/"
     },
     {
       no: "1308026",
