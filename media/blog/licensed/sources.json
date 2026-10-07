@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2026/07/best-elevated-system-for-strawberries.png",
+    "path": "/media/blog/licensed/01-cover.webp",
+    "size": [
+      852,
+      316
+    ]
+  },
+  {
+    "id": 2,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2024/09/best-hydroponic-system-for-strawberries.png",
+    "path": "/media/blog/licensed/02-cover.webp",
+    "size": [
+      852,
+      316
+    ]
+  },
+  {
+    "id": 3,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2023/08/best-tabletop-system-strawberries-1-scaled.jpg",
+    "path": "/media/blog/licensed/03-cover.webp",
+    "size": [
+      1600,
+      593
+    ]
+  },
+  {
+    "id": 4,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/11/Tomatoes-in-grow-bags.jpg",
+    "path": "/media/blog/licensed/04-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 5,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/03/sistema-elevado-fresa-1.jpg",
+    "path": "/media/blog/licensed/05-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 5,
+    "slot": "3",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/03/hi-grow-pot-system-vs-slab-system-02.jpg",
+    "path": "/media/blog/licensed/05-3.webp",
+    "size": [
+      1333,
+      1276
+    ]
+  },
+  {
+    "id": 6,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/03/plantlogic-best-pots-hydroponics.jpg",
+    "path": "/media/blog/licensed/06-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 7,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/02/produccion-frambuesa-cana-larga.jpg",
+    "path": "/media/blog/licensed/07-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 8,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2022/01/vid-uvas-en-macetas.jpg",
+    "path": "/media/blog/licensed/08-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 9,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/12/25-liter-pot-for-blueberries.jpg",
+    "path": "/media/blog/licensed/09-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 10,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/10/spacer-espaciador.jpg",
+    "path": "/media/blog/licensed/10-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 11,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/08/HEADER-1.jpg",
+    "path": "/media/blog/licensed/11-cover.webp",
+    "size": [
+      1024,
+      470
+    ]
+  },
+  {
+    "id": 12,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/08/header.jpg",
+    "path": "/media/blog/licensed/12-cover.webp",
+    "size": [
+      1143,
+      475
+    ]
+  },
+  {
+    "id": 13,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/07/kratos-slab-base-vegetables.jpg",
+    "path": "/media/blog/licensed/13-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 14,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/06/Hi-grow-system.jpg",
+    "path": "/media/blog/licensed/14-cover.webp",
+    "size": [
+      1600,
+      660
+    ]
+  },
+  {
+    "id": 15,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/05/best-blueberry-pot.jpg",
+    "path": "/media/blog/licensed/15-cover.webp",
+    "size": [
+      1366,
+      768
+    ]
+  },
+  {
+    "id": 15,
+    "slot": "0",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/05/ZephyrV2_Blog_EN_A.jpg",
+    "path": "/media/blog/licensed/15-0.webp",
+    "size": [
+      1600,
+      955
+    ]
+  },
+  {
+    "id": 15,
+    "slot": "1",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/05/ZephyrV2_Blog_EN_B.jpg",
+    "path": "/media/blog/licensed/15-1.webp",
+    "size": [
+      1600,
+      955
+    ]
+  },
+  {
+    "id": 15,
+    "slot": "2",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/05/ZephyrV2_Blog_EN_C.jpg",
+    "path": "/media/blog/licensed/15-2.webp",
+    "size": [
+      1600,
+      955
+    ]
+  },
+  {
+    "id": 16,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/05/blueberry-pots-greenhouse.jpg",
+    "path": "/media/blog/licensed/16-cover.webp",
+    "size": [
+      1440,
+      900
+    ]
+  },
+  {
+    "id": 17,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2021/01/agri-startups.jpg",
+    "path": "/media/blog/licensed/17-cover.webp",
+    "size": [
+      480,
+      360
+    ]
+  },
+  {
+    "id": 17,
+    "slot": "1",
+    "source": "https://getplantlogic.com/wp-content/uploads/2020/12/img_30LDC.jpg",
+    "path": "/media/blog/licensed/17-1.webp",
+    "size": [
+      500,
+      549
+    ]
+  },
+  {
+    "id": 17,
+    "slot": "2",
+    "source": "https://getplantlogic.com/wp-content/uploads/2020/12/img_25LDC-1.jpg",
+    "path": "/media/blog/licensed/17-2.webp",
+    "size": [
+      500,
+      549
+    ]
+  },
+  {
+    "id": 18,
+    "slot": "cover",
+    "source": "https://getplantlogic.com/wp-content/uploads/2020/12/WhatsApp-Image-2020-12-11-at-11.25.32.jpeg",
+    "path": "/media/blog/licensed/18-cover.webp",
+    "size": [
+      960,
+      1280
+    ]
+  }
+]

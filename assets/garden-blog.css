@@ -169,3 +169,23 @@ body.blog-page{background:#f6f7f2;color:#10261d}
 @media(max-width:1100px){.blog-page .blog-reading{gap:36px;grid-template-columns:160px minmax(0,1fr)}.blog-story-photo.is-side{width:44%;margin-left:24px}.blog-article-body section p{font-size:16px}.blog-article-body section h2{font-size:28px}}
 @media(max-width:820px){.blog-page .blog-reading{display:block}.blog-article-body{max-width:none}.blog-reading-aside{display:none}.blog-story-photo.is-side{width:44%;margin-left:24px}}
 @media(max-width:560px){.blog-page .blog-reading{padding-top:34px}.blog-story-photo.is-side,.blog-story-photo.is-side.is-small{float:none;width:100%;max-width:none;margin:0 0 24px}.blog-story-photo.is-small{max-width:none}.blog-story-photo figcaption{font-size:11px}.blog-story-photo{margin-block:24px 30px}.blog-story-gallery{grid-template-columns:1fr;gap:26px}.blog-story-gallery .blog-story-photo:last-child:nth-child(odd){grid-column:auto}.blog-article-body section{margin-bottom:34px}.blog-article-body section h2{font-size:27px}.blog-article-body section p{font-size:16px;line-height:1.85}.blog-inline-figure{padding:12px}.blog-editorial-note{display:flex}}
+
+/* Licensed source articles: faithful order, readable quotations and full diagrams. */
+.blog-licensed-section h2{clear:both}
+.blog-licensed-section h3{font-size:22px;line-height:1.4;color:#183c28;margin:28px 0 16px}
+.blog-licensed-section blockquote{margin:32px 0;padding:26px 32px;border-left:3px solid #99bc65;background:#eaf0e1;border-radius:0 10px 10px 0}
+.blog-article-body .blog-licensed-section blockquote p{font-size:21px;line-height:1.7;color:#1a432a}
+.blog-article-body .blog-licensed-section .blog-story-lead{font-size:21px;line-height:1.7;color:#173d29;margin-bottom:26px}
+.blog-licensed-section .blog-story-photo{max-width:800px;margin:32px auto}
+.blog-licensed-section .blog-story-photo img{max-height:none}
+.blog-licensed-section .blog-story-photo a{background:transparent}
+.blog-licensed-section .blog-story-gallery{margin:36px 0 44px}
+.blog-licensed-section .blog-story-gallery .blog-story-photo{margin:0}
+.blog-licensed-section .blog-story-gallery img{aspect-ratio:auto;max-height:none}
+.blog-licensed-section .blog-inline-figure{margin:34px 0 44px;background:#fff}
+.blog-licensed-section .blog-inline-figure img{height:auto;max-height:none;object-fit:contain}
+.blog-licensed-section .blog-story-gallery:has(.blog-inline-figure){display:block}
+.blog-licensed-section .blog-story-gallery:has(.blog-inline-figure) .blog-inline-figure{margin:28px 0}
+.blog-byline{flex-wrap:wrap}
+.blog-page .blog-article-cover-compact{max-width:480px}
+@media(max-width:560px){.blog-licensed-section blockquote{padding:20px 22px;margin:26px 0}.blog-article-body .blog-licensed-section blockquote p,.blog-article-body .blog-licensed-section .blog-story-lead{font-size:19px;line-height:1.7}.blog-licensed-section .blog-story-photo{margin:26px 0}.blog-licensed-section h3{font-size:21px}.blog-licensed-section .blog-inline-figure{margin:26px 0;padding:10px}}
