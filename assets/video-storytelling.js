@@ -1,10 +1,10 @@
 (() => {
   const VERSION = "20260929-video-v3";
   const stories = [
-    { key: "corporate-quality", type: "band", selector: "#offer", label: "PlantLogic / ???????????" },
-    { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image", label: "Zephyr V2 / assembly" },
-    { key: "ugroove-irrigation", type: "product", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image", label: "U-Groove / irrigation" },
-    { key: "higrow-strawberry", type: "section", selector: "#lysimeter", label: "Hi-Grow / strawberry" }
+    { key: "corporate-quality", type: "band", selector: "#offer", label: "Виробництво PlantLogic" },
+    { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image", label: "Монтаж Zephyr V2 на основу" },
+    { key: "ugroove-irrigation", type: "product", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image", label: "Поливна труба в U-пазах" },
+    { key: "higrow-strawberry", type: "section", selector: "#lysimeter", label: "Hi-Grow для полуниці" }
   ];
 
   const prefersReduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -15,8 +15,8 @@
     if (!button) return;
     button.setAttribute("aria-label", state === "playing" ? "Призупинити відео" : "Відтворити відео");
     button.innerHTML = state === "playing"
-      ? '<span class="video-pause-icon"><i></i><i></i></span><em>Pause</em>'
-      : '<span class="video-play-icon"></span><em>Play</em>';
+      ? '<span class="video-pause-icon"><i></i><i></i></span><em>Пауза</em>'
+      : '<span class="video-play-icon"></span><em>Відео</em>';
   };
 
   const tryPlay = async (video) => {
@@ -70,13 +70,13 @@
     shade.setAttribute("aria-hidden", "true");
 
     const caption = document.createElement("figcaption");
-    caption.innerHTML = '<span>PLANTLOGIC / MOTION</span><strong>' + (story.label || "Engineering in motion") + '</strong>';
+    caption.innerHTML = '<span>PLANTLOGIC</span><strong>' + (story.label || "Конструкція у роботі") + '</strong>';
 
     const button = document.createElement("button");
     button.type = "button";
     button.className = "video-play-button";
     button.setAttribute("aria-label", "Відтворити відео");
-    button.innerHTML = '<span class="video-play-icon"></span><em>Play</em>';
+    button.innerHTML = '<span class="video-play-icon"></span><em>Відео</em>';
 
     button.addEventListener("click", async (event) => {
       event.preventDefault();
