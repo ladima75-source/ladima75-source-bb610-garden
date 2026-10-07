@@ -28,3 +28,24 @@ main [id],section[id]{scroll-margin-top:20px}
 .solution-page .garden-breadcrumbs,.culture-page .garden-breadcrumbs{color:#a8b7aa}
 .intro>.garden-breadcrumbs{margin-top:0;margin-bottom:24px}
 body.garden-has-header .site-shell{padding-top:0!important}
+
+
+/* 2026-10-07 navigation hierarchy */
+.garden-site-header .garden-desktop-nav .garden-nav-catalog{
+  color:#d7ff79!important;
+  font-weight:700!important;
+  padding:7px 0 6px!important;
+  border-bottom:1px solid rgba(215,255,121,.75)!important;
+}
+.garden-site-header .garden-desktop-nav .garden-nav-catalog:hover{
+  color:#ecffb8!important;
+  border-bottom-color:#ecffb8!important;
+}
+.garden-site-header .garden-market{
+  font-weight:650!important;
+  letter-spacing:.01em;
+}
+.garden-site-header .garden-mobile-nav .garden-nav-catalog{
+  color:#d7ff79!important;
+  font-weight:700!important;
+}
