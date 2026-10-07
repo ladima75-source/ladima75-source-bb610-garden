@@ -273,8 +273,8 @@
       figure.className = "proof-rubus proof-white";
       figure.id = "proof-rubus";
       figure.innerHTML =
-        '<img src="/media/diagrams-uk/image-348-uk-v2.webp?v=' + VERSION + '" alt="Офіційна схема PlantLogic для малини та ожини" loading="lazy">' +
-        '<figcaption><span>Малина та ожина · виробнича схема</span><strong>Офіційна схема PlantLogic</strong></figcaption>';
+        '<img src="/media/diagrams-uk/image-348-uk-v2.webp?v=' + VERSION + '" alt="Схема PlantLogic для малини та ожини" loading="lazy">' +
+        '<figcaption><span>Малина та ожина · виробнича схема</span><strong>Схема PlantLogic</strong></figcaption>';
       rubus.after(figure);
     }
 
@@ -411,7 +411,7 @@
       const heading = rootZone.querySelector(".root-zone-copy h2");
       const lead = rootZone.querySelector(".root-zone-copy > p");
       if (heading) heading.textContent = "Як вода й повітря проходять через конструкцію горщика.";
-      if (lead) lead.textContent = "Порівнюємо логіку руху води й повітря з реальною кореневою масою та офіційною схемою конструкції.";
+      if (lead) lead.textContent = "Порівнюємо логіку руху води й повітря з фото кореневої маси та схемою конструкції.";
     }
 
     const duplicateRootProof = document.querySelector("#proof-root-zone");
@@ -447,7 +447,7 @@
       const title = hiGrow.querySelector(".higrow-copy h2");
       const lead = hiGrow.querySelector(".higrow-copy p");
       if (title) title.textContent = "Hi-Grow: схема та робота системи.";
-      if (lead) lead.textContent = "Відео показує просторову логіку установки, а офіційна схема нижче — конструкцію та розміщення елементів.";
+      if (lead) lead.textContent = "Відео показує просторову логіку установки, а схема нижче — конструкцію та розміщення елементів.";
     }
 
     return true;
