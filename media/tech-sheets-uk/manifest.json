@@ -721,6 +721,22 @@
       "revision": "2026-10-07-verified-catalog",
       "download_url": "/media/tech-sheets-uk/rivus-slab-base-current-uk.pdf?v=20261007-catalog-v1",
       "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "new-25-liter-round-pot",
+      "products": [
+        "new-25-liter-round-pot"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2024/03/25-liter-pot-for-blueberries_Item_1308125_Eng.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/new-25-liter-round-pot-uk.pdf",
+      "sha256": "f74adff123cffbaf6dd9c5296a012ab54c8a9b770165c40657d96845a4d6e036",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-08",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/new-25-liter-round-pot-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
     }
   ],
   "catalog": {

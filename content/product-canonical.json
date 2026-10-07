@@ -540,7 +540,10 @@
       "canonical_product_ids": [
         "plantlogic-25-round-1308125"
       ],
-      "public_enabled": true
+      "public_enabled": true,
+      "source_url": "https://getplantlogic.com/portfolio-items/new-25-liter-round-pot/",
+      "authoritative_document": "https://getplantlogic.com/wp-content/uploads/2024/03/25-liter-pot-for-blueberries_Item_1308125_Eng.pdf",
+      "technical_sheet_uk": "/media/tech-sheets-uk/new-25-liter-round-pot-uk.pdf?v=20261008-catalog-v2"
     },
     {
       "route": "/portfolio-items/plastic-gutter/",
