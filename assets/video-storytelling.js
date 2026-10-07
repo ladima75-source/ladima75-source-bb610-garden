@@ -1,6 +1,7 @@
 (() => {
   const VERSION = "20260929-video-v3";
   const stories = [
+    { key: "corporate-quality", type: "band", selector: "#offer", label: "PlantLogic / ???????????" },
     { key: "zephyr-v2-install", type: "product", selector: '#blueberry img[src*="zephyr"]', parent: ".product-image", label: "Zephyr V2 / assembly" },
     { key: "ugroove-irrigation", type: "product", selector: '#blueberry img[src*="ugroove"]', parent: ".product-image", label: "U-Groove / irrigation" },
     { key: "higrow-strawberry", type: "section", selector: "#lysimeter", label: "Hi-Grow / strawberry" }

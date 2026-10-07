@@ -292,10 +292,9 @@
       <div class="wrap plantlogic-quality-grid">
         <div class="plantlogic-quality-media">
           <video class="plantlogic-quality-video" muted loop playsinline preload="none"
-            poster="/media/video/corporate-quality-poster.webp?v=20261007-quality-v1"
+            poster="/media/video/quality-tests-banner-poster.webp?v=20261007-quality-v3"
             aria-label="Виробництво PlantLogic">
-            <source data-src="/media/video/corporate-quality.webm?v=20261007-quality-v1" type="video/webm">
-            <source data-src="/media/video/corporate-quality.mp4?v=20261007-quality-v1" type="video/mp4">
+            <source data-src="/media/video/quality-tests-banner.mp4?v=20261007-quality-v3" type="video/mp4">
           </video>
           <div class="plantlogic-quality-media-caption">
             <span>PLANTLOGIC / ВИРОБНИЦТВО</span>
@@ -366,7 +365,6 @@
       }
     }
 
-    document.querySelector("#corporate-video")?.remove();
     return true;
   };
 
