@@ -3,11 +3,9 @@
   const MARKET = "https://market.bb610.com.ua/";
 
   const productLinks = {
-    "#1308020": "plantlogic-blueberry-round-20l-1308020",
-    "#1309020": "plantlogic-blueberry-square-20l-1309020",
-    "#1308041": "plantlogic-blueberry-round-40l-u-grooves-1308041",
-    "#1301144": "plantlogic-blueberry-zephyr-v2-25l-1301144"
-  };
+  "#1308125": "https://market.bb610.com.ua/products/plantlogic-25l-1308125-1ea/",
+  "#1308041": "https://market.bb610.com.ua/products/plantlogic-40l-1308041-1ea/"
+};
 
   const catalogUrl = (query = "") => {
     const url = new URL("catalog.html", MARKET);
@@ -17,6 +15,7 @@
   };
 
   const productUrl = (id) => {
+    if (id.startsWith("https://market.bb610.com.ua/")) return id;
     const url = new URL("product.html", MARKET);
     url.searchParams.set("id", id);
     return url.toString();

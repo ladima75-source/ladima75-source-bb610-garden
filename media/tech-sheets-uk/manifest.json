@@ -551,20 +551,6 @@
       "download_url": "/media/tech-sheets-uk/pot-anchor-uk.pdf?v=20261006-clean-v2"
     },
     {
-      "source_pdf": "/media/plantlogic-rubus-vegetables/ca80b14a4985.pdf",
-      "uk_pdf": "/media/tech-sheets-uk/rivus-slab-base-uk.pdf",
-      "product": "rivus-slab-base",
-      "source_sha256": "e40a56ec67f9b6507ed278a33426a86d00a156ebba59615e64329cf563286231",
-      "sha256": "ca58bff7b2af1255227d66aeb172a4a84ef33aa990cef139efdce9322907bd12",
-      "pages": 1,
-      "source_notes": [],
-      "language": "uk-UA",
-      "date": "2026-10-06",
-      "footer_removed": true,
-      "revision": "2026-10-06-no-footer-v2",
-      "download_url": "/media/tech-sheets-uk/rivus-slab-base-uk.pdf?v=20261006-clean-v2"
-    },
-    {
       "source_pdf": "/media/plantlogic-strawberry/66c713bef6d4.pdf",
       "uk_pdf": "/media/tech-sheets-uk/trough-cover-for-strawberries-uk.pdf",
       "product": "trough-cover-for-strawberries",
@@ -605,6 +591,136 @@
       "footer_removed": true,
       "revision": "2026-10-06-no-footer-v2",
       "download_url": "/media/tech-sheets-uk/zephyr-v2-uk.pdf?v=20261006-clean-v2"
+    },
+    {
+      "product": "25-liter-square-pot",
+      "products": [
+        "25-liter-square-pot"
+      ],
+      "source_url": "/wp-content/uploads/2021/03/Techsheet_Item_1309025_Eng.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/25-liter-square-pot-uk.pdf",
+      "sha256": "a7da77710894c266f7aa63e9d1cc9058ce79589b591fedd6cf86b63222247541",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/25-liter-square-pot-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "30-liter-round-pot-with-parallel-u-grooves",
+      "products": [
+        "30-liter-round-pot-with-parallel-u-grooves"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2026/04/Techsheet_Item_1308305_30L_RD_UG_ENG.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/30-liter-round-pot-with-parallel-u-grooves-uk.pdf",
+      "sha256": "fd7bdeb9ff8ffb0cf26652510c1d8681d8e39db5ef84390678342851f0cd3d8c",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/30-liter-round-pot-with-parallel-u-grooves-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "35-liter-round-pot-with-u-grooves-for-blueberries",
+      "products": [
+        "35-liter-round-pot-with-u-grooves-for-blueberries"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2025/11/Techsheet_Item_13080350_35L_RD_UG_ENG-1.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/35-liter-round-pot-with-u-grooves-for-blueberries-uk.pdf",
+      "sha256": "8bb09e16c6ebd1053ab5eecf13da335a598665b8b96d780137689bc050b4b0fe",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/35-liter-round-pot-with-u-grooves-for-blueberries-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "40-liter-square-pot-side-holes-20mm",
+      "products": [
+        "40-liter-square-pot-side-holes-16mm",
+        "40-liter-square-pot-side-holes-20mm"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2026/09/Item-1309040_40L-Square-pot-UG_EN.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/40-liter-square-pot-side-holes-uk.pdf",
+      "sha256": "cca00a928510164f3606bf3e2349c0129af845bee00e887d2564d4f56c94964c",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/40-liter-square-pot-side-holes-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "8-liter-pot-with-big-handle",
+      "products": [
+        "8-liter-trough-with-short-legs",
+        "8-liter-pot-with-big-handle"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2021/06/Techsheet_Item_1305081_Eng.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/8-liter-trough-variants-uk.pdf",
+      "sha256": "0dde62d0d9e3b071a781609430a8330cb0fe859965486063723aadcb8a39c272",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/8-liter-trough-variants-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "9-liter-trough-for-strawberries",
+      "products": [
+        "9-liter-trough-for-strawberries"
+      ],
+      "source_url": "/wp-content/uploads/2021/11/9L-StrawberryPots_Item_Eng.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/9-liter-trough-for-strawberries-uk.pdf",
+      "sha256": "73856269ef0065cbb469309eeae256d7f34df0022cc9a8d5b4eb5d044b487584",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/9-liter-trough-for-strawberries-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "rivus-end-cap",
+      "products": [
+        "rivus-end-cap"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2026/03/Plantlogic_Catalog_2026_ENG_Email.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/rivus-end-cap-uk.pdf",
+      "sha256": "63844ccefda45ffa126616563cd5663bba175a222e31e97aa8f07930994108b8",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/rivus-end-cap-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
+    },
+    {
+      "product": "rivus-slab-base",
+      "products": [
+        "rivus-slab-base"
+      ],
+      "source_url": "https://getplantlogic.com/wp-content/uploads/2026/03/Plantlogic_Catalog_2026_ENG_Email.pdf",
+      "uk_pdf": "/media/tech-sheets-uk/rivus-slab-base-current-uk.pdf",
+      "sha256": "2347f45a5af0b8686d9a264fa4e5c97be5e09bf83452e62818e1b3d62d059d13",
+      "pages": 1,
+      "language": "uk-UA",
+      "date": "2026-10-07",
+      "footer_removed": true,
+      "revision": "2026-10-07-verified-catalog",
+      "download_url": "/media/tech-sheets-uk/rivus-slab-base-current-uk.pdf?v=20261007-catalog-v1",
+      "source_notes": "Технічний лист BB610 Garden за підтвердженими характеристиками виробника; оригінальні фотографії PlantLogic."
     }
   ],
   "catalog": {

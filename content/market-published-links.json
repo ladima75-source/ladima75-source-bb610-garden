@@ -1,0 +1,17 @@
+{
+  "verified_date": "2026-10-07",
+  "source": "https://market.bb610.com.ua/data/catalog.runtime.js",
+  "products": {
+    "1308125": {
+      "id": "plantlogic-25-round-1308125",
+      "sku": "BB610-PLT-1308125-EA",
+      "url": "https://market.bb610.com.ua/products/plantlogic-25l-1308125-1ea/"
+    },
+    "1308041": {
+      "id": "plantlogic-40-round-ugroove-1308041",
+      "sku": "BB610-PLT-1308041-EA",
+      "url": "https://market.bb610.com.ua/products/plantlogic-40l-1308041-1ea/"
+    }
+  },
+  "rule": "Link only SKU pages present in the published runtime and verified to return the expected product number."
+}
