@@ -180,7 +180,7 @@
     if (featured) featured.textContent = "Горщик для лохини 25 л круглий зі збором дренажу";
 
     const familyHead = document.querySelector("#family-engineering .family-engineering-head h2");
-    if (familyHead) familyHead.textContent = "Порівняння конструкцій горщиків PlantLogic";
+    if (familyHead) familyHead.textContent = "Чим відрізняються конструкції горщиків PlantLogic";
 
     const familyCards = [...document.querySelectorAll("#family-engineering .family-card")];
     familyCards.forEach(card => {

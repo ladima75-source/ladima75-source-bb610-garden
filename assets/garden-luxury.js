@@ -225,11 +225,11 @@
       block.className = "proof-band proof-drainage-band";
       block.id = "proof-drainage";
       block.innerHTML =
-        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="Технічне креслення горщика 25 л зі збором дренажу" loading="lazy"><figcaption>Технічне креслення · горщик 25 л зі збором дренажу</figcaption></figure></div>' +
+        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="Схема основи горщика 25 л зі збором дренажу" loading="lazy"><figcaption>Горщик 25 л зі збором дренажу · схема основи</figcaption></figure></div>' +
         '<div class="proof-band-copy">' +
           '<span class="proof-label">ЗБІР ДРЕНАЖУ</span>' +
-          '<h3>Геометрія виходу спрямовує дренаж у визначений контур.</h3>' +
-          '<p>Технічна пластина доповнює фото виробу: видно форму основи, висоту опор і організацію відведення. Текст пояснює лише те, що неможливо побачити безпосередньо.</p>' +
+          '<h3>Вихід у дні збирає зайву воду в одну лінію.</h3>' +
+          '<p>Піднята основа залишає простір під контейнером, а дренажні виходи спрямовують стік до жолоба або окремої лінії для відведення чи контролю.</p>' +
         '</div>';
       drainage.append(block);
     }
@@ -242,12 +242,12 @@
       block.innerHTML =
         '<div class="proof-feature-copy">' +
           '<span class="proof-label">ПОЛИВ / ДРЕНАЖ</span>' +
-          '<h3>Лізиметр збирає чисту контрольну пробу дренажу.</h3>' +
-          '<p>Пластиковий лізиметр встановлюється під горщиком і спрямовує пробу в ємність OUT. Комплект IN/OUT допомагає порівнювати полив і дренаж; pH та EC вимірюються зовнішніми приладами.</p>' +
+          '<h3>Лізиметр збирає дренаж безпосередньо під горщиком.</h3>' +
+          '<p>Пластиковий лізиметр встановлюється під горщиком і спрямовує стік у окрему ємність. Комплект з ємностями для поданого розчину та дренажу дозволяє порівнювати їх об’єм; pH та EC вимірюються зовнішніми приладами.</p>' +
         '</div>' +
         '<div class="proof-feature-media proof-white"><a href="/portfolio-items/lysimeters/"><img src="/media/plantlogic-accessories/d31fe8ba66e2.jpg" alt="Пластиковий лізиметр PlantLogic — лоток для збору дренажу під горщиком" loading="lazy"></a></div>';
       interfaces.append(block);
-      block.querySelector('.proof-feature-copy').insertAdjacentHTML('beforeend','<a class="text-button accessory-proof-link" href="/portfolio-items/lysimeters/">Лізиметри та комплект IN/OUT ↗</a>');
+      block.querySelector('.proof-feature-copy').insertAdjacentHTML('beforeend','<a class="text-button accessory-proof-link" href="/portfolio-items/lysimeters/">Лізиметри та комплект для контролю поливу й дренажу ↗</a>');
       const steel = document.createElement('div');
       steel.className = 'proof-feature proof-feature-lysimeter';
       steel.id = 'proof-steel-lysimeter';
@@ -488,8 +488,8 @@
 
       const heading = rootZone.querySelector(".root-zone-copy h2");
       const lead = rootZone.querySelector(".root-zone-copy > p");
-      if (heading) heading.textContent = "Як вода й повітря проходять через конструкцію горщика.";
-      if (lead) lead.textContent = "Порівнюємо логіку руху води й повітря з фото кореневої маси та схемою конструкції.";
+      if (heading) heading.textContent = "Що відбувається з водою і повітрям усередині горщика.";
+      if (lead) lead.textContent = "Форма дна та отвори визначають, куди відходить зайва вода і звідки нижня частина кореневої зони отримує повітря. Фото кореневого кому показує, як це працює у вирощуванні.";
     }
 
     const duplicateRootProof = document.querySelector("#proof-root-zone");
@@ -517,8 +517,8 @@
 
     const corporateTitle = document.querySelector("#corporate-video .video-band-head h2");
     const corporateLead = document.querySelector("#corporate-video .video-band-head p");
-    if (corporateTitle) corporateTitle.textContent = "PlantLogic у русі.";
-    if (corporateLead) corporateLead.textContent = "Короткі фрагменти показують монтаж і роботу конструкції там, де статичного фото недостатньо.";
+    if (corporateTitle) corporateTitle.textContent = "Конструкції PlantLogic у роботі.";
+    if (corporateLead) corporateLead.textContent = "Відео показують, як встановлюються контейнери, як фіксується поливна лінія та як організовано відведення дренажу в реальних рядах.";
 
     const hiGrow = document.querySelector("#strawberry");
     if (hiGrow) {
@@ -578,16 +578,16 @@
         '<img src="/media/drainage.webp" alt="Drainage Collection PlantLogic у виробничій системі" loading="lazy">' +
         '<span class="drainage-application-shade"></span>' +
         '<figcaption>' +
-          '<span>Застосування · збір дренажу</span>' +
-          '<strong>Спочатку показуємо систему в ряду. Нижче — конструкцію та технічне креслення.</strong>' +
+          '<span>Як працює збір дренажу в ряду</span>' +
+          '<strong>Вода з контейнерів спрямовується в окрему лінію, а не залишається на поверхні під рослинами.</strong>' +
         '</figcaption>';
       if (head) head.after(band); else drainage.prepend(band);
     }
 
     const familyHead = document.querySelector("#family-engineering .family-engineering-head h2");
     const familyLead = document.querySelector("#family-engineering .family-engineering-head > p");
-    if (familyHead) familyHead.textContent = "Порівняння конструкцій горщиків PlantLogic";
-    if (familyLead) familyLead.textContent = "Круглий · Квадратний · U-пази · Zephyr V2 · Збір дренажу. Порівнюємо за поливом, дренажем, поверхнею встановлення та щільністю ряду.";
+    if (familyHead) familyHead.textContent = "Чим відрізняються конструкції горщиків PlantLogic";
+    if (familyLead) familyLead.textContent = "Форма контейнера впливає не лише на розміщення в ряду. Вона визначає положення поливної труби, відведення зайвої води, доступ повітря та висоту кореневої зони над поверхнею.";
 
     const source = document.querySelector("#technical-source-note");
     if (source) source.remove();
@@ -608,6 +608,14 @@
 
     document.querySelectorAll(".section-index,.lux-kicker,.lux-field-index,.lux-field-copy>span,.proof-motion-label").forEach((node) => node.remove());
     document.querySelectorAll(".proof-label,.proof-principle > div > span,.interfaces-no").forEach((node) => node.remove());
+
+    const contact = document.querySelector("#b2b");
+    if (contact) {
+      const title = contact.querySelector("h2");
+      const text = contact.querySelector(".contact-inner p");
+      if (title) title.innerHTML = "Питання щодо продукції<br><span>та постачання.</span>";
+      if (text) text.textContent = "Вкажіть культуру, потрібну модель або задачу. Надішлемо характеристики, наявність, умови постачання та посилання на відповідні позиції.";
+    }
 
     const wrapTextArrow = (root = document) => {
       const selectors = [
