@@ -99,7 +99,7 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="lux-field-head">' +
-          '<div><h2>Чотири культури. Чотири різні виробничі сценарії.</h2></div>' +
+          '<div><h2>Культури та технології вирощування</h2></div>' +
           '<p>Фото показують не окремий виріб, а середовище його роботи: ряд, теплицю, висоту культури, полив, дренаж і доступ персоналу.</p>' +
         '</div>' +
         '<div class="lux-field-grid">' +
@@ -137,7 +137,7 @@
         '</figure>' +
         '<div class="lux-root-copy">' +
           '' +
-          '<h2>Геометрію оцінюють не по пластику. Її оцінюють по кореневій зоні.</h2>' +
+          '<h2>Конструкцію оцінюють за тим, як вона працює з водою, повітрям і кореневою зоною.</h2>' +
           '<p>Для професійного вирощування важливо, чи залишається внизу застійна насичена зона, як розподіляється корінь, де виходить дренаж і чи є повітряний обмін у центральній частині субстрату.</p>' +
           '<div class="lux-root-points">' +
             '<div><b>01</b><span>дивимось на форму кореневого кома;</span></div>' +
@@ -323,7 +323,7 @@
     const rubusTitle = document.querySelector("#rubus h3");
     if (rubusTitle) rubusTitle.innerHTML = "Production і Long Cane:<br>різні виробничі сценарії.";
     const rubusLead = document.querySelector("#rubus .rubus-copy > p");
-    if (rubusLead) rubusLead.textContent = "Для Rubus геометрію контейнера розглядаємо разом із щільністю ряду, cold storage, стабілізацією пагонів і дренажем.";
+    if (rubusLead) rubusLead.textContent = "Для малини та ожини геометрію контейнера розглядаємо разом із щільністю ряду, холодним зберіганням, стабілізацією пагонів і дренажем.";
 
     const blueberry = document.querySelector("#blueberry");
     if (blueberry) {
@@ -362,8 +362,8 @@
       if (head) {
         const h2 = head.querySelector("h2");
         const p = head.querySelector("p");
-        if (h2) h2.textContent = "Конструкція, яку можна роздивитися.";
-        if (p) p.textContent = "Коренева зона, дренаж, U-пази та Zephyr V2 — на фотографіях, схемах і у відео роботи виробів.";
+        if (h2) h2.textContent = "Конструкція та її робота.";
+        if (p) p.textContent = "Коренева зона, дренаж, U-пази та Zephyr V2 — на фотографіях, схемах і відео конструкції.";
       }
 
       const proof = document.createElement("div");
@@ -410,7 +410,7 @@
 
       const heading = rootZone.querySelector(".root-zone-copy h2");
       const lead = rootZone.querySelector(".root-zone-copy > p");
-      if (heading) heading.textContent = "Як читати воду й повітря через конструкцію контейнера.";
+      if (heading) heading.textContent = "Як вода й повітря проходять через конструкцію горщика.";
       if (lead) lead.textContent = "Зліва — коротка логіка процесу. Справа — реальна коренева маса та офіційна схема Round. Так твердження прив’язане до того, що можна побачити.";
     }
 
@@ -440,14 +440,14 @@
     const corporateTitle = document.querySelector("#corporate-video .video-band-head h2");
     const corporateLead = document.querySelector("#corporate-video .video-band-head p");
     if (corporateTitle) corporateTitle.textContent = "PlantLogic у русі.";
-    if (corporateLead) corporateLead.textContent = "Короткі фрагменти показують монтаж і роботу системи там, де статичного фото недостатньо.";
+    if (corporateLead) corporateLead.textContent = "Короткі фрагменти показують монтаж і роботу конструкції там, де статичного фото недостатньо.";
 
     const hiGrow = document.querySelector("#strawberry");
     if (hiGrow) {
       const title = hiGrow.querySelector(".higrow-copy h2");
       const lead = hiGrow.querySelector(".higrow-copy p");
-      if (title) title.textContent = "Hi-Grow: схема плюс реальна робота системи.";
-      if (lead) lead.textContent = "Відео показує просторову логіку установки, а офіційна схема нижче фіксує конструкцію без рекламної інтерпретації.";
+      if (title) title.textContent = "Hi-Grow: схема та робота системи.";
+      if (lead) lead.textContent = "Відео показує просторову логіку установки, а офіційна схема нижче — конструкцію та розміщення елементів.";
     }
 
     return true;
