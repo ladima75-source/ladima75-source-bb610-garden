@@ -36,8 +36,8 @@
     ["PLANTLOGIC / MOTION STUDY", ""],
     ["MOTION PROOF / CONSTRUCTION", ""],
     ["FIELD PHOTO / ROOT ZONE", "Коренева зона · фото з виробництва"],
-    ["OFFICIAL ROUND DIAGRAM", "Офіційна схема круглої моделі"],
-    ["OFFICIAL TECHNICAL PLATE", "Офіційна технічна схема"],
+    ["OFFICIAL ROUND DIAGRAM", "Схема круглої моделі"],
+    ["OFFICIAL TECHNICAL PLATE", "Технічна схема"],
     ["OFFICIAL TECHNICAL MATERIAL", ""],
     ["PRODUCT DETAILS", ""],
     ["WHY THIS CONSTRUCTION", ""],
@@ -68,7 +68,7 @@
     [/\bMeasurement\b/gi, "вимірювання"],
     [/\bApplication\b/gi, "застосування"],
     [/\bTechnical Drawing\b/gi, "технічне креслення"],
-    [/\bOfficial Diagram\b/gi, "офіційна схема"]
+    [/\bOfficial Diagram\b/gi, "схема"]
   ];
 
   const protectedTags = new Set(["SCRIPT","STYLE","NOSCRIPT","CODE","PRE","TEXTAREA"]);
