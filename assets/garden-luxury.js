@@ -262,7 +262,7 @@
       block.className = "proof-higrow proof-white";
       block.id = "proof-higrow";
       block.innerHTML =
-        '<img src="/media/diagrams-uk/pl_technology_hi_grow_trough_system_plantlogic_1_diagram_1680_ua.webp?v=' + VERSION + '" alt="Схема PlantLogic Hi-Grow для жолобів" loading="lazy">' +
+        '<img src="/media/diagrams-uk/pl_technology_hi_grow_trough_system_plantlogic_1_diagram_1680_ua-garden.webp?v=' + VERSION + '" alt="Схема PlantLogic Hi-Grow для жолобів" loading="lazy">' +
         '<figcaption><span>HI-GROW</span><strong>Схема системи</strong></figcaption>';
       strawberry.append(block);
     }
@@ -447,7 +447,7 @@
       const title = hiGrow.querySelector(".higrow-copy h2");
       const lead = hiGrow.querySelector(".higrow-copy p");
       if (title) title.textContent = "Hi-Grow: схема та робота системи.";
-      if (lead) lead.textContent = "Відео показує просторову логіку установки, а схема нижче — конструкцію та розміщення елементів.";
+      if (lead) lead.remove();
     }
 
     return true;

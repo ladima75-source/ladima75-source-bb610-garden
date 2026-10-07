@@ -788,3 +788,17 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
 #proof-steel-lysimeter .accessory-proof-link:hover{
   color:#365514!important;
 }
+
+/* 2026-10-07 Hi-Grow visual harmony */
+#strawberry .proof-higrow.proof-white{
+  background:transparent!important;
+  border-radius:0!important;
+  overflow:visible!important;
+}
+#strawberry .proof-higrow img{
+  background:#eef1e8!important;
+  border-radius:8px!important;
+}
+#strawberry .higrow-copy h2{
+  margin-bottom:0!important;
+}
