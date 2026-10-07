@@ -56,7 +56,7 @@
     });
   };
   const syncHeader = header => {
-    header.dataset.gardenArchitectureAudit='20261007-nav-v3';
+    header.dataset.gardenArchitectureAudit='20261007-nav-v4';
     header.classList.add('garden-site-header');
     document.body.classList.add('garden-has-header');
 
@@ -77,10 +77,10 @@
     const shop=actions?.querySelector('.garden-market,.market-link');
     if(shop){
       shop.classList.add('garden-market');
-      shop.textContent='BB610 Market ↗';
-      shop.href='https://market.bb610.com.ua/';
-      shop.target='_blank';
-      shop.rel='noopener';
+      if(shop.textContent.trim()!=='BB610 Market ↗') shop.textContent='BB610 Market ↗';
+      if(shop.getAttribute('href')!=='https://market.bb610.com.ua/') shop.href='https://market.bb610.com.ua/';
+      if(shop.target!=='_blank') shop.target='_blank';
+      if(shop.rel!=='noopener') shop.rel='noopener';
     }
 
     const project=actions?.querySelector('.garden-project,.header-cta');
@@ -125,7 +125,7 @@
 
     const footer=document.querySelector('footer');
     if (footer && !footer.dataset.gardenArchitectureAudit) {
-      footer.dataset.gardenArchitectureAudit='20261007-nav-v3';
+      footer.dataset.gardenArchitectureAudit='20261007-nav-v4';
       const heading=[...footer.querySelectorAll('h2,h3')].find(h=>h.textContent.trim()==='GARDEN');
       const group=heading?.parentElement || footer.querySelector('a[href="/catalog/"]')?.parentElement;
       if(group){
