@@ -80,9 +80,9 @@
     ? '<section class="product-tech-drawing product-page-section">' +
         '<div class="product-page-wrap product-tech-drawing-grid">' +
           '<div class="product-section-copy">' +
-            '<span class="product-section-kicker">ОФІЦІЙНИЙ ТЕХНІЧНИЙ МАТЕРІАЛ</span>' +
+            '<span class="product-section-kicker">ТЕХНІЧНІ МАТЕРІАЛИ</span>' +
             '<h2>Схема / креслення</h2>' +
-            '<p>Офіційний технічний матеріал PlantLogic для цієї моделі або її конструктивної платформи. Використовуємо його як візуальне підтвердження геометрії, а не як декоративну ілюстрацію.</p>' +
+            '<p>Схема або креслення цієї моделі чи її конструктивної платформи показує геометрію та доповнює технічні характеристики.</p>' +
           '</div>' +
           '<figure><img src="' + product.diagram + '" alt="Технічна схема ' + product.name + '" loading="lazy"><figcaption>PlantLogic · Product #' + product.no + '</figcaption></figure>' +
         '</div>' +
@@ -106,7 +106,7 @@
               ).join("") +
             '</div>' +
             '<div class="product-detail-actions">' +
-              '<a class="product-primary-action" href="' + product.source + '" target="_blank" rel="noreferrer">Офіційна сторінка PlantLogic ↗</a>' +
+              '<a class="product-primary-action" href="' + product.source + '" target="_blank" rel="noreferrer">Технічна сторінка PlantLogic ↗</a>' +
               '<button type="button" class="product-copy-link">Скопіювати посилання</button>' +
             '</div>' +
           '</div>' +
@@ -166,9 +166,9 @@
 
       '<section class="product-source product-page-section">' +
         '<div class="product-page-wrap product-source-inner">' +
-          '<div><span>Технічне джерело</span><strong>Офіційні матеріали PlantLogic</strong></div>' +
-          '<p>Назва моделі відповідає каталогу BB610 Market. Garden доповнює її технічним поясненням, офіційними фото та схемами.</p>' +
-          '<a href="' + product.source + '" target="_blank" rel="noreferrer">Перевірити першоджерело ↗</a>' +
+          '<div><span>Додаткові матеріали</span><strong>PlantLogic</strong></div>' +
+          '<p>Назва моделі відповідає каталогу BB610 Market. Тут зібрані технічні фото, схеми та пояснення конструкції.</p>' +
+          '<a href="' + product.source + '" target="_blank" rel="noreferrer">Переглянути сторінку PlantLogic ↗</a>' +
         '</div>' +
       '</section>' +
     '</article>';
