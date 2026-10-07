@@ -290,16 +290,23 @@
     section.className = "plantlogic-quality section";
     section.innerHTML = `
       <div class="wrap plantlogic-quality-grid">
-        <div class="plantlogic-quality-media">
-          <video class="plantlogic-quality-video" muted loop playsinline preload="none"
-            poster="/media/video/quality-tests-banner-poster.webp?v=20261007-quality-v3"
-            aria-label="Виробництво PlantLogic">
-            <source data-src="/media/video/quality-tests-banner.mp4?v=20261007-quality-v3" type="video/mp4">
-          </video>
-          <div class="plantlogic-quality-media-caption">
-            <span>PLANTLOGIC / ВИРОБНИЦТВО</span>
-            <strong>Власний завод · Нінбо, Китай</strong>
-          </div>
+        <div class="plantlogic-quality-media" aria-label="PlantLogic: виробництво, монтаж і робота систем">
+          <figure class="plantlogic-quality-screen">
+            <img src="/media/video/corporate-quality-poster.webp?v=20261007-quality-4screen-v1"
+              alt="Виробництво PlantLogic на власному заводі" loading="lazy" decoding="async">
+          </figure>
+          <figure class="plantlogic-quality-screen">
+            <img src="/media/video/zephyr-v2-install-poster.webp?v=20261007-quality-4screen-v1"
+              alt="Монтаж Zephyr V2 на основу" loading="lazy" decoding="async">
+          </figure>
+          <figure class="plantlogic-quality-screen">
+            <img src="/media/video/ugroove-irrigation-poster.webp?v=20261007-quality-4screen-v1"
+              alt="Горщик PlantLogic з U-пазами для поливної труби" loading="lazy" decoding="async">
+          </figure>
+          <figure class="plantlogic-quality-screen">
+            <img src="/media/video/higrow-strawberry-poster.webp?v=20261007-quality-4screen-v1"
+              alt="Hi-Grow PlantLogic у виробничій теплиці" loading="lazy" decoding="async">
+          </figure>
         </div>
 
         <div class="plantlogic-quality-copy">
@@ -331,35 +338,6 @@
         </div>
       </div>
     `;
-
-    const video = section.querySelector(".plantlogic-quality-video");
-    if (video) {
-      const activate = () => {
-        if (video.dataset.loaded) return;
-        video.dataset.loaded = "1";
-        video.querySelectorAll("source[data-src]").forEach((source) => {
-          source.src = source.dataset.src;
-          source.removeAttribute("data-src");
-        });
-        video.load();
-        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          video.autoplay = true;
-          video.setAttribute("autoplay","");
-          video.play().catch(() => {});
-        }
-      };
-
-      if ("IntersectionObserver" in window) {
-        const io = new IntersectionObserver((entries, observer) => {
-          if (!entries.some((entry) => entry.isIntersecting)) return;
-          activate();
-          observer.disconnect();
-        }, { rootMargin: "500px 0px", threshold: 0 });
-        io.observe(video);
-      } else {
-        activate();
-      }
-    }
 
     return true;
   };
