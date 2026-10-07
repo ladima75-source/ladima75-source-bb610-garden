@@ -1144,3 +1144,70 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
     max-height:none;
   }
 }
+
+
+/* 2026-10-07 Quality video fill v2 */
+#lysimeter.plantlogic-quality{
+  padding:44px 0 48px!important;
+}
+#lysimeter .plantlogic-quality-grid{
+  width:min(var(--garden-max),calc(100% - (var(--garden-side) * 2)));
+  margin-inline:auto;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(64px,5vw,88px);
+  align-items:center;
+}
+#lysimeter .plantlogic-quality-media{
+  width:max-content;
+  max-width:100%;
+  min-height:0;
+  margin:0;
+  display:block;
+}
+#lysimeter .plantlogic-quality-video-vertical{
+  display:block;
+  width:auto;
+  height:clamp(650px,78vh,720px);
+  max-height:none;
+  max-width:none;
+  aspect-ratio:9/16;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow:0 20px 50px rgba(0,0,0,.26);
+}
+#lysimeter .plantlogic-quality-copy{
+  width:min(100%,760px);
+  justify-self:end;
+  align-self:center;
+}
+@media(max-width:1280px){
+  #lysimeter .plantlogic-quality-grid{
+    gap:48px;
+  }
+  #lysimeter .plantlogic-quality-video-vertical{
+    height:clamp(600px,72vh,660px);
+  }
+}
+@media(max-width:1100px){
+  #lysimeter .plantlogic-quality-grid{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  #lysimeter .plantlogic-quality-media{
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+  #lysimeter .plantlogic-quality-copy{
+    width:100%;
+    max-width:820px;
+    justify-self:start;
+  }
+}
+@media(max-width:760px){
+  #lysimeter .plantlogic-quality-video-vertical{
+    width:min(100%,390px);
+    height:auto;
+    max-height:none;
+  }
+}
