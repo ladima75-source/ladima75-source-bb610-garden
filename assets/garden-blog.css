@@ -78,6 +78,9 @@ body.blog-page{background:#f6f7f2;color:#10261d}
 .blog-byline{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px;font-size:11px;color:#486442;font-weight:650}
 .blog-byline>span{font-weight:450;color:#7a8971;padding-left:18px;border-left:1px solid #cbd5c3}
 .blog-article-cover{margin-top:42px;margin-bottom:0}
+.blog-article-cover-compact{max-width:700px}
+.blog-article-cover-portrait{max-width:800px}
+.blog-page .blog-article-cover-portrait img{object-fit:contain;background:#e8eee0}
 .blog-article-cover img{width:100%;height:auto;max-height:640px;object-fit:cover;object-position:center;border-radius:12px}
 .blog-article-cover img.is-diagram{object-fit:contain;background:#fff;padding:28px}
 .blog-article-cover figcaption{margin-top:13px;font-size:11px;color:#7a8974}
