@@ -524,8 +524,36 @@
     if (hiGrow) {
       const title = hiGrow.querySelector(".higrow-copy h2");
       const lead = hiGrow.querySelector(".higrow-copy p");
-      if (title) title.textContent = "Hi-Grow: схема та робота системи.";
-      if (lead) lead.remove();
+      const copy = hiGrow.querySelector(".higrow-copy");
+      const grid = hiGrow.querySelector(".higrow-grid");
+
+      if (title) title.innerHTML = "Hi-Grow:<br>система для вирощування полуниці над ґрунтом.";
+      if (lead) {
+        lead.className = "higrow-lead";
+        lead.textContent = "Ключовий принцип Hi-Grow — несуча конструкція та дренаж працюють окремо. Коренева зона залишається вище відведення стоку, а ухил дренажного жолоба можна налаштовувати незалежно від висоти опор.";
+      }
+
+      if (copy && !copy.querySelector(".higrow-configs")) {
+        const configs = document.createElement("div");
+        configs.className = "higrow-configs";
+        configs.innerHTML = '<span>На опорах</span><span>Підвісна система</span><span>Горщики / жолоби / мати</span>';
+        copy.append(configs);
+      }
+
+      if (grid && !grid.querySelector(".higrow-facts")) {
+        const facts = document.createElement("div");
+        facts.className = "higrow-facts";
+        facts.innerHTML =
+          '<article><strong>До 27% менше сталі</strong><p>Порівняно з традиційними системами на металевому жолобі — завдяки окремій несучій конструкції та вузькому дренажу.</p></article>' +
+          '<article><strong>Регульований ухил дренажу</strong><p>Ухил жолоба задається кронштейном окремо, тому опори не потребують високоточного вирівнювання по висоті.</p></article>' +
+          '<article><strong>Дренаж відокремлений від коренів</strong><p>Стоки відводяться нижче кореневої зони. Опційний збір дренажу допомагає контролювати вологість у теплиці або тунелі.</p></article>' +
+          '<article><strong>Гнучка конфігурація</strong><p>Hi-Grow працює з горщиками, жолобами та субстратними матами; підтримує inline-крапельниці та крапельниці на кілочках.</p></article>';
+        const proof = grid.querySelector("#proof-higrow");
+        if (proof) grid.insertBefore(facts, proof); else grid.append(facts);
+      }
+
+      const proofCaption = hiGrow.querySelector("#proof-higrow figcaption strong");
+      if (proofCaption) proofCaption.textContent = "Як влаштовано Hi-Grow";
     }
 
     return true;
@@ -562,12 +590,7 @@
     if (familyLead) familyLead.textContent = "Круглий · Квадратний · U-пази · Zephyr V2 · Збір дренажу. Порівнюємо за поливом, дренажем, поверхнею встановлення та щільністю ряду.";
 
     const source = document.querySelector("#technical-source-note");
-    if (source) {
-      const strong = source.querySelector("strong");
-      const p = source.querySelector("p");
-      if (strong) strong.textContent = "Технічні матеріали";
-      if (p) p.textContent = "Фото, креслення та схеми доповнюють опис конструкції, монтажу та застосування.";
-    }
+    if (source) source.remove();
 
     return true;
   };

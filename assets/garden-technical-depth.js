@@ -692,7 +692,6 @@
     makeSystemInterfaces();
     makeMonitoringDeep();
     makeCropEngineering();
-    makeSourceNote();
   };
 
   const boot = () => {
