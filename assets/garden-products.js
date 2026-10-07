@@ -15,7 +15,7 @@
       dimensions: "Ø385 × H362.5 мм",
       legs: "30 мм",
       focus: "Центральна аерація + крайовий дренаж",
-      href: "/product.html?id=1308125"
+      href: "/portfolio-items/new-25-liter-round-pot/"
     },
     {
       no: "1301144 / 1301153 / 1301143",
@@ -87,8 +87,6 @@
   let lastFocus = null;
 
   const cardId = (product) => "product-" + (product.hashNo || product.no.split(" ")[0].split("/")[0]);
-
-  const productUrl = (product) => "/product.html?id=" + encodeURIComponent(product.no.split(" ")[0].split("/")[0]);
 
   const renderCards = (grid) => {
     grid.innerHTML = "";
