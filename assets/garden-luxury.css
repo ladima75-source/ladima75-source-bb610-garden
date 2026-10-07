@@ -810,16 +810,16 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
   padding:42px 0 46px!important;
 }
 #lysimeter .plantlogic-quality-grid{
-  width:min(1540px,calc(100% - (var(--garden-side) * 2)));
+  width:min(1650px,calc(100% - (var(--garden-side) * 2)));
   display:grid;
-  grid-template-columns:minmax(0,1.55fr) minmax(470px,.95fr);
+  grid-template-columns:minmax(0,1fr) minmax(500px,560px);
   gap:clamp(42px,4vw,66px);
   align-items:start;
 }
 #lysimeter .plantlogic-quality-media{
   position:relative;
   min-width:0;
-  margin-top:18px;
+  margin-top:0;
   overflow:hidden;
   border-radius:9px;
   background:#06130d;
