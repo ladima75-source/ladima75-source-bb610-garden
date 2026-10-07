@@ -1,12 +1,17 @@
 (() => {
   const sections = [
-    ['/crops/', 'Культури'], ['/systems/', 'Системи'], ['/catalog/', 'Каталог'], ['/blog/', 'Блог']
+    ['/', 'Головна'],
+    ['/catalog/', 'Каталог', 'garden-nav-catalog'],
+    ['/crops/', 'Культури'],
+    ['/systems/', 'Системи'],
+    ['/blog/', 'Блог']
   ];
-  const markup = sections.map(([href,label]) => `<a href="${href}">${label}</a>`).join('');
-  const market = '<a href="https://market.bb610.com.ua/" target="_blank" rel="noopener">Market ↗</a>';
+  const markup = sections.map(([href,label,className]) => `<a href="${href}"${className ? ` class="${className}"` : ''}>${label}</a>`).join('');
+  const market = '<a class="garden-market" href="https://market.bb610.com.ua/" target="_blank" rel="noopener">BB610 Market ↗</a>';
   const culturePaths = new Set(['/crops/','/blueberry-production/','/strawberry-production/','/rubus-production/','/vegetable-production/']);
   const activeHref = () => {
     const path=location.pathname;
+    if (path === '/') return '/';
     if (culturePaths.has(path)) return '/crops/';
     if (path.startsWith('/systems/')) return '/systems/';
     if (path.startsWith('/accessories/')) return '/catalog/';
@@ -53,7 +58,12 @@
         if(nav){nav.classList.add('garden-desktop-nav');nav.setAttribute('aria-label','Головна навігація');nav.innerHTML=markup;}
         header.querySelector('.header-actions')?.classList.add('garden-header-actions');
         const shop=header.querySelector('.market-link');
-        if(shop){shop.classList.add('garden-market');shop.target='_blank';shop.rel='noopener';}
+        if(shop){
+          shop.classList.add('garden-market');
+          shop.textContent='BB610 Market ↗';
+          shop.target='_blank';
+          shop.rel='noopener';
+        }
         header.querySelector('.header-cta')?.classList.add('garden-project');
         const button=header.querySelector('.menu-button');if(button)button.classList.add('garden-menu-button');
         let menu=header.querySelector('.garden-mobile-nav');
