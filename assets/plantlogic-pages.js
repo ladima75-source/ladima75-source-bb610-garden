@@ -68,7 +68,7 @@
     ["SUBSTRATE / ELEVATED SYSTEM",""],
     ["PRODUCT DETAILS","Деталі продукту"],
     ["RELATED PRODUCTS","Пов’язані продукти"],
-    ["OFFICIAL TECHNICAL MATERIAL","Офіційний технічний матеріал"]
+    ["OFFICIAL TECHNICAL MATERIAL","Технічні матеріали"]
   ]);
   document.querySelectorAll("span,small,div,p").forEach(el => {
     if(el.children.length) return;
