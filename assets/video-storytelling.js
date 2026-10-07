@@ -158,8 +158,8 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="video-band-head">' +
-          '<div><span class="eyebrow">PLANTLOGIC / MOTION STUDY</span><h2>Інженерія, яку краще побачити в русі.</h2></div>' +
-          '<p>Монтаж, геометрія, полив і робота системи — короткі технологічні фрагменти без рекламного шуму.</p>' +
+          '<div><span class="eyebrow">PLANTLOGIC / MOTION STUDY</span><h2>Конструкція в роботі.</h2></div>' +
+          '<p>Монтаж, геометрія, полив і робота системи — у коротких технологічних фрагментах.</p>' +
         '</div>' +
       '</div>';
     const inner = section.querySelector(".wrap");
@@ -177,8 +177,8 @@
       '<div class="wrap higrow-grid">' +
         '<div class="higrow-copy">' +
           '<span class="eyebrow">ПОЛУНИЦЯ / HI-GROW</span>' +
-          '<h2>Hi-Grow — система, яку треба бачити в роботі.</h2>' +
-          '<p>Піднята виробнича зона, модульна несуча конструкція та окремий дренажний контур. Відео показує просторову логіку краще за статичну схему.</p>' +
+          '<h2>Hi-Grow у роботі.</h2>' +
+          '<p>У відео видно підняту виробничу зону, модульну несучу конструкцію та окремий дренажний контур.</p>' +
         '</div>' +
         '<div class="higrow-media"></div>' +
       '</div>';
