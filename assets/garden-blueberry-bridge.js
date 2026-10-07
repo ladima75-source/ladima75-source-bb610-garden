@@ -15,8 +15,8 @@
     if (!section || section.dataset.fieldStoriesPolished === '1') return;
 
     const title = section.querySelector('.lux-field-head h2');
-    if (title && title.textContent !== 'PlantLogic у реальних системах') {
-      title.textContent = 'PlantLogic у реальних системах';
+    if (title && title.textContent !== 'PlantLogic у реальних системах вирощування') {
+      title.textContent = 'PlantLogic у реальних системах вирощування';
     }
 
     const note = section.querySelector('.lux-field-head > p');
@@ -26,11 +26,11 @@
     if (rubus) {
       const strong = rubus.querySelector('strong');
       const body = rubus.querySelector('p');
-      if (strong && strong.textContent !== 'Горщик у виробничому ряду.') {
-        strong.textContent = 'Горщик у виробничому ряду.';
+      if (strong && strong.textContent !== 'Контейнер у виробничому ряду.') {
+        strong.textContent = 'Контейнер у виробничому ряду.';
       }
-      if (body && body.textContent !== 'Полив, дренаж, стабільність високих пагонів і зручний доступ персоналу.') {
-        body.textContent = 'Полив, дренаж, стабільність високих пагонів і зручний доступ персоналу.';
+      if (body && body.textContent !== 'Полив, дренаж, стабільність високих пагонів і доступ персоналу.') {
+        body.textContent = 'Полив, дренаж, стабільність високих пагонів і доступ персоналу.';
       }
     }
 
@@ -47,10 +47,10 @@
     document.querySelectorAll('a[href="#strawberry"],a[href="#lux-strawberry"]').forEach(link => link.setAttribute('href','/strawberry-production/'));
     document.querySelectorAll('a[href="#rubus"],a[href="#lux-rubus"]').forEach(link => link.setAttribute('href','/rubus-production/'));
     document.querySelectorAll('a[href="#vegetable"],a[href="#vegetables"],a[href="#lux-vegetable"]').forEach(link => link.setAttribute('href','/vegetable-production/'));
-    appendLink(document.querySelector('#lux-rubus .lux-field-copy'),'/rubus-production/','13 моделей · технологія →','rubus-crop-entry');
-    appendLink(document.querySelector('#lux-vegetable .lux-field-copy'),'/vegetable-production/','Овочі · система, горщики та основи →','vegetable-crop-entry');
-    appendLink(document.querySelector('#lux-blueberry .lux-field-copy'),'/blueberry-production/','Вирощування лохини · каталог і технологія →','blueberry-crop-entry');
-    appendLink(document.querySelector('#lux-strawberry .lux-field-copy'),'/strawberry-production/','Вирощування полуниці · Hi-Grow і компоненти →','strawberry-crop-entry');
+    appendLink(document.querySelector('#lux-rubus .lux-field-copy'),'/rubus-production/','Моделі та технологія →','rubus-crop-entry');
+    appendLink(document.querySelector('#lux-vegetable .lux-field-copy'),'/vegetable-production/','Безґрунтове вирощування овочів · системи й горщики →','vegetable-crop-entry');
+    appendLink(document.querySelector('#lux-blueberry .lux-field-copy'),'/blueberry-production/','Лохина в контейнерах · моделі й технологія →','blueberry-crop-entry');
+    appendLink(document.querySelector('#lux-strawberry .lux-field-copy'),'/strawberry-production/','Безґрунтове вирощування полуниці · Hi-Grow →','strawberry-crop-entry');
     appendLink(document.querySelector('#strawberry .section-heading') || document.querySelector('#strawberry'),'/systems/hi-grow/','Hi-Grow · настільна та підвісна система →','strawberry-system-entry');
     const foot = document.querySelector('.garden-products-foot');
     if (foot && !foot.dataset.catalogRoute) {
