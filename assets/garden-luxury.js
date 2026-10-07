@@ -440,8 +440,8 @@
       if (head) {
         const h2 = head.querySelector("h2");
         const p = head.querySelector("p");
-        if (h2) h2.textContent = "Конструкція та її робота.";
-        if (p) p.textContent = "Коренева зона, дренаж, U-пази та Zephyr V2 — на фотографіях, схемах і відео конструкції.";
+        if (h2) h2.textContent = "Як конструкція працює з кореневою зоною.";
+        if (p) p.textContent = "Не перелік деталей, а чотири принципи: як контейнер працює з корінням, відводить зайву воду, забезпечує повітрообмін і утримує поливну лінію.";
       }
 
       const proof = document.createElement("div");
@@ -449,20 +449,20 @@
       proof.innerHTML =
         '<article class="proof-principle proof-principle-photo">' +
           '<figure class="proof-card-media"><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Коренева маса лохини після вирощування у горщику PlantLogic" loading="lazy"></figure>' +
-          '<div class="proof-card-copy"><h3>Фактична коренева маса</h3><p>Кореневий ком після виробничого циклу: видно форму й розподіл коренів у субстраті.</p><a class="proof-card-link" href="/blueberry-production/">Вирощування лохини ↗</a></div>' +
+          '<div class="proof-card-copy"><h3>Коріння освоює весь об’єм контейнера</h3><p>На фактичному кореневому комі видно, як корені розподіляються по висоті та ширині субстрату, а не концентруються лише біля дна.</p><a class="proof-card-link" href="/blueberry-production/">Вирощування лохини ↗</a></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-diagram">' +
           '<figure class="proof-card-media proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Схема дренажу та повітрообміну круглого горщика PlantLogic 20 л" loading="lazy"></figure>' +
-          '<div class="proof-card-copy"><h3>Дренаж і повітрообмін</h3><p>Схема круглого горщика 20 л показує рух води, відкриту основу та простір під контейнером.</p><a class="proof-card-link" href="/portfolio-items/20-liter-round-pot/">Круглий горщик 20 л ↗</a></div>' +
+          '<div class="proof-card-copy"><h3>Зайва вода виходить вниз, повітря заходить знизу</h3><p>Відкрита основа та зазор під горщиком дають дренажу вільний вихід і залишають нижню частину контейнера відкритою для повітрообміну.</p><a class="proof-card-link" href="/portfolio-items/20-liter-round-pot/">Круглий горщик 20 л ↗</a></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-motion" id="proof-square-ugroove">' +
           '<div class="proof-video-slot" data-proof-slot="ugroove-irrigation"></div>' +
-          '<div class="proof-card-copy"><h3>U-пази у квадратному горщику</h3><p>На відео — квадратна модель 40 л із бічними отворами. Видно розташування U-пазів уздовж краю та встановлення поливної труби.</p><ul class="proof-card-facts"><li>Поливна лінія на краю контейнера</li><li>Відкрита основа для відведення води</li><li>Бічні отвори для повітрообміну</li></ul><a class="proof-card-link" href="/catalog/#pots">Горщики для вашої технології ↗</a></div>' +
+          '<div class="proof-card-copy"><h3>Поливна лінія фіксується на краю й не заважає дренажу</h3><p>U-пази утримують поливну трубу вздовж краю контейнера. Дно та бічні отвори залишаються відкритими для відведення води й повітрообміну.</p><ul class="proof-card-facts"><li>Труба зафіксована вздовж краю</li><li>Дно залишається відкритим</li><li>Бічні отвори не перекриваються</li></ul><a class="proof-card-link" href="/catalog/#pots">Горщики для вашої технології ↗</a></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-zephyr" id="proof-zephyr">' +
-          '<div class="proof-zephyr-heading"><h3>Zephyr V2: аерація по висоті контейнера</h3><a class="proof-card-link" href="/portfolio-items/zephyr-v2/">Моделі 25, 30 і 40 л ↗</a></div>' +
+          '<div class="proof-zephyr-heading"><h3>Zephyr V2 подає повітря до субстрату на кількох рівнях</h3><a class="proof-card-link" href="/portfolio-items/zephyr-v2/">Моделі 25, 30 і 40 л ↗</a></div>' +
           '<figure class="proof-zephyr-schema"><button class="proof-diagram-open" type="button" aria-label="Збільшити схему Zephyr V2"><img src="/media/diagrams-uk/zephyr-v2-airflow-wide-uk.webp?v=' + VERSION + '" alt="Схема Zephyr V2: зони аерації, рух води та окрема основа" loading="lazy"><span class="proof-diagram-hint">Збільшити схему ⤢</span></button></figure>' +
-          '<div class="proof-zephyr-detail"><div class="proof-video-slot" data-proof-slot="zephyr-v2-install"></div><div class="proof-card-copy"><h4>Окрема база. Ніжки 7 см.</h4><p>Широка схема показує зони аерації та рух води у субстраті. На відео — з’єднання оболонки Zephyr V2 з основою.</p><a class="proof-card-link" href="/media/tech-sheets-uk/zephyr-v2-uk.pdf?v=20261006-clean-v2" target="_blank" rel="noopener">Технічний лист українською ↗</a></div></div>' +
+          '<div class="proof-zephyr-detail"><div class="proof-video-slot" data-proof-slot="zephyr-v2-install"></div><div class="proof-card-copy"><h4>Основа піднімає контейнер над поверхнею</h4><p>Ніжки висотою 7 см створюють зазор під контейнером: нижні отвори не перекриваються поверхнею, а зайва вода може вільно відводитися з кореневої зони.</p><a class="proof-card-link" href="/media/tech-sheets-uk/zephyr-v2-uk.pdf?v=20261006-clean-v2" target="_blank" rel="noopener">Технічний лист українською ↗</a></div></div>' +
         '</article>';
       technical.querySelector(".wrap")?.append(proof);
       const dialog = document.createElement("dialog");
