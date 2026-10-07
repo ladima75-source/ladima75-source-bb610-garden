@@ -204,17 +204,12 @@
     enhanceArrows();
   };
 
-  let raf = 0;
-  const schedule = () => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(run);
+  const boot = () => {
+    run();
+    [220, 700, 1600, 3200].forEach((delay) => setTimeout(run, delay));
   };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", run, {once:true});
-  } else run();
-
-  const observer = new MutationObserver(schedule);
-  observer.observe(document.documentElement,{subtree:true,childList:true});
-  const canonicalTimer=setInterval(run,500); setTimeout(()=>{clearInterval(canonicalTimer);observer.disconnect();},15000);
+    document.addEventListener("DOMContentLoaded", boot, {once:true});
+  } else boot();
 })();

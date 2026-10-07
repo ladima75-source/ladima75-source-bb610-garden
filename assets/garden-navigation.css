@@ -32,14 +32,25 @@ body.garden-has-header .site-shell{padding-top:0!important}
 
 /* 2026-10-07 navigation hierarchy */
 .garden-site-header .garden-desktop-nav .garden-nav-catalog{
-  color:#d7ff79!important;
+  background:#d7f58c!important;
+  color:#102117!important;
+  border:0!important;
+  border-radius:4px!important;
+  min-height:48px!important;
+  padding:15px 20px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  font-size:14px!important;
   font-weight:700!important;
-  padding:7px 0 6px!important;
-  border-bottom:1px solid rgba(215,255,121,.75)!important;
+  line-height:1.3!important;
+  text-decoration:none!important;
 }
-.garden-site-header .garden-desktop-nav .garden-nav-catalog:hover{
-  color:#ecffb8!important;
-  border-bottom-color:#ecffb8!important;
+.garden-site-header .garden-desktop-nav .garden-nav-catalog:hover,
+.garden-site-header .garden-desktop-nav .garden-nav-catalog[aria-current]{
+  background:#e3f9a7!important;
+  color:#102117!important;
+  text-decoration:none!important;
 }
 .garden-site-header .garden-market{
   font-weight:650!important;

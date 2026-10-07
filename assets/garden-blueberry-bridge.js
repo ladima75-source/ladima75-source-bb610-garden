@@ -68,14 +68,6 @@
   else start();
   function start() {
     enhance();
-    let scheduled = false;
-    new MutationObserver(() => {
-      if (scheduled) return;
-      scheduled = true;
-      requestAnimationFrame(() => {
-        scheduled = false;
-        enhance();
-      });
-    }).observe(document.querySelector('#root') || document.body, {childList:true,subtree:true});
+    [300, 900, 2000, 3500].forEach((delay) => setTimeout(enhance, delay));
   }
 })();

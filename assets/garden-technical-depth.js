@@ -695,16 +695,14 @@
     makeSourceNote();
   };
 
-  let tries = 0;
-  const timer = setInterval(() => {
+  const boot = () => {
     run();
-    tries += 1;
-    if (tries > 80) clearInterval(timer);
-  }, 180);
+    [240, 720, 1600, 3200].forEach((delay) => setTimeout(run, delay));
+  };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", run, { once: true });
+    document.addEventListener("DOMContentLoaded", boot, { once: true });
   } else {
-    run();
+    boot();
   }
 })();

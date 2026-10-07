@@ -23,7 +23,7 @@
     const current=activeHref();
     header.querySelectorAll('nav a').forEach(a=>{
       const url=new URL(a.getAttribute('href'),location.href);
-      const active=url.pathname+url.hash===current;
+      const active=url.origin===location.origin && url.pathname+url.hash===current;
       a.classList.toggle('is-active',active);
       if (active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
@@ -56,7 +56,7 @@
     });
   };
   const syncHeader = header => {
-    header.dataset.gardenArchitectureAudit='20261007-nav-v4';
+    header.dataset.gardenArchitectureAudit='20261007-nav-v5';
     header.classList.add('garden-site-header');
     document.body.classList.add('garden-has-header');
 
@@ -125,7 +125,7 @@
 
     const footer=document.querySelector('footer');
     if (footer && !footer.dataset.gardenArchitectureAudit) {
-      footer.dataset.gardenArchitectureAudit='20261007-nav-v4';
+      footer.dataset.gardenArchitectureAudit='20261007-nav-v5';
       const heading=[...footer.querySelectorAll('h2,h3')].find(h=>h.textContent.trim()==='GARDEN');
       const group=heading?.parentElement || footer.querySelector('a[href="/catalog/"]')?.parentElement;
       if(group){
@@ -163,10 +163,19 @@
     setTimeout(()=>observer.disconnect(),10000);
   };
   const start=()=>{
-    enhance();
+    const mountHeader=()=>{
+      if(!document.querySelector('header')) return false;
+      enhance();
+      return true;
+    };
+    if(!mountHeader()){
+      const observer=new MutationObserver(()=>{
+        if(mountHeader()) observer.disconnect();
+      });
+      observer.observe(document.querySelector('#root')||document.body,{subtree:true,childList:true});
+      setTimeout(()=>observer.disconnect(),4000);
+    }
     settleInitialAnchor();
-    const observer=new MutationObserver(enhance);
-    observer.observe(document.querySelector('#root')||document.body,{subtree:true,childList:true});
     window.addEventListener('hashchange',()=>{const header=document.querySelector('header');if(header)updateActive(header);});
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();

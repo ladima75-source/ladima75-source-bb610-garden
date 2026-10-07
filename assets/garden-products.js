@@ -255,16 +255,14 @@
   });
   window.addEventListener("hashchange", openFromHash);
 
-  let tries = 0;
-  const timer = setInterval(() => {
-    const ready = mount();
-    tries += 1;
-    if (ready || tries > 100) clearInterval(timer);
-  }, 180);
+  const boot = () => {
+    if (mount()) return;
+    [250, 750, 1600, 3200].forEach((delay) => setTimeout(mount, delay));
+  };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", mount, { once: true });
+    document.addEventListener("DOMContentLoaded", boot, { once: true });
   } else {
-    mount();
+    boot();
   }
 })();
