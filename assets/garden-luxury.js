@@ -163,7 +163,7 @@
     const figure = document.createElement("figure");
     figure.className = "lux-zephyr-diagram";
     figure.innerHTML =
-      '<img src="/media/diagrams-uk/zephyr-v2-section-11-uk.webp?v=' + VERSION + '" alt="Офіційна технічна схема Zephyr V2 PlantLogic" loading="lazy">' +
+      '<img src="/media/diagrams-uk/zephyr-v2-section-11-uk.webp?v=' + VERSION + '" alt="Технічна схема Zephyr V2 PlantLogic" loading="lazy">' +
       '<figcaption><strong>Zephyr V2 · геометрія кореневої зони</strong></figcaption>';
     copy.append(figure);
     return true;
@@ -195,11 +195,11 @@
         '<div class="proof-band-copy">' +
           '<span class="proof-label">КОРЕНЕВА ЗОНА</span>' +
           '<h3>Фактична коренева маса показує розподіл коренів у робочому об’ємі.</h3>' +
-          '<p>Фото кореневої зони ставимо поруч з офіційною схемою Round, щоб пояснення води, повітря та дренажу читалось через реальний результат і геометрію контейнера.</p>' +
+          '<p>Фото кореневої зони ставимо поруч зі схемою круглої моделі, щоб показати зв’язок між геометрією контейнера та розподілом коренів.</p>' +
         '</div>' +
         '<div class="proof-band-media proof-band-media-double">' +
           '<figure><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Root zone blueberry PlantLogic" loading="lazy"><figcaption>Фактична коренева зона</figcaption></figure>' +
-          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="20L Round Pot official PlantLogic diagram" loading="lazy"><figcaption>Офіційна схема · 20 л</figcaption></figure>' +
+          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Схема круглого горщика PlantLogic 20 л" loading="lazy"><figcaption>Схема круглої моделі · 20 л</figcaption></figure>' +
         '</div>';
       rootZone.append(band);
     }
@@ -210,11 +210,11 @@
       block.className = "proof-feature proof-feature-ugroove";
       block.id = "proof-ugroove";
       block.innerHTML =
-        '<div class="proof-feature-media proof-white"><img src="/media/diagrams-uk/ugroove-item-13080350-dimensions-uk.webp?v=' + VERSION + '" alt="Офіційне технічне креслення PlantLogic з U-пазами" loading="lazy"></div>' +
+        '<div class="proof-feature-media proof-white"><img src="/media/diagrams-uk/ugroove-item-13080350-dimensions-uk.webp?v=' + VERSION + '" alt="Технічне креслення PlantLogic з U-пазами" loading="lazy"></div>' +
         '<div class="proof-feature-copy">' +
           '<span class="proof-label">U-ПАЗИ</span>' +
           '<h3>U-пази задають фіксоване положення поливної труби.</h3>' +
-          '<p>Офіційне технічне креслення показує саму геометрію посадочного місця для поливної труби. Поруч залишаємо тільки коротке пояснення монтажної логіки.</p>' +
+          '<p>Технічне креслення показує геометрію посадкового місця для поливної труби та принцип її фіксації.</p>' +
         '</div>';
       geometry.after(block);
     }
@@ -225,7 +225,7 @@
       block.className = "proof-band proof-drainage-band";
       block.id = "proof-drainage";
       block.innerHTML =
-        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="25L Drainage Collection official technical drawing" loading="lazy"><figcaption>Офіційне креслення · горщик 25 л зі збором дренажу</figcaption></figure></div>' +
+        '<div class="proof-band-media proof-white"><figure><img src="/media/proof/drainage-25l-tech-drawing.png?v=' + VERSION + '" alt="Технічне креслення горщика 25 л зі збором дренажу" loading="lazy"><figcaption>Технічне креслення · горщик 25 л зі збором дренажу</figcaption></figure></div>' +
         '<div class="proof-band-copy">' +
           '<span class="proof-label">ЗБІР ДРЕНАЖУ</span>' +
           '<h3>Геометрія виходу спрямовує дренаж у визначений контур.</h3>' +
@@ -262,8 +262,8 @@
       block.className = "proof-higrow proof-white";
       block.id = "proof-higrow";
       block.innerHTML =
-        '<img src="/media/diagrams-uk/pl_technology_hi_grow_trough_system_plantlogic_1_diagram_1680_ua.webp?v=' + VERSION + '" alt="Офіційна схема PlantLogic Hi-Grow для жолобів" loading="lazy">' +
-        '<figcaption><span>HI-GROW</span><strong>Офіційна схема системи</strong></figcaption>';
+        '<img src="/media/diagrams-uk/pl_technology_hi_grow_trough_system_plantlogic_1_diagram_1680_ua.webp?v=' + VERSION + '" alt="Схема PlantLogic Hi-Grow для жолобів" loading="lazy">' +
+        '<figcaption><span>HI-GROW</span><strong>Схема системи</strong></figcaption>';
       strawberry.append(block);
     }
 
@@ -404,8 +404,8 @@
       if (visual) {
         visual.className = "root-zone-proof-media";
         visual.innerHTML =
-          '<figure class="root-zone-proof-main"><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Blueberry root zone PlantLogic" loading="lazy"><figcaption>FIELD PHOTO / ROOT ZONE</figcaption></figure>' +
-          '<figure class="root-zone-proof-drawing proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Round Pot official diagram PlantLogic" loading="lazy"><figcaption>OFFICIAL ROUND DIAGRAM</figcaption></figure>';
+          '<figure class="root-zone-proof-main"><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Blueberry root zone PlantLogic" loading="lazy"><figcaption>Коренева зона · фото з виробництва</figcaption></figure>' +
+          '<figure class="root-zone-proof-drawing proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Схема круглого горщика PlantLogic" loading="lazy"><figcaption>Схема круглої моделі</figcaption></figure>';
       }
 
       const heading = rootZone.querySelector(".root-zone-copy h2");
@@ -487,8 +487,8 @@
     if (source) {
       const strong = source.querySelector("strong");
       const p = source.querySelector("p");
-      if (strong) strong.textContent = "Джерело технічних матеріалів";
-      if (p) p.textContent = "Фото, креслення та схеми на сторінці взяті з офіційного медіаархіву й технічних матеріалів PlantLogic. Текст використовується тільки для пояснення того, що показано візуально.";
+      if (strong) strong.textContent = "Технічні матеріали";
+      if (p) p.textContent = "Фото, креслення та схеми доповнюють опис конструкції, монтажу та застосування.";
     }
 
     return true;
