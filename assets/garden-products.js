@@ -75,8 +75,8 @@
           '<dl class="garden-product-detail-specs"></dl>' +
           '<div class="garden-product-detail-facts"><h3>Конструктивні особливості</h3><ul></ul></div>' +
           '<div class="garden-product-detail-source">' +
-            '<span>Джерело технічних даних</span>' +
-            '<a target="_blank" rel="noreferrer">Офіційна сторінка PlantLogic ↗</a>' +
+            '<span>Додаткові матеріали</span>' +
+            '<a target="_blank" rel="noreferrer">Технічна сторінка PlantLogic ↗</a>' +
           '</div>' +
         '</div>' +
       '</section>';
