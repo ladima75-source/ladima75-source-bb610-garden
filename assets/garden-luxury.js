@@ -290,23 +290,12 @@
     section.className = "plantlogic-quality section";
     section.innerHTML = `
       <div class="wrap plantlogic-quality-grid">
-        <div class="plantlogic-quality-media" aria-label="PlantLogic: виробництво, монтаж і робота систем">
-          <figure class="plantlogic-quality-screen">
-            <img src="/media/video/corporate-quality-poster.webp?v=20261007-quality-4screen-v1"
-              alt="Виробництво PlantLogic на власному заводі" loading="lazy" decoding="async">
-          </figure>
-          <figure class="plantlogic-quality-screen">
-            <img src="/media/video/zephyr-v2-install-poster.webp?v=20261007-quality-4screen-v1"
-              alt="Монтаж Zephyr V2 на основу" loading="lazy" decoding="async">
-          </figure>
-          <figure class="plantlogic-quality-screen">
-            <img src="/media/video/ugroove-irrigation-poster.webp?v=20261007-quality-4screen-v1"
-              alt="Горщик PlantLogic з U-пазами для поливної труби" loading="lazy" decoding="async">
-          </figure>
-          <figure class="plantlogic-quality-screen">
-            <img src="/media/video/higrow-strawberry-poster.webp?v=20261007-quality-4screen-v1"
-              alt="Hi-Grow PlantLogic у виробничій теплиці" loading="lazy" decoding="async">
-          </figure>
+        <div class="plantlogic-quality-media">
+          <video class="plantlogic-quality-video plantlogic-quality-video-vertical" muted loop playsinline preload="none"
+            poster="/media/video/plantlogic_4_vertical_web-poster.webp?v=20261007-quality-video-v1"
+            aria-label="PlantLogic: випробування міцності горщика у чотирьох відеокадрах">
+            <source data-src="/media/video/plantlogic_4_vertical_web.mp4?v=20261007-quality-video-v1" type="video/mp4">
+          </video>
         </div>
 
         <div class="plantlogic-quality-copy">
@@ -338,6 +327,35 @@
         </div>
       </div>
     `;
+
+    const qualityVideo = section.querySelector(".plantlogic-quality-video");
+    if (qualityVideo) {
+      const activateQualityVideo = () => {
+        if (qualityVideo.dataset.loaded) return;
+        qualityVideo.dataset.loaded = "1";
+        qualityVideo.querySelectorAll("source[data-src]").forEach((source) => {
+          source.src = source.dataset.src;
+          source.removeAttribute("data-src");
+        });
+        qualityVideo.load();
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          qualityVideo.autoplay = true;
+          qualityVideo.setAttribute("autoplay", "");
+          qualityVideo.play().catch(() => {});
+        }
+      };
+
+      if ("IntersectionObserver" in window) {
+        const qualityObserver = new IntersectionObserver((entries, observer) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          activateQualityVideo();
+          observer.disconnect();
+        }, { rootMargin: "500px 0px", threshold: 0 });
+        qualityObserver.observe(qualityVideo);
+      } else {
+        activateQualityVideo();
+      }
+    }
 
     return true;
   };
