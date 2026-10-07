@@ -362,30 +362,39 @@
       if (head) {
         const h2 = head.querySelector("h2");
         const p = head.querySelector("p");
-        if (h2) h2.textContent = "Що саме підтверджує конструкцію PlantLogic.";
-        if (p) p.textContent = "Не перелік переваг, а чотири речі, які можна побачити: кореневу масу, геометрію дна, інтеграцію поливу та конструкцію Zephyr V2.";
+        if (h2) h2.textContent = "Конструкція, яку можна роздивитися.";
+        if (p) p.textContent = "Коренева зона, дренаж, U-пази та Zephyr V2 — на фотографіях, схемах і у відео роботи виробів.";
       }
 
       const proof = document.createElement("div");
       proof.className = "proof-principles";
       proof.innerHTML =
         '<article class="proof-principle proof-principle-photo">' +
-          '<figure><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Root zone PlantLogic blueberry" loading="lazy"></figure>' +
-          '<div><span>01 / ROOT ZONE</span><h3>Фактична коренева маса</h3><p>Фото показує результат роботи кореневої зони без декоративної інтерпретації. Далі пояснюємо, які елементи конструкції впливають на рух води та повітря.</p></div>' +
+          '<figure class="proof-card-media"><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Коренева маса лохини після вирощування у горщику PlantLogic" loading="lazy"></figure>' +
+          '<div class="proof-card-copy"><h3>Фактична коренева маса</h3><p>Кореневий ком після виробничого циклу: видно форму й розподіл коренів у субстраті.</p><a class="proof-card-link" href="/blueberry-production/">Вирощування лохини ↗</a></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-diagram">' +
-          '<figure class="proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="20L Round Pot official diagram" loading="lazy"></figure>' +
-          '<div><span>02 / ROUND BASE</span><h3>Геометрія дна і опор</h3><p>Офіційна схема дозволяє побачити профіль контейнера, основу та розташування конструктивних зон замість абстрактної розмови про «дренаж».</p></div>' +
+          '<figure class="proof-card-media proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Схема дренажу та повітрообміну круглого горщика PlantLogic 20 л" loading="lazy"></figure>' +
+          '<div class="proof-card-copy"><h3>Дренаж і повітрообмін</h3><p>Схема круглого горщика 20 л показує рух води, відкриту основу та простір під контейнером.</p><a class="proof-card-link" href="/portfolio-items/20-liter-round-pot/">Круглий горщик 20 л ↗</a></div>' +
         '</article>' +
-        '<article class="proof-principle proof-principle-diagram">' +
-          '<figure class="proof-white"><img src="/media/diagrams-uk/ugroove-item-13080350-dimensions-uk.webp?v=' + VERSION + '" alt="Офіційне технічне креслення з U-пазами" loading="lazy"></figure>' +
-          '<div><span>03 / U-GROOVE</span><h3>Поливна труба інтегрована у форму</h3><p>На кресленні видно сам паз і його положення. Технічне пояснення залишається коротким: навіщо це монтажу та повторюваності ряду.</p></div>' +
+        '<article class="proof-principle proof-principle-motion" id="proof-square-ugroove">' +
+          '<div class="proof-video-slot" data-proof-slot="ugroove-irrigation"></div>' +
+          '<div class="proof-card-copy"><h3>U-пази у квадратному горщику</h3><p>На відео — квадратна модель 40 л із бічними отворами. Видно розташування U-пазів уздовж краю та встановлення поливної труби.</p><ul class="proof-card-facts"><li>Поливна лінія на краю контейнера</li><li>Відкрита основа для відведення води</li><li>Бічні отвори для повітрообміну</li></ul><a class="proof-card-link" href="/catalog/#pots">Горщики для вашої технології ↗</a></div>' +
         '</article>' +
-        '<article class="proof-principle proof-principle-diagram">' +
-          '<figure class="proof-white"><img src="/media/diagrams-uk/zephyr-v2-section-11-uk.webp?v=' + VERSION + '" alt="Офіційна технічна схема Zephyr V2" loading="lazy"></figure>' +
-          '<div><span>04 / ZEPHYR V2</span><h3>Висока опора і окрема база</h3><p>Офіційна технічна пластина показує, чому Zephyr V2 — окрема конструктивна платформа, а не просто інша форма контейнера.</p></div>' +
+        '<article class="proof-principle proof-principle-zephyr" id="proof-zephyr">' +
+          '<div class="proof-zephyr-heading"><h3>Zephyr V2: аерація по висоті контейнера</h3><a class="proof-card-link" href="/portfolio-items/zephyr-v2/">Моделі 25, 30 і 40 л ↗</a></div>' +
+          '<figure class="proof-zephyr-schema"><button class="proof-diagram-open" type="button" aria-label="Збільшити схему Zephyr V2"><img src="/media/diagrams-uk/zephyr-v2-airflow-wide-uk.webp?v=' + VERSION + '" alt="Схема Zephyr V2: зони аерації, рух води та окрема основа" loading="lazy"><span class="proof-diagram-hint">Збільшити схему ⤢</span></button></figure>' +
+          '<div class="proof-zephyr-detail"><div class="proof-video-slot" data-proof-slot="zephyr-v2-install"></div><div class="proof-card-copy"><h4>Окрема база. Ніжки 7 см.</h4><p>Широка схема показує зони аерації та рух води у субстраті. На відео — з’єднання оболонки Zephyr V2 з основою.</p><a class="proof-card-link" href="/media/tech-sheets-uk/zephyr-v2-uk.pdf?v=20261006-clean-v2" target="_blank" rel="noopener">Технічний лист українською ↗</a></div></div>' +
         '</article>';
       technical.querySelector(".wrap")?.append(proof);
+      const dialog = document.createElement("dialog");
+      dialog.className = "proof-diagram-dialog";
+      dialog.setAttribute("aria-label", "Схема Zephyr V2 у повному розмірі");
+      dialog.innerHTML = '<button class="proof-diagram-close" type="button" aria-label="Закрити схему">×</button><img src="/media/diagrams-uk/zephyr-v2-airflow-wide-uk.webp" alt="Українська технічна схема Zephyr V2">';
+      technical.append(dialog);
+      proof.querySelector(".proof-diagram-open").addEventListener("click", () => dialog.showModal());
+      dialog.querySelector(".proof-diagram-close").addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
     }
 
     const rootZone = document.querySelector("#root-zone");
@@ -414,22 +423,14 @@
   const integrateVideoProofs = () => {
     const proofArticles = document.querySelectorAll("#technical-core .proof-principle");
     if (proofArticles.length >= 4) {
-      const placements = [
-        { key: "ugroove-irrigation", index: 2, label: "U-GROOVE / MOTION" },
-        { key: "zephyr-v2-install", index: 3, label: "ZEPHYR V2 / MOTION" }
-      ];
+      const placements = ["ugroove-irrigation", "zephyr-v2-install"];
 
-      placements.forEach(({key,index,label}) => {
+      placements.forEach((key) => {
         const figure = document.querySelector('[data-video-story="' + key + '"]');
-        const article = proofArticles[index];
-        if (!figure || !article || article.querySelector('[data-proof-motion="' + key + '"]')) return;
-
-        const inset = document.createElement("div");
-        inset.className = "proof-motion-inset";
-        inset.dataset.proofMotion = key;
-        inset.innerHTML = '<span class="proof-motion-label">' + label + '</span>';
-        inset.append(figure);
-        article.append(inset);
+        const slot = document.querySelector('[data-proof-slot="' + key + '"]');
+        if (!figure || !slot || slot.contains(figure)) return;
+        slot.append(figure);
+        figure.querySelector("video").setAttribute("aria-label", key === "ugroove-irrigation" ? "Квадратний горщик 40 л: встановлення поливної труби у U-пази" : "Монтаж оболонки Zephyr V2 на основу");
       });
 
       const blueberry = document.querySelector("#blueberry");
