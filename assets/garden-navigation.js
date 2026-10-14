@@ -1,4 +1,176 @@
 (() => {
+  const GA_ID = 'G-VEW179P3PW';
+  const MARKET_HOST = 'market.bb610.com.ua';
+
+  if (!window.__bb610GardenGa4) {
+    window.__bb610GardenGa4 = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+
+    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+      const tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
+      document.head.append(tag);
+    }
+
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, {
+      send_page_view: true,
+      cookie_domain: 'auto'
+    });
+  }
+
+  const text = (node) => (node?.textContent || '').replace(/\s+/g, ' ').trim();
+
+  const parseJsonLdProduct = () => {
+    for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+      try {
+        const value = JSON.parse(script.textContent || '{}');
+        const list = Array.isArray(value) ? value : [value];
+        for (const item of list) {
+          if (item && item['@type'] === 'Product') return item;
+          if (Array.isArray(item?.['@graph'])) {
+            const product = item['@graph'].find(x => x?.['@type'] === 'Product');
+            if (product) return product;
+          }
+        }
+      } catch (_) {}
+    }
+    return null;
+  };
+
+  const idFromText = (value) => {
+    const raw = String(value || '');
+    const labeled = raw.match(/(?:Product\s*#|Код(?:\s+моделі)?|Артикул)\s*[:#]?\s*([A-Za-z0-9-]+)/i);
+    if (labeled) return labeled[1];
+    const numeric = raw.match(/\b(\d{5,8})\b/);
+    return numeric ? numeric[1] : '';
+  };
+
+  const idFromHref = (href) => {
+    try {
+      const url = new URL(href, location.href);
+      const id = url.searchParams.get('id');
+      if (id) return id;
+      const match = url.pathname.match(/\/portfolio-items\/([^/]+)/);
+      return match ? match[1] : '';
+    } catch (_) {
+      return '';
+    }
+  };
+
+  const currentProduct = () => {
+    const isProduct = location.pathname.startsWith('/portfolio-items/') || location.pathname === '/product.html';
+    if (!isProduct) return null;
+
+    const ld = parseJsonLdProduct();
+    const name = ld?.name || text(document.querySelector('h1')) || document.title;
+    const domId =
+      idFromText(text(document.querySelector('.product-no,[data-product-no]'))) ||
+      new URL(location.href).searchParams.get('id') ||
+      ld?.sku ||
+      idFromHref(location.href);
+
+    return {
+      item_id: String(domId || '').trim(),
+      item_name: String(name || '').trim(),
+      item_brand: 'PlantLogic'
+    };
+  };
+
+  const productFromLink = (anchor) => {
+    const card = anchor.closest('[data-product-no],.catalog-card,.garden-product-card') || anchor;
+    const itemId =
+      card?.dataset?.productNo ||
+      idFromText(text(card.querySelector?.('.garden-product-meta,.product-no,[data-product-no]'))) ||
+      idFromText(text(card)) ||
+      idFromHref(anchor.href);
+    const itemName =
+      text(card.querySelector?.('h3,h2')) ||
+      anchor.getAttribute('aria-label')?.replace(/^Детальніше про\s+/i,'') ||
+      text(anchor) ||
+      itemId;
+
+    return {
+      item_id: String(itemId || '').trim(),
+      item_name: String(itemName || '').trim(),
+      item_brand: 'PlantLogic'
+    };
+  };
+
+  const listName = (anchor) => {
+    const section = anchor.closest('section');
+    return text(section?.querySelector('h2,h1')) || (location.pathname === '/catalog/' ? 'Каталог' : 'BB610 Garden');
+  };
+
+  const decorateMarketUrl = (anchor, product) => {
+    try {
+      const url = new URL(anchor.href, location.href);
+      if (url.hostname !== MARKET_HOST) return;
+      if (!url.searchParams.has('utm_source')) url.searchParams.set('utm_source','bb610_garden');
+      if (!url.searchParams.has('utm_medium')) url.searchParams.set('utm_medium','referral');
+      if (!url.searchParams.has('utm_campaign')) url.searchParams.set('utm_campaign','garden_to_market');
+      if (product?.item_id && !url.searchParams.has('utm_content')) url.searchParams.set('utm_content',product.item_id);
+      anchor.href = url.toString();
+    } catch (_) {}
+  };
+
+  const sendViewItem = () => {
+    if (window.__bb610GardenViewItemSent) return;
+    const item = currentProduct();
+    if (!item?.item_id && !item?.item_name) return;
+    window.__bb610GardenViewItemSent = true;
+    window.gtag('event','view_item',{items:[item]});
+  };
+
+  const bindAnalytics = () => {
+    sendViewItem();
+
+    document.addEventListener('click', (event) => {
+      const anchor = event.target.closest?.('a[href]');
+      if (!anchor) return;
+
+      let url;
+      try { url = new URL(anchor.href, location.href); } catch (_) { return; }
+
+      const isProductSelection =
+        anchor.matches('.catalog-card,.garden-product-open') ||
+        !!anchor.closest('.catalog-card,.garden-product-card');
+
+      if (isProductSelection && url.origin === location.origin) {
+        const item = productFromLink(anchor);
+        window.gtag('event','select_item',{
+          item_list_name:listName(anchor),
+          items:[item]
+        });
+      }
+
+      if (url.hostname === MARKET_HOST) {
+        const item = currentProduct() || (anchor.closest('.catalog-card,.garden-product-card') ? productFromLink(anchor) : null);
+        decorateMarketUrl(anchor,item);
+        window.gtag('event','click_to_market',{
+          link_url:anchor.href,
+          source_page:location.href,
+          item_id:item?.item_id || '',
+          item_name:item?.item_name || ''
+        });
+      }
+    }, true);
+
+    document.querySelectorAll('a[href*="market.bb610.com.ua"]').forEach(anchor => {
+      decorateMarketUrl(anchor, currentProduct());
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindAnalytics, {once:true});
+  } else {
+    bindAnalytics();
+  }
+})();
+
+(() => {
   const sections = [
     ['/', 'Головна'],
     ['/catalog/', 'Каталог', 'garden-nav-catalog'],
