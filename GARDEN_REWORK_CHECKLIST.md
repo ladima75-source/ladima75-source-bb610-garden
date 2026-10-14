@@ -118,3 +118,19 @@ Status legend: [ ] pending · [~] in progress · [x] done
 - [x] Keep legacy `#product-...` links redirect-compatible
 - [x] Do not substitute a drawing from another model
 - [~] Publish and verify Pages
+
+## Stage 6A — Google Analytics 4
+- [x] Confirm no existing GA4 / GTM tag in Garden repository before installation
+- [x] Connect GA4 property `BB610 Garden` with Measurement ID `G-VEW179P3PW`
+- [x] Use a single implementation path through shared `garden-navigation.js`
+- [x] Enable automatic `page_view`
+- [x] Add GA4 ecommerce-style `view_item` for Garden product pages
+- [x] Add GA4 ecommerce-style `select_item` for catalog / product-list selections
+- [x] Add custom `click_to_market` with destination URL, source page and product context
+- [x] Add Garden → Market UTM attribution without changing the BB610 Market GA4 property
+- [x] Do not enable GA cross-domain linker because Garden and Market use separate GA4 properties
+- [x] Publish cache-busted analytics script across all 86 canonical content pages
+- [x] Leave 4 legacy redirect-only URLs without a separate page_view to avoid duplicate measurement before redirect
+- [x] JavaScript syntax validation for shared analytics/navigation script
+- [ ] Verify live events in Google Analytics DebugView (requires authenticated GA4 UI access)
+
