@@ -104,6 +104,19 @@
     return text(section?.querySelector('h2,h1')) || (location.pathname === '/catalog/' ? 'Каталог' : 'BB610 Garden');
   };
 
+  // Prefer the SKU encoded in a direct Market product URL over a grouped Garden family SKU.
+  const itemIdFromMarketUrl = (href) => {
+    try {
+      const url = new URL(href, location.href);
+      if (url.hostname !== MARKET_HOST) return '';
+      for (const value of [url.searchParams.get('id'),url.searchParams.get('sku'),url.pathname]) {
+        const match = String(value||'').match(/(?:^|\D)(\d{6,8})(?=\D|$)/);
+        if (match) return match[1];
+      }
+    } catch (_) {}
+    return '';
+  };
+
   const decorateMarketUrl = (anchor, product) => {
     try {
       const url = new URL(anchor.href, location.href);
@@ -111,7 +124,9 @@
       if (!url.searchParams.has('utm_source')) url.searchParams.set('utm_source','bb610_garden');
       if (!url.searchParams.has('utm_medium')) url.searchParams.set('utm_medium','referral');
       if (!url.searchParams.has('utm_campaign')) url.searchParams.set('utm_campaign','garden_to_market');
-      if (product?.item_id && !url.searchParams.has('utm_content')) url.searchParams.set('utm_content',product.item_id);
+      const directId = itemIdFromMarketUrl(url.toString());
+      if (directId) url.searchParams.set('utm_content',directId);
+      else if (product?.item_id && !url.searchParams.has('utm_content')) url.searchParams.set('utm_content',product.item_id);
       anchor.href = url.toString();
     } catch (_) {}
   };
@@ -147,7 +162,9 @@
       }
 
       if (url.hostname === MARKET_HOST) {
-        const item = currentProduct() || (anchor.closest('.catalog-card,.garden-product-card') ? productFromLink(anchor) : null);
+        const baseItem = currentProduct() || (anchor.closest('.catalog-card,.garden-product-card') ? productFromLink(anchor) : null);
+        const directId = itemIdFromMarketUrl(anchor.href);
+        const item = directId && baseItem ? {...baseItem,item_id:directId} : baseItem;
         decorateMarketUrl(anchor,item);
         window.gtag('event','click_to_market',{
           link_url:anchor.href,

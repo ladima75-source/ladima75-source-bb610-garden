@@ -60,7 +60,7 @@
         section.querySelectorAll('.catalog-card').forEach(card=>{
           const tags=card.dataset.cultures.split(' ');
           const cultureMatch=culture==='all'||tags.includes(culture)||tags.includes('shared');
-          const label=normalizeTerm(card.textContent+' '+card.getAttribute('href'));
+          const label=normalizeTerm(card.textContent+' '+(card.dataset.search||'')+' '+card.getAttribute('href'));
           card.hidden=!cultureMatch||(query!==''&&!label.includes(query));
           if(!card.hidden)visible++;
         });
