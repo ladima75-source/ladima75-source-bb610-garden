@@ -169,8 +169,8 @@
     section.innerHTML =
       '<div class="wrap">' +
         '<div class="video-band-head">' +
-          '<div><span class="eyebrow">PLANTLOGIC / MOTION STUDY</span><h2>Конструкція в роботі.</h2></div>' +
-          '<p>Монтаж, геометрія, полив і робота системи — у коротких технологічних фрагментах.</p>' +
+          '<div><span class="eyebrow">PLANTLOGIC / ВИРОБНИЦТВО</span><h2>Як виготовляють продукцію PlantLogic</h2></div>' +
+          '<p>Виробничі лінії, робота обладнання та процес виготовлення пластикових контейнерів на заводі PlantLogic.</p>' +
         '</div>' +
       '</div>';
     const inner = section.querySelector(".wrap");
