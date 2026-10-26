@@ -262,3 +262,25 @@ a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip,a:hover>.lux-arrow-mark,but
   .market-buy-options{display:grid;grid-template-columns:1fr}
   .market-buy-options a{width:100%}
 }
+
+/* UX F06: Zephyr V2 identity and technical shortcuts before its mobile gallery */
+.zephyr-hero-ux{grid-template-rows:auto 1fr;row-gap:14px}
+.zephyr-hero-ux>.product-intro{grid-column:2;grid-row:1;align-self:start}
+.zephyr-hero-ux>.product-intro h1{font-size:31px;font-weight:500;color:#303a31}
+.zephyr-hero-ux>.product-intro .product-no{margin:8px 0 12px;font-size:14px}
+.zephyr-hero-ux>.gallery{grid-column:1;grid-row:1/span 2}
+.zephyr-hero-ux>.product-summary{grid-column:2;grid-row:2}
+.zephyr-intro-links{display:flex;flex-wrap:wrap;gap:10px}
+.zephyr-intro-links a{display:inline-flex;align-items:center;min-height:42px;padding:8px 12px;border:1px solid #2ca448;color:#216d31;font-weight:600;font-size:13px}
+.zephyr-intro-links a:hover{background:#f1f8f1;text-decoration:none}
+@media(max-width:600px){
+ .zephyr-hero-ux{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;gap:16px}
+ .zephyr-hero-ux>.product-intro{grid-column:1;grid-row:1}
+ .zephyr-hero-ux>.product-intro h1{font-size:24px;line-height:1.2}
+ .zephyr-hero-ux>.product-intro .product-no{font-size:13px;margin:7px 0 10px}
+ .zephyr-hero-ux>.gallery{grid-column:1;grid-row:2}
+ .zephyr-hero-ux>.product-summary{grid-column:1;grid-row:3}
+ .zephyr-hero-ux .gallery-stage img{max-height:245px;object-fit:contain}
+ .zephyr-hero-ux .thumbnails{margin-top:9px}
+ .zephyr-hero-ux .gallery-caption{margin-top:6px}
+}
