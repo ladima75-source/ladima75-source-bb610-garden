@@ -234,6 +234,43 @@
       drainage.append(block);
     }
 
+    // Product family belongs between the irrigation-to-drainage explanation and the lysimeter proof.
+    const basesContainer = document.querySelector("#system-interfaces .wrap");
+    if (basesContainer && !document.querySelector("#garden-bases-showcase")) {
+      const models = [
+        { title: "Мішок для субстрату з інтегрованою основою", no: "13079250 / 13079300", note: "Мішок та опорна основа · 25 / 30 л", image: "/media/plantlogic-bag-bases/5cbd2a3536e8.jpg", href: "/portfolio-items/culti-base-grow-bag-with-integrated-base/" },
+        { title: "Основа VF для мішка з субстратом", no: "12010300 / 12010320 / 12010400", note: "Опорна платформа 50 мм · три виконання", image: "/media/plantlogic-bag-bases/0df6e54eea15.jpg", href: "/portfolio-items/vf-base-for-open-top-grow-bags/" },
+        { title: "Основа для мішка зі збором дренажу", no: "1301036", note: "Відведення стоку до центрального жолоба", image: "/media/plantlogic-bag-bases/b86de5f6653d.jpg", href: "/portfolio-items/bag-base-drainage-collection/" },
+        { title: "Основа Kratos для субстратних плит", no: "1301081", note: "V-подібна основа · збір дренажу", image: "/media/plantlogic-rubus-vegetables/9cf2b3d82824.jpg", href: "/portfolio-items/kratos-slab-base/" },
+        { title: "Основа Rivus з інтегрованим дренажним жолобом", no: "13020500 / 13020502", note: "Опора для субстратних плит · інтегрований жолоб", image: "/media/plantlogic-rubus-vegetables/cccbe7846031.jpg", href: "/portfolio-items/rivus-slab-base/" }
+      ];
+      const showcase = document.createElement("section");
+      showcase.id = "garden-bases-showcase";
+      showcase.className = "garden-bases-showcase";
+      showcase.setAttribute("aria-labelledby", "garden-bases-heading");
+      showcase.innerHTML =
+        '<div class="garden-bases-head">' +
+          '<h3 id="garden-bases-heading">Основи та мішки для субстратного вирощування</h3>' +
+          '<p>П’ять конструкцій для розміщення кореневої зони та відведення дренажу. Переглядайте характеристики кожної моделі.</p>' +
+        '</div>' +
+        '<div class="garden-bases-grid">' +
+          models.map(item =>
+            '<a class="garden-base-card" href="' + item.href + '">' +
+              '<div class="garden-base-media"><img src="' + item.image + '" alt="' + item.title + '" loading="lazy" decoding="async"></div>' +
+              '<div class="garden-base-content">' +
+                '<span class="garden-base-code">Артикул ' + item.no + '</span>' +
+                '<h4>' + item.title + '</h4>' +
+                '<p>' + item.note + '</p>' +
+                '<span class="garden-base-detail">Характеристики ↗</span>' +
+              '</div>' +
+            '</a>'
+          ).join('') +
+        '</div>';
+      const lysimeter = basesContainer.querySelector("#proof-lysimeter");
+      if (lysimeter) lysimeter.before(showcase);
+      else basesContainer.append(showcase);
+    }
+
     const interfaces = document.querySelector("#system-interfaces .wrap");
     if (interfaces && !document.querySelector("#proof-lysimeter")) {
       const block = document.createElement("div");
