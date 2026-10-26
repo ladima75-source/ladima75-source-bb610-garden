@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /product.html
+
 Sitemap: https://garden.bb610.com.ua/sitemap.xml
