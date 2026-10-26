@@ -44,13 +44,12 @@
     const video = document.createElement("video");
     video.muted = true;
     video.defaultMuted = true;
-    video.autoplay = true;
+    video.autoplay = false;
     video.loop = true;
     video.playsInline = true;
-    video.preload = "metadata";
+    video.preload = "none";
     video.poster = "/media/video/" + story.key + "-poster.webp?v=" + VERSION;
     video.setAttribute("muted", "");
-    video.setAttribute("autoplay", "");
     video.setAttribute("loop", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
@@ -61,7 +60,7 @@
     [["mp4","video/mp4"],["webm","video/webm"]].forEach(([ext,type]) => {
       const source = document.createElement("source");
       source.type = type;
-      source.src = "/media/video/" + story.key + "." + ext + "?v=" + VERSION;
+      source.dataset.src = "/media/video/" + story.key + "." + ext + "?v=" + VERSION;
       video.append(source);
     });
 
@@ -112,6 +111,16 @@
     return figure;
   };
 
+  const activateVideo = (video) => {
+    if (video.dataset.loaded === "1") return;
+    video.dataset.loaded = "1";
+    video.querySelectorAll("source[data-src]").forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+    video.load();
+  };
+
   const observer = "IntersectionObserver" in window
     ? new IntersectionObserver((entries) => {
         entries.forEach(({target,isIntersecting}) => {
@@ -119,6 +128,7 @@
           if (!figure) return;
           figure.dataset.visible = isIntersecting ? "1" : "0";
           if (isIntersecting) {
+            activateVideo(target);
             tryPlay(target);
           } else {
             target.pause();
@@ -133,6 +143,7 @@
       observer.observe(video);
     } else {
       figure.dataset.visible = "1";
+      activateVideo(video);
       tryPlay(video);
     }
   };
