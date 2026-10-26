@@ -44,6 +44,10 @@
     };
     document.querySelectorAll('.catalog-card-media>img').forEach(normalizeImageBackground);
 
+    const searchInput=document.getElementById('catalog-product-search');
+    const clearSearch=document.getElementById('catalog-search-clear');
+    const normalizeTerm=value=>String(value||'').toLocaleLowerCase('uk').normalize('NFKC').trim();
+    let query='';
     const total=document.querySelectorAll('.catalog-category .catalog-card').length;
     const names={all:'Усі культури',blueberry:'Лохина',strawberry:'Полуниця',rubus:'Малина та ожина',vegetables:'Овочі'};
     const cultureHashes=new Set(Object.keys(names).filter(key=>key!=='all'));
@@ -55,7 +59,9 @@
         let visible=0;
         section.querySelectorAll('.catalog-card').forEach(card=>{
           const tags=card.dataset.cultures.split(' ');
-          card.hidden=culture!=='all'&&!tags.includes(culture)&&!tags.includes('shared');
+          const cultureMatch=culture==='all'||tags.includes(culture)||tags.includes('shared');
+          const label=normalizeTerm(card.textContent+' '+card.getAttribute('href'));
+          card.hidden=!cultureMatch||(query!==''&&!label.includes(query));
           if(!card.hidden)visible++;
         });
         section.hidden=visible===0;
@@ -64,12 +70,15 @@
         if(link)link.hidden=visible===0;
         count+=visible;
       });
-      document.querySelector('.catalog-status').textContent=culture==='all'?`${count} моделей`:`${names[culture]} · ${count}`;
+      document.querySelector('.catalog-status').textContent=(culture==='all'?'':names[culture]+' · ')+count+' моделей'+(query?' за пошуком':'');
+      const empty=document.getElementById('catalog-search-empty');if(empty)empty.hidden=count!==0;
+      if(clearSearch)clearSearch.hidden=!query;
     };
     const readURL=()=>{
       const url=new URL(location.href),hash=url.hash.slice(1);
       const legacy=cultureHashes.has(hash);
       const culture=legacy?hash:url.searchParams.get('culture')||'all';
+      if(searchInput){const q=url.searchParams.get('q')||'';searchInput.value=q;query=normalizeTerm(q)}
       apply(culture);
       if(legacy){
         const first=sections.find(section=>!section.hidden);
@@ -85,6 +94,18 @@
       url.hash='';history.pushState(null,'',url.pathname+url.search);
       apply(culture);
     }));
+    if(searchInput){
+      const urlQuery=new URL(location.href).searchParams.get('q')||'';
+      searchInput.value=urlQuery;query=normalizeTerm(urlQuery);
+      searchInput.addEventListener('input',()=>{
+        query=normalizeTerm(searchInput.value);
+        const url=new URL(location.href);
+        if(query)url.searchParams.set('q',searchInput.value.trim());else url.searchParams.delete('q');
+        history.replaceState(null,'',url.pathname+url.search+url.hash);
+        apply(new URL(location.href).searchParams.get('culture')||'all');
+      });
+      clearSearch?.addEventListener('click',()=>{searchInput.value='';searchInput.dispatchEvent(new Event('input'));searchInput.focus();});
+    }
     controls.hidden=false;readURL();
 
     const typeLinks=[...document.querySelectorAll('.catalog-controls .solution-nav a[href^="#"]')];
