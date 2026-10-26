@@ -1211,3 +1211,22 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
     max-height:none;
   }
 }
+
+/* BB610 Garden: bases between water-path explanation and lysimeter (2026-10-26). */
+#system-interfaces .garden-bases-showcase{padding:clamp(30px,4vw,54px) 0 12px;margin-top:clamp(34px,5vw,64px);border-top:1px solid rgba(16,38,29,.16)}
+#system-interfaces .garden-bases-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:26px;align-items:end;margin:0 0 26px}
+#system-interfaces .garden-bases-head h3{margin:0;font-size:clamp(26px,3.2vw,43px);line-height:1.1;letter-spacing:-.04em;color:#10261d;font-weight:620}
+#system-interfaces .garden-bases-head p{margin:0;color:#53675b;font-size:15px;line-height:1.55}
+#system-interfaces .garden-bases-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#system-interfaces .garden-base-card{min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid #d8e2d9;color:#142d20;border-radius:8px;overflow:hidden;text-decoration:none;transition:border-color .16s,transform .16s}
+#system-interfaces .garden-base-card:hover{border-color:#328b45;transform:translateY(-2px);text-decoration:none}
+#system-interfaces .garden-base-card:focus-visible{outline:3px solid #258d47;outline-offset:3px}
+#system-interfaces .garden-base-media{height:clamp(170px,18vw,240px);background:#fff;display:flex;align-items:center;justify-content:center;padding:15px}
+#system-interfaces .garden-base-media img{display:block;width:100%;height:100%;object-fit:contain}
+#system-interfaces .garden-base-content{display:flex;flex:1;flex-direction:column;padding:18px 19px 21px;border-top:1px solid #eef1ed}
+#system-interfaces .garden-base-code{font-size:12px;color:#64776a;line-height:1.5}
+#system-interfaces .garden-base-content h4{margin:9px 0 7px;font-size:20px;line-height:1.25;color:#102d1a;font-weight:650;letter-spacing:-.022em}
+#system-interfaces .garden-base-content p{margin:0 0 18px;color:#52675a;font-size:14px;line-height:1.5}
+#system-interfaces .garden-base-detail{margin-top:auto;color:#1e7c3c;font-size:14px;font-weight:700}
+@media(max-width:980px){#system-interfaces .garden-bases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#system-interfaces .garden-bases-head{grid-template-columns:1fr;gap:12px}}
+@media(max-width:600px){#system-interfaces .garden-bases-grid{grid-template-columns:1fr;gap:13px}#system-interfaces .garden-bases-head h3{font-size:27px}#system-interfaces .garden-base-media{height:230px}#system-interfaces .garden-base-content{padding:15px 18px 18px}}
