@@ -214,55 +214,6 @@ a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip,a:hover>.lux-arrow-mark,but
 .thumbnails:has(>.thumbnail:only-child){display:none}
 
 
-/* 2026-10-06 Garden -> Market commercial handoff */
-.market-buy-block{
-  margin:26px 0 12px;
-  padding:18px;
-  border:1px solid #d9e6da;
-  background:#f6faf4;
-}
-.market-buy-block>strong{
-  display:block;
-  margin-bottom:4px;
-  color:#173d25;
-  font-size:18px;
-  font-weight:650;
-}
-.market-buy-block>span{
-  display:block;
-  margin-bottom:12px;
-  color:#6f7b72;
-  font-size:13px;
-}
-.market-buy-options{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.market-buy-options a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:42px;
-  padding:10px 14px;
-  border:1px solid #2ca448;
-  background:#2ca448;
-  color:#fff;
-  font-size:13px;
-  font-weight:650;
-  text-decoration:none;
-}
-.market-buy-options a:hover{
-  background:#23883b;
-  border-color:#23883b;
-  color:#fff;
-  text-decoration:none;
-}
-@media(max-width:600px){
-  .market-buy-options{display:grid;grid-template-columns:1fr}
-  .market-buy-options a{width:100%}
-}
-
 /* UX F06: Zephyr V2 identity and technical shortcuts before its mobile gallery */
 .zephyr-hero-ux{grid-template-rows:auto 1fr;row-gap:14px}
 .zephyr-hero-ux>.product-intro{grid-column:2;grid-row:1;align-self:start}
@@ -283,4 +234,23 @@ a:hover>.lux-arrow-chip,button:hover>.lux-arrow-chip,a:hover>.lux-arrow-mark,but
  .zephyr-hero-ux .gallery-stage img{max-height:245px;object-fit:contain}
  .zephyr-hero-ux .thumbnails{margin-top:9px}
  .zephyr-hero-ux .gallery-caption{margin-top:6px}
+}
+
+/* Direct Garden -> BB610 Market actions: single clear destination, no nested promotional panel. */
+.product-summary .garden-market-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:23px 0 12px}
+.product-summary .garden-store-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:46px;max-width:100%;box-sizing:border-box;padding:11px 17px;border:1px solid #123b29;border-radius:5px;background:#123b29;color:#f0f9e8;font-size:14px;font-weight:650;line-height:1.35;text-decoration:none;transition:background .18s,border-color .18s;box-shadow:none}
+.product-summary .garden-store-cta:after{content:"↗";font-size:18px;line-height:1;font-weight:400;flex:none;color:#d7ff79}
+.product-summary .garden-store-cta:hover{background:#21563a;border-color:#21563a;color:#fff;text-decoration:none}
+.product-summary .garden-store-cta:focus-visible{outline:3px solid #91dc5d;outline-offset:3px}
+.product-summary .garden-store-catalog{background:#fff;border-color:#89a392;color:#1b5331}
+.product-summary .garden-store-catalog:after{color:#1b5331}
+.product-summary .garden-store-catalog:hover{background:#eff6ed;border-color:#508466;color:#173e29}
+.product-summary .garden-store-variant{font-size:13px;gap:12px}
+.product-summary>.actions{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px}
+.product-summary>.actions>a{margin:0}
+@media(max-width:600px){
+ .product-summary .garden-market-ctas{flex-direction:column;align-items:stretch}
+ .product-summary .garden-store-cta{width:100%;justify-content:center;min-height:48px}
+ .product-summary>.actions{flex-direction:column;align-items:stretch;gap:10px}
+ .product-summary>.actions>a{text-align:center;justify-content:center}
 }
