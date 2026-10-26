@@ -44,6 +44,19 @@
       href: "/portfolio-items/25-liter-square-pot-with-u-grooves/"
     },
     {
+      no: "1305909",
+      name: "Жолоб для вирощування полуниці 18 л з опорою для квітконосів",
+      subtitle: "Метровий жолоб для піднятих систем",
+      applicationLabel: "Полуниця",
+      family: "Жолоб",
+      image: "/media/plantlogic-strawberry/6dedd865dc15.jpg",
+      volume: "18 л",
+      dimensions: "255 × 1014 мм",
+      legs: "піднята система",
+      focus: "Опора для квітконосів + збір дренажу",
+      href: "/portfolio-items/18-liter-strawberry-trough-with-truss-support/"
+    },
+    {
       no: "13079250 / 13079300",
       name: "Culti-base · мішок для субстрату з інтегрованою основою",
       subtitle: "Готова конструкція: мішок + опорна база",
@@ -57,17 +70,60 @@
       href: "/portfolio-items/culti-base-grow-bag-with-integrated-base/"
     },
     {
-      no: "1305909",
-      name: "Жолоб для вирощування полуниці 18 л з опорою для квітконосів",
-      subtitle: "Метровий жолоб для піднятих систем",
-      applicationLabel: "Полуниця",
-      family: "Жолоб",
-      image: "/media/plantlogic-strawberry/6dedd865dc15.jpg",
-      volume: "18 л",
-      dimensions: "255 × 1014 мм",
-      legs: "піднята система",
-      focus: "Опора для квітконосів + збір дренажу",
-      href: "/portfolio-items/18-liter-strawberry-trough-with-truss-support/"
+      no: "12010300 / 12010320 / 12010400",
+      name: "Основа VF для мішка з субстратом",
+      subtitle: "Опорна платформа для відкритих мішків",
+      applicationLabel: "Овочі / універсальне",
+      family: "Основа VF",
+      image: "/media/plantlogic-bag-bases/0df6e54eea15.jpg",
+      volume: "Відкритий мішок",
+      dimensions: "3 виконання",
+      legs: "50 мм",
+      focus: "Повітряний простір під мішком",
+      specLabels: ["Призначення", "Варіанти", "Висота"],
+      href: "/portfolio-items/vf-base-for-open-top-grow-bags/"
+    },
+    {
+      no: "1301036",
+      name: "Основа для мішка зі збором дренажу",
+      subtitle: "Керований відвід стоку до центрального жолоба",
+      applicationLabel: "Овочі / універсальне",
+      family: "Збір дренажу",
+      image: "/media/plantlogic-bag-bases/b86de5f6653d.jpg",
+      volume: "Мішок із субстратом",
+      dimensions: "Ширина 372 мм",
+      legs: "Центральний жолоб",
+      focus: "Внутрішні канали збору дренажу",
+      specLabels: ["Призначення", "Розмір", "Дренаж"],
+      href: "/portfolio-items/bag-base-drainage-collection/"
+    },
+    {
+      no: "1301081",
+      name: "Основа Kratos для субстратних плит",
+      subtitle: "V-подібна конструкція із жолобом для стоку",
+      applicationLabel: "Овочі",
+      family: "Kratos",
+      image: "/media/plantlogic-rubus-vegetables/9cf2b3d82824.jpg",
+      volume: "Субстратні плити",
+      dimensions: "V-подібна основа",
+      legs: "Вузький жолоб",
+      focus: "Збір стоку та доступ повітря",
+      specLabels: ["Призначення", "Основа", "Дренаж"],
+      href: "/portfolio-items/kratos-slab-base/"
+    },
+    {
+      no: "13020500 / 13020502",
+      name: "Основа Rivus з інтегрованим дренажним жолобом",
+      subtitle: "Профіль для розміщення субстратних плит",
+      applicationLabel: "Овочі",
+      family: "Rivus",
+      image: "/media/plantlogic-rubus-vegetables/cccbe7846031.jpg",
+      volume: "Субстратні плити",
+      dimensions: "320 × 60 мм",
+      legs: "Вбудований жолоб",
+      focus: "Опора й відведення дренажу в одній конструкції",
+      specLabels: ["Призначення", "Габарити", "Дренаж"],
+      href: "/portfolio-items/rivus-slab-base/"
     },
     {
       no: "1301010 / 1301030",
@@ -108,9 +164,9 @@
             '<p class="garden-product-subtitle">' + p.subtitle + '</p>' +
             '<p class="garden-product-focus">' + p.focus + '</p>' +
             '<div class="garden-product-specs">' +
-              '<span><b>Об’єм</b>' + p.volume + '</span>' +
-              '<span><b>Габарити</b>' + p.dimensions + '</span>' +
-              '<span><b>Опора</b>' + p.legs + '</span>' +
+              '<span><b>' + (p.specLabels?.[0] || 'Об’єм') + '</b>' + p.volume + '</span>' +
+              '<span><b>' + (p.specLabels?.[1] || 'Габарити') + '</b>' + p.dimensions + '</span>' +
+              '<span><b>' + (p.specLabels?.[2] || 'Опора') + '</b>' + p.legs + '</span>' +
             '</div>' +
             '<span class="garden-product-more">Відкрити сторінку <i>↗</i></span>' +
           '</div>' +
