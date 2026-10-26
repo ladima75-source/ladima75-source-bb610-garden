@@ -441,3 +441,13 @@
   .catalog-page .catalog-filter{display:flex;flex:1 1 100%;flex-wrap:wrap;gap:7px;min-width:0}
   .catalog-page .catalog-filter button{min-height:44px;padding:10px 13px;font-size:14px;line-height:1.2;white-space:normal}
 }
+
+/* UX: fast catalog model search without changing technical taxonomy */
+.catalog-search{display:flex;align-items:center;gap:7px;flex:1 1 220px;min-width:190px}
+.catalog-search label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.catalog-search input{width:100%;min-width:0;height:42px;padding:8px 12px;background:#fff;color:#13251b;border:1px solid #879a8d;border-radius:5px;font:inherit;font-size:14px}
+.catalog-search input:focus-visible{outline:2px solid #d7ff79;outline-offset:2px}
+.catalog-search button{color:#d7ff79;border:0;background:transparent;cursor:pointer;font-size:13px;padding:8px}
+.catalog-search-empty{max-width:960px;margin:24px auto;padding:20px;background:#f5f8f4;color:#294232;text-align:center}
+@media(max-width:1180px){.catalog-search{flex:1 1 100%}}
+@media(max-width:760px){.catalog-search{width:100%;min-width:0}.catalog-search input{min-height:44px;font-size:16px}}
