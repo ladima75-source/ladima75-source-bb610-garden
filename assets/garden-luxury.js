@@ -350,7 +350,7 @@
           if (!entries.some((entry) => entry.isIntersecting)) return;
           activateQualityVideo();
           observer.disconnect();
-        }, { rootMargin: "500px 0px", threshold: 0 });
+        }, { rootMargin: "0px", threshold: 0 });
         qualityObserver.observe(qualityVideo);
       } else {
         activateQualityVideo();
