@@ -337,28 +337,27 @@
 
         <div class="plantlogic-quality-copy">
           <span class="plantlogic-quality-eyebrow">ЯКІСТЬ PLANTLOGIC</span>
-          <h2>Якість, закладена у виробництві.</h2>
+          <h2>Виробництво PlantLogic</h2>
           <p class="plantlogic-quality-lead">
-            PlantLogic виробляє продукцію на власному заводі в Нінбо. Автоматизоване обладнання
-            та високоякісна сировина допомагають підтримувати стабільну якість від виробу до виробу.
+            Міцність, точність форми та можливість повторного використання залежать від матеріалу й технології виготовлення.
           </p>
 
           <div class="plantlogic-quality-facts">
             <article>
               <strong>Власне виробництво</strong>
-              <p>PlantLogic виробляє продукцію на власному заводі в Нінбо, Китай.</p>
+              <p>Власний завод PlantLogic у Нінбо (Китай).</p>
             </article>
             <article>
               <strong>Повна автоматизація</strong>
-              <p>Горщики виготовляються на повністю автоматизованому обладнанні.</p>
+              <p>Горщики виготовляють на автоматизованих виробничих лініях.</p>
             </article>
             <article>
-              <strong>Якісна сировина</strong>
-              <p>PlantLogic вказує використання високоякісної сировини для стабільних виробничих стандартів.</p>
+              <strong>Матеріали</strong>
+              <p>Властивості сировини впливають на міцність, форму та довговічність контейнера.</p>
             </article>
             <article>
               <strong>Повторне використання</strong>
-              <p>PlantLogic підкреслює стабільну якість продукції для повторного використання цикл за циклом.</p>
+              <p>За належного використання контейнери можна застосовувати повторно.</p>
             </article>
           </div>
         </div>
@@ -418,7 +417,7 @@
     if (scrollButton) scrollButton.href = "#crops";
 
     const fieldHead = document.querySelector("#field-stories .lux-field-head h2");
-    if (fieldHead) fieldHead.textContent = "PlantLogic у реальних виробничих системах.";
+    if (fieldHead) fieldHead.textContent = "Рішення для різних культур";
 
     const rootTitle = document.querySelector("#root-evidence .lux-root-copy h2");
     if (rootTitle) rootTitle.textContent = "Що можна оцінити по фактичній кореневій масі.";
@@ -473,8 +472,8 @@
       if (head) {
         const h2 = head.querySelector("h2");
         const p = head.querySelector("p");
-        if (h2) h2.textContent = "Як конструкція працює з кореневою зоною.";
-        if (p) p.textContent = "Не перелік деталей, а чотири принципи: як контейнер працює з корінням, відводить зайву воду, забезпечує повітрообмін і утримує поливну лінію.";
+        if (h2) h2.textContent = "Як будова горщика впливає на кореневу зону";
+        if (p) p.textContent = "Основа, дренажні отвори та кріплення поливу впливають на відведення води, доступ повітря й розміщення коренів у субстраті.";
       }
 
       const proof = document.createElement("div");
@@ -482,7 +481,7 @@
       proof.innerHTML =
         '<article class="proof-principle proof-principle-photo">' +
           '<figure class="proof-card-media"><img src="/media/proof/root-zone-blueberry.jpg?v=' + VERSION + '" alt="Коренева маса лохини після вирощування у горщику PlantLogic" loading="lazy"></figure>' +
-          '<div class="proof-card-copy"><h3>Коріння освоює весь об’єм контейнера</h3><p>На фактичному кореневому комі видно, як корені розподіляються по висоті та ширині субстрату, а не концентруються лише біля дна.</p><a class="proof-card-link" href="/blueberry-production/">Вирощування лохини ↗</a></div>' +
+          '<div class="proof-card-copy"><h3>Як корені заповнюють субстрат</h3><p>На фото видно кореневу систему, що сформувалася по всій висоті та ширині субстрату.</p><a class="proof-card-link" href="/blueberry-production/">Вирощування лохини ↗</a></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-diagram">' +
           '<figure class="proof-card-media proof-white"><img src="/media/proof/round-20l-diagram.jpg?v=' + VERSION + '" alt="Схема дренажу та повітрообміну круглого горщика PlantLogic 20 л" loading="lazy"></figure>' +
@@ -493,7 +492,7 @@
           '<div class="proof-card-copy"><h3>Поливна лінія фіксується на краю й не заважає дренажу</h3><p>U-пази утримують поливну трубу вздовж краю контейнера. Дно та бічні отвори залишаються відкритими для відведення води й повітрообміну.</p><ul class="proof-card-facts"><li>Труба зафіксована вздовж краю</li><li>Дно залишається відкритим</li><li>Бічні отвори не перекриваються</li></ul><a class="proof-card-link" href="/catalog/#pots">Горщики для вашої технології ↗</a></div>' +
         '</article>' +
         '<article class="proof-principle proof-principle-zephyr" id="proof-zephyr">' +
-          '<div class="proof-zephyr-heading"><h3>Zephyr V2 подає повітря до субстрату на кількох рівнях</h3><a class="proof-card-link" href="/portfolio-items/zephyr-v2/">Моделі 25, 30 і 40 л ↗</a></div>' +
+          '<div class="proof-zephyr-heading"><h3>Zephyr V2: опори 70 мм і доступ повітря</h3><a class="proof-card-link" href="/portfolio-items/zephyr-v2/">Моделі 25, 30 і 40 л ↗</a></div>' +
           '<figure class="proof-zephyr-schema"><button class="proof-diagram-open" type="button" aria-label="Збільшити схему Zephyr V2"><img src="/media/diagrams-uk/zephyr-v2-airflow-wide-uk.webp?v=' + VERSION + '" alt="Схема Zephyr V2: зони аерації, рух води та окрема основа" loading="lazy"><span class="proof-diagram-hint">Збільшити схему ⤢</span></button></figure>' +
           '<div class="proof-zephyr-detail"><div class="proof-video-slot" data-proof-slot="zephyr-v2-install"></div><div class="proof-card-copy"><h4>Основа піднімає контейнер над поверхнею</h4><p>Ніжки висотою 7 см створюють зазор під контейнером: нижні отвори не перекриваються поверхнею, а зайва вода може вільно відводитися з кореневої зони.</p><a class="proof-card-link" href="/media/tech-sheets-uk/zephyr-v2-uk.pdf?v=20261006-clean-v2" target="_blank" rel="noopener">Технічний лист українською ↗</a></div></div>' +
         '</article>';
@@ -521,8 +520,8 @@
 
       const heading = rootZone.querySelector(".root-zone-copy h2");
       const lead = rootZone.querySelector(".root-zone-copy > p");
-      if (heading) heading.textContent = "Що відбувається з водою і повітрям усередині горщика.";
-      if (lead) lead.textContent = "Форма дна та отвори визначають, куди відходить зайва вода і звідки нижня частина кореневої зони отримує повітря. Фото кореневого кому показує, як це працює у вирощуванні.";
+      if (heading) heading.textContent = "Як вода й повітря рухаються в горщику";
+      if (lead) lead.textContent = "Отвори в основі відводять зайву воду, а простір під дном забезпечує доступ повітря. Поруч — фото сформованої кореневої системи.";
     }
 
     const duplicateRootProof = document.querySelector("#proof-root-zone");
@@ -550,8 +549,8 @@
 
     const corporateTitle = document.querySelector("#corporate-video .video-band-head h2");
     const corporateLead = document.querySelector("#corporate-video .video-band-head p");
-    if (corporateTitle) corporateTitle.textContent = "Конструкції PlantLogic у роботі.";
-    if (corporateLead) corporateLead.textContent = "Відео показують, як встановлюються контейнери, як фіксується поливна лінія та як організовано відведення дренажу в реальних рядах.";
+    if (corporateTitle) corporateTitle.textContent = "Конструкції PlantLogic у роботі";
+    if (corporateLead) corporateLead.textContent = "Розміщення контейнерів у рядах, кріплення поливної лінії та відведення дренажу — на прикладах із господарств.";
 
     const hiGrow = document.querySelector("#strawberry");
     if (hiGrow) {
@@ -563,7 +562,7 @@
       if (title) title.innerHTML = "Hi-Grow:<br>система для вирощування полуниці над ґрунтом.";
       if (lead) {
         lead.className = "higrow-lead";
-        lead.textContent = "Ключовий принцип Hi-Grow — несуча конструкція та дренаж працюють окремо. Коренева зона залишається вище відведення стоку, а ухил дренажного жолоба можна налаштовувати незалежно від висоти опор.";
+        lead.textContent = "У Hi-Grow горщики або жолоби розміщують над землею, а окрема дренажна лінія відводить зайву воду. Її ухил можна регулювати незалежно від висоти опор.";
       }
 
       if (copy && !copy.querySelector(".higrow-configs")) {
@@ -620,7 +619,7 @@
     const familyHead = document.querySelector("#family-engineering .family-engineering-head h2");
     const familyLead = document.querySelector("#family-engineering .family-engineering-head > p");
     if (familyHead) familyHead.textContent = "Чим відрізняються конструкції горщиків PlantLogic";
-    if (familyLead) familyLead.textContent = "Форма контейнера впливає не лише на розміщення в ряду. Вона визначає положення поливної труби, відведення зайвої води, доступ повітря та висоту кореневої зони над поверхнею.";
+    if (familyLead) familyLead.textContent = "Порівнюйте форму, висоту опор, кріплення поливної труби й спосіб відведення дренажу. Саме ці деталі відрізняють моделі між собою.";
 
     const source = document.querySelector("#technical-source-note");
     if (source) source.remove();

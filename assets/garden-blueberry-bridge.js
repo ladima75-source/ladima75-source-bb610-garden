@@ -15,8 +15,8 @@
     if (!section || section.dataset.fieldStoriesPolished === '1') return;
 
     const title = section.querySelector('.lux-field-head h2');
-    if (title && title.textContent !== 'PlantLogic у реальних системах вирощування') {
-      title.textContent = 'PlantLogic у реальних системах вирощування';
+    if (title && title.textContent !== 'Рішення для різних культур') {
+      title.textContent = 'Рішення для різних культур';
     }
 
     const note = section.querySelector('.lux-field-head > p');
