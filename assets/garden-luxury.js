@@ -23,7 +23,7 @@
     {
       name: "Полуниця",
       en: "STRAWBERRY",
-      image: "/media/lux/strawberry-hydroponics.jpg?v=" + VERSION,
+      image: "/media/lux/strawberry-hydroponics.webp?v=" + VERSION,
       href: "#lux-strawberry",
       tag: "",
       title: "Піднята культура як окрема інженерна система.",
@@ -32,7 +32,7 @@
     {
       name: "Овочі",
       en: "VEGETABLES",
-      image: "/media/lux/vegetable-production.jpg?v=" + VERSION,
+      image: "/media/lux/vegetable-production.webp?v=" + VERSION,
       href: "#lux-vegetable",
       tag: "",
       title: "Субстрат, опора і дренаж мають працювати як одне ціле.",
@@ -132,7 +132,7 @@
     section.innerHTML =
       '<div class="wrap lux-root-evidence-grid">' +
         '<figure class="lux-root-photo">' +
-          '<img src="/media/lux/blueberry-production.jpg?v=' + VERSION + '" alt="Коренева маса лохини після вирощування в контейнерній системі PlantLogic" loading="lazy">' +
+          '<img src="/media/lux/blueberry-production.webp?v=' + VERSION + '" alt="Коренева маса лохини після вирощування в контейнерній системі PlantLogic" loading="lazy">' +
           '<figcaption><strong>Коренева зона після виробничого циклу</strong></figcaption>' +
         '</figure>' +
         '<div class="lux-root-copy">' +
