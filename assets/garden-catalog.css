@@ -433,3 +433,11 @@
 .catalog-page .catalog-card-media>img.catalog-image-bg-normalize{
   filter:brightness(1.08) contrast(1.10);
 }
+
+/* UX F05: show every culture without hidden horizontal mobile scrolling */
+@media (max-width:760px){
+  .catalog-page .catalog-culture-group{overflow:visible;flex-wrap:wrap;align-items:flex-start;gap:8px}
+  .catalog-page .catalog-culture-group .catalog-control-label{position:static;flex:0 0 100%;padding:0;background:transparent;font-size:12px}
+  .catalog-page .catalog-filter{display:flex;flex:1 1 100%;flex-wrap:wrap;gap:7px;min-width:0}
+  .catalog-page .catalog-filter button{min-height:44px;padding:10px 13px;font-size:14px;line-height:1.2;white-space:normal}
+}
