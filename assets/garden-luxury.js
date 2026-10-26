@@ -549,8 +549,8 @@
 
     const corporateTitle = document.querySelector("#corporate-video .video-band-head h2");
     const corporateLead = document.querySelector("#corporate-video .video-band-head p");
-    if (corporateTitle) corporateTitle.textContent = "Конструкції PlantLogic у роботі";
-    if (corporateLead) corporateLead.textContent = "Розміщення контейнерів у рядах, кріплення поливної лінії та відведення дренажу — на прикладах із господарств.";
+    if (corporateTitle) corporateTitle.textContent = "Як виготовляють продукцію PlantLogic";
+    if (corporateLead) corporateLead.textContent = "Виробничі лінії, робота обладнання та процес виготовлення пластикових контейнерів на заводі PlantLogic.";
 
     const hiGrow = document.querySelector("#strawberry");
     if (hiGrow) {
