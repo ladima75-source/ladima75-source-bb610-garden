@@ -1,0 +1,119 @@
+/* BB610 Garden / first-screen composition v1
+   Scope: home hero and active navigation.
+   Media: official audited PlantLogic image, hosted in /media/.
+   This stylesheet deliberately loads after legacy overrides. */
+
+.garden-site-header .garden-desktop-nav .garden-nav-catalog:not([aria-current="page"]) {
+  background:transparent!important;
+  color:#d9e3d8!important;
+  border:0!important;
+  padding-inline:15px!important;
+  font-weight:600!important;
+}
+.garden-site-header .garden-desktop-nav .garden-nav-catalog:not([aria-current="page"]):hover {
+  color:#d7f58c!important;
+  background:rgba(215,245,140,.06)!important;
+}
+
+.hero {
+  padding-top:20px!important;
+}
+.hero:before {
+  opacity:.1!important;
+}
+.hero-grid.wrap {
+  width:min(1440px,calc(100% - 64px))!important;
+  grid-template-columns:minmax(0,.97fr) minmax(0,1.03fr)!important;
+  min-height:550px!important;
+  gap:clamp(32px,4vw,68px)!important;
+  align-items:center!important;
+}
+.hero-copy {
+  min-width:0!important;
+  max-width:650px!important;
+  padding:18px 0 28px!important;
+  justify-content:center!important;
+}
+.hero-copy > :first-child:empty {
+  display:none!important;
+}
+.hero h1 {
+  margin:0 0 23px!important;
+  max-width:650px!important;
+  font-size:clamp(3.05rem,3.9vw,4.4rem)!important;
+  line-height:1.045!important;
+  letter-spacing:-.047em!important;
+  text-wrap:balance;
+}
+.hero-description {
+  max-width:560px!important;
+  font-size:clamp(16px,1.08vw,18px)!important;
+  line-height:1.58!important;
+  color:#bdcbbb!important;
+}
+.hero-buttons {
+  margin-top:24px!important;
+  gap:24px!important;
+}
+.hero-foot {
+  display:none!important;
+}
+.hero-photo {
+  align-self:center!important;
+  min-height:520px!important;
+  height:520px!important;
+  border-radius:12px!important;
+}
+.hero-main-image {
+  object-position:center 48%!important;
+  filter:brightness(.96) saturate(.98) contrast(1.025)!important;
+}
+.hero-photo:after {
+  background:linear-gradient(180deg,rgba(6,19,13,.02) 0%,rgba(6,19,13,0) 55%,rgba(6,19,13,.58) 100%)!important;
+}
+.hero .photo-label {
+  bottom:22px!important;
+}
+.hero + .clarity-section {
+  padding-top:60px!important;
+}
+@media (min-width:1081px) and (max-width:1299px){
+  .hero h1{font-size:clamp(2.9rem,4.15vw,3.7rem)!important}
+  .hero-grid.wrap{min-height:510px!important}
+  .hero-photo{height:480px!important;min-height:480px!important}
+}
+@media (max-width:1080px){
+  .hero{padding-top:0!important}
+  .hero-grid.wrap{
+    width:calc(100% - 48px)!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    min-height:0!important;
+    gap:28px!important;
+  }
+  .hero-copy{
+    max-width:760px!important;
+    padding:34px 0 0!important;
+  }
+  .hero h1{
+    margin:0 0 20px!important;
+    font-size:clamp(2.8rem,6.4vw,4.1rem)!important;
+  }
+  .hero-photo{
+    height:clamp(370px,55vw,510px)!important;
+    min-height:0!important;
+  }
+  .hero + .clarity-section{padding-top:52px!important}
+}
+@media (max-width:650px){
+  .hero-grid.wrap{width:calc(100% - 36px)!important;gap:20px!important}
+  .hero-copy{padding:28px 0 0!important}
+  .hero h1{font-size:clamp(2.35rem,10vw,3.2rem)!important;line-height:1.06!important}
+  .hero-description{font-size:16px!important;line-height:1.6!important}
+  .hero-buttons{margin-top:20px!important;gap:12px!important}
+  .hero-photo{height:360px!important;min-height:0!important;border-radius:10px!important}
+  .hero .photo-label{left:18px!important;right:18px!important;bottom:16px!important}
+  .hero + .clarity-section{padding-top:44px!important}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-main-image{transition:none!important}
+}
