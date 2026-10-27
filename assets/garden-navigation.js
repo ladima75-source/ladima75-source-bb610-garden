@@ -335,11 +335,43 @@
       mobileLinks.at(-1)?.textContent.trim()==='Обговорити проєкт';
     if(!mobileCurrent) menu.innerHTML=markup+pdfMobileLink+market+'<a class="garden-mobile-project" href="#contact">Обговорити проєкт</a>';
   };
+  // Keep Garden's contact phones consistent with BB610 Market:
+  // the established +380 77 number remains first, the new +380 97 number second.
+  const syncContactPhones = () => {
+    const numbers = [
+      ['+380770179770', '+380 (77) 017 97 70'],
+      ['+380972920104', '+380 (97) 292-01-04']
+    ];
+    const makeNumbers = () => {
+      const group = document.createElement('div');
+      group.className = 'garden-contact-phones';
+      group.setAttribute('aria-label', 'Телефони BB610 Garden');
+      numbers.forEach(([number, label]) => {
+        const a = document.createElement('a');
+        a.href = 'tel:' + number;
+        a.textContent = label;
+        group.appendChild(a);
+      });
+      return group;
+    };
+    const footer = document.querySelector('footer');
+    if (footer && !footer.querySelector('.garden-contact-phones')) {
+      const email = footer.querySelector('a[href^="mailto:"]');
+      if (email) email.after(makeNumbers());
+      else footer.append(makeNumbers());
+    }
+    const contact = document.querySelector('#contact');
+    if (contact && !contact.querySelector('.garden-contact-phones')) {
+      const action = contact.querySelector('a[href^="mailto:"]');
+      if (action) action.after(makeNumbers());
+    }
+  };
   const enhance = () => {
     const header=document.querySelector('header');
     if (!header) return;
 
     syncHeader(header);
+    syncContactPhones();
     bindMenu(header,header.querySelector('.garden-menu-button'),header.querySelector('.garden-mobile-nav'));
     updateActive(header);
 
