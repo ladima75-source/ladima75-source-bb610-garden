@@ -114,3 +114,87 @@ body.garden-has-header .site-shell{padding-top:0!important}
     content:"Каталог PDF";font-size:13px;font-weight:650;line-height:1.25;
   }
 }
+
+/* Shared BB610 Garden informational footer. Native and React footers retain their DOM but
+   their legacy ecosystem blocks are hidden (no interference with React reconciliation). */
+footer.garden-unified-footer{
+  display:block!important;position:relative!important;clear:both!important;
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding:0!important;box-sizing:border-box!important;
+  background:#0c2117!important;color:#e7eee7!important;
+  border-top:1px solid #294835!important;text-align:left!important;
+  font:inherit!important;
+}
+footer.garden-unified-footer > :not(.garden-footer-content){display:none!important}
+footer.garden-unified-footer .garden-footer-content{
+  display:block!important;width:min(1300px,calc(100% - 64px))!important;
+  max-width:1300px!important;margin:0 auto!important;
+  padding:62px 0 25px!important;box-sizing:border-box!important;
+}
+footer.garden-unified-footer .garden-footer-inner{
+  display:grid!important;grid-template-columns:minmax(200px,.85fr) minmax(0,2.15fr)!important;
+  gap:clamp(30px,5vw,80px)!important;
+}
+footer.garden-unified-footer .garden-footer-intro p{
+  max-width:290px!important;color:#a9bbb0!important;font-size:14px!important;
+  line-height:1.65!important;margin:18px 0 0!important;
+}
+footer.garden-unified-footer .garden-footer-logo{display:inline-block!important}
+footer.garden-unified-footer .garden-footer-logo img{
+  display:block!important;width:128px!important;height:auto!important;max-width:100%!important;
+}
+footer.garden-unified-footer .garden-footer-columns{
+  display:grid!important;grid-template-columns:.65fr 1.25fr 1.2fr!important;
+  gap:clamp(20px,3vw,47px)!important;
+}
+footer.garden-unified-footer .garden-footer-column{
+  min-width:0!important;display:flex!important;flex-direction:column!important;
+  align-items:flex-start!important;gap:10px!important;
+}
+footer.garden-unified-footer .garden-footer-column h2{
+  color:#b5c5b6!important;margin:0 0 13px!important;
+  font-size:12px!important;font-weight:750!important;letter-spacing:.095em!important;
+  line-height:1.3!important;text-transform:uppercase!important;
+}
+footer.garden-unified-footer .garden-footer-column a,
+footer.garden-unified-footer .garden-footer-top{
+  display:inline-block!important;color:#e4f0e5!important;background:transparent!important;
+  font-size:14px!important;font-weight:500!important;line-height:1.5!important;
+  margin:0!important;padding:0!important;text-decoration:none!important;
+  overflow-wrap:anywhere!important;
+}
+footer.garden-unified-footer .garden-footer-column a:hover,
+footer.garden-unified-footer .garden-footer-top:hover{color:#d7ff79!important;text-decoration:underline!important}
+footer.garden-unified-footer .garden-footer-column a:focus-visible,
+footer.garden-unified-footer .garden-footer-top:focus-visible{outline:2px solid #d7ff79!important;outline-offset:3px!important}
+footer.garden-unified-footer .garden-footer-column span{
+  color:#9eafa3!important;font-size:13px!important;line-height:1.5!important;
+}
+footer.garden-unified-footer .garden-footer-column .garden-footer-contact-detail{color:#d7ff79!important}
+footer.garden-unified-footer .garden-footer-merchant{
+  display:flex!important;flex-direction:column!important;gap:7px!important;
+  border-top:1px solid #32513c!important;margin-top:48px!important;padding-top:22px!important;
+  font-size:12px!important;line-height:1.55!important;color:#9aada0!important;
+}
+footer.garden-unified-footer .garden-footer-bottom{
+  display:flex!important;justify-content:space-between!important;align-items:center!important;
+  gap:20px!important;margin-top:20px!important;
+  font-size:12px!important;line-height:1.5!important;color:#96aa9a!important;
+}
+@media(max-width:980px){
+  footer.garden-unified-footer .garden-footer-inner{grid-template-columns:1fr!important;gap:35px!important}
+  footer.garden-unified-footer .garden-footer-columns{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:650px){
+  footer.garden-unified-footer .garden-footer-content{
+    width:calc(100% - 40px)!important;padding:38px 0 22px!important;
+  }
+  footer.garden-unified-footer .garden-footer-columns{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:34px 21px!important;
+  }
+  footer.garden-unified-footer .garden-footer-contact{grid-column:1 / -1!important}
+  footer.garden-unified-footer .garden-footer-column h2{font-size:11px!important;margin-bottom:10px!important}
+  footer.garden-unified-footer .garden-footer-column a{font-size:14px!important;line-height:1.55!important}
+  footer.garden-unified-footer .garden-footer-merchant{margin-top:32px!important}
+}
