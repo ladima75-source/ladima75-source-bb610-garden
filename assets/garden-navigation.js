@@ -337,12 +337,10 @@
       mobileLinks.at(-1)?.textContent.trim()==='Обговорити проєкт';
     if(!mobileCurrent) menu.innerHTML=markup+pdfMobileLink+market+'<a class="garden-mobile-project" href="'+contactTarget+'">Обговорити проєкт</a>';
   };
-  // Keep Garden's contact phones consistent with BB610 Market:
-  // the established +380 77 number remains first, the new +380 97 number second.
+  // Use the single contact number currently published on BB610 Market.
   const syncContactPhones = () => {
     const numbers = [
-      ['+380770179770', '+380 (77) 017 97 70'],
-      ['+380972920104', '+380 (97) 292-01-04']
+      ['+380770179770', '+380 (77) 017 97 70']
     ];
     const makeNumbers = () => {
       const group = document.createElement('div');
@@ -462,7 +460,6 @@
           '<div class="garden-footer-column garden-footer-contact">',
             '<h2>ЗВ’ЯЗОК</h2>',
             '<a href="tel:+380770179770">+380 (77) 017 97 70</a>',
-            '<a href="tel:+380972920104">+380 (97) 292-01-04</a>',
             '<a href="mailto:market.bb610@gmail.com">market.bb610@gmail.com</a>',
             '<a href="https://t.me/bb610_market_bot" target="_blank" rel="noopener">Telegram · @bb610_market_bot ↗</a>',
             '<span>09:00–18:00 · м. Дніпро</span>',
