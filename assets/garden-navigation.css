@@ -75,3 +75,32 @@ body.garden-has-header .site-shell{padding-top:0!important}
  .garden-site-header .garden-mobile-catalog-cta{padding:10px 12px!important;font-size:13px!important}
  .garden-site-header .garden-menu-button{padding:7px!important}
 }
+
+/* Shared catalog download: the same Ukrainian PDF on every Garden page. */
+.garden-site-header .garden-catalog-download{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:9px!important;min-height:43px!important;box-sizing:border-box!important;
+  padding:9px 13px!important;border:1px solid #87b28d!important;border-radius:5px!important;
+  background:transparent!important;color:#e7f3e4!important;text-decoration:none!important;
+  font-size:13px!important;line-height:1.25!important;font-weight:650!important;
+  white-space:nowrap!important;flex-shrink:0!important;
+}
+.garden-site-header .garden-catalog-download:hover{
+  border-color:#d7f58c!important;background:#143225!important;color:#d7f58c!important;
+}
+.garden-site-header .garden-catalog-download:focus-visible{
+  outline:2px solid #d7f58c!important;outline-offset:3px!important;
+}
+.garden-site-header .garden-catalog-download-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:500;line-height:1;
+}
+@media(max-width:1100px){
+  .garden-site-header .garden-catalog-download{
+    width:43px!important;min-width:43px!important;padding:8px!important;
+  }
+  .garden-site-header .garden-catalog-download-text{display:none!important}
+  .garden-site-header .garden-mobile-nav .garden-mobile-pdf{
+    color:#d7ff79!important;font-weight:700!important;
+  }
+}
