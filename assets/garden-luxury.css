@@ -1466,3 +1466,165 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
     padding:28px 0;
   }
 }
+
+
+/* GARDEN TECHNICAL PRODUCT PRESENTATION / v2
+   No retail card chrome. All five technical examples share identical
+   typography, image framing, original image proportions and action style. */
+#system-interfaces .garden-base-card,
+#system-interfaces #proof-lysimeter{
+  align-items:center!important;
+  gap:clamp(32px,5vw,70px)!important;
+}
+#system-interfaces .garden-base-card{
+  position:relative;
+  overflow:visible!important;
+  cursor:auto!important;
+  min-height:0;
+}
+#system-interfaces .garden-base-card:hover{transform:none!important;box-shadow:none!important}
+#system-interfaces .garden-base-content,
+#system-interfaces #proof-lysimeter .proof-feature-copy{
+  align-self:center!important;
+  width:100%!important;
+  max-width:520px!important;
+  padding:0!important;
+  background:transparent!important;
+}
+#system-interfaces .garden-base-code{
+  display:block;
+  margin:0 0 14px;
+  font-size:12px!important;
+  line-height:1.5!important;
+  letter-spacing:.025em!important;
+  color:#667b6d!important;
+  font-weight:600!important;
+}
+#system-interfaces .garden-base-content h4,
+#system-interfaces #proof-lysimeter .proof-feature-copy h3{
+  font-family:var(--garden-typeface,"Garden Manrope",sans-serif)!important;
+  font-size:clamp(28px,2.55vw,42px)!important;
+  line-height:1.075!important;
+  font-weight:500!important;
+  letter-spacing:-.043em!important;
+  color:#10261d!important;
+  margin:0 0 18px!important;
+  text-wrap:balance;
+}
+#system-interfaces .garden-base-content p,
+#system-interfaces #proof-lysimeter .proof-feature-copy p{
+  font-family:var(--garden-typeface,"Garden Manrope",sans-serif)!important;
+  font-size:clamp(15px,1.14vw,17px)!important;
+  line-height:1.67!important;
+  color:#526559!important;
+  font-weight:450!important;
+  max-width:515px!important;
+  margin:0!important;
+}
+#system-interfaces .garden-base-detail,
+#system-interfaces #proof-lysimeter .accessory-proof-link{
+  display:inline-flex!important;
+  margin:24px 0 0!important;
+  padding:0 0 5px!important;
+  border:0!important;
+  border-bottom:1px solid #8baa6c!important;
+  background:none!important;
+  box-shadow:none!important;
+  color:#587a21!important;
+  font-family:var(--garden-typeface,"Garden Manrope",sans-serif)!important;
+  font-size:14px!important;
+  font-weight:700!important;
+  line-height:1.5!important;
+  text-decoration:none!important;
+}
+#system-interfaces .garden-base-detail:hover,
+#system-interfaces #proof-lysimeter .accessory-proof-link:hover{
+  color:#365514!important;
+  border-bottom-color:#365514!important;
+}
+#system-interfaces .garden-base-detail:focus-visible{
+  outline:3px solid #258d47!important;
+  outline-offset:4px!important;
+}
+#system-interfaces .garden-base-media,
+#system-interfaces #proof-lysimeter .proof-feature-media{
+  position:relative!important;
+  isolation:isolate!important;
+  margin:0!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+  background:#e8ede4!important;
+  border:1px solid #d3dcd0!important;
+  border-radius:9px!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+}
+#system-interfaces .garden-base-media img,
+#system-interfaces #proof-lysimeter .proof-feature-media img{
+  display:block!important;
+  position:static!important;
+  flex:0 1 auto!important;
+  width:auto!important;
+  height:auto!important;
+  max-width:90%!important;
+  max-height:86%!important;
+  min-width:0!important;
+  min-height:0!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  aspect-ratio:auto!important;
+  transform:none!important;
+  margin:auto!important;
+  mix-blend-mode:multiply!important;
+}
+#system-interfaces #proof-lysimeter .proof-feature-media > a{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:visible!important;
+}
+@media(max-width:900px){
+  #system-interfaces .garden-base-card,
+  #system-interfaces #proof-lysimeter{
+    align-items:stretch!important;
+    gap:20px!important;
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  #system-interfaces .garden-base-content,
+  #system-interfaces #proof-lysimeter .proof-feature-copy{
+    max-width:650px!important;
+  }
+  #system-interfaces .garden-base-media,
+  #system-interfaces #proof-lysimeter .proof-feature-media{
+    height:clamp(300px,48vw,420px)!important;
+    min-height:300px!important;
+    padding:14px!important;
+  }
+}
+@media(max-width:600px){
+  #system-interfaces .garden-base-content h4,
+  #system-interfaces #proof-lysimeter .proof-feature-copy h3{
+    font-size:clamp(26px,7.2vw,34px)!important;
+    line-height:1.1!important;
+  }
+  #system-interfaces .garden-base-content p,
+  #system-interfaces #proof-lysimeter .proof-feature-copy p{
+    font-size:15.5px!important;
+    line-height:1.68!important;
+  }
+  #system-interfaces .garden-base-media,
+  #system-interfaces #proof-lysimeter .proof-feature-media{
+    height:310px!important;
+    min-height:310px!important;
+  }
+  #system-interfaces .garden-base-media img,
+  #system-interfaces #proof-lysimeter .proof-feature-media img{
+    max-width:92%!important;
+    max-height:88%!important;
+  }
+}
