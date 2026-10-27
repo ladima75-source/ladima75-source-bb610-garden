@@ -329,7 +329,7 @@
         '</div>' +
         '<div class="proof-feature-media proof-white"><a href="/portfolio-items/lysimeters/"><img src="/media/plantlogic-accessories/d31fe8ba66e2.jpg" alt="Пластиковий лізиметр PlantLogic — лоток для збору дренажу під горщиком" loading="lazy"></a></div>';
       interfaces.append(block);
-      block.querySelector('.proof-feature-copy').insertAdjacentHTML('beforeend','<a class="text-button accessory-proof-link" href="/portfolio-items/lysimeters/">Лізиметри та комплект для контролю поливу й дренажу ↗</a>');
+      block.querySelector('.proof-feature-copy').insertAdjacentHTML('beforeend','<a class="text-button accessory-proof-link" href="/portfolio-items/lysimeters/">Технічні характеристики ↗</a>');
 
 
     }
