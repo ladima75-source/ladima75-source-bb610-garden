@@ -1230,3 +1230,60 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
 #system-interfaces .garden-base-detail{margin-top:auto;color:#1e7c3c;font-size:14px;font-weight:700}
 @media(max-width:980px){#system-interfaces .garden-bases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#system-interfaces .garden-bases-head{grid-template-columns:1fr;gap:12px}}
 @media(max-width:600px){#system-interfaces .garden-bases-grid{grid-template-columns:1fr;gap:13px}#system-interfaces .garden-bases-head h3{font-size:27px}#system-interfaces .garden-base-media{height:230px}#system-interfaces .garden-base-content{padding:15px 18px 18px}}
+
+/* Field stories: mobile carousel must reveal its horizontal navigation. */
+#field-stories .lux-field-controls{display:none}
+@media(max-width:760px){
+  #field-stories .lux-field-controls{
+    display:flex!important;align-items:center;justify-content:space-between;
+    gap:10px;margin:0 0 16px;color:#e5f4e6;
+  }
+  #field-stories .lux-field-hint{
+    display:inline-flex;align-items:center;gap:8px;min-width:0;
+    font-size:13px;font-weight:600;line-height:1.35;color:#d7ff79;
+  }
+  #field-stories .lux-field-hint span{
+    font-size:20px;font-weight:500;line-height:1;flex:none;
+  }
+  #field-stories .lux-field-pager{
+    display:flex;align-items:center;gap:7px;flex-shrink:0;
+  }
+  #field-stories .lux-field-count{
+    min-width:42px;text-align:center;white-space:nowrap;
+    font-variant-numeric:tabular-nums;font-size:12px;letter-spacing:.02em;
+    font-weight:650;color:#d7e7d9;
+  }
+  #field-stories .lux-field-pager button{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;min-width:40px;padding:0;margin:0;
+    background:transparent;color:#d7ff79;border:1px solid #8aa798;
+    border-radius:7px;font-size:23px;line-height:1;cursor:pointer;
+    touch-action:manipulation;
+  }
+  #field-stories .lux-field-pager button:disabled{
+    color:#617469;border-color:#475d50;opacity:.65;cursor:default;
+  }
+  #field-stories .lux-field-pager button:not(:disabled):active{
+    background:#d7ff79;color:#10261d;
+  }
+  #field-stories .lux-field-pager button:focus-visible{
+    outline:2px solid #d7ff79;outline-offset:3px;
+  }
+  #field-stories .lux-field-grid{
+    display:flex!important;gap:14px!important;overflow-x:auto!important;
+    overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;scrollbar-width:none;
+    padding-bottom:4px!important;
+  }
+  #field-stories .lux-field-grid::-webkit-scrollbar{display:none}
+  #field-stories .lux-field-card{
+    flex:0 0 84%!important;width:84%!important;min-width:0!important;
+    max-width:84%!important;scroll-snap-align:start;
+  }
+}
+@media(max-width:365px){
+  #field-stories .lux-field-hint{font-size:12px;gap:5px}
+  #field-stories .lux-field-count{min-width:36px;font-size:11px}
+  #field-stories .lux-field-pager{gap:5px}
+  #field-stories .lux-field-pager button{width:36px;height:36px;min-width:36px}
+}
