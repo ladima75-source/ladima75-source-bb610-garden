@@ -284,10 +284,10 @@
     const basesContainer = document.querySelector("#system-interfaces .wrap");
     if (basesContainer && !document.querySelector("#garden-bases-showcase")) {
       const models = [
-        { title: "Мішок для субстрату з інтегрованою основою", no: "13079250 / 13079300", note: "Мішок та опорна основа · 25 / 30 л", image: "/media/plantlogic-bag-bases/5cbd2a3536e8.jpg", href: "/portfolio-items/culti-base-grow-bag-with-integrated-base/" },
-        { title: "Основа VF для мішка з субстратом", no: "12010300 / 12010320 / 12010400", note: "Опорна платформа 50 мм · три виконання", image: "/media/plantlogic-bag-bases/0df6e54eea15.jpg", href: "/portfolio-items/vf-base-for-open-top-grow-bags/" },
-        { title: "Основа для мішка зі збором дренажу", no: "1301036", note: "Відведення стоку до центрального жолоба", image: "/media/plantlogic-bag-bases/b86de5f6653d.jpg", href: "/portfolio-items/bag-base-drainage-collection/" },
-        { title: "Основа Rivus з інтегрованим дренажним жолобом", no: "13020500 / 13020502", note: "Опора для субстратних плит · інтегрований жолоб", image: "/media/plantlogic-rubus-vegetables/cccbe7846031.jpg", href: "/portfolio-items/rivus-slab-base/" }
+        { title: "Мішок для субстрату з інтегрованою основою", no: "13079250 / 13079300", note: "Основа та мішок утворюють готову конструкцію для розміщення субстрату над поверхнею. Пірамідальна геометрія спрямовує надлишок води до периферії, а центральні отвори залишають шлях для повітрообміну в кореневій зоні. Доступні об’єми 25 і 30 л.", image: "/media/plantlogic-bag-bases/5cbd2a3536e8.jpg", href: "/portfolio-items/culti-base-grow-bag-with-integrated-base/" },
+        { title: "Основа VF для мішка з субстратом", no: "12010300 / 12010320 / 12010400", note: "Платформа заввишки 50 мм піднімає мішок над поверхнею, залишаючи простір для відведення води та руху повітря. Передбачено три виконання; модифікація 3232 Hose fix додатково фіксує поливну трубу між мішком і основою.", image: "/media/plantlogic-bag-bases/0df6e54eea15.jpg", href: "/portfolio-items/vf-base-for-open-top-grow-bags/" },
+        { title: "Основа для мішка зі збором дренажу", no: "1301036", note: "Внутрішні канали спрямовують дренажну воду до центрального жолоба, звідки її можна організовано відвести з виробничого ряду. Широка опора зменшує просідання мішка на м’якому ґрунті; основи вкладаються одна в одну для компактного транспортування.", image: "/media/plantlogic-bag-bases/b86de5f6653d.jpg", href: "/portfolio-items/bag-base-drainage-collection/" },
+        { title: "Основа Rivus з інтегрованим дренажним жолобом", no: "13020500 / 13020502", note: "Профіль поєднує опору для субстратної плити та дренажний жолоб в одній конструкції. Простір під плитою забезпечує повітрообмін, а стік відводиться вздовж ряду. Висота профілю — 60 мм; передбачені довжини 2, 4 та 8 м.", image: "/media/plantlogic-rubus-vegetables/cccbe7846031.jpg", href: "/portfolio-items/rivus-slab-base/" }
       ];
       const showcase = document.createElement("section");
       showcase.id = "garden-bases-showcase";
@@ -296,19 +296,19 @@
       showcase.innerHTML =
         '<div class="garden-bases-head">' +
           '<h3 id="garden-bases-heading">Основи та мішки для субстратного вирощування</h3>' +
-          '<p>Чотири конструкції для розміщення кореневої зони та відведення дренажу. Переглядайте характеристики кожної моделі.</p>' +
+          '<p>Різні конструкції підтримують кореневу зону над поверхнею, організовують доступ повітря та відведення надлишкової води. Нижче показано принцип роботи кожної основи.</p>' +
         '</div>' +
         '<div class="garden-bases-grid">' +
           models.map(item =>
-            '<a class="garden-base-card" href="' + item.href + '">' +
+            '<article class="garden-base-card">' +
               '<div class="garden-base-content">' +
                 '<span class="garden-base-code">Артикул ' + item.no + '</span>' +
                 '<h4>' + item.title + '</h4>' +
                 '<p>' + item.note + '</p>' +
-                '<span class="garden-base-detail">Характеристики ↗</span>' +
+                '<a class="garden-base-detail" href="' + item.href + '">Технічні характеристики ↗</a>' +
               '</div>' +
-              '<div class="garden-base-media"><img src="' + item.image + '" alt="' + item.title + '" loading="lazy" decoding="async"></div>' +
-            '</a>'
+              '<figure class="garden-base-media"><img src="' + item.image + '" alt="' + item.title + ' — фото PlantLogic" loading="lazy" decoding="async"></figure>' +
+            '</article>'
           ).join('') +
         '</div>';
       const lysimeter = basesContainer.querySelector("#proof-lysimeter");
