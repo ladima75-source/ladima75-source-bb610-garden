@@ -206,3 +206,40 @@ footer.garden-unified-footer .garden-footer-bottom{
 .garden-contact-phones a:focus-visible{outline:2px solid #d7ff79;outline-offset:3px}
 #contact .garden-contact-phones{margin-top:16px;gap:8px}
 #contact .garden-contact-phones a{font-size:clamp(15px,1.35vw,18px);font-weight:650}
+
+/* GARDEN DESIGN SYSTEM — one font and one content grid on every page.
+   Manrope is served only from the existing local Garden font assets. */
+@font-face{
+  font-family:"Garden Manrope";font-style:normal;font-weight:200 800;font-display:swap;
+  src:url("/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2") format("woff2");
+  unicode-range:U+0400-052F,U+1C80-1C8F,U+2DE0-2DFF,U+A640-A69F;
+}
+@font-face{
+  font-family:"Garden Manrope";font-style:normal;font-weight:200 800;font-display:swap;
+  src:url("/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2") format("woff2");
+  unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face{
+  font-family:"Garden Manrope";font-style:normal;font-weight:200 800;font-display:swap;
+  src:url("/assets/manrope-latin-wght-normal-DHIcAJRg.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+:root{
+  --garden-typeface:"Garden Manrope","Manrope Variable",Manrope,sans-serif;
+  --garden-max:1320px;
+  --garden-side:clamp(22px,4vw,56px);
+}
+html body,
+html body :is(h1,h2,h3,h4,h5,h6,p,a,span,small,strong,em,b,i,button,input,textarea,select,option,label,legend,li,dt,dd,th,td,blockquote,figcaption,summary,time){
+  font-family:var(--garden-typeface)!important;
+}
+html body .wrap,
+.garden-site-header .garden-header-inner,
+footer.garden-unified-footer .garden-footer-content{
+  width:min(var(--garden-max),calc(100% - (var(--garden-side) * 2)))!important;
+  max-width:var(--garden-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+@media(max-width:760px){:root{--garden-side:20px}}
+@media(max-width:360px){:root{--garden-side:16px}}
