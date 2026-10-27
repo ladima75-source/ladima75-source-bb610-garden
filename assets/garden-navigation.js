@@ -458,7 +458,7 @@
             '<h2>ЗВ’ЯЗОК</h2>',
             '<a href="tel:+380770179770">+380 (77) 017 97 70</a>',
             '<a href="mailto:market.bb610@gmail.com">market.bb610@gmail.com</a>',
-            '<a href="https://t.me/bb610_market_bot" target="_blank" rel="noopener">Telegram · @bb610_market_bot ↗</a>',
+            '',
             '<span>09:00–18:00 · м. Дніпро</span>',
             '<a href="/contacts/" class="garden-footer-contact-detail">Контактні дані та реквізити →</a>',
           '</div>',
