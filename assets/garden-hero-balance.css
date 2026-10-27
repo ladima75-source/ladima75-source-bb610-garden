@@ -110,7 +110,7 @@
    without accidentally cropping a few pixels of the culture photographs.
    Mobile/tablet retains the normal continuous layout. */
 @media (min-width:1101px) and (max-height:960px){
-  #field-stories .lux-field-head:has(>p){
+  #field-stories .lux-field-head{
     margin-bottom:clamp(86px,11svh,110px)!important;
   }
 }
