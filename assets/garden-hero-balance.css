@@ -1,19 +1,7 @@
 /* BB610 Garden / first-screen composition v1
-   Scope: home hero and active navigation.
+   Scope: home hero only; shared navigation uses garden-navigation.css.
    Media: official audited PlantLogic image, hosted in /media/.
    This stylesheet deliberately loads after legacy overrides. */
-
-.garden-site-header .garden-desktop-nav .garden-nav-catalog:not([aria-current="page"]) {
-  background:transparent!important;
-  color:#d9e3d8!important;
-  border:0!important;
-  padding-inline:15px!important;
-  font-weight:600!important;
-}
-.garden-site-header .garden-desktop-nav .garden-nav-catalog:not([aria-current="page"]):hover {
-  color:#d7f58c!important;
-  background:rgba(215,245,140,.06)!important;
-}
 
 .hero {
   padding-top:20px!important;
