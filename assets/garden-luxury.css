@@ -1707,3 +1707,25 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
     transform:scale(1.15)!important;
   }
 }
+
+/* GARDEN PHOTO MATTE CORRECTION / v4
+   PlantLogic source JPGs include an off-white baked-in photographic
+   backdrop. 'multiply' darkens that matte and leaves a rectangle.
+   'darken' preserves pixels darker than the panel (product + shadows)
+   while replacing the lighter paper backdrop with the panel's color.
+   Keep the approved product scales exactly as in v3. */
+#system-interfaces .garden-base-card--drainage-base .garden-base-media,
+#system-interfaces #proof-lysimeter .proof-feature-media {
+  background-color:#e8ede4!important;
+  isolation:isolate!important;
+}
+#system-interfaces .garden-base-card--drainage-base .garden-base-media img,
+#system-interfaces #proof-lysimeter .proof-feature-media img {
+  mix-blend-mode:darken!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  filter:none!important;
+}
+#system-interfaces #proof-lysimeter .proof-feature-media > a {
+  background:transparent!important;
+}
