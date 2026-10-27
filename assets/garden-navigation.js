@@ -274,6 +274,19 @@
 
     const project=actions?.querySelector('.garden-project,.header-cta');
     project?.classList.add('garden-project');
+    if (actions && !actions.querySelector('.garden-mobile-catalog-cta')) {
+      const catalog = document.createElement('a');
+      catalog.href = '/catalog/';
+      catalog.className = 'garden-mobile-catalog-cta';
+      catalog.textContent = 'Каталог';
+      catalog.setAttribute('aria-label', 'Відкрити каталог продукції');
+      if (project) project.before(catalog); else actions.prepend(catalog);
+    }
+    const mobileCatalog = actions?.querySelector('.garden-mobile-catalog-cta');
+    if (mobileCatalog) {
+      if (activeHref() === '/catalog/') mobileCatalog.setAttribute('aria-current', 'page');
+      else mobileCatalog.removeAttribute('aria-current');
+    }
 
     const button=header.querySelector('.garden-menu-button,.menu-button');
     button?.classList.add('garden-menu-button');
@@ -290,16 +303,18 @@
     if(!menu.id) menu.id='garden-mobile-nav';
     const mobileLinks=[...menu.querySelectorAll(':scope > a')];
     const mobileCurrent=
-      mobileLinks.length===sections.length+1 &&
+      mobileLinks.length===sections.length+2 &&
       sections.every(([href,label,className],index)=>{
         const a=mobileLinks[index];
         return a?.getAttribute('href')===href &&
           a.textContent.trim()===label &&
           (!!className===a.classList.contains(className));
       }) &&
-      mobileLinks.at(-1)?.getAttribute('href')==='https://market.bb610.com.ua/' &&
-      mobileLinks.at(-1)?.textContent.trim()==='BB610 Market ↗';
-    if(!mobileCurrent) menu.innerHTML=markup+market;
+      mobileLinks.at(-2)?.getAttribute('href')==='https://market.bb610.com.ua/' &&
+      mobileLinks.at(-2)?.textContent.trim()==='BB610 Market ↗' &&
+      mobileLinks.at(-1)?.getAttribute('href')==='#contact' &&
+      mobileLinks.at(-1)?.textContent.trim()==='Обговорити проєкт';
+    if(!mobileCurrent) menu.innerHTML=markup+market+'<a class="garden-mobile-project" href="#contact">Обговорити проєкт</a>';
   };
   const enhance = () => {
     const header=document.querySelector('header');
