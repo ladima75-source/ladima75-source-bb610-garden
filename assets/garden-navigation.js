@@ -197,6 +197,7 @@
   ];
   const markup = sections.map(([href,label,className]) => `<a href="${href}"${className ? ` class="${className}"` : ''}>${label}</a>`).join('');
   const market = '<a class="garden-market" href="https://market.bb610.com.ua/" target="_blank" rel="noopener">BB610 Market ↗</a>';
+  const contactTarget = /^\/(about|contacts|privacy|terms)\//.test(location.pathname) ? '/contacts/' : '#contact';
   // The Ukrainian PlantLogic catalog is already versioned in this Garden repository.
   const pdfPath = '/media/tech-sheets-uk/plantlogic-catalog-2026-uk.pdf';
   const pdfName = 'PlantLogic-katalog-uk.pdf';
@@ -278,6 +279,7 @@
 
     const project=actions?.querySelector('.garden-project,.header-cta');
     project?.classList.add('garden-project');
+    if (project && project.getAttribute('href') !== contactTarget) project.setAttribute('href',contactTarget);
     if (actions && !actions.querySelector('.garden-catalog-download')) {
       const download = document.createElement('a');
       download.className = 'garden-catalog-download';
@@ -331,9 +333,9 @@
       mobileLinks.at(-3)?.hasAttribute('download') &&
       mobileLinks.at(-2)?.getAttribute('href')==='https://market.bb610.com.ua/' &&
       mobileLinks.at(-2)?.textContent.trim()==='BB610 Market ↗' &&
-      mobileLinks.at(-1)?.getAttribute('href')==='#contact' &&
+      mobileLinks.at(-1)?.getAttribute('href')===contactTarget &&
       mobileLinks.at(-1)?.textContent.trim()==='Обговорити проєкт';
-    if(!mobileCurrent) menu.innerHTML=markup+pdfMobileLink+market+'<a class="garden-mobile-project" href="#contact">Обговорити проєкт</a>';
+    if(!mobileCurrent) menu.innerHTML=markup+pdfMobileLink+market+'<a class="garden-mobile-project" href="'+contactTarget+'">Обговорити проєкт</a>';
   };
   // Keep Garden's contact phones consistent with BB610 Market:
   // the established +380 77 number remains first, the new +380 97 number second.
