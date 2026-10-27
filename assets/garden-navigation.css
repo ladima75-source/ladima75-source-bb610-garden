@@ -441,3 +441,73 @@ footer.garden-unified-footer .garden-footer-content{
 #drainage-engineering .drainage-engineering-head > p {
   color:#52685a!important;
 }
+
+
+/* GARDEN NAV STABLE GEOMETRY / 2026-10-27
+   The React homepage nav also carries .desktop-nav, whose legacy 42px
+   vertical link padding made it nearly 98px tall. Internal pages were 48px.
+   Keep identical header dimensions during clicks, hover and navigation. */
+@media (min-width:1101px){
+  .garden-site-header .garden-desktop-nav{
+    height:48px!important;
+    min-height:48px!important;
+    align-items:center!important;
+    box-sizing:border-box!important;
+  }
+  .garden-site-header .garden-desktop-nav > a:not(.garden-nav-catalog){
+    box-sizing:border-box!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    height:48px!important;
+    min-height:48px!important;
+    padding:0!important;
+    margin:0!important;
+    line-height:1.3!important;
+    transform:none!important;
+  }
+  .garden-site-header .garden-desktop-nav > .garden-nav-catalog{
+    display:inline-flex!important;
+    box-sizing:border-box!important;
+    align-items:center!important;
+    justify-content:center!important;
+    flex-shrink:0!important;
+    height:48px!important;
+    min-height:48px!important;
+    padding:0 20px!important;
+    margin:0!important;
+    background:#d7f58c!important;
+    color:#102117!important;
+    border:0!important;
+    border-radius:4px!important;
+    font-size:14px!important;
+    font-weight:700!important;
+    line-height:1.3!important;
+    text-decoration:none!important;
+    transform:none!important;
+  }
+  .garden-site-header .garden-desktop-nav > .garden-nav-catalog:hover,
+  .garden-site-header .garden-desktop-nav > .garden-nav-catalog:focus-visible,
+  .garden-site-header .garden-desktop-nav > .garden-nav-catalog[aria-current="page"]{
+    background:#e3f9a7!important;
+    color:#102117!important;
+    text-decoration:none!important;
+    transform:none!important;
+  }
+}
+.garden-site-header .garden-header-inner,
+.garden-site-header .garden-header-actions,
+.garden-site-header .garden-desktop-nav,
+.garden-site-header .garden-desktop-nav > a{
+  transition-property:color,background-color,border-color,box-shadow!important;
+  transition-duration:.16s!important;
+}
+.garden-site-header .garden-desktop-nav > a:active,
+.garden-site-header .garden-market:active,
+.garden-site-header .garden-project:active,
+.garden-site-header .garden-catalog-download:active{
+  transform:none!important;
+}
+html{
+  scrollbar-gutter:stable;
+}
