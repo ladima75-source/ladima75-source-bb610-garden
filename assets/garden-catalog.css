@@ -451,3 +451,28 @@
 .catalog-search-empty{max-width:960px;margin:24px auto;padding:20px;background:#f5f8f4;color:#294232;text-align:center}
 @media(max-width:1180px){.catalog-search{flex:1 1 100%}}
 @media(max-width:760px){.catalog-search{width:100%;min-width:0}.catalog-search input{min-height:44px;font-size:16px}}
+
+/* Compact catalog controls for phones: no half-screen permanent filter panel. */
+.catalog-mobile-toggle{display:none}
+.catalog-filter-panel{display:contents}
+@media(max-width:760px){
+ .catalog-controls{top:78px}
+ .catalog-controls-inner{width:100%;min-height:0;padding:7px 14px!important;gap:0!important;display:flex;flex-wrap:wrap;align-items:center}
+ .catalog-mobile-toggle{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;padding:9px 12px;border:1px solid #546e57;border-radius:7px;background:#11291b;color:#f5f8f1;text-align:left;font:650 14px/1.35 Manrope,Arial,sans-serif;cursor:pointer}
+ .catalog-mobile-toggle:focus-visible{outline:2px solid #d7ff79;outline-offset:2px}
+ .catalog-mobile-filter-icon{font-size:24px;line-height:1;color:#d7ff79}
+ .catalog-mobile-filter-current{margin-left:auto;color:#d7ff79;font-size:12px;font-weight:550;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .catalog-mobile-filter-arrow{font-size:23px;line-height:1;transform-origin:center;transition:transform .18s ease}
+ .catalog-controls.is-expanded .catalog-mobile-filter-arrow{transform:rotate(180deg)}
+ .catalog-filter-panel{display:none!important}
+ .catalog-controls.is-expanded .catalog-filter-panel{display:flex!important;flex-direction:column;gap:13px;width:100%;min-width:0;padding:13px 0 8px}
+ .catalog-page .catalog-filter-panel .catalog-control-group{display:flex;flex:0 0 auto;width:100%;min-width:0;overflow:visible;flex-wrap:wrap;gap:9px;align-items:flex-start}
+ .catalog-page .catalog-filter-panel .catalog-control-label{position:static;flex:0 0 100%;margin:0;padding:0;background:transparent;font-size:11px;color:#abbcad}
+ .catalog-page .catalog-filter-panel .solution-nav{display:flex;flex-wrap:wrap;gap:6px;width:100%;min-width:0}
+ .catalog-page .catalog-filter-panel .solution-nav a{font-size:13px;min-height:42px;padding:10px 12px}
+ .catalog-page .catalog-filter-panel .catalog-filter{display:flex;flex-wrap:wrap;flex:1 1 100%;gap:7px;min-width:0}
+ .catalog-page .catalog-filter-panel .catalog-filter button{font-size:13px;min-height:43px;padding:10px 12px}
+ .catalog-page .catalog-filter-panel .catalog-search{display:flex;min-width:0;width:100%;flex:0 0 auto}
+ .catalog-page .catalog-filter-panel .catalog-search input{font-size:16px;min-height:44px}
+ .catalog-category{scroll-margin-top:144px}
+}
