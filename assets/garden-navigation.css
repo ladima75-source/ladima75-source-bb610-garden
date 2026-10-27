@@ -511,3 +511,26 @@ footer.garden-unified-footer .garden-footer-content{
 html{
   scrollbar-gutter:stable;
 }
+
+/* GARDEN HEADER CROSS-PAGE CTA WIDTH / v2: identical label, dimensions and type on every route. */
+@media(min-width:1101px){
+  .garden-site-header .garden-desktop-nav > a:not(.garden-nav-catalog){
+    font-family:var(--garden-typeface,"Garden Manrope",sans-serif)!important;
+    font-weight:550!important;
+    font-size:16px!important;
+    letter-spacing:0!important;
+  }
+  .garden-site-header .garden-project{
+    flex:0 0 144px!important;
+    width:144px!important;
+    min-width:144px!important;
+    max-width:144px!important;
+    box-sizing:border-box!important;
+    white-space:nowrap!important;
+  }
+}
+@media(min-width:1101px) and (max-width:1300px){
+  .garden-site-header .garden-desktop-nav > a:not(.garden-nav-catalog){
+    font-size:14px!important;
+  }
+}
