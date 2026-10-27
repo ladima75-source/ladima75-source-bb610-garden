@@ -197,6 +197,10 @@
   ];
   const markup = sections.map(([href,label,className]) => `<a href="${href}"${className ? ` class="${className}"` : ''}>${label}</a>`).join('');
   const market = '<a class="garden-market" href="https://market.bb610.com.ua/" target="_blank" rel="noopener">BB610 Market ↗</a>';
+  // The Ukrainian PlantLogic catalog is already versioned in this Garden repository.
+  const pdfPath = '/media/tech-sheets-uk/plantlogic-catalog-2026-uk.pdf';
+  const pdfName = 'PlantLogic-katalog-uk.pdf';
+  const pdfMobileLink = '<a class="garden-mobile-pdf" href="' + pdfPath + '" download="' + pdfName + '">Завантажити каталог (PDF)</a>';
   const culturePaths = new Set(['/crops/','/blueberry-production/','/strawberry-production/','/rubus-production/','/vegetable-production/']);
   const activeHref = () => {
     const path=location.pathname;
@@ -274,6 +278,19 @@
 
     const project=actions?.querySelector('.garden-project,.header-cta');
     project?.classList.add('garden-project');
+    if (actions && !actions.querySelector('.garden-catalog-download')) {
+      const download = document.createElement('a');
+      download.className = 'garden-catalog-download';
+      download.href = pdfPath;
+      download.download = pdfName;
+      download.title = 'Завантажити каталог PlantLogic (PDF)';
+      download.setAttribute('aria-label','Завантажити каталог PlantLogic (PDF)');
+      download.innerHTML = '<span class="garden-catalog-download-icon" aria-hidden="true">↓</span>' +
+        '<span class="garden-catalog-download-text">Завантажити каталог</span>';
+      if (shop) shop.before(download);
+      else if (project) project.before(download);
+      else actions.prepend(download);
+    }
     if (actions && !actions.querySelector('.garden-mobile-catalog-cta')) {
       const catalog = document.createElement('a');
       catalog.href = '/catalog/';
@@ -303,18 +320,20 @@
     if(!menu.id) menu.id='garden-mobile-nav';
     const mobileLinks=[...menu.querySelectorAll(':scope > a')];
     const mobileCurrent=
-      mobileLinks.length===sections.length+2 &&
+      mobileLinks.length===sections.length+3 &&
       sections.every(([href,label,className],index)=>{
         const a=mobileLinks[index];
         return a?.getAttribute('href')===href &&
           a.textContent.trim()===label &&
           (!!className===a.classList.contains(className));
       }) &&
+      mobileLinks.at(-3)?.getAttribute('href')===pdfPath &&
+      mobileLinks.at(-3)?.hasAttribute('download') &&
       mobileLinks.at(-2)?.getAttribute('href')==='https://market.bb610.com.ua/' &&
       mobileLinks.at(-2)?.textContent.trim()==='BB610 Market ↗' &&
       mobileLinks.at(-1)?.getAttribute('href')==='#contact' &&
       mobileLinks.at(-1)?.textContent.trim()==='Обговорити проєкт';
-    if(!mobileCurrent) menu.innerHTML=markup+market+'<a class="garden-mobile-project" href="#contact">Обговорити проєкт</a>';
+    if(!mobileCurrent) menu.innerHTML=markup+pdfMobileLink+market+'<a class="garden-mobile-project" href="#contact">Обговорити проєкт</a>';
   };
   const enhance = () => {
     const header=document.querySelector('header');
