@@ -403,3 +403,69 @@
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
+
+
+/* Garden informational footer: shared BB610 Market contacts, no ecosystem promotional links. */
+(() => {
+  const mail = 'market.bb610@gmail.com';
+  const footerHTML = [
+    '<div class="garden-footer-content">',
+      '<div class="garden-footer-inner">',
+        '<div class="garden-footer-intro">',
+          '<a class="garden-footer-logo" href="/" aria-label="BB610 Garden — головна"><img src="/media/bb610-garden-user-logo.webp" alt="BB610 Garden" width="158" height="105" loading="lazy"></a>',
+          '<p>Горщики, конструкції та системи PlantLogic для сучасного вирощування. Вивчайте. Порівнюйте. Застосовуйте.</p>',
+        '</div>',
+        '<div class="garden-footer-columns">',
+          '<nav class="garden-footer-column" aria-label="Розділи Garden">',
+            '<h2>РОЗДІЛИ</h2><a href="/catalog/">Каталог</a><a href="/crops/">Культури</a><a href="/systems/">Системи</a><a href="/blog/">Блог</a>',
+          '</nav>',
+          '<nav class="garden-footer-column" aria-label="Інформація про сайт">',
+            '<h2>ІНФОРМАЦІЯ</h2><a href="/about/">Про нас</a><a href="/contacts/">Контакти</a><a href="/privacy/">Політика конфіденційності</a><a href="/terms/">Умови використання</a>',
+            '<a href="https://market.bb610.com.ua/delivery.html" target="_blank" rel="noopener">Доставка · Market ↗</a>',
+            '<a href="https://market.bb610.com.ua/payment.html" target="_blank" rel="noopener">Оплата · Market ↗</a>',
+            '<a href="https://market.bb610.com.ua/returns.html" target="_blank" rel="noopener">Обмін та повернення · Market ↗</a>',
+          '</nav>',
+          '<div class="garden-footer-column garden-footer-contact">',
+            '<h2>ЗВ’ЯЗОК</h2>',
+            '<a href="tel:+380770179770">+380 (77) 017 97 70</a>',
+            '<a href="mailto:market.bb610@gmail.com">market.bb610@gmail.com</a>',
+            '<a href="https://t.me/bb610_market_bot" target="_blank" rel="noopener">Telegram · @bb610_market_bot ↗</a>',
+            '<span>09:00–18:00 · м. Дніпро</span>',
+            '<a href="/contacts/" class="garden-footer-contact-detail">Контактні дані та реквізити →</a>',
+          '</div>',
+        '</div>',
+      '</div>',
+      '<div class="garden-footer-merchant">',
+        '<span>Контактні дані та продавець у BB610 Market: ФОП Лахно Марина Анатоліївна · РНОКПП 2560502404</span>',
+        '<span>49116, Україна, м. Дніпро, вул. Рильського (Самарський район), буд. 106</span>',
+      '</div>',
+      '<div class="garden-footer-bottom"><span>© '+ new Date().getFullYear() +' BB610 Garden</span><a href="#top" class="garden-footer-top">На початок ↑</a></div>',
+    '</div>'
+  ].join('');
+  const syncEmails = () => {
+    document.querySelectorAll('a[href="mailto:info@bb610.com.ua"]').forEach(a => {
+      a.href = 'mailto:' + mail;
+      if (a.textContent.trim() === 'info@bb610.com.ua') a.textContent = mail;
+    });
+  };
+  const syncFooter = () => {
+    syncEmails();
+    const footer = document.querySelector('footer');
+    if (!footer) return false;
+    if (!footer.querySelector('.garden-footer-content')) {
+      footer.classList.add('garden-unified-footer');
+      footer.insertAdjacentHTML('beforeend',footerHTML);
+    }
+    return true;
+  };
+  const start = () => {
+    if (syncFooter()) return;
+    const observer = new MutationObserver(() => {
+      if (syncFooter()) observer.disconnect();
+    });
+    observer.observe(document.body,{childList:true,subtree:true});
+    setTimeout(() => observer.disconnect(),8000);
+  };
+  if(document.readyState === 'loading')document.addEventListener('DOMContentLoaded',start,{once:true});
+  else start();
+})();
