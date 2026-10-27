@@ -1729,3 +1729,14 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
 #system-interfaces #proof-lysimeter .proof-feature-media > a {
   background:transparent!important;
 }
+
+/* GARDEN MATTED JPG REPLACEMENT — transparent originals v5
+   Only two photos with corrected transparent WebP are affected.
+   Keep approved scaling and framing from the preceding version. */
+#system-interfaces .garden-base-card--drainage-base .garden-base-media img,
+#system-interfaces #proof-lysimeter .proof-feature-media img{
+  mix-blend-mode:normal!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  filter:none!important;
+}
