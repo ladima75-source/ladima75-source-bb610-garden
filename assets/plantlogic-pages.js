@@ -31,7 +31,7 @@
       thumbs.forEach(t => t.setAttribute('aria-pressed', String(t === thumb)));
     }
     if (dialog?.open && dialogImage) {
-      dialogImage.src = image.currentSrc || image.src;
+      dialogImage.src = image.src;
       dialogImage.alt = image.alt;
       const count = dialog.querySelector('.image-dialog-counter');
       if (count) count.textContent = (index + 1) + ' / ' + total;
@@ -63,7 +63,7 @@
 
   stage.addEventListener('click', () => {
     index = selectedIndex();
-    dialogImage.src = image.currentSrc || image.src;
+    dialogImage.src = image.src;
     dialogImage.alt = image.alt;
     dialog.querySelector('.image-dialog-counter')?.replaceChildren(document.createTextNode((index + 1) + ' / ' + total));
     dialog.showModal();
