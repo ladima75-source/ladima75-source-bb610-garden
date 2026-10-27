@@ -243,3 +243,70 @@ footer.garden-unified-footer .garden-footer-content{
 }
 @media(max-width:760px){:root{--garden-side:20px}}
 @media(max-width:360px){:root{--garden-side:16px}}
+
+/* GARDEN SECTION HEADINGS — production and root-zone parity v1
+   Keep both editorial introductions inside the same Garden 1320px content grid. */
+#corporate-video .video-band-head,
+#technical-core .technical-core-head {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  gap:clamp(36px,5vw,76px)!important;
+  align-items:start!important;
+  margin-bottom:clamp(26px,3vw,38px)!important;
+}
+#corporate-video .video-band-head > div,
+#technical-core .technical-core-head > div {
+  min-width:0!important;
+}
+#corporate-video .video-band-head h2,
+#technical-core .technical-core-head h2 {
+  margin:0!important;
+  max-width:690px!important;
+  font-size:clamp(2.1rem,3.05vw,3.55rem)!important;
+  line-height:1.075!important;
+  letter-spacing:-.042em!important;
+  font-weight:500!important;
+  text-wrap:balance;
+}
+#corporate-video .video-band-head > p,
+#technical-core .technical-core-head > p {
+  margin:0!important;
+  width:100%!important;
+  max-width:490px!important;
+  min-width:0!important;
+  align-self:start!important;
+  padding:4px 0 4px 22px!important;
+  border-left:2px solid #a5d57a!important;
+  font-size:clamp(15px,1.12vw,17px)!important;
+  line-height:1.62!important;
+  font-weight:450!important;
+}
+#corporate-video .video-band-head > p {color:#c1cfc1!important}
+#technical-core .technical-core-head > p {color:#536959!important}
+@media(max-width:900px){
+  #corporate-video .video-band-head,
+  #technical-core .technical-core-head {
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:16px!important;
+    margin-bottom:26px!important;
+  }
+  #corporate-video .video-band-head h2,
+  #technical-core .technical-core-head h2 {
+    font-size:clamp(2rem,5.5vw,3.15rem)!important;
+  }
+  #corporate-video .video-band-head > p,
+  #technical-core .technical-core-head > p {
+    max-width:660px!important;
+    border-left:0!important;
+    border-top:1px solid #a5d57a!important;
+    padding:16px 0 0!important;
+    font-size:16px!important;
+    line-height:1.6!important;
+  }
+}
+@media(max-width:600px){
+  #corporate-video .video-band-head h2,
+  #technical-core .technical-core-head h2 {
+    font-size:clamp(1.85rem,7.5vw,2.6rem)!important;
+  }
+}
