@@ -434,3 +434,10 @@ footer.garden-unified-footer .garden-footer-content{
   .site-shell main > .intro:has(> h2 + p) > .hero-banner,
   .site-shell main > .intro:has(> h2 + p) > .section-nav {grid-column:1!important}
 }
+
+/* Light-surface explanatory text: maintain readable contrast. */
+#family-engineering .family-engineering-head > p,
+#system-interfaces .system-interfaces-head > p,
+#drainage-engineering .drainage-engineering-head > p {
+  color:#52685a!important;
+}
