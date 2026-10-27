@@ -279,7 +279,12 @@
 
     const project=actions?.querySelector('.garden-project,.header-cta');
     project?.classList.add('garden-project');
-    if (project && project.getAttribute('href') !== contactTarget) project.setAttribute('href',contactTarget);
+    // One CTA label across React homepage and static internal pages prevents
+    // neighboring links from shifting when a visitor changes section.
+    if (project?.tagName === 'A') {
+      if (project.textContent.trim() !== 'Надіслати запит') project.textContent = 'Надіслати запит';
+      if (project.getAttribute('href') !== contactTarget) project.setAttribute('href',contactTarget);
+    }
     if (actions && !actions.querySelector('.garden-catalog-download')) {
       const download = document.createElement('a');
       download.className = 'garden-catalog-download';
