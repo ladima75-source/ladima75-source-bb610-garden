@@ -104,3 +104,13 @@ body.garden-has-header .site-shell{padding-top:0!important}
     color:#d7ff79!important;font-weight:700!important;
   }
 }
+
+/* Keep the new CTA readable on compact desktop widths without crowding navigation. */
+@media(min-width:1101px) and (max-width:1300px){
+  .garden-site-header .garden-header-actions{gap:12px!important}
+  .garden-site-header .garden-catalog-download{gap:7px!important;padding:9px 11px!important}
+  .garden-site-header .garden-catalog-download-text{display:none!important}
+  .garden-site-header .garden-catalog-download:after{
+    content:"Каталог PDF";font-size:13px;font-weight:650;line-height:1.25;
+  }
+}
