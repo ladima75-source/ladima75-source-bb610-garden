@@ -1,0 +1,32 @@
+/* BB610 Garden informational/legal pages: unified with public site navigation. */
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:#f7f9f5;color:#152d20;font:16px/1.65 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:#20753b;text-underline-offset:3px}
+a:hover{color:#155a2d}
+.skip{position:absolute;top:-80px;left:16px;background:#d7ff79;color:#123321;padding:10px;z-index:100}
+.skip:focus{top:120px}
+.garden-info-main{min-height:58vh}
+.garden-info-head{background:#0e2519;color:#f2f7ed;padding:62px max(24px,calc((100vw - 1140px)/2)) 64px}
+.garden-info-head .eyebrow{display:block;font-size:12px;letter-spacing:.16em;color:#d7ff79;font-weight:750;margin-bottom:14px}
+.garden-info-head h1{max-width:890px;margin:0;font-size:clamp(40px,6vw,70px);font-weight:540;line-height:1.05;letter-spacing:-.04em}
+.garden-info-head p{max-width:790px;color:#c2d2c8;font-size:18px;line-height:1.6;margin:25px 0 0}
+.garden-info-content{width:min(1140px,calc(100% - 48px));margin:0 auto;padding:56px 0 90px}
+.garden-info-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);gap:34px;align-items:start}
+.garden-info-card{background:#fff;border:1px solid #dce8dd;border-radius:10px;padding:clamp(22px,3.5vw,42px);margin-bottom:20px}
+.garden-info-card h2{font-size:clamp(22px,2.7vw,30px);line-height:1.2;font-weight:650;margin:0 0 17px}
+.garden-info-card h3{font-size:19px;font-weight:650;margin:22px 0 9px}
+.garden-info-card p{margin:12px 0;color:#4a6052}
+.garden-info-card ul{padding-left:22px;color:#44584a}
+.garden-info-card li{margin:8px 0}
+.garden-info-card a{overflow-wrap:anywhere}
+.garden-info-card .info-action{display:inline-flex;margin-top:12px;padding:12px 18px;background:#d7f58c;color:#102d1b;border-radius:5px;font-weight:700;text-decoration:none}
+.garden-info-card .info-action:hover{background:#bce972}
+.garden-info-detail{display:grid;grid-template-columns:minmax(130px,.4fr) minmax(0,1fr);gap:10px 22px}
+.garden-info-detail dt{color:#708374}
+.garden-info-detail dd{margin:0;color:#172b1e;font-weight:550;overflow-wrap:anywhere}
+.garden-info-note{border-left:4px solid #8acc57;padding:15px 18px;background:#ecf4e8;color:#34533b}
+.garden-info-small{font-size:13px!important;color:#6d7e70!important}
+.garden-info-list{display:flex;flex-direction:column;gap:10px}
+.garden-info-list a{display:block;background:#f4f7f1;padding:12px 14px;border-radius:5px;text-decoration:none;font-weight:550}
+@media(max-width:760px){.garden-info-head{padding:40px 20px 45px}.garden-info-head p{font-size:16px}.garden-info-content{width:calc(100% - 36px);padding:32px 0 65px}.garden-info-grid{grid-template-columns:1fr;gap:0}.garden-info-detail{grid-template-columns:1fr;gap:3px}.garden-info-detail dd{margin-bottom:13px}}
