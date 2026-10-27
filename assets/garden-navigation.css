@@ -310,3 +310,127 @@ footer.garden-unified-footer .garden-footer-content{
     font-size:clamp(1.85rem,7.5vw,2.6rem)!important;
   }
 }
+
+/* GARDEN EDITORIAL LEAD SYSTEM / V2
+   Heading + explanatory lead uses two aligned columns only where the DOM
+   contains a genuine heading/lead pair. Product specs, cards, tables and
+   photo-led feature panels intentionally keep their own composition. */
+:root{
+  --garden-lead-gap:clamp(32px,4.2vw,66px);
+  --garden-lead-rule:#a5d57a;
+  --garden-lead-size:clamp(15px,1.12vw,17px);
+}
+#field-stories .lux-field-head:has(>p),
+#family-engineering .family-engineering-head:has(>p),
+#system-interfaces .system-interfaces-head:has(>p),
+#drainage-engineering .drainage-engineering-head:has(>p),
+.culture-section .culture-heading:has(>p),
+.solution-intro .culture-heading:has(>p),
+.blog-masthead .blog-heading:has(>p) {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  gap:var(--garden-lead-gap)!important;
+  align-items:start!important;
+  margin-bottom:clamp(26px,3vw,40px)!important;
+}
+#field-stories .lux-field-head > div,
+#family-engineering .family-engineering-head > div,
+#system-interfaces .system-interfaces-head > div,
+#drainage-engineering .drainage-engineering-head > div,
+.culture-section .culture-heading > div,
+.solution-intro .culture-heading > div,
+.blog-masthead .blog-heading > div {
+  min-width:0!important;
+}
+#field-stories .lux-field-head > p,
+#family-engineering .family-engineering-head > p,
+#system-interfaces .system-interfaces-head > p,
+#drainage-engineering .drainage-engineering-head > p,
+.culture-section .culture-heading > p,
+.solution-intro .culture-heading > p,
+.blog-masthead .blog-heading > p {
+  margin:0!important;
+  max-width:490px!important;
+  width:100%!important;
+  min-width:0!important;
+  align-self:start!important;
+  padding:4px 0 4px 22px!important;
+  border-left:2px solid var(--garden-lead-rule)!important;
+  font-size:var(--garden-lead-size)!important;
+  font-weight:450!important;
+  line-height:1.62!important;
+}
+#field-stories .lux-field-head > p,
+#family-engineering .family-engineering-head > p,
+#system-interfaces .system-interfaces-head > p,
+#drainage-engineering .drainage-engineering-head > p,
+.culture-section .culture-heading > p,
+.solution-intro .culture-heading > p,
+.blog-masthead .blog-heading > p {color:#b9cabb!important}
+#family-engineering .family-engineering-head > p {color:#546958!important}
+
+/* Full-width PlantLogic photo first, shared editorial intro second.
+   Preserve original image size, aspect ratio and section navigation. */
+.site-shell main > .intro:has(> h2 + p){
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  column-gap:var(--garden-lead-gap)!important;
+  row-gap:24px!important;
+  align-items:start!important;
+}
+.site-shell main > .intro:has(> h2 + p) > .hero-banner,
+.site-shell main > .intro:has(> h2 + p) > .section-nav {
+  grid-column:1/-1!important;
+}
+.site-shell main > .intro:has(> h2 + p) > h2{
+  margin:0!important;
+  min-width:0!important;
+  text-align:left!important;
+  font-size:clamp(2rem,3vw,3.45rem)!important;
+  font-weight:500!important;
+  line-height:1.08!important;
+  letter-spacing:-.04em!important;
+  text-wrap:balance;
+}
+.site-shell main > .intro:has(> h2 + p) > p{
+  margin:0!important;
+  max-width:490px!important;
+  text-align:left!important;
+  font-size:var(--garden-lead-size)!important;
+  line-height:1.62!important;
+  padding:4px 0 4px 22px!important;
+  border-left:2px solid var(--garden-lead-rule)!important;
+  color:#52685a!important;
+}
+/* Intro on system index has no hero image; avoid an unnecessary tall empty row. */
+@media(max-width:940px){
+  #field-stories .lux-field-head:has(>p),
+  #family-engineering .family-engineering-head:has(>p),
+  #system-interfaces .system-interfaces-head:has(>p),
+  #drainage-engineering .drainage-engineering-head:has(>p),
+  .culture-section .culture-heading:has(>p),
+  .solution-intro .culture-heading:has(>p),
+  .blog-masthead .blog-heading:has(>p),
+  .site-shell main > .intro:has(> h2 + p) {
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:16px!important;
+  }
+  #field-stories .lux-field-head > p,
+  #family-engineering .family-engineering-head > p,
+  #system-interfaces .system-interfaces-head > p,
+  #drainage-engineering .drainage-engineering-head > p,
+  .culture-section .culture-heading > p,
+  .solution-intro .culture-heading > p,
+  .blog-masthead .blog-heading > p,
+  .site-shell main > .intro:has(> h2 + p) > p {
+    width:100%!important;
+    max-width:660px!important;
+    padding:15px 0 0!important;
+    border-left:0!important;
+    border-top:1px solid var(--garden-lead-rule)!important;
+    font-size:16px!important;
+    line-height:1.6!important;
+  }
+  .site-shell main > .intro:has(> h2 + p) > .hero-banner,
+  .site-shell main > .intro:has(> h2 + p) > .section-nav {grid-column:1!important}
+}
