@@ -1628,3 +1628,82 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
     max-height:88%!important;
   }
 }
+
+/* Garden technical photo fill V3 — edge blending (2026-10-27).
+   Enlarges product imagery without cropping. Original PlantLogic images unchanged.
+   The two source photos with baked-in matte backgrounds have feathered edges,
+   so the rectangular source backdrop does not interrupt the shared card tone. */
+#system-interfaces .garden-base-media,
+#system-interfaces #proof-lysimeter .proof-feature-media{
+  height:clamp(365px,33vw,465px)!important;
+  min-height:365px!important;
+  padding:0!important;
+  background:#e8ede4!important;
+  overflow:hidden!important;
+}
+#system-interfaces .garden-base-media img,
+#system-interfaces #proof-lysimeter .proof-feature-media img{
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  flex:1 1 auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  margin:0!important;
+  transform:scale(1.16)!important;
+  transform-origin:center center!important;
+  mix-blend-mode:multiply!important;
+}
+#system-interfaces .garden-base-card--culti .garden-base-media img{
+  transform:scale(1.18)!important;
+}
+#system-interfaces .garden-base-card--vf .garden-base-media img{
+  transform:scale(1.20)!important;
+}
+#system-interfaces .garden-base-card--rivus .garden-base-media img{
+  transform:scale(1.20)!important;
+}
+#system-interfaces .garden-base-card--drainage-base .garden-base-media img,
+#system-interfaces #proof-lysimeter .proof-feature-media img{
+  transform:scale(1.22)!important;
+  -webkit-mask-image:radial-gradient(ellipse 72% 75% at 50% 50%,#000 0%,#000 51%,rgba(0,0,0,.98) 65%,rgba(0,0,0,.55) 81%,transparent 100%)!important;
+  mask-image:radial-gradient(ellipse 72% 75% at 50% 50%,#000 0%,#000 51%,rgba(0,0,0,.98) 65%,rgba(0,0,0,.55) 81%,transparent 100%)!important;
+}
+/* The photo is inside a link in the lysimeter panel. Allow it to fill
+   exactly the same inner frame as the four presentation rows. */
+#system-interfaces #proof-lysimeter .proof-feature-media > a{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  overflow:hidden!important;
+}
+@media(max-width:900px){
+  #system-interfaces .garden-base-media,
+  #system-interfaces #proof-lysimeter .proof-feature-media{
+    height:clamp(310px,50vw,445px)!important;
+    min-height:310px!important;
+    padding:0!important;
+  }
+}
+@media(max-width:600px){
+  #system-interfaces .garden-base-media,
+  #system-interfaces #proof-lysimeter .proof-feature-media{
+    height:340px!important;
+    min-height:340px!important;
+    padding:0!important;
+  }
+  #system-interfaces .garden-base-media img,
+  #system-interfaces #proof-lysimeter .proof-feature-media img{
+    transform:scale(1.10)!important;
+  }
+  #system-interfaces .garden-base-card--drainage-base .garden-base-media img,
+  #system-interfaces #proof-lysimeter .proof-feature-media img{
+    transform:scale(1.15)!important;
+  }
+}
