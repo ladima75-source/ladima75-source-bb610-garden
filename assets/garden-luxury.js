@@ -102,7 +102,15 @@
           '<div><h2>Культури та технології вирощування</h2></div>' +
           '<p>Фото показують не окремий виріб, а середовище його роботи: ряд, теплицю, висоту культури, полив, дренаж і доступ персоналу.</p>' +
         '</div>' +
-        '<div class="lux-field-grid">' +
+        '<div class="lux-field-controls" aria-label="Гортання карток культур">' +
+          '<span class="lux-field-hint"><span aria-hidden="true">↔</span> Гортайте картки вбік</span>' +
+          '<div class="lux-field-pager">' +
+            '<span class="lux-field-count" aria-live="polite" aria-atomic="true">1 / 4</span>' +
+            '<button type="button" class="lux-field-prev" aria-label="Попередня культура" disabled>←</button>' +
+            '<button type="button" class="lux-field-next" aria-label="Наступна культура">→</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="lux-field-grid" role="region" aria-label="Картки культур" tabindex="0">' +
           cropStories.map((story, i) =>
             '<article class="lux-field-card lux-field-card-' + (i + 1) + '" id="' + story.href.slice(1) + '">' +
               '<img src="' + story.image + '" alt="' + story.name + ' — application PlantLogic" loading="lazy">' +
@@ -119,6 +127,44 @@
 
     target.after(section);
     return true;
+  };
+
+  const setupFieldStoryNavigation = () => {
+    const section = document.querySelector("#field-stories");
+    if (!section || section.dataset.fieldControlsReady === "1") return;
+    const track = section.querySelector(".lux-field-grid");
+    const cards = [...(track?.querySelectorAll(".lux-field-card") || [])];
+    const prev = section.querySelector(".lux-field-prev");
+    const next = section.querySelector(".lux-field-next");
+    const count = section.querySelector(".lux-field-count");
+    if (!track || cards.length < 2 || !prev || !next || !count) return;
+    section.dataset.fieldControlsReady = "1";
+
+    // Use actual card positions, not viewport-width guesses; keep vertical page scroll native.
+    const cardLeft = (card) => track.scrollLeft + card.getBoundingClientRect().left - track.getBoundingClientRect().left;
+    const activeIndex = () => {
+      const scroll = track.scrollLeft;
+      return cards.reduce((best, card, index) =>
+        Math.abs(cardLeft(card) - scroll) < Math.abs(cardLeft(cards[best]) - scroll) ? index : best, 0);
+    };
+    const update = () => {
+      const i = activeIndex();
+      count.textContent = (i + 1) + " / " + cards.length;
+      prev.disabled = i === 0;
+      next.disabled = i === cards.length - 1;
+    };
+    const step = (delta) => {
+      const i = Math.max(0, Math.min(cards.length - 1, activeIndex() + delta));
+      track.scrollTo({
+        left: cardLeft(cards[i]),
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+      });
+    };
+    prev.addEventListener("click", () => step(-1));
+    next.addEventListener("click", () => step(1));
+    track.addEventListener("scroll", update, {passive: true});
+    window.addEventListener("resize", update, {passive: true});
+    update();
   };
 
   const makeRootEvidence = () => {
@@ -710,6 +756,7 @@
     enhanceHero();
     enhanceCropCards();
     makeFieldStories();
+    setupFieldStoryNavigation();
     makeRootEvidence();
     decorateZephyr();
     makeVisualRail();
