@@ -2,6 +2,47 @@
   const start = () => {
     const controls=document.querySelector('.catalog-filter');
     if(!controls)return;
+    // A single-line mobile filter control keeps the product list visible.
+    const panelRoot=document.querySelector('.catalog-controls');
+    const panelInner=panelRoot?.querySelector('.catalog-controls-inner');
+    let mobileToggle=null;
+    let mobileCaption=null;
+    if (panelInner && !panelInner.querySelector('.catalog-mobile-toggle')) {
+      const panel=document.createElement('div');
+      panel.id='catalog-filter-panel';
+      panel.className='catalog-filter-panel';
+      ['.catalog-type-group','.catalog-culture-group','.catalog-search'].forEach(selector=>{
+        const group=panelInner.querySelector(selector);
+        if(group)panel.append(group);
+      });
+      const toggle=document.createElement('button');
+      toggle.type='button';
+      toggle.className='catalog-mobile-toggle';
+      toggle.setAttribute('aria-controls',panel.id);
+      toggle.setAttribute('aria-expanded','false');
+      toggle.innerHTML='<span class="catalog-mobile-filter-icon" aria-hidden="true">☷</span><span class="catalog-mobile-filter-title">Фільтри</span><span class="catalog-mobile-filter-current">Усі культури</span><span class="catalog-mobile-filter-arrow" aria-hidden="true">⌄</span>';
+      panelInner.prepend(toggle);
+      toggle.after(panel);
+      mobileToggle=toggle;
+      mobileCaption=toggle.querySelector('.catalog-mobile-filter-current');
+      const closePanel=()=>{
+        panelRoot.classList.remove('is-expanded');
+        toggle.setAttribute('aria-expanded','false');
+      };
+      toggle.addEventListener('click',()=>{
+        const open=!panelRoot.classList.contains('is-expanded');
+        panelRoot.classList.toggle('is-expanded',open);
+        toggle.setAttribute('aria-expanded',String(open));
+      });
+      panelRoot.addEventListener('keydown',event=>{
+        if(event.key==='Escape' && panelRoot.classList.contains('is-expanded')){
+          closePanel();toggle.focus();
+        }
+      });
+      panel.querySelectorAll('[data-culture],.solution-nav a').forEach(el=>el.addEventListener('click',()=>{
+        if(matchMedia('(max-width:760px)').matches)closePanel();
+      }));
+    }
     const buttons=[...controls.querySelectorAll('[data-culture]')];
     const sections=[...document.querySelectorAll('.catalog-category')];
     document.querySelectorAll('.catalog-category .catalog-card').forEach(card=>{
@@ -71,6 +112,7 @@
         count+=visible;
       });
       document.querySelector('.catalog-status').textContent=(culture==='all'?'':names[culture]+' · ')+count+' моделей'+(query?' за пошуком':'');
+      if (mobileCaption) mobileCaption.textContent=(culture==='all'?'Усі культури':names[culture])+(query?' · пошук':'')+' · '+count;
       const empty=document.getElementById('catalog-search-empty');if(empty)empty.hidden=count!==0;
       if(clearSearch)clearSearch.hidden=!query;
     };
