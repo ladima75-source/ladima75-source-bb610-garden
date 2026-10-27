@@ -12,27 +12,88 @@
   const gallery = document.querySelector('.gallery');
   if (!gallery) return;
   const image = gallery.querySelector('.gallery-image');
-  const buttons = [...gallery.querySelectorAll('.thumbnail')];
-  buttons.forEach(button => button.addEventListener('click', () => {
-    image.src = button.dataset.image;
-    image.alt = button.dataset.alt;
-    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-  }));
+  const thumbs = [...gallery.querySelectorAll('.thumbnail')];
   const dialog = document.querySelector('.image-dialog');
   const stage = gallery.querySelector('.gallery-stage');
-  if (!dialog || !stage || !image) return;
+  const dialogImage = dialog?.querySelector('img');
+  if (!image) return;
+
+  const selectedIndex = () => Math.max(0, thumbs.findIndex(t => t.getAttribute('aria-pressed') === 'true'));
+  const total = thumbs.length || 1;
+  let index = selectedIndex();
+
+  const setImage = next => {
+    index = (next + total) % total;
+    const thumb = thumbs[index];
+    if (thumb) {
+      image.src = thumb.dataset.image;
+      image.alt = thumb.dataset.alt || image.alt;
+      thumbs.forEach(t => t.setAttribute('aria-pressed', String(t === thumb)));
+    }
+    if (dialog?.open && dialogImage) {
+      dialogImage.src = image.currentSrc || image.src;
+      dialogImage.alt = image.alt;
+      const count = dialog.querySelector('.image-dialog-counter');
+      if (count) count.textContent = (index + 1) + ' / ' + total;
+    }
+  };
+
+  thumbs.forEach((thumb, i) => thumb.addEventListener('click', () => setImage(i)));
+  if (!dialog || !stage || !dialogImage) return;
+
+  if (total > 1 && !dialog.querySelector('.image-dialog-prev')) {
+    const prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'image-dialog-prev';
+    prev.setAttribute('aria-label', 'Попереднє фото');
+    prev.textContent = '‹';
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.className = 'image-dialog-next';
+    next.setAttribute('aria-label', 'Наступне фото');
+    next.textContent = '›';
+    const counter = document.createElement('span');
+    counter.className = 'image-dialog-counter';
+    counter.setAttribute('aria-live', 'polite');
+    counter.textContent = (index + 1) + ' / ' + total;
+    dialog.append(prev, next, counter);
+    prev.addEventListener('click', () => setImage(index - 1));
+    next.addEventListener('click', () => setImage(index + 1));
+  }
+
   stage.addEventListener('click', () => {
-    dialog.querySelector('img').src = image.src;
-    dialog.querySelector('img').alt = image.alt;
+    index = selectedIndex();
+    dialogImage.src = image.currentSrc || image.src;
+    dialogImage.alt = image.alt;
+    dialog.querySelector('.image-dialog-counter')?.replaceChildren(document.createTextNode((index + 1) + ' / ' + total));
     dialog.showModal();
   });
   dialog.querySelector('.dialog-close')?.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => {
     if (event.target === dialog) dialog.close();
   });
+  dialog.addEventListener('keydown', event => {
+    if (!dialog.open || total < 2) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      setImage(index + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  let touchX = null, touchY = null;
+  dialog.addEventListener('touchstart', event => {
+    if (event.touches.length !== 1) return;
+    touchX = event.touches[0].clientX;
+    touchY = event.touches[0].clientY;
+  }, { passive: true });
+  dialog.addEventListener('touchend', event => {
+    if (touchX === null || total < 2 || !event.changedTouches.length) return;
+    const dx = event.changedTouches[0].clientX - touchX;
+    const dy = event.changedTouches[0].clientY - touchY;
+    touchX = touchY = null;
+    if (Math.abs(dx) >= 45 && Math.abs(dx) > Math.abs(dy) * 1.15) setImage(index + (dx < 0 ? 1 : -1));
+  }, { passive: true });
   dialog.addEventListener('close', () => stage.focus());
 })();
-
 ;(() => {
   const removeDecorativeLabels = () => {
     document.querySelectorAll(".section-index,.eyebrow.section-code,.page-index,.slide-index").forEach(node => node.remove());
