@@ -5,7 +5,7 @@
     {
       name: "Лохина",
       en: "BLUEBERRY",
-      image: "/media/plantlogic-blueberry/8400a784a135.jpg",
+      image: "/media/blog/licensed/15-cover.webp",
       href: "#lux-blueberry",
       tag: "",
       title: "Коренева зона як керований виробничий модуль.",
