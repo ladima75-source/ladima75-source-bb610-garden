@@ -1287,3 +1287,182 @@ a:hover>.lux-arrow-chip::before,button:hover>.lux-arrow-chip::before{width:29px;
   #field-stories .lux-field-pager{gap:5px}
   #field-stories .lux-field-pager button{width:36px;height:36px;min-width:36px}
 }
+
+
+/* GARDEN ACCESSORIES — ONE PRODUCT PER ROW (2026-10-27)
+   Editorial reference: the plastic lysimeter feature directly below.
+   Four bag/base products: copy LEFT, verified PlantLogic photo RIGHT.
+   These rules target this homepage section, not product catalog cards. */
+#system-interfaces .garden-bases-showcase{
+  padding-bottom:0;
+}
+#system-interfaces .garden-bases-head{
+  align-items:start;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(32px,4.2vw,66px);
+  margin-bottom:clamp(24px,3vw,38px);
+}
+#system-interfaces .garden-bases-head p{
+  align-self:start;
+  max-width:490px;
+  border-left:2px solid #a5d57a;
+  padding:4px 0 4px 22px;
+  font-size:clamp(15px,1.12vw,17px);
+  line-height:1.62;
+}
+#system-interfaces .garden-bases-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:0;
+}
+#system-interfaces .garden-base-card,
+#system-interfaces #proof-lysimeter{
+  display:grid;
+  grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);
+  gap:clamp(32px,5vw,70px);
+  align-items:center;
+  width:100%;
+  margin:0;
+  min-width:0;
+}
+#system-interfaces .garden-base-card{
+  padding:clamp(23px,3.25vw,42px) 0;
+  border:0;
+  border-bottom:1px solid rgba(16,38,29,.16);
+  border-radius:0;
+  background:transparent;
+  color:#10261d;
+  box-shadow:none;
+  text-decoration:none;
+}
+#system-interfaces .garden-base-card:hover{
+  transform:none;
+  border-color:rgba(16,38,29,.28);
+  text-decoration:none;
+}
+#system-interfaces .garden-base-card:focus-visible{
+  outline:3px solid #258d47;
+  outline-offset:4px;
+}
+#system-interfaces .garden-base-content{
+  min-width:0;
+  max-width:480px;
+  padding:0;
+  border:0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  background:transparent;
+}
+#system-interfaces .garden-base-code{
+  font-size:12px;
+  font-weight:600;
+  line-height:1.5;
+  color:#65806c;
+}
+#system-interfaces .garden-base-content h4{
+  margin:12px 0 14px;
+  font-size:clamp(27px,2.55vw,42px);
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:-.041em;
+  color:#10261d;
+  text-wrap:balance;
+}
+#system-interfaces .garden-base-content p{
+  margin:0;
+  font-size:clamp(14px,1.1vw,16px);
+  line-height:1.65;
+  color:#4f5f55;
+}
+#system-interfaces .garden-base-detail{
+  margin-top:24px;
+  padding-bottom:5px;
+  border-bottom:1px solid #9bbf75;
+  color:#587a21;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.45;
+}
+#system-interfaces .garden-base-media,
+#system-interfaces #proof-lysimeter .proof-feature-media{
+  box-sizing:border-box;
+  display:grid;
+  place-items:center;
+  height:clamp(335px,32vw,440px);
+  min-height:335px;
+  width:100%;
+  min-width:0;
+  padding:clamp(18px,2.3vw,34px);
+  overflow:hidden;
+  background:#e8ede4!important;
+  border:1px solid rgba(16,38,29,.08);
+  border-radius:9px;
+}
+#system-interfaces .garden-base-media img,
+#system-interfaces #proof-lysimeter .proof-feature-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  mix-blend-mode:multiply;
+  background:transparent!important;
+}
+#system-interfaces #proof-lysimeter{
+  padding-top:clamp(23px,3.25vw,42px);
+  border-top:0;
+  border-bottom:1px solid rgba(16,38,29,.16);
+}
+#system-interfaces #proof-lysimeter .proof-feature-copy{
+  min-width:0;
+  max-width:480px;
+}
+#system-interfaces #proof-lysimeter .proof-feature-media > a{
+  display:grid;
+  place-items:center;
+  width:100%;
+  height:100%;
+}
+@media(max-width:900px){
+  #system-interfaces .garden-bases-head{
+    grid-template-columns:minmax(0,1fr);
+    gap:16px;
+  }
+  #system-interfaces .garden-bases-head p{
+    max-width:660px;
+    padding:15px 0 0;
+    border-left:0;
+    border-top:1px solid #a5d57a;
+  }
+  #system-interfaces .garden-base-card,
+  #system-interfaces #proof-lysimeter{
+    grid-template-columns:minmax(0,1fr);
+    gap:20px;
+  }
+  #system-interfaces .garden-base-media,
+  #system-interfaces #proof-lysimeter .proof-feature-media{
+    height:clamp(280px,48vw,410px);
+    min-height:280px;
+  }
+}
+@media(max-width:600px){
+  #system-interfaces .garden-base-card{
+    padding:28px 0;
+  }
+  #system-interfaces .garden-base-content{
+    padding:0;
+  }
+  #system-interfaces .garden-base-content h4{
+    font-size:clamp(25px,7.1vw,34px);
+  }
+  #system-interfaces .garden-base-media,
+  #system-interfaces #proof-lysimeter .proof-feature-media{
+    height:290px;
+    min-height:290px;
+    padding:18px;
+  }
+  #system-interfaces #proof-lysimeter{
+    padding:28px 0;
+  }
+}
